@@ -41,7 +41,7 @@ pls. usage github' Issue , show us u:
 
 
 ## Other
-The QPython.org's sourcecode folks from the askbot(https://askbot.com/)
+The QPython.org's sourcecode folks from the askbot free version(https://askbot.com/)
 
 ## author
 
