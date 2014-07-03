@@ -1,0 +1,62 @@
+<form
+        id="fmanswer"
+        action="{% url answer question.id %}"
+        method="post"
+        >{% csrf_token %}
+    {# ==== START: question/subscribe_by_email_prompt.html ==== #}
+    {% include "question/subscribe_by_email_prompt.html" %}
+    {# ==== END: question/subscribe_by_email_prompt.html ==== #}
+    <div style="clear:both"></div>
+    {% if request.user.is_anonymous() and settings.ALLOW_POSTING_BEFORE_LOGGING_IN == False %}
+        {% if not thread.closed %}
+            <a
+                    class="submit"
+                    href="{{settings.LOGIN_URL}}?next={% url question question.id %}"
+                    >{% trans %}Login/Signup to Answer{% endtrans %}</a>
+        {% endif %}
+    {% else %}
+        {% if not thread.closed %}
+            <div>
+                {% spaceless %}
+                    <h2>
+                        {% if answers %}
+                            {% trans %}Your answer{% endtrans %}
+                        {% else %}
+                            {% trans %}Be the first one to answer this question!{% endtrans %}
+                        {% endif %}
+                    </h2>
+                {% endspaceless %}
+            </div>
+            {% if request.user.is_anonymous() %}
+                <div class="message">{% trans %}<span class='strong big'>Please start posting your answer anonymously</span> - your answer will be saved within the current session and published after you log in or create a new account. Please try to give a <strong>substantial answer</strong>, for discussions, <strong>please use comments</strong> and <strong>please do remember to vote</strong> (after you log in)!{% endtrans %}</div>
+            {% else %}
+                <p class="message">
+                    {% if request.user==question.author  %}
+                        {% trans %}<span class='big strong'>You are welcome to answer your own question</span>, but please make sure to give an <strong>answer</strong>. Remember that you can always <strong>revise your original question</strong>. Please <strong>use comments for discussions</strong>  and <strong>please don't forget to vote :)</strong> for the answers that you liked (or perhaps did not like)!{% endtrans %}
+                    {% else %}
+                        {% trans %}<span class='big strong'>Please try to give a substantial answer</span>. If you wanted to comment on the question or answer, just <strong>use the commenting tool</strong>. Please remember that you can always <strong>revise your answers</strong> - no need to answer the same question twice. Also, please <strong>don't forget to vote</strong> - it really helps to select the best questions and answers!{% endtrans %}
+                    {% endif %}
+                </p>
+            {% endif %}
+            {{ macros.edit_post(
+                    answer,
+                    user = request.user,
+                    editor_type = settings.EDITOR_TYPE
+                )
+            }}
+            <input id="add-answer-btn" type="submit" class="submit after-editor" style="float:left"/>
+            <script type="text/javascript">
+                askbot['functions']['renderAddAnswerButton']();
+            </script>
+            {% if settings.WIKI_ON %}
+                {{ macros.checkbox_in_div(answer.wiki) }}
+            {% endif %}
+            {% if settings.GROUPS_ENABLED and 
+                request.user.is_authenticated() and 
+                request.user.can_make_group_private_posts()
+            %}
+                {{ macros.checkbox_in_div(answer.post_privately) }}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+</form>

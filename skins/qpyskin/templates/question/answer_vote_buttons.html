@@ -1,0 +1,10 @@
+{{ macros.post_vote_buttons(post = answer) }}
+<div
+    id="answer-img-accept-{{ answer.id }}"
+    class="answer-img-accept"
+        {% if answer.accepted() %}
+    title="{% trans %}this answer has been selected as correct{% endtrans %}"
+        {% else %}
+    title="{% trans %}mark this answer as correct (click again to undo){% endtrans %}"
+        {% endif %}
+></div>

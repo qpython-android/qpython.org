@@ -1,0 +1,13 @@
+{% import "macros.html" as macros %}
+{% if threads.object_list|length == 0 %}
+    {% include "main_page/nothing_found.html" %}
+{% else %}
+    {% for thread in threads.object_list %}
+        {{ thread.get_summary_html(search_state=search_state, visitor = request.user) }}
+    {% endfor %}
+    <div class="evenMore">
+        {% trans %}Did not find what you were looking for?{% endtrans %} 
+        <a href="{% url ask %}">{% trans %}Please, post your question!{% endtrans %}</a>
+    </div>
+{% endif %}
+

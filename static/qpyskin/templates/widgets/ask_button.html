@@ -1,0 +1,9 @@
+{% if active_tab != "ask" %}
+    {% if not search_state %}  {#  get empty SearchState() if there's none #}
+        {% set search_state=search_state|get_empty_search_state %}
+    {% endif %}
+    <a
+        id="askButton"
+        href="{{ search_state.full_ask_url() }}{% if group %}{% if '?' in search_state.full_ask_url() %}&{% else %}?{% endif %}group_id={{ group.id }}{% endif %}"
+        >{% if group %}{% trans %}Ask the Group{% endtrans %}{% else %}{% trans %}Ask Your Question{% endtrans %}{% endif %}</a>
+{% endif %}

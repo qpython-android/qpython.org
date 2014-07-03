@@ -1,0 +1,24 @@
+{% import "macros.html" as macros %}
+
+{% macro tag_selection(tag_names, selection_type) %}
+    <a name="{{selection_type}}-tags"></a>
+    {% spaceless %}
+    <h2>{% 
+            trans counter=tag_names|length, type=gettext(selection_type)|capitalize
+        %}<span class="count">{{counter}}</span> {{type}} Tag{% 
+            pluralize 
+        %}<span class="count">{{counter}}</span> {{type}} Tags{% 
+            endtrans
+        %}
+    </h2>
+    {% endspaceless %}
+    <div class="user-stats-table">
+        <table class="tags">
+            <tr>
+                <td valign="top">
+                {{ macros.tag_list_widget(tag_names, deletable = False) }}
+                </td>
+            </tr>
+        </table>
+    </div>
+{% endmacro %}

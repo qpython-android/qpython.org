@@ -1,0 +1,98 @@
+{# most, if not all javascripts should go here
+   this template is included at the very bottow of the
+   main template "base.html"
+#}
+<div id="no-javascript">
+    <noscript class="noscript">
+        {% trans app_name = settings.APP_SHORT_NAME %}Please note: {{app_name}} requires javascript to work properly, please enable javascript in your browser, <a href="{{noscript_url}}">here is how</a>{% endtrans %}
+    </noscript>
+    <script type="text/javascript">
+        //IE fix to hide the red margin
+        var noscript = document.getElementsByTagName('noscript')[0];
+        noscript.style.padding = '0px';
+        noscript.style.backgroundColor = 'transparent';
+    </script>
+</div>
+<script type="text/javascript">
+    var i18nLang = '{{settings.LANGUAGE_CODE}}';
+    var scriptUrl = '/{{settings.ASKBOT_URL}}'
+    var askbotSkin = '{{settings.ASKBOT_DEFAULT_SKIN}}';
+    var enableMathJax = {% if settings.ENABLE_MATHJAX %}true{% else %}false{% endif %};
+    askbot['urls']['mark_read_message'] = '{% url "read_message" %}';
+    askbot['urls']['get_tags_by_wildcard'] = '{% url "get_tags_by_wildcard" %}';
+    askbot['urls']['get_tag_list'] = '{% url "get_tag_list" %}';
+    askbot['urls']['follow_user'] = '/followit/follow/user/{{'{{'}}userId{{'}}'}}/';
+    askbot['urls']['unfollow_user'] = '/followit/unfollow/user/{{'{{'}}userId{{'}}'}}/';
+    askbot['urls']['user_signin'] = '{{ settings.LOGIN_URL }}';
+    askbot['settings']['static_url'] = '{{ settings.STATIC_URL }}';
+    askbot['urls']['getEditor'] = '{% url "get_editor" %}';
+</script>
+<script 
+    type="text/javascript"
+    {% if settings.DEBUG %}
+        src="{{"/js/jquery-1.7.2.min.js"|media}}"
+    {% else %}
+        src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"
+    {% endif %}
+></script>
+<script type="text/javascript" src='{{"/bootstrap/js/bootstrap.js"|media}}'></script>
+<!-- History.js --> 
+<script type='text/javascript' src="{{"/js/jquery.history.js"|media }}"></script>
+<script type='text/javascript' src="{{"/js/utils.js"|media }}"></script>
+{% if settings.ENABLE_MATHJAX %}
+    <script type='text/javascript' src="{{settings.MATHJAX_BASE_URL}}/MathJax.js">
+        MathJax.Hub.Config({
+            extensions: ["tex2jax.js"],
+            jax: ["input/TeX","output/HTML-CSS"],
+            tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+        });
+    </script>
+{% endif %}
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $(document).ready(function(){
+        // focus input on the search bar endcomment
+        {% if active_tab in ('users', 'questions', 'tags') %}
+            $('#keywords').focus();
+        {% elif active_tab == 'ask' %}
+            $('#id_title').focus();
+        {% else %}
+            animateHashes();
+        {% endif %}
+        if (askbot['data']['userIsAdminOrMod']) {
+            $('body').addClass('admin');
+        }
+        {%if settings.GROUPS_ENABLED %}
+        askbot['urls']['add_group'] = "{% url add_group %}";
+        var group_dropdown = new GroupDropdown({{group_list}});
+        $('.dropdown').append(group_dropdown.getElement());
+        {%if request.user.is_superuser%}
+        group_dropdown.enableAddGroups();
+        {%endif%}
+        {% endif %}
+    });
+{% if user_messages %}
+    $('#validate_email_alert').click(function(){notify.close(true)})
+    notify.show();
+{% endif %}
+    $('abbr.timeago').timeago();
+    /*]]>*/
+</script>
+{% if settings.USE_CUSTOM_JS %}
+<script 
+    src="{% url "custom_js"%}?v={{ settings.MEDIA_RESOURCE_REVISION }}"
+    type="text/javascript"
+></script>
+{% endif %}
+{% if settings.GOOGLE_ANALYTICS_KEY %}
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker('{{ settings.GOOGLE_ANALYTICS_KEY }}');
+    pageTracker._trackPageview();
+    } catch(err) {}
+</script>
+{% endif %}

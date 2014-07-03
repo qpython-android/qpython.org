@@ -1,0 +1,13 @@
+{% extends "email/base_mail.html"%}
+{% block headline %}{% trans %}Great, you are ready to use {{ site_name }}!{% endtrans %}{%endblock%}
+{% block title %}{% trans %}Great, you are ready to use {{ site_name }}!{% endtrans %}{%endblock%}
+
+{%block content %}
+<p>{% trans %}You can post questions by emailing them at {{ ask_address }}.{% endtrans %}</p>
+<p>{% trans %}When you receive update notifications, you will be able to respond to them, also by email.{% endtrans %}</p>
+<p>{% trans %}Of course, you can always visit the {{ site_name }} at <a href="{{ site_url }}">{{ site_url }}</a>{% endtrans %}</p>
+{%endblock%}
+
+{%block footer%}
+{% include "email/footer.html" %}
+{%endblock%}

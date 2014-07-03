@@ -1,0 +1,14 @@
+{% extends "one_column_body.html" %}
+{% block title %}{% spaceless %}{% trans %}Confirm email address{% endtrans %}{% endspaceless %}{% endblock %}
+{% block content %}
+    <h1 class="section-title">{% trans %}Confirm email address{% endtrans %}</h1>
+    <label for="validation_code">
+        {% trans %}Validation email sent. Please find it and follow the enclosed link.<br/>
+        If the link doesn't work - enter the code below:{% endtrans %}
+    </label>
+    <form method="post">{% csrf_token %}
+        <input id="validation-code" type="text" name="validation_code" />
+        <input type="submit" class="submit" value="{% trans %}Confirm email{% endtrans %}" />
+    </form>
+{% endblock %}
+<!-- end changeemail.html -->

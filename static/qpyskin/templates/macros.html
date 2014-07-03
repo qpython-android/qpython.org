@@ -1,0 +1,782 @@
+{% load extra_filters_jinja %}
+
+{%- macro share(site = None, site_label = None, icon = False) -%}
+    <a class="{{ site }}-share{% if icon == True %} icon{% endif %}"
+        title="{% trans %}Share this question on {{site}}{% endtrans %}"
+    >{% if icon == False %}{% if site_label %}{{ site_label }}{% else %}{{ site }}{% endif %}{% endif %}</a>
+{%- endmacro -%}
+
+{%- macro inbox_post_snippet(response, inbox_section) -%}
+<div id="re_{{response.id}}" class="re{% if response.is_new %} new highlight{% else %} seen{% endif %}">
+    <input type="checkbox" />
+    <div class="face">
+    {{ gravatar(response.user, 48) }}
+    </div>
+    <a style="font-size:12px" href="{{ response.user.get_absolute_url() }}">{{ response.user.username|escape }}</a>
+    <a style="text-decoration:none;" href="{{ response.response_url }}">
+         {{ response.response_type }}
+         ({{ timeago(response.timestamp) }}):<br/>
+         {% if inbox_section != 'flags' %}
+             {{ response.response_snippet }}
+         {% endif %}
+    </a>
+    {% if inbox_section == 'flags' %}
+         <a class="re_expand" href="{{ response.response_url }}">
+              <!--div class="re_snippet">{{ response.response_snippet|escape }}</div-->
+              <div class="re_content">{{ response.response_content }}</div>
+         </a>
+    {% endif %}
+</div>
+{%- endmacro -%}
+
+{%- macro post_vote_buttons(post = None) -%}
+<div id="{{post.post_type}}-img-upvote-{{ post.id }}"
+    class="{{post.post_type}}-img-upvote post-vote">
+</div>
+<div 
+    id="{{post.post_type}}-vote-number-{{ post.id }}"
+    class="vote-number"
+    title="{% trans %}current number of votes{% endtrans %}"
+>{{ post.score }}</div>
+<div
+    id="{{post.post_type}}-img-downvote-{{ post.id }}"
+    class="{{post.post_type}}-img-downvote post-vote">
+</div>
+<script type="text/javascript">
+    askbot['functions']['renderPostVoteButtons']('{{post.post_type}}', '{{post.id}}');
+</script>
+{%- endmacro -%}
+
+{%- macro post_contributor_avatar_and_credentials(post, user, karma_mode = None, badges_mode = None) -%}
+    {% if post.is_anonymous %}
+        <img alt="{% trans %}anonymous user{% endtrans %}" src="{{ '/images/anon.png'|media }} " class="gravatar" width="32" height="32" />
+        <p>{{ user.get_anonymous_name() }}</p>
+    {% else %}
+        {{ gravatar(user, 32) }}
+        {{ user.get_profile_link()}}{{ user_country_flag(user) }}<br/>
+        {{ user_score_and_badge_summary(user, karma_mode = karma_mode, badges_mode = badges_mode) }}<br/>
+        {{ user_website_link(user) }}
+    {% endif %}
+    {{ user_primary_group(user) }}
+{%- endmacro -%}
+
+{%- macro post_last_updater_and_creator_info(
+        post, min_rep_to_edit_wiki, karma_mode = None, badges_mode = None
+    ) -%}
+    {{ post_contributor_info(
+            post, "original_author", post.wiki, min_rep_to_edit_wiki,
+            karma_mode = karma_mode, badges_mode = badges_mode
+        )
+    }}
+    {{ post_contributor_info(
+            post, "last_updater", post.wiki, min_rep_to_edit_wiki,
+            karma_mode = karma_mode, badges_mode = badges_mode
+        )
+    }}
+{%- endmacro -%}
+
+{%- macro post_contributor_info(
+        post, contributor_type, is_wiki, wiki_min_rep,
+        karma_mode = None, badges_mode = None
+    ) -%}
+{# there is a whole bunch of trickery here, probably indicative of 
+poor design of the data or methods on data objects #}
+{% if contributor_type=="original_author" %}
+    <div class='post-update-info'>
+    {% if is_wiki %}
+        <p>
+           {%- if post.post_type == 'question' -%}
+                {%- trans %}asked{% endtrans %}
+           {% elif post.post_type == 'answer' %}
+                {%- trans %}answered{% endtrans %}
+           {% else %}
+                {%- trans %}posted{% endtrans %}
+           {% endif %}
+           <strong>{{ timeago(post.added_at) }}</strong>
+        </p>
+        <img width="35" height="35"
+            src="{{'/images/wiki.png'|media}}"
+            alt="{% trans %}this post is marked as community wiki{% endtrans %}"
+            style="float:left"
+        />
+        <p class="tip">{% trans %}This post is a wiki.
+        Anyone with karma &gt;{{wiki_min_rep}} is welcome to improve it.{% endtrans %}</p>
+    {% else %}
+        <p style="line-height:12px;">
+            {# todo: access to class names needs to be removed here #}
+            {% if post.post_type == 'question' %}
+                {% trans %}asked{% endtrans %}
+            {% elif post.post_type == 'answer' %}
+                {% trans %}answered{% endtrans %}
+            {% else %}
+                {% trans %}posted{% endtrans %}
+            {% endif %}
+            {% if post.__class__.__name__ == 'PostRevision' %}
+                <strong>{{ timeago(post.revised_at) }}</strong>
+            {% else %}
+                <strong>{{ timeago(post.added_at) }}</strong>
+            {% endif %}
+        </p>
+        {{ post_contributor_avatar_and_credentials(
+            post, post.author, karma_mode = karma_mode, badges_mode = badges_mode
+        ) }}
+    {% endif %}
+    </div>
+{% elif contributor_type=="last_updater" %}
+    {% if post.post_type in ('question', 'answer') %}
+        {% set last_edited_at = post.last_edited_at %}
+        {% set original_author = post.author %}
+        {% set update_author = post.last_edited_by %}
+    {% elif post.__class__.__name__ == 'PostRevision' %}
+        {% set last_edited_at = post.revised_at %}
+        {% set original_author = None %}{# fake value to force display widget in the revision views #}
+        {% set update_author = post.author %}
+    {% endif %}
+    {% if last_edited_at %}
+    <div class='post-update-info'>
+        <p style="line-height:12px;">
+            <a 
+        {% if post.post_type == 'question' %}
+            href="{% url question_revisions post.id %}"
+        {% else %}
+            href="{% url answer_revisions post.id %}"
+        {% endif %}
+            >{% trans %}updated{% endtrans %} <strong>{{ timeago(last_edited_at) }}</strong></a>
+        </p>
+        {% if original_author != update_author or is_wiki %}
+            {{ 
+                post_contributor_avatar_and_credentials(
+                    post, update_author,
+                    karma_mode = karma_mode, badges_mode = badges_mode
+                )
+            }}
+        {% endif %}
+    </div>
+    {% endif %}
+{% endif %}
+{%- endmacro -%}
+
+{%- macro if_else(condition, if_true, if_false) -%}
+    {%- if condition == True -%}
+        {{if_true}}
+    {%- else -%}
+        {{if_false}}
+    {%- endif -%}
+{%- endmacro -%}
+
+{%- macro tag_cloud(tags = None, font_sizes = None, search_state = None) -%}
+    {% for tag in tags %}
+    <span class="tag-size-{{ font_sizes[tag.name] }}">
+        <a 
+            class="link-typeA"
+            title="Number of entries: {{ tag.used_count }}"
+            href="{{ search_state.add_tag(tag.name).full_url() }}"
+        >{{ tag.name }}</a>
+    </span>
+    {% endfor %}
+{%- endmacro -%}
+
+{%- macro tag_list_widget(
+        tags,
+        id = None,
+        deletable = False,
+        make_links = True,
+        search_state = None,
+        css_class = None,
+        tag_css_class = None,
+        tag_html_tag = 'li',
+        truncate_long_tags = False
+    )
+-%}
+<ul {% if id %}id="{{ id }}"{% endif %}
+    class="tags{% if css_class %} {{css_class}}{% endif %}"
+>
+    {% if tags %}
+        {% for tag in tags %}
+            {{ tag_widget(
+                tag,
+                css_class = tag_css_class,
+                deletable = deletable,
+                is_link = make_links,
+                search_state = search_state,
+                html_tag = tag_html_tag,
+                truncate_long_tag = False
+            )}}
+        {% endfor %}
+    {% endif %}
+</ul>
+{%- endmacro -%}
+
+{%- macro user_group_link(group) -%}
+    <a class="group-name"
+        href="{% url users_by_group group.id, group.name|replace('-', ' ')|slugify %}"
+    >{{ group.name|escape }}</a>
+{%- endmacro -%}
+
+{%- macro user_group(group, membership_info, show_count=False) -%}
+    <td>
+        {{ user_group_link(group) }}
+    </td>
+    {% if show_count %}
+        <td>{{ group.users_count }}</td>
+    {% endif %}
+    <td>
+    <span class="group-description">
+    {% if group.description %}
+        {{ group.description.summary }}
+    {% endif %}
+    </span>
+    {% if membership_info %}
+        <br/>
+        {{ group_join_button(
+                group_id = group.id,
+                acceptance_level = membership_info['aceptance_level'],
+                membership_level = membership_info['membership_level']
+            )
+        }}
+    {% endif %}
+    </td>
+{%- endmacro -%}
+
+{%- macro user_primary_group(user) -%}
+    {% set group=user.get_primary_group() %}
+    {% if group %}
+        <span class="primary-group-name"><a
+            class="primary-group-name"
+            href="{% url users_by_group group.id, group.name|replace('-', ' ')|slugify %}"
+        >{{ group.name|replace('-', ' ')|escape }}</a></span>
+    {% endif %}
+{%- endmacro -%}
+
+{%- macro group_join_button(
+    group_id=None, acceptance_level='closed', membership_level='none')
+-%}
+    {% if acceptance_level in ('open', 'moderated') %}
+        <button 
+            class="group-join-btn follow-toggle {% if membership_level != 'none' %}on on-state{% endif %}"
+            data-group-id="{{group_id}}"
+            {% if acceptance_level == 'open' %}
+                data-off-prompt-text="{% trans %}Leave this group{% endtrans %}"
+                data-on-prompt-text="{% trans %}Join this group{% endtrans %}"
+                data-on-state-text="{% trans %}You are a member{% endtrans %}"
+                data-off-state-text="{% trans %}Join this group{% endtrans %}"
+            {% else %}
+                {% if membership_level == 'full' %}
+                    data-off-prompt-text="{% trans %}Leave this group{% endtrans %}"
+                    data-on-state-text="{% trans %}You are a member{% endtrans %}"
+                {% else %}
+                    data-off-prompt-text="{% trans %}Cancel application{% endtrans %}"
+                    data-on-state-text="{% trans %}Waiting approval{% endtrans %}"
+                {% endif %}
+                data-on-prompt-text="{% trans %}Ask to join{% endtrans %}"
+                data-off-state-text="{% trans %}Ask to join{% endtrans %}"
+            {% endif %}
+        >
+            {% if membership_level == 'full' %}
+                {% trans %}You are a member{% endtrans %}
+            {% elif membership_level == 'pending' %}
+                {% trans %}Waiting approval{% endtrans %}
+            {% else %}
+                {% if acceptance_level == 'open' %}
+                    {% trans %}Join this group{% endtrans %}
+                {% else %}
+                    {% trans %}Ask to join{% endtrans %}
+                {% endif %}
+            {% endif %}
+        </button>
+    {% endif %}
+{%- endmacro -%}
+
+{# todo: remove the extra content argument to make its usage more explicit #}
+{%- macro tag_widget(
+            tag,
+            deletable = False,
+            is_link = True,
+            delete_link_title = None,
+            css_class = None,
+            search_state = None,
+            html_tag = 'div',
+            extra_content = '',
+            truncate_long_tag = False
+        )
+-%}
+  {% if not search_state %}  {#  get empty SearchState() if there's none; CAUTION: for some reason this doesn't work inside `spaceless` tag below! #}
+      {% set search_state=search_state|get_empty_search_state %}
+  {% endif %}
+  {% spaceless %}
+    <{{ html_tag }} class="tag-left{% if deletable %} deletable-tag{% endif %}">
+    <{% if not is_link or tag[-1] == '*' %}span{% else %}a{% endif %}
+            class="tag tag-right{% if css_class %} {{ css_class }}{% endif %}"
+            {% if is_link %}
+            href="{{ search_state.add_tag(tag).full_url() }}"
+            title="{% trans tag=tag|escape %}see questions tagged '{{ tag }}'{% endtrans %}"
+            {% endif %}
+            rel="tag"
+            data-tag-name="{{ tag|replace('*', '&#10045;')|escape }}"
+        >{% if truncate_long_tag -%}
+            {{ tag|replace('*', '&#10045;')|truncate(17, True)|escape }}
+        {%- else -%}
+            {{ tag|replace('*', '&#10045;')|escape }}
+        {%- endif %}</{% if not is_link or tag[-1] == '*' %}span{% else %}a{% endif %}>
+        {% if deletable %}
+            <div class="delete-icon"
+                {% if delete_link_title %}
+                    title="{{ delete_link_title }}"
+                {% endif %}
+            >x</div>
+        {% endif %}
+    </{{ html_tag }}>
+    {{ extra_content }}
+  {% endspaceless %}
+{%- endmacro -%}
+
+{%- macro radio_select(name = None, value = None, choices = None) -%}
+    {% for choice in choices %}
+        <p class="choice">
+            {% set id = "id_" ~ name ~ "_" ~ choice[0] %}
+            <input 
+                id="{{ id }}"
+                name="{{ name }}"
+                value="{{ choice[0] }}"
+                type="radio"
+                {% if value == choice[0] %}
+                checked="checked"
+                {% endif %}
+            />
+            <label for="{{ id }}">{{ choice[1] }}</label>
+        </p>
+    {% endfor %}
+{%- endmacro -%}
+
+{%- macro question_summary(thread, question, extra_class=None, search_state=None, visitor = None) -%}
+{%include "widgets/question_summary.html" %}
+{%- endmacro -%}
+
+{# Warning! Any changes to the comment markup here must be duplicated in post.js
+for the purposes of the AJAX comment editor #}
+
+{%- macro add_or_show_comments_button(post = None, max_comments = None, widget_id = None) -%}
+    {% if post.comment_count > max_comments %}
+        {% set remaining_comment_count = post.comment_count - max_comments %}
+    {% else %}
+        {% set remaining_comment_count = 0 %}
+    {% endif %}
+    <a id="add-comment-to-post-{{post.id}}" class="button"></a>
+    <script type="text/javascript">
+        askbot['data']['{{widget_id}}'] = {
+            truncated: {% if post.comment_count > max_comments %}true{% else %}false{% endif %}
+        };
+        askbot['functions']['renderAddCommentButton'](
+                                                '{{post.id}}',
+                                                {{remaining_comment_count}}
+                                            );
+    </script>
+{%- endmacro -%}
+
+{%- macro post_comments_widget(
+        post=None,
+        show_post = None,
+        show_comment = None,
+        show_comment_position = None,
+        user=None,
+        max_comments=None
+    )
+-%}
+    {% spaceless %}
+    {% if post.comment_count > 0 %}
+        <h2 id="comment-title">Comments</h2>
+        <div class="clean"></div> 
+    {% endif %}
+    {% set widget_id = 'comments-for-' + post.post_type + '-' + post.id|string %}
+    <div class="comments" id="{{widget_id}}">
+        <div class="content">
+            {% if show_post == post and show_comment and show_comment_position > max_comments %}
+                {% set comments = post.get_cached_comments()[:show_comment_position] %}
+            {% else %}
+                {% set comments = post.get_cached_comments()[:max_comments] %}
+            {% endif %}
+            {% for comment in comments %}
+                {# Warning! Any changes to the comment markup IN THIS `FOR` LOOP must be duplicated in post.js
+                   for the purposes of the AJAX comment editor #}
+                <div class="comment" id="comment-{{comment.id}}">
+                    <div class="comment-votes">
+                        {% if comment.score > 0 %}
+                            <div 
+                                id="comment-img-upvote-{{comment.id}}" 
+                                class="upvote"
+                            >{{comment.score}}</div>
+                            <script type="text/javascript">
+                                askbot['functions']['renderPostVoteButtons']('comment', '{{comment.id}}');
+                            </script>
+                        {% else %}
+                            <div class="upvote"></div>
+                        {% endif %}
+                    </div>
+                    <div 
+                        id="post-{{comment.id}}-delete"
+                        class="comment-delete"
+                    >
+                        <span class="delete-icon" title="{% trans %}delete this comment{% endtrans %}"></span>
+                    </div>
+                    <div class="comment-body">
+                        {{comment.html}}
+                        <a class="author" href="{{comment.author.get_profile_url()}}">{{comment.author.username|escape}}</a>
+                        <span class="age">&nbsp;({{ timeago(comment.added_at) }})</span>
+                        <a id="post-{{comment.id}}-edit"
+                            class="edit">{% trans %}edit{% endtrans %}</a>
+                        <form action="{% url comment_to_answer %}" method="POST" accept-charset="utf-8" class='convert-comment'>
+                          {% csrf_token %}
+                          <input type="hidden" value="{{comment.id}}" name="comment_id" id="id_comment_id">
+                          <input type="submit" value="{% trans %}convert to answer{% endtrans %}">
+                        </form>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    askbot['functions']['hideConvertLinks']();
+                    askbot['functions']['renderPostControls']('{{comment.id}}');
+                </script>
+            {% endfor %}
+        </div>
+        <div class="controls">
+            {% if show_post == post and show_comment %}
+                {% if show_comment_position > max_comments %}
+                    {{
+                        add_or_show_comments_button(
+                                            post = post,
+                                            max_comments = show_comment_position,
+                                            widget_id = widget_id
+                                        )
+                    }}
+                {% else %}
+                    {{
+                        add_or_show_comments_button(
+                                            post = post,
+                                            max_comments = max_comments,
+                                            widget_id = widget_id
+                                        )
+                    }}
+                {% endif %}
+            {% else %}
+                {{
+                    add_or_show_comments_button(
+                                        post = post,
+                                        max_comments = max_comments,
+                                        widget_id = widget_id
+                                    )
+                }}
+            {% endif %}
+        </div>
+    </div>
+    {% endspaceless %}
+{%- endmacro -%}
+
+{%- macro reversible_sort_button(button_sort_criterium=None, asc_tooltip=None,
+            desc_tooltip=None, label=None, current_sort_method=None, search_state=None) -%}
+{# 
+    sort button where descending sort is default
+    and the search method is togglable between ascending and descending 
+    buttons are rendered as links with id constructed as
+    "by_" + button_sort_criterium
+    class "on" is added when current_sort_method is one of
+    button_sort_criterium + "asc" or "desc"
+#}
+    {% set key_name = button_sort_criterium %}
+    {% if current_sort_method == key_name + "-asc" %}{# "worst" first #}
+        <a id="by_{{key_name}}"
+           href="{{ search_state.change_sort(key_name+"-desc").full_url() }}"
+           class="rev on"
+           title="{{desc_tooltip}}"><span>{{label}} &#9650;</span></a>
+    {% elif current_sort_method == key_name + "-desc" %}{# "best first" #}
+        <a id="by_{{key_name}}"
+           href="{{ search_state.change_sort(key_name+"-asc").full_url() }}"
+           class="rev on"
+           title="{{asc_tooltip}}"><span>{{label}} &#9660;</span></a>
+    {% else %}{# default, when other button is active #}
+        <a id="by_{{key_name}}"
+           href="{{ search_state.change_sort(key_name+"-desc").full_url() }}"
+           class="off"
+           title="{{desc_tooltip}}"><span>{{label}}</span></a>
+    {% endif %}
+    <script type="text/javascript">{# need to pass on text translations to js #}
+        var sortButtonData = sortButtonData || {};
+        sortButtonData["{{key_name}}"] = {
+            label: "{{label}}",
+            asc_tooltip: "{{asc_tooltip}}",
+            desc_tooltip: "{{desc_tooltip}}"
+        };
+    </script>
+{%- endmacro %}
+
+{%- macro checkbox_in_div(checkbox_field, class = 'checkbox') -%}
+    <div{% if class %} class="{{class}}"{% endif %}
+        title="{{checkbox_field.help_text}}">
+        {{ checkbox_field }} 
+        {{ checkbox_field.label_tag() }} 
+        {{ checkbox_field.errors }}
+    </div>
+{%- endmacro -%}
+
+{%- macro edit_post(
+                post_form,
+                post_type = None,
+                post_html = None,
+                mandatory_tags = None,
+                edit_title = False,
+                use_category_selector = False,
+                tag_names = None,
+                editor_type = None,
+                user = None
+            )
+-%}
+{%include "widgets/edit_post.html" %}
+{%- endmacro -%}
+
+{%- macro tag_autocomplete_js(id = '#id_tags') -%}
+    var tagAc = new AutoCompleter({
+            url: '{% url "get_tag_list" %}',
+            preloadData: true,
+            minChars: 1,
+            useCache: true,
+            matchInside: true,
+            maxCacheLength: 100,
+            delay: 10
+    });
+    tagAc.decorate($("{{ id }}"));
+{%- endmacro -%}
+
+{%- macro answer_classes(answer, question) -%}
+answer {% if answer.accepted() %}accepted-answer{% endif %} {% if answer.author_id==question.author_id %} answered-by-owner{% endif %} {% if answer.deleted %}deleted{% endif -%}
+{%- endmacro -%}
+
+{%- macro user_score_and_badge_summary(
+                                    user,
+                                    karma_mode = None,
+                                    badges_mode = None
+) -%}
+  {%include "widgets/user_score_and_badge_summary.html"%}
+{%- endmacro -%}
+
+{%- macro follow_toggle(follow, name, alias, id) -%}
+    {# follow - boolean; name - object type name; alias - e.g. users name; id - object id #}
+    <div 
+        class="follow-toggle follow-user-toggle" 
+        id="follow-{{ name|escape }}-{{ id }}"
+    >
+        {% if follow %}
+        <div class="follow">{% trans %}follow {{alias}}{% endtrans %}</div>
+        {% else %}
+        <div class="unfollow">
+          <div class="unfollow-red">{% trans %}unfollow {{alias}}{% endtrans %}</div>
+          <div class="unfollow-green">{% trans %}following {{alias}}{% endtrans %}</div>
+        </div>
+        {% endif %}
+    </div>
+{%- endmacro -%}
+
+{%- macro follow_user_toggle(visitor = None, subject = None) -%}
+    {% if visitor.is_anonymous() %}
+        {{ follow_toggle(True, 'user', subject.username|escape, subject.id) }}
+    {% else %}
+        {% if visitor != subject %}
+            {% if visitor.is_following(subject) %}
+                {{ follow_toggle(False, 'user', subject.username|escape, subject.id) }}
+            {% else %}
+                {{ follow_toggle(True, 'user', subject.username|escape, subject.id) }}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+{%- endmacro -%}
+
+{%- macro user_long_score_and_badge_summary(user, badges_mode = None) -%}
+  {%- include "widgets/user_long_score_and_badge_summary.html" -%}
+{%- endmacro -%}
+
+{%- macro user_country_flag(user) -%}
+    {% if user.country and user.show_country %}
+        <img class="flag" 
+            src="{{ ('/images/flags/' ~ user.country.code|lower ~ '.gif')|media }}"
+            alt="{% trans 
+                    country=user.country.name 
+                    %}flag of {{country}}{% 
+                endtrans %}"
+            title="{% trans 
+                    country=user.country.name, 
+                    person=user.username|escape %}{{person}} is from {{country}}{%
+                 endtrans %}"
+        />
+    {% endif %}
+{%- endmacro -%}
+
+{%- macro user_country_name_and_flag(user) -%}
+    {% if user.country and user.show_country %}
+        {{ user.country.name }}
+        {{ user_country_flag(user) }}
+    {% endif %}
+{%- endmacro -%}
+
+{%- macro user_full_location(user) -%}
+    {% if user.location %}
+        {{ user.location }},
+    {% endif %}
+    {{ user_country_name_and_flag(user) }}
+{%- endmacro -%}
+
+{%- macro user_list(
+        users, profile_section = None, karma_mode = None, badges_mode = None
+    )
+-%}
+{% include "widgets/user_list.html"%}
+{%- endmacro -%}
+
+{#todo: rename this to avatar #}
+{%- macro gravatar(user, size) -%}
+{% spaceless %}
+<a style="text-decoration:none"
+    href="{{ user.get_absolute_url() }}"
+><img class="gravatar" 
+    width="{{size}}" height="{{size}}"
+    src="{{ user.get_avatar_url(size) }}"
+    title="{{user.username|escape}}" 
+    alt="{% trans username=user.username|escape %}{{username}} gravatar image{% endtrans %}" 
+/></a>
+{% endspaceless %}
+{%- endmacro -%}
+
+{%- macro user_website_link(user, max_display_length=25) -%}
+    {% if user.website and (not user.is_blocked()) %}
+        <a 
+            href="{{user.website}}"
+            title="{% trans username=user.username|escape, url=user.website %}{{username}}'s website is {{url}}{% endtrans %}"
+            {% if user.can_have_strong_url() == False %}
+            rel="nofollow"
+            {% endif %}
+        >
+        {{user.website|truncate(length=max_display_length, killwords=True, end='...')}}
+        </a>
+    {% endif %}
+{%- endmacro -%}
+
+{%- macro paginator(p, position='left', anchor='') -%}{# p is paginator context dictionary #}
+{% spaceless %}
+    {% if p.is_paginated %}
+        <div class="paginator" style="float:{{position}}">
+        {% if p.has_previous %}
+            <span class="prev"><a href="{{p.base_url}}page={{ p.previous }}{{ anchor }}" title="{% trans %}previous{% endtrans %}">
+        &laquo; {% trans %}previous{% endtrans %}</a></span>
+        {% endif %}
+        {% if not p.in_leading_range %}
+            {% for num in p.pages_outside_trailing_range %}
+                <span class="page"><a href="{{p.base_url}}page={{ num }}{{ anchor }}" >{{ num }}</a></span>
+            {% endfor %}
+        ...
+        {% endif %}
+         
+        {% for num in p.page_numbers %}
+          {% if num == p.page and p.pages != 1%}
+            <span class="curr" title="{% trans %}current page{% endtrans %}">{{ num }}</span>
+          {% else %}
+            <span class="page"><a href="{{p.base_url}}page={{ num }}{{ anchor }}" title="{% trans %}page {{num}}{% endtrans %}">{{ num }}</a></span>
+          {% endif %}
+        {% endfor %}
+         
+        {% if not p.in_trailing_range %}
+            ...
+            {% for num in p.pages_outside_leading_range|reverse %}
+                <span class="page"><a href="{{p.base_url}}page={{ num }}{{ anchor }}" title="{% trans %}page {{ num }}{% endtrans %}">{{ num }}</a></span>
+            {% endfor %}
+        {% endif %}
+        {% if p.has_next %}
+            <span class="next"><a href="{{p.base_url}}page={{ p.next }}{{ anchor }}" title="{% trans %}next page{% endtrans %}">{% trans %}next page{% endtrans %} &raquo;</a></span>
+        {% endif %}
+        </div>
+    {% endif %}
+{% endspaceless %}
+{%- endmacro -%}
+
+
+
+{%- macro paginator_main_page(p, position, search_state) -%} {# p is paginator context dictionary #}
+    {% spaceless %}
+        {% if p.is_paginated %}
+            <div class="paginator" style="float:{{position}}">
+                {% if p.has_previous %}
+                    <span class="prev"><a href="{{ search_state.change_page(p.previous).full_url() }}" title="{% trans %}previous{% endtrans %}">
+                        &laquo; {% trans %}previous{% endtrans %}</a></span>
+                {% endif %}
+                {% if not p.in_leading_range %}
+                    {% for num in p.pages_outside_trailing_range %}
+                        <span class="page"><a href="{{ search_state.change_page(num).full_url() }}" >{{ num }}</a></span>
+                    {% endfor %}
+                    ...
+                {% endif %}
+
+                {% for num in p.page_numbers %}
+                    {% if num == p.page and p.pages != 1%}
+                        <span class="curr" title="{% trans %}current page{% endtrans %}">{{ num }}</span>
+                    {% else %}
+                        <span class="page"><a href="{{ search_state.change_page(num).full_url() }}" title="{% trans %}page {{num}}{% endtrans %}">{{ num }}</a></span>
+                    {% endif %}
+                {% endfor %}
+
+                {% if not p.in_trailing_range %}
+                    ...
+                    {% for num in p.pages_outside_leading_range|reverse %}
+                        <span class="page"><a href="{{ search_state.change_page(num).full_url() }}" title="{% trans %}page {{ num }}{% endtrans %}">{{ num }}</a></span>
+                    {% endfor %}
+                {% endif %}
+                {% if p.has_next %}
+                    <span class="next"><a href="{{ search_state.change_page(p.next).full_url() }}" title="{% trans %}next page{% endtrans %}">{% trans %}next page{% endtrans %} &raquo;</a></span>
+                {% endif %}
+            </div>
+        {% endif %}
+    {% endspaceless %}
+{%- endmacro -%}
+
+
+{%- macro inbox_link(user) -%}
+    {% if user.new_response_count > 0 or user.seen_response_count > 0 %}
+    <a id='ab-responses' href="{{user.get_absolute_url()}}?sort=inbox&section=forum">
+        <img 
+            alt="{% trans username=user.username|escape %}responses for {{username}}{% endtrans %}"
+            {% if user.new_response_count > 0 %}
+                src="{{ "/images/mail-envelope-full.png"|media }}"
+                title="{% trans response_count=user.new_response_count %}you have {{response_count}} new response{% pluralize %}you have {{response_count}} new responses{% endtrans %}"
+            {% elif user.seen_response_count > 0 %}
+                src="{{ "/images/mail-envelope-empty.png"|media }}"
+                title="{% trans %}no new responses yet{% endtrans %}"
+            {% endif %}
+        />
+    </a>
+    {% endif %}
+{%- endmacro -%}
+
+{%- macro moderation_items_link(user, moderation_items) -%}
+    {% if moderation_items %}
+        <a id="ab-responses"
+            href="{{user.get_absolute_url()}}?sort=inbox&section=flags"
+        >
+        {% if moderation_items['new_count'] > 0 %}
+            <img src="{{'/images/dialog-warning.png'|media}}"
+            {% if moderation_items['seen_count'] > 0 %}
+                alt="{% trans new=moderation_items['new_count'], seen=moderation_items['seen_count']%}{{new}} new flagged posts and {{seen}} previous{% endtrans %}"
+                title="{% trans new=moderation_items['new_count'], seen=moderation_items['seen_count']%}{{new}} new flagged posts and {{seen}} previous{% endtrans %}"
+            {% else %}
+                alt="{% trans new=moderation_items['new_count'] %}{{new}} new flagged posts{% endtrans %}"
+                title="{% trans new=moderation_items['new_count'] %}{{new}} new flagged posts{% endtrans %}"
+            {% endif %}
+            />
+        {% elif moderation_items['seen_count'] > 0 %}
+            <img src={{'/images/dialog-warning-off.png'|media}} 
+                alt="{% trans seen=moderation_items['seen_count'] %}{{seen}} flagged posts{% endtrans %}" 
+                title="{% trans seen=moderation_items['seen_count'] %}{{seen}} flagged posts{% endtrans %}" 
+            />
+        {% endif %}
+        </a>
+    {% endif %}
+{%- endmacro -%}
+
+{%- macro timeago(datetime_object) -%}
+    <abbr class="timeago" title="{{datetime_object.replace(microsecond=0)|add_tz_offset}}">
+        {{datetime_object.replace(microsecond=0)|add_tz_offset}}
+    </abbr>
+{%- endmacro -%}

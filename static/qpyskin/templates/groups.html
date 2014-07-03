@@ -1,0 +1,58 @@
+{% import "macros.html" as macros %}
+{% extends 'two_column_body.html' %}
+{% block title %}{% trans %}Groups{% endtrans %}{% endblock %}
+{% block content %}
+    <div id="content-header">
+        <h1 class="section-title">{% trans %}Groups{% endtrans %}</h1>
+        {% if request.user.is_authenticated() %}
+            <div class="tabBar">
+                <div class="tabsC">
+                    <a id="all-groups" class="first{% if tab_name=="all-groups" %} on{% endif %}"
+                        title="{% trans %}All groups{% endtrans %}" 
+                        href="{% url groups %}?sort=all-groups"
+                    ><span>{% trans %}all groups{% endtrans %}</span></a>
+                    <a id="my-groups" {% if tab_name=="my-groups" %}class="on"{% endif %} 
+                        title="{% trans %}My groups{% endtrans %}" 
+                        href="{% url groups %}?sort=my-groups"
+                    ><span>{% trans %}my groups{% endtrans %}</span></a>
+                </div>
+            </div>
+        {% endif %}
+        <div class="clearfix"></div>
+    </div>
+    {% if user_can_add_groups %}
+    <p id="group-add-tip">
+        {% trans %}Tip: to create a new group - please go to some user profile and add the new group there. That user will be the first member of the group{% endtrans %}
+    </p>
+    {% endif %}
+    <table id="groups-list">
+        <thead>
+            <th>{% trans %}Group{% endtrans %}</th>
+            <th>{% trans %}Number of members{% endtrans %}</th>
+            <th>{% trans %}Description{% endtrans %}</th>
+        </thead>
+        <tbody>
+        {% for group in groups %}
+            <tr>
+                {{ macros.user_group(
+                        group, groups_membership_info[group.id], show_count=True
+                    )
+                }}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+{% block endjs %}
+    <script type='text/javascript' src='{{"/js/jquery.validate.min.js"|media}}'></script>
+    <script src='{{"/js/post.js"|media}}' type='text/javascript'></script>
+    {% if request.user.is_authenticated() %}
+    <script type="text/javascript">
+        askbot['urls']['join_or_leave_group'] = '{% url join_or_leave_group %}';
+        $.each($('.group-join-btn'), function(idx, elem){
+            var group_join_btn = new GroupJoinButton();
+            group_join_btn.decorate($(elem));
+        });
+    </script>
+    {% endif %}
+{% endblock %}

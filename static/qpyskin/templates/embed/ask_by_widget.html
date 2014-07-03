@@ -1,0 +1,225 @@
+{% extends "widget_base.html" %}
+{% import "macros.html" as macros %}
+{% block forestyle %}
+  {% if editor_type == 'markdown' %}
+  <link rel="stylesheet" type="text/css" href="{{"/js/wmd/wmd.css"|media}}" />
+  {%else %}
+    <link href="{{'/bootstrap/css/bootstrap.css'|media}}" rel="stylesheet" type="text/css" />
+  {%endif%}
+  {% if settings.USE_LOCAL_FONTS %}
+    {% include "meta/fonts.html" %}
+  {% else %}
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700&amp;subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css' />
+  {% endif %}
+  <style type="text/css" media="screen">
+    body{
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+    }
+    #editor {
+      display: block;
+      min-height: 200px;
+      width: 98%;
+      margin: 0;
+      border:none;
+      outline:none;
+      padding: 6px;
+    }
+    .wmd-container{
+      border: #CCE6EC 3px solid;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    #id_title{
+      {% if editor_type == 'markdown' %}
+      width: 100%;
+      {%else%}
+      padding: 0px 0 0 5px;
+      width: 99.2%;
+      {%endif%}
+      font-size: 130%;
+      border: #CCE6EC 3px solid;
+      max-width: 600px;
+    }
+
+    #id_title:focus {
+      outline: none;
+      box-shadow:none;
+    }
+
+    .title{
+      font-family: 'Open Sans Condensed', Arial, sans-serif; 
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    #question-list {
+      height: auto;
+      z-index: 10000;
+      position: absolute;
+      border: 3px solid #CCE6EC;
+      border-top:none;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      background: #fff;
+      {% if editor_type == 'markdown' %}
+      width:97.4%;
+      {%else%}
+      width:90.8%;
+      {%endif%}
+      margin-top: -4.9px;
+    }
+
+    #question-list h2{
+      text-decoration: none;
+      margin: 0px;
+      font-size: 13px;
+      padding: 3px 0 3px 5px;
+      padding-bottom: 0;
+      border-top: #F0F0EC 1px solid;
+      min-height: 30px;
+      line-height: 30px;
+      font-weight: normal
+    }
+
+    #question-list h2:first-child{
+      border-top: none; 
+    }
+
+    #question-list a{
+      color: #005580;
+    }
+
+    #question-list a:hover{
+        color: #005580;
+        text-decoration: underline;
+    }
+
+    #question-list a:visited{
+      color: #005580;
+      text-decoration: none;
+    }
+
+    #question-list span{
+      width: 28px;
+      height: 26px;
+      line-height: 26px;
+      text-align: center;
+      margin-right: 10px;
+      float: left;
+      display: block;
+      color: white;
+      background: #B8D0D5;
+      border-radius: 3px;
+      -ms-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -khtml-border-radius: 3px;
+    }
+    {% if editor_type == 'markdown' %}
+    #wmd-button-bar {
+      background: url({{"/js/wmd/images/editor-toolbar-background.png"|media}}) repeat-x bottom;
+      height: 30px;
+      border: 0;
+      display: block;
+    }
+    {% endif %}
+
+    #submit{
+      font-size: 130%;
+      margin-right: -6px;
+      float: right;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      color: #4A757F;
+      font-family: 'Open Sans Condensed', Arial, sans-serif;
+      text-shadow: 0px 1px 0px #C6D9DD;
+      -moz-text-shadow: 0px 1px 0px #c6d9dd;
+      -webkit-text-shadow: 0px 1px 0px #c6d9dd;
+      border-top: #EAF2F3 1px solid;
+      background-color: #D1E2E5;
+      background-repeat: no-repeat;
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#D1E2E5), color-stop(25%, #D1E2E5), to(#A9C2C7));
+      background-image: -webkit-linear-gradient(#D1E2E5, #D1E2E5 25%, #A9C2C7);
+      background-image: -moz-linear-gradient(top, #D1E2E5, #D1E2E5 25%, #A9C2C7);
+      background-image: -ms-linear-gradient(#D1E2E5, #D1E2E5 25%, #A9C2C7);
+      background-image: -o-linear-gradient(#D1E2E5, #D1E2E5 25%, #A9C2C7);
+      background-image: linear-gradient(#D1E2E5, #D1E2E5 25%, #A9C2C7);
+      border-radius: 4px;
+      -ms-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -khtml-border-radius: 4px;
+      -webkit-box-shadow: 1px 1px 2px #636363;
+      -moz-box-shadow: 1px 1px 2px #636363;
+      box-shadow: 1px 1px 2px #636363;
+      width: 200px;
+    } 
+
+    .field-errors{
+      font-size: 10px;
+      color: #ff0000;
+      height: 10px;
+    }
+    {{widget.inner_style}}
+  </style>
+{%endblock%}
+
+{%block body%}
+<div class="title">{{widget.title}}</div>
+<form action="." method="POST" accept-charset="utf-8">
+  {% csrf_token %}
+  <label>{%trans%}Please enter a descriptive title for your question{%endtrans%}</label>
+  <div class="input-title">
+    {{form.title}}
+  </div>
+  <div id='question-list'>
+  </div>
+  <div class="field-errors">
+    {% for error in form.title.errors %} {{error}} {%endfor%}
+  </div>
+{% if widget.include_text_field %}
+  {% if editor_type == 'markdown' %}
+      <div class="wmd-container">
+          <div id="wmd-button-bar" class="wmd-panel"></div>
+          {{ form.text }}{# this element is resizable and will be wrapped by js #}
+      </div>
+  {% else %}
+      <div class="wmd-container">
+          {{ form.media }}
+          {{ form.text }}
+      </div>
+  {% endif %}
+  <div class="field-errors">
+    {% for error in form.text.errors %} {{error}} {%endfor%}
+  </div>
+  {% endif %}
+  {% if form.ask_anonymously %}
+    <p>{{form.ask_anonymously.label_tag()}}: {{form.ask_anonymously}}</p>
+  {%endif%}
+  <input type="submit" value="Ask your question" id="submit" />
+</form>
+{%endblock%}
+{% block endjs %}
+<script type='text/javascript' src='{{"/js/editor.js"|media}}'></script>
+{% if editor_type == 'markdown' %}
+    <script type='text/javascript' src='{{"/js/wmd/showdown.js"|media}}'></script>
+    <script type='text/javascript' src='{{"/js/wmd/wmd.js"|media}}'></script>
+{% else %}
+    {% include "meta/tinymce_css.html" %}{# todo - maybe move to form media? #}
+{% endif %}
+
+<script type="text/javascript" src='{{"/js/live_search_new_thread.js"|media}}'></script>
+<script type="text/javascript" charset="utf-8">
+    var minSearchWordLength = {{settings.MIN_SEARCH_WORD_LENGTH}};
+    askbot['urls']['api_get_questions'] = '{% url api_get_questions %}';
+    askbot['urls']['upload'] = '{% url upload %}';
+    $(document).ready(function(){
+      $("#id_title").focus();
+      $("#id_title").addClass('questionTitleInput');
+      liveSearchNewThreadInit(true);
+    });
+</script>
+{% endblock %}

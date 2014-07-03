@@ -1,0 +1,18 @@
+{% from "email/macros.html" import quoted_post %}
+
+{% if post.post_type in ('question', 'answer') %}
+    {{ quoted_post(post) }}
+    {% set comments = post.get_cached_comments() %}
+    {% if comments %}
+        <p>
+            {% trans count=comments|length -%}
+                {{ comment }} comment:
+            {%- pluralize -%}
+                {{ count }} comments:
+            {%- endtrans -%}
+        </p>
+        {% for comment in comments %}
+            {{ quoted_post(comment, quote_level = 1) }}
+        {% endfor %}
+    {% endif %}
+{% endif %}

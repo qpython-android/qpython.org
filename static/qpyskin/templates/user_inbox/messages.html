@@ -1,0 +1,100 @@
+{% extends "user_inbox/base.html" %}
+{% import "macros.html" as macros %}
+{% block before_css %}
+    {{ super() }}
+    <style type="text/css">
+        .group-messaging {
+            padding-top: 25px;
+        }
+        ul.senders-list {
+            padding: 0px;
+            margin-left: 1em;
+            margin-top: 0.5em;
+        }
+        .senders-list li {
+            height: 1.5em;
+            vertical-align: center;
+            list-style-type: none;
+            list-style-position: outside;
+        }
+        .senders-list .selected {
+            font-weight: bold;
+        }
+        table.threads-list {
+            width: 100%;
+        }
+        .threads-list tr {
+            height: 2em;
+        }
+        .threads-list td {
+            vertical-align: center;
+        }
+        .threads-list tr.new {
+            font-weight: bold;
+            color: #777;
+        }
+        .threads-list tr:hover {
+            background-color: #eff5f6;
+        }
+        td.empty {
+            line-height: 30px;
+            vertical-align: middle;
+            background: #eee;
+            padding-left: 320px;
+            margin: 0px;
+        }
+        td.senders {
+            padding-left: 10px;
+        }
+        td.timestamp {
+            width: 180px;
+        }
+        button.compose {
+            width: 150px;
+        }
+        .first-col, .second-col {
+            float: left;
+            min-height: 45px;
+        }
+        .first-col {
+            width: 150px;
+        }
+        .second-col {
+            width: 790px;
+            margin-left: 20px;
+        }
+        .message-composer {
+            padding-bottom: 10px;
+            margin-top: -25px;
+        }
+        .reply-composer .message-composer {
+            margin-top: 0;
+        }
+        .message-composer input.recipients,
+        .message-composer textarea {
+            width: 400px;
+            display: block;
+        }
+        .message-composer input.recipients {
+            border: #CCE6EC 3px solid;
+            padding: 5px 0 5px 5px;
+            font-size: 14px;
+        }
+        .message-composer textarea {
+            height: 200px;
+            margin-bottom: 10px;
+        }
+        .message-composer label.errors {
+            padding-left: 5px;
+        }
+    </style>
+{% endblock %}
+{% block profilesection %}
+    {% trans %}inbox - messages{% endtrans %}
+{% endblock %}
+{% block inbox_content %}
+    {% include "group_messaging/home.html" %}
+{% endblock %}
+{% block userjs %}
+    <script type="text/javascript" src="{{ 'js/group_messaging.js'|media }}"></script>
+{% endblock %}

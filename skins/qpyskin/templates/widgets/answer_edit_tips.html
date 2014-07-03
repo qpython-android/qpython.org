@@ -1,0 +1,27 @@
+<!-- template answer_edit_tips.html -->
+<div class="box">
+    <h2>{% trans %}Tips{% endtrans %}</h2>
+    <div id="tips">
+        <ul >
+            <li> <b>{% trans %}give an answer interesting to this community{% endtrans %}</b>
+            </li>
+            <li>
+                {% trans  %}try to give an answer, rather than engage into a discussion{% endtrans %}
+            </li>
+            <li>
+                {% trans %}provide enough details{% endtrans %}
+            </li>
+            <li>
+                {% trans %}be clear and concise{% endtrans %}
+            </li>
+        </ul>
+        <p class='info-box-follow-up-links'>
+<!-- will be change to a popup windows
+        <a href="{% url faq %}" target="_blank" title="{% trans %}see frequently asked questions{% endtrans %}">{% trans %}FAQ{% endtrans %} »</a>
+-->
+        </p>
+    </div>
+</div>
+{% if settings.EDITOR_TYPE == 'markdown' %}
+    {% include "widgets/markdown_help.html" %}
+{% endif %}

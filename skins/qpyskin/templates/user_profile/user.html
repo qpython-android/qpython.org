@@ -1,0 +1,46 @@
+{% extends "one_column_body.html" %}
+<!-- user.html -->
+{% block title %}{% spaceless %}{{ page_title }}{% endspaceless %}{% endblock %}
+{% block forestyle %}
+<style type="text/css">
+    .history-table td { padding: 5px; }
+</style>
+{% endblock %}
+{% block content %}
+    <h1 class="section-title">
+        {% spaceless %}
+        {% trans username=view_user.username|escape %}{{username}}'s profile{% endtrans %} - {% block profilesection %}{% endblock %}
+        {% endspaceless %}
+    </h1>
+    {% include "user_profile/user_tabs.html" %}
+    <div>
+        {% block usercontent %}
+        {% endblock %}
+    </div>
+{% endblock %}<!-- end user.html -->
+{% block endjs %}
+    <script type="text/javascript">
+        var viewUserID = {{view_user.id}};
+        askbot['data']['viewUserName'] = '{{ view_user.username|escape }}';
+        askbot['data']['viewUserId'] = {{view_user.id}};
+        askbot['urls']['edit_group_membership'] = '{% url edit_group_membership %}';
+        askbot['urls']['getGroupsList'] = '{% url get_groups_list %}';
+    </script>
+    {% if request.user|can_moderate_user(view_user) %}
+        <script type='text/javascript' src='{{"/js/jquery.form.js"|media}}'></script>
+    {% endif %}
+    <script type="text/javascript" src='{{"/js/user.js"|media}}'></script>
+    <script type='text/javascript' src='{{"/js/jquery.validate.min.js"|media}}'></script>
+    <script type="text/javascript" src='{{"/js/post.js"|media}}'></script>
+    {% block userjs %}
+    {% endblock %}
+{% endblock %}
+{% block sidebar %}
+<div class="box">
+    {{ settings.SIDEBAR_PROFILE_HEADER }}
+</div>
+<div class="box">
+    {{ settings.SIDEBAR_PROFILE_FOOTER }}
+</div>
+{% endblock %}
+<!-- end of user.html -->

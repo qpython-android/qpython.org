@@ -1,0 +1,96 @@
+{% macro quoted_post(
+        post = None,
+        quote_level = 0,
+        format = None,
+        is_leaf_post = False
+    )
+%}
+    {% spaceless %}
+        {{ start_quote(quote_level) }}
+            {% set author = post.author.username|escape %}
+            {% if post.post_type == 'question' %}
+            <p style="font-size:10px; font-weight: bold;">
+                    {% if format == 'parent_subthread' %}
+                        {% if is_leaf_post %}
+                            {% trans %}Question by {{ author }}:{% endtrans %}
+                        {% else %}
+                            {% trans -%}
+                                In reply to {{ author }}'s question:
+                            {%- endtrans %}
+                        {% endif %}
+                    {% else %}
+                        {% trans %}Question :{% endtrans %}
+                    {% endif %}
+                    {{ post.thread.title }}
+            </p>
+            <p style="font-size:10px; font-weight: bold;">
+                    {% if format != 'parent_subthread' %}
+                        {% trans %}Asked by {{ author }}:{% endtrans %}
+                    {% endif %}
+            </p>
+                {% set tag_names = post.get_tag_names() %}
+                {% if tag_names %}
+                <p style="font-size:10px; font-style:italic;">
+                    {% trans %}Tags:{% endtrans %}
+                    {{ tag_names|join(', ') }}.
+                </p>
+                {% endif %}
+            {% elif post.post_type == 'answer' %}
+                <p style="font-size:10px; font-weight: bold;">
+                    {% if format == 'parent_subthread' %}
+                        {% if is_leaf_post %}
+                            {% trans -%}
+                                {{ author }}'s answer:
+                            {%- endtrans %}
+                        {% else %}
+                            {% trans -%}
+                                In reply to {{ author }}'s answer:
+                            {%- endtrans %}
+                        {% endif %}
+                    {% else %}
+                        {% trans %}Answered by {{ author }}:{% endtrans %}
+                    {% endif %}
+                </p>
+            {% else %}
+                <p style="font-size:10px; font-weight: bold;">
+                    {% if format == 'parent_subthread' %}
+                        {% if is_leaf_post %}
+                            {% trans -%}
+                                {{ author }}'s comment:
+                            {%- endtrans %}
+                        {% else %}
+                            {% trans -%}
+                                In reply to {{ author }}'s comment:
+                            {%- endtrans %}
+                        {% endif %}
+                    {% else %}
+                        {% trans author -%}
+                            Commented by {{ author }}:
+                        {%- endtrans %}
+                    {% endif %}
+                </p>
+            {% endif %}
+            {{ post.html }}
+        {{ end_quote(quote_level) }}
+    {% endspaceless %}
+{% endmacro %}
+
+{% macro start_quote(level = 0) %}
+    {% for number in range(level) %}
+        <div style="padding-left:5px; border-left: 2px solid #aaa;">
+    {% endfor %}
+{% endmacro %}
+
+{% macro end_quote(level = 0) %}
+    {% for number in range(level) %}
+        </div>
+    {% endfor %}
+{% endmacro %}
+
+{% macro heading_style() %}
+font-size:14px;font-weight:bold;margin-bottom:0px;
+{% endmacro %}
+
+{% macro fine_print_style() %}
+font-size:8px;color:#aaa;margin-bottom:0px;
+{% endmacro %}

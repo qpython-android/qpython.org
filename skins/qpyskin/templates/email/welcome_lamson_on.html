@@ -1,0 +1,20 @@
+{% extends "email/base_mail.html"%}
+{% import "email/macros.html" as macros %}
+{%block title%}{% trans %}Welcome to {{ site_name }}!{% endtrans %}{% endblock %}
+{%block headline%}{% trans %}Welcome to {{ site_name }}!{% endtrans %}{% endblock %}
+
+{%block content %}
+{# site_name - is short name of the site, email_code - address portion
+of the reply email used for this message, we scan to the last appearance
+of the email code to detect the response signature that will appear under #}
+<p>
+    {% trans %}Important: <em>Please reply</em> to this message, without editing it. We need this to determine your email signature and that the email address is valid and was typed correctly.{% endtrans %}
+</p>
+<p>
+    {% trans %}Until we receive the response from you, you will not be able ask or answer questions on {{ site_name }} by email.{% endtrans %}
+</p>
+{% endblock %}
+{%block footer %}
+{% include "email/footer.html" %}
+<p style="{{ macros.fine_print_style() }}">{{ email_code }}</p>{# important #}
+{% endblock %}

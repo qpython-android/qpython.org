@@ -1,0 +1,245 @@
+{% extends "two_column_body.html" %}
+<!-- question.html -->
+{% block title %}{% spaceless %}{{ question.get_question_title()|escape }}{% endspaceless %}{% endblock %}
+{% block meta_description %}
+        <meta name="description" content="{{question.summary|striptags|escape}}" />
+{% endblock %}
+{% block keywords %}{{thread.tagname_meta_generator()}}{% endblock %}
+{% block forestyle %}
+    <link rel="canonical" href="{{settings.APP_URL|strip_path}}{{question.get_absolute_url()}}" />
+    <link rel="stylesheet" type="text/css" href="{{'/js/wmd/wmd.css'|media}}" />
+    <link href="{{'/bootstrap/css/bootstrap.css'|media}}" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block forejs %}
+    <script type="text/javascript">
+        /*<![CDATA[*/
+        //below is pure cross-browser javascript, no jQuery
+        askbot['data']['userIsThreadModerator'] = {% if user_is_thread_moderator %}true{% else %}false{% endif %};
+        (function(){
+            var data = askbot['data'];
+            if (data['userIsAuthenticated']){
+                var votes = {};
+                {% for post_id in user_votes %}
+                    votes['{{post_id}}'] = {{user_votes[post_id]}};
+                {% endfor %}
+                data['user_votes'] = votes;
+                var posts = {};
+                {% for post_id in user_post_id_list %}
+                    posts['{{post_id}}'] = 1;
+                {% endfor %}
+                data['user_posts'] = posts;
+            }
+
+            function render_vote_buttons(post_type, post_id){
+                var upvote_btn = document.getElementById(
+                    post_type + '-img-upvote-' + post_id
+                );
+                var downvote_btn = document.getElementById(
+                    post_type + '-img-downvote-' + post_id
+                );
+                if (data['userIsAuthenticated']){
+                    if (post_id in data['user_votes']){
+                        var vote = data['user_votes'][post_id];
+                        if (vote == -1){
+                            var btn = downvote_btn;
+                        } else if (vote == 1){
+                            var btn = upvote_btn;
+                        } else {
+                            return;
+                        }
+                        if (post_type == 'comment'){
+                            btn.className = btn.className + ' upvoted';
+                        } else {
+                            btn.className = btn.className + ' on';
+                        }
+                    }
+                }
+            }
+
+            function hide_convert_answer_links(post_id){
+                var answer_convert_id = 'post-' + post_id + '-convert';
+                var convert_answer = document.getElementById(answer_convert_id);
+                if (data['userIsAdminOrMod']){
+                    var answer_id = 'post-id-' + post_id;
+                    var answer_container = document.getElementById(answer_id);
+                    var answer_element= answer_container.getElementsByClassName('answer-body')[0].children[1];
+                    if (answer_element.textContent.length > 300){
+                        convert_answer.parentNode.removeChild(convert_answer);
+                    }
+                } else{
+                    convert_answer.parentNode.removeChild(convert_answer);
+                }
+            }
+
+            function hidePublishAnswerLink(postId) {
+                if (data['userIsThreadModerator'] === false) {
+                    //hide publish/unpublish answer links
+                    var answerId = 'post-' + postId + '-publish';
+                    var pubBtn = document.getElementById(answerId);
+                    pubBtn.parentNode.removeChild(pubBtn);
+                }
+            }
+
+            function render_post_controls(post_id){
+                if (data['userIsAdminOrMod']){
+                    return;//all remaining functions stay on
+                }
+                if (data['user_posts'] === undefined) {
+                    return;
+                }
+                if (post_id in data['user_posts']){
+                    //todo: remove edit button from older comments
+                    return;//same here
+                }
+                if (//maybe remove "delete" button
+                    data['userReputation'] < 
+                    {{settings.MIN_REP_TO_DELETE_OTHERS_COMMENTS}}
+                ) {
+                    var delete_btn = document.getElementById(
+                        'post-' + post_id + '-delete'
+                    );
+                    delete_btn.parentNode.removeChild(delete_btn);
+                }
+                if (//maybe remove "edit" button
+                    data['userReputation'] <
+                    {{settings.MIN_REP_TO_EDIT_OTHERS_POSTS}}
+                ){
+                    var edit_btn = document.getElementById(
+                        'post-' + post_id + '-edit'
+                    )
+                    edit_btn.parentNode.removeChild(edit_btn);
+                }
+                if (//maybe remove retag button
+                    data['userReputation'] <
+                    {{settings.MIN_REP_TO_RETAG_OTHERS_QUESTIONS}}
+                ){
+                    var retag_btn = document.getElementById('retag');
+                    retag_btn.parentNode.removeChild(retag_btn);
+                }
+            }
+            function render_add_comment_button(post_id, extra_comment_count){
+                var can_add = false;
+                if (data['user_posts'] === undefined) {
+                    return;
+                }
+                {% if user_can_post_comment %}
+                    can_add = true;
+                {% else %}
+                    if (data['user_posts'] && post_id in data['user_posts']){
+                        can_add = true;
+                    }
+                {% endif %}
+                var add_comment_btn = document.getElementById(
+                    'add-comment-to-post-' + post_id
+                );
+                if (can_add === false){
+                    add_comment_btn.parentNode.removeChild(add_comment_btn);
+                    return;
+                }
+
+                var text = '';
+                if (extra_comment_count > 0){
+                    if (can_add){
+                        text = 
+        "{% trans %}post a comment / <strong>some</strong> more{% endtrans %}";
+                    } else {
+                        text = 
+        "{% trans %}see <strong>some</strong> more{% endtrans%}";
+                    }
+                } else {
+                    if (can_add){
+                        text = "{% trans %}post a comment{% endtrans %}";
+                    }
+                }
+                add_comment_btn.innerHTML = text;
+                //add the count
+                for (node in add_comment_btn.childNodes){
+                    if (node.nodeName === 'strong'){
+                        node.innerHTML = extra_comment_count;
+                        break;
+                    }
+                }
+            }
+            function render_add_answer_button(){
+                var add_answer_btn = document.getElementById('add-answer-btn');
+                if (askbot['data']['userIsAuthenticated']){
+                    if (askbot['data']['userId'] == {{question.author_id}}){
+                        add_answer_btn.className += ' answer-own-question';
+                        add_answer_btn.setAttribute(
+                            'value',
+                            '{% trans %}Answer Your Own Question{% endtrans %}'
+                        )
+                    } else {
+                        add_answer_btn.setAttribute(
+                           'value',
+                            '{% trans %}Post Your Answer{% endtrans %}'
+                        )
+                    }
+                } else {
+                    add_answer_btn.setAttribute(
+                        'value',
+                        '{% trans %}Login/Signup to Post{% endtrans %}'
+                    );
+                }
+            }
+
+            function hide_convert_links(){
+              if (!askbot['data']['userIsAdminOrMod']){
+                var links = document.getElementsByClassName('convert-comment');
+                for (i=0; i<links.length; i++){
+                  links[i].setAttribute('style', 'display:none;');
+                }
+              }
+            }
+            
+            askbot['functions'] = askbot['functions'] || {};
+            askbot['functions']['renderPostVoteButtons'] = render_vote_buttons;
+            askbot['functions']['renderPostControls'] = render_post_controls;
+            askbot['functions']['renderAddCommentButton'] = render_add_comment_button;
+            askbot['functions']['renderAddAnswerButton'] = render_add_answer_button;
+            askbot['functions']['hideConvertLinks'] = hide_convert_links;
+            askbot['functions']['hideConvertAnswerLinks'] = hide_convert_answer_links;
+            askbot['functions']['hidePublishAnswerLink'] = hidePublishAnswerLink;
+        })();
+        /*]]>*/
+    </script>
+{% endblock %}
+{% block content %}
+    <div>
+        {{ settings.QUESTION_PAGE_TOP_BANNER }}
+    </div>
+    {% if is_cacheable %}
+        {% cache long_time "thread-content-html" thread.id %}
+            {% include "question/content.html" %}
+        {% endcache %}
+    {% else %}
+        {% include "question/content.html" %}
+    {% endif %}
+{% endblock %}
+{% block sidebar %}
+    {% include "question/sidebar.html" %}
+{% endblock %}
+{% block endjs %}
+    {% include "question/javascript.html" %}
+    {% if settings.TAG_SOURCE == 'category-tree' %}
+        {% include "meta/category_tree_js.html" %}
+    {% endif %}
+    {#
+    <script type="text/javascript">
+        var messages = askbot['messages'];
+        messages['upvote_question'] = gettext(
+            'I like this question (click again to cancel)'
+        );
+        messages['upvote_answer'] = gettext(
+            'I like this answer (click again to cancel)'
+        );
+        messages['downvote_question'] = gettext(
+            "I don't like this question (click again to cancel)"
+        );
+        messages['downvote_answer'] = gettext(
+            "I don't like this answer (click again to cancel)"
+        );
+    </script>
+    #}
+{% endblock %}
+

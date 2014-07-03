@@ -1,0 +1,20 @@
+{% extends "email/base_mail.html"%}
+{% block title %}{% trans %}Greetings from the Q&A forum{% endtrans %},{%endblock%}
+{% block headline%}{% trans %}Greetings from the Q&A forum{% endtrans %},{%endblock%}
+
+{%block content%}
+
+<p>{% trans %}To make use of the Forum, please follow the link below:{% endtrans %}</p>
+
+<p><a href="{{validation_link}}" >{{validation_link}}</a></p>
+
+<p>{% trans %}Following the link above will help us verify your email address.{% endtrans %}</p>
+
+<p>{% trans %}If you believe that this message was sent in mistake - 
+no further action is needed. Just ignore this email, we apologize
+for any inconvenience{% endtrans %}</p>
+{%endblock%}
+
+{%block footer %}
+{% include "email/footer.html" %}
+{% endblock %}

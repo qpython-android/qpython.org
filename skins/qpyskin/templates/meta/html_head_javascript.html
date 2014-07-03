@@ -1,0 +1,34 @@
+<script type="text/javascript" src="{{"/js/modernizr.custom.js"|media }}"></script>
+<script type="text/javascript" src="{% url django.views.i18n.javascript_catalog %}"></script>
+<script type="text/javascript">
+    var askbot = {};
+    askbot['data'] = {};
+    {% if request.user.is_authenticated() %}
+        askbot['data']['userIsAuthenticated'] = true;
+        askbot['data']['userId'] = {{request.user.id}};
+        askbot['data']['userName'] = '{{ request.user.username }}';
+        askbot['data']['userIsAdminOrMod'] = {% if 
+                                                request.user.is_administrator()
+                                                or request.user.is_moderator()
+                                            %}true{% else %}false{% endif %};
+        askbot['data']['userIsAdmin'] = {% if 
+                                            request.user.is_administrator()
+                                        %}true{% else %}false{% endif %};
+        askbot['data']['userReputation'] = {{request.user.reputation}};
+    {% else %}
+        askbot['data']['userIsAuthenticated'] = false;
+        askbot['data']['userReputation'] = 0;
+    {% endif %}
+    askbot['urls'] = {};
+    askbot['settings'] = {};
+    askbot['settings']['editorType'] = '{{ settings.EDITOR_TYPE }}';
+    {% if settings.ALLOWED_UPLOAD_FILE_TYPES %}
+        askbot['settings']['allowedUploadFileTypes'] = [
+            "{{ settings.ALLOWED_UPLOAD_FILE_TYPES|join('", "')|replace('.','') }}"
+        ];
+    {% else %}
+        askbot['settings']['allowedUploadFileTypes'] = [];
+    {% endif %}
+    askbot['messages'] = {};
+</script>
+{# avoid adding javascript here so that pages load faster #}

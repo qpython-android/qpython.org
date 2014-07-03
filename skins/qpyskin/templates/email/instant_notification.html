@@ -1,0 +1,18 @@
+{% extends "email/base_mail.html"%}
+
+{%block content %}
+{{ reply_separator }}
+<div>{{ content_preview }}</div>
+{% trans %}
+<p style="font-size:10px; font-style:italic;">
+Please note - you can easily <a href="{{user_subscriptions_url}}">change</a>
+how often you receive these notifications or unsubscribe. Thank you for your interest in our forum!</p>
+{% endtrans %}
+{%endblock%}
+
+{%block footer %}
+{% include "email/footer.html" %}
+{% if can_reply %}
+<p style="font-size:8px;color:#aaa">{{reply_address}}</p>
+{%endif%}
+{%endblock%}

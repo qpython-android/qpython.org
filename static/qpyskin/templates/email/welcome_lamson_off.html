@@ -1,0 +1,15 @@
+{% extends "email/base_mail.html" %}
+{% import "email/macros.html" as macros %}
+{# site_name - is short name of the site, email_code - address portion
+of the reply email used for this message, we scan to the last appearance
+of the email code to detect the response signature that will appear under #}
+{%block title%} {% trans %}Welcome to {{ site_name }}!{% endtrans %} {%endblock%}
+{%block headline%} {% trans %}Welcome to {{ site_name }}!{% endtrans %} {%endblock%}
+{%block content%}
+<p>
+    {% trans %}We look forward to your Questions!{% endtrans %}
+</p>
+{%endblock%}
+{%block footer %}
+{% include "email/footer.html" %}
+{%endblock%}

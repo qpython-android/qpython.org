@@ -1,0 +1,26 @@
+<script type='text/javascript'>
+    askbot['functions'] = askbot['functions'] || {};
+    askbot['functions']['initCategoryTree'] = function(){
+        var sel_elems = $('.category-selector');
+        if (sel_elems.length > 0) {
+            var selector = new CategorySelector();
+            selector.setData(JSON.parse("{{category_tree_data|escapejs}}"));
+            selector.decorate(sel_elems);
+            selector.setState('select');
+
+            var tag_editor = new TagEditor();
+            tag_editor.decorate($('.tag-editor'));
+            {% if page_class == 'question-page' %}
+                {% for tag_name in question.get_tag_names() %}
+                    tag_editor.addTag('{{ tag_name }}');
+                {% endfor %}
+            {% endif %}
+            selector.setSelectHandler(tag_editor.getAddTagHandler());
+            return selector;
+        }
+    };
+    askbot['functions']['initCategoryTree']();
+    askbot['urls']['add_tag_category'] = '{% url add_tag_category %}';
+    askbot['urls']['rename_tag'] = '{% url rename_tag %}';
+    askbot['urls']['delete_tag'] = '{% url delete_tag %}';
+</script>

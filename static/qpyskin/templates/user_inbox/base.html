@@ -1,0 +1,65 @@
+{% extends "user_profile/user.html" %}
+{% block before_css %}
+    <link href="{{'/bootstrap/css/bootstrap.css'|media}}" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block profilesection %}
+    {% trans %}inbox{% endtrans %}
+{% endblock %}
+{% block usercontent %}
+<div style="padding-top:5px;font-size:13px;">
+    {% set re_count = request.user.new_response_count +
+            request.user.seen_response_count
+    %}
+    <div id="re_sections">
+        {% trans %}Sections:{% endtrans %}
+        {% set sep = joiner('|') %}
+        {#{ sep() }}
+        <a href="{{request.user.get_absolute_url()}}?sort=inbox&section=messages"
+            {% if inbox_section == 'messages' %}class="on"{% endif %}
+        >{% trans %}messages{% endtrans %}</a>#}
+        {% if re_count > 0 %}{{ sep() }}
+            <a href="{{request.user.get_absolute_url()}}?sort=inbox&section=forum"
+                {% if inbox_section == 'forum' %}class="on"{% endif %}
+            >
+                {% trans %}forum responses ({{re_count}}){% endtrans -%}
+            </a>
+        {% endif %}
+        {% if flags_count > 0 %}{{ sep() }}
+            <a href="{{request.user.get_absolute_url()}}?sort=inbox&section=flags"
+                {% if inbox_section == 'flags' %}class="on"{% endif %}
+            >
+                {% trans %}flagged items ({{flags_count}}){% endtrans %}
+            </a>
+        {% endif %}
+        {% if group_join_requests_count %}{{ sep() }}
+        <a href="{{request.user.get_absolute_url()}}?sort=inbox&section=join_requests"
+            {% if inbox_section == 'join_requests' %}class="on"{% endif %}
+        >
+            {% trans %}group join requests{% endtrans %}
+        </a>
+        {% endif %}
+    </div>
+    {% block inbox_content %}
+    {% endblock %}
+</div>
+{% endblock %}
+{% block userjs %}
+    <script type="text/javascript">
+        var askbot = askbot || {};
+        askbot['urls'] = askbot['urls'] || {};
+        askbot['urls']['manageInbox'] = '{% url manage_inbox %}';
+        askbot['urls']['save_post_reject_reason'] = '{% url save_post_reject_reason %}';
+        askbot['urls']['delete_post_reject_reason'] = '{% url delete_post_reject_reason %}';
+        {% if request.user.is_administrator_or_moderator() %}
+            askbot['data']['postRejectReasons'] = [
+                {% for reason in post_reject_reasons %}
+                {'id': {{reason.id}}, 'title': '{{reason.title|escapejs}}'},
+                {% endfor %}
+            ];
+        {% endif %}
+        $(document).ready(function(){
+            $('body').addClass('inbox-{{ inbox_section }}');
+            setup_inbox();
+        });
+    </script>
+{% endblock %}

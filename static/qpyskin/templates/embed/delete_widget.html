@@ -1,0 +1,14 @@
+{% extends "one_column_body.html" %}
+<!-- create_ask_widget.html -->
+{% block title %}Delete {{widget_name|capitalize}} Widget{% endblock %}
+{% block content %}
+<h1>Are you sure that you cant to delete this {{widget_name|capitalize}}Widget?</h1>
+<br/>
+<strong>Warning: This could break the widgets on sites that currently use this widget please make sure that you don't use the widget in other sites</strong>
+<form action="." method="POST">
+  <p><input type='submit' value='Delete' /> <a href="{% url list_widgets widget_name %}">Go Back</a></p>
+</form>
+{% endblock %}
+{% block endjs %}
+{% endblock %}
+

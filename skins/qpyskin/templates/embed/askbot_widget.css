@@ -1,0 +1,38 @@
+#{{variable_name}} {
+     visibility: hidden;
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     width:100%;
+     height:100%;
+     text-align:center;
+     z-index: 99999;
+}
+
+#{{variable_name}} div{
+     width:600px;
+     {%if widget.include_text_field%}
+     {% if editor_type == 'markdown' %}
+     height:520px;
+     {%else%}
+     height:520px;
+     {%endif%}
+     {%else%}
+     height:220px;
+     {%endif%}
+     margin: 100px auto;
+     background-color: #fff;
+     border:1px solid #000;
+     padding:15px;
+     padding-left: 10px;
+     text-align: right;
+}
+
+#{{variable_name}} a{
+     padding:5px;
+}
+
+#{{variable_name}} iframe{
+     width:600px;
+     height:500px;
+}

@@ -1,0 +1,22 @@
+<!-- question_edit_tips.html -->
+<div id ="tips" class="box">
+    <h2>{% trans %}Tips{% endtrans %}</h2>
+    <ul>
+        <li> <b>{% trans %}ask a question interesting to this community{% endtrans %}</b>
+        </li>
+        <li>
+            {% trans %}provide enough details{% endtrans %}
+        </li>
+        <li>
+            {% trans %}be clear and concise{% endtrans %}
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+<!-- will be change to a popup windows
+        <a href="{% url faq %}" target="_blank" title="{% trans %}see frequently asked questions{% endtrans %}">{% trans %}FAQ{% endtrans %} »</a>
+-->
+    </p>
+</div>
+{% if settings.EDITOR_TYPE == 'markdown' %}
+    {% include "/widgets/markdown_help.html" %}
+{% endif %}

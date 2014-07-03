@@ -1,0 +1,112 @@
+{% extends "one_column_body.html" %}
+{% block title %}{% spaceless %}{% trans %}Change Email{% endtrans %}{% endspaceless %}{% endblock %}
+{% block content %}
+<!-- changeemail.html action_type={{action_type}}-->
+{% if action_type=="change" %}
+    <h1>
+        {% if user.email %}
+            {% trans %}Change Email{% endtrans %}
+        {% else %}
+            {% trans %}Save your email address{% endtrans %}
+        {% endif %}
+    </h1>
+    <p class="message">
+        {% if user.email %}
+            {% trans %}<span class=\"strong big\">Enter your new email into the box below</span> if 
+you'd like to use another email for <strong>update subscriptions</strong>.
+<br>Currently you are using <strong>%(email)s</strong>{% endtrans %}
+        {% else %}
+            {% trans %}<span class='strong big'>Please enter your email address in the box below.</span>
+Valid email address is required on this Q&amp;A forum. If you like, 
+you can <strong>receive updates</strong> on interesting questions or entire
+forum via email. Also, your email is used to create a unique 
+<a href='%(gravatar_faq_url)s'><strong>gravatar</strong></a> image for your
+account. Email addresses are never shown or otherwise shared with anybody
+else.{% endtrans %}
+        {% endif %}
+    </p>
+    {% if msg %}
+    <p class="error">{{ msg }}</p>
+    {% endif %}
+    <div class="aligned">
+        <form action="." method="post" accept-charset="utf-8">{% csrf_token %}
+            {% if next %}
+                <input type="hidden" name="next" value="{{next}}"/>
+            {% endif %}
+            <div class="form-row-vertical">
+                <label for="id_email">
+                {%- if user.email %}{% trans %}<strong>Your new Email:</strong> 
+(will <strong>not</strong> be shown to anyone, must be valid){% endtrans -%}
+                {%- else -%}
+                    {%- trans %}<strong>Your Email</strong> (<i>must be valid, never shown to others</i>){% endtrans -%}
+                {%- endif %}
+                {% if form.email.errors %}
+                <p class="error">{{form.email.errors|join(", ")}}</p>
+                {% endif %}
+                {{ form.email }}
+            </div>
+            <div class="submit-row">
+                <input class="submit" type="submit" name="change_email" value="{% if user.email %}{% trans %}Change Email{% endtrans %}{% else %}{% trans %}Save Email{% endtrans %}{% endif %}">
+                {% if user.email %}
+                <input class="submit" type="submit" name="cancel" value="{% trans %}Cancel{% endtrans %}">
+                {% endif %}
+            </div>
+        </form>
+    </div>
+{% elif action_type=="validate" %}
+    <div id="main-bar" class="headNormal">
+        {% trans %}Validate email{% endtrans %}
+    </div>
+    <p class="message">
+        {% trans %}<span class=\"strong big\">An email with a validation link has been sent to 
+%(email)s.</span> Please <strong>follow the emailed link</strong> with your 
+web browser. Email validation is necessary to help insure the proper use of 
+email on <span class=\"orange\">Q&amp;A</span>. If you would like to use 
+<strong>another email</strong>, please <a 
+href='%(change_email_url)s'><strong>change it again</strong></a>.{% endtrans %}
+    </p>
+{% elif action_type=="keep" %}
+    <div id="main-bar" class="headNormal">
+        {% trans %}Email not changed{% endtrans %}
+    </div>
+    <p class="message">
+        {% trans %}<span class=\"strong big\">Your email address %(email)s has not been changed.
+</span> If you decide to change it later - you can always do it by editing 
+it in your user profile or by using the <a 
+href='%(change_email_url)s'><strong>previous form</strong></a> again.{% endtrans %}
+    </p>
+{% elif action_type=="done_novalidate" %}
+    <div id="main-bar" class="headNormal">
+        {% trans %}Email changed{% endtrans %}
+    </div>
+    <p class="message">
+        {% trans %}
+<span class='big strong'>Your email address is now set to %(email)s.</span> 
+Updates on the questions that you like most will be sent to this address. 
+Email notifications are sent once a day or less frequently - only when there 
+are any news.{% endtrans %}
+    </p>
+{% elif action_type=="validation_complete" %}
+    <div id="main-bar" class="headNormal">
+        {% trans %}Email verified{% endtrans %}
+    </div>
+    <p class="message">
+        {% trans %}<span class=\"big strong\">Thank you for verifying your email!</span> Now 
+you can <strong>ask</strong> and <strong>answer</strong> questions. Also if 
+you find a very interesting question you can <strong>subscribe for the 
+updates</strong> - then will be notified about changes <strong>once a day</strong>
+or less frequently.{% endtrans %}
+    </p>
+{% elif action_type=="key_not_sent" %}
+    <div id="main-bar" class="headNormal">
+        {% trans %}Validation email not sent{% endtrans %}
+    </div>
+    <p class="message">
+        {% trans %}<span class='big strong'>Your current email address %(email)s has been 
+validated before</span> so the new key was not sent. You can <a 
+href='%(change_link)s'>change</a> email used for update subscriptions if 
+necessary.{% endtrans %}
+    </p>
+{% endif %}
+{% endblock %}
+<!-- end changeemail.html -->

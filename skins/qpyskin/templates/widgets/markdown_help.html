@@ -1,0 +1,42 @@
+<div class="box">
+    <h2>{% trans %}Markdown basics{% endtrans %}</h2>
+    <ul>
+        {% if settings.MARKUP_CODE_FRIENDLY or settings.ENABLE_MATHJAX %}
+        <li>
+            {% trans %}*italic*{% endtrans %}
+        </li>
+        <li>
+            {% trans %}**bold**{% endtrans %}
+        </li>
+        {% else %}
+        <li>
+            {% trans %}*italic* or _italic_{% endtrans %}
+        </li>
+        <li>
+            {% trans %}**bold** or __bold__{% endtrans %}
+        </li>
+        {% endif %}
+        <li>
+            <b>{% trans %}link{% endtrans %}</b>:[{% trans %}text{% endtrans %}](http://url.com/ "{% trans %}title{% endtrans %}")
+
+        </li>
+        <li>
+            <b>{% trans %}image{% endtrans %}</b>:![alt {% trans %}text{% endtrans %}](/path/img.jpg "{% trans %}title{% endtrans %}")
+
+        </li>
+        <li>
+        {% trans %}numbered list:{% endtrans %}
+            1.  Foo
+            2.  Bar
+        </li>
+        <li>
+        {% trans %}basic HTML tags are also supported{% endtrans %}
+        </li>
+    </ul>
+    <p class='info-box-follow-up-links'>
+<!-- will be change to a popup windows
+        <a href="http://en.wikipedia.org/wiki/Markdown" target="_blank">{% trans %}learn more about Markdown{% endtrans %} »</a>
+-->
+    </p>
+</div>
+<!-- end template answer_edit_tips.html -->

@@ -1,0 +1,81 @@
+{% import "macros.html" as macros %}
+{% load extra_filters_jinja %}
+{% cache 0 "scope_sort_tabs" search_tags request.user author_name scope sort query context.page language_code %}
+<a class="rss"
+    {% if feed_url %}
+    href="{{feed_url}}"
+    {% else %}
+    href="/feeds/rss/"
+    {% endif %}
+    title="{% trans %}subscribe to the questions feed{% endtrans %}"
+    >{% trans %}RSS{% endtrans %}
+</a>
+<div class="tabBar">
+    <div id="sort_tabs" class="tabsA">
+        <span class="label">{% trans %}Sort by &raquo;{% endtrans %}</span>
+        {% if show_sort_by_relevance %}
+            {% set asc_relevance_tooltip = gettext('most relevant questions') %}
+            {% set desc_relevance_tooltip = gettext('click to see most relevant questions') %}
+            {% set relevance_label = gettext('relevance') %}
+            {% if query %}
+            <a id="by_relevance"
+                {% if sort == "relevance-desc" %}
+                    href="{{ search_state.change_sort('relevance-desc').full_url() }}"
+                    class="on"
+                    title="{{asc_relevance_tooltip}}"><span>{{relevance_label}} &#9660;</span>
+                {% else %}
+                    href="{{ search_state.change_sort('relevance-desc').full_url() }}"
+                    class="off"
+                    title="{{desc_relevance_tooltip}}"><span>{{relevance_label}}</span>
+                {% endif %}
+            </a>
+            {% endif %}
+            <script type="text/javascript">
+                var sortButtonData = sortButtonData || {};
+                sortButtonData['relevance'] = {
+                    asc_tooltip: "{{asc_relevance_tooltip}}",
+                    desc_tooltip: "{{desc_relevance_tooltip}}",
+                    label: "{{relevance_label}}"
+                };
+            </script>
+        {% endif %}
+        {{macros.reversible_sort_button(
+                button_sort_criterium = 'age',
+                label = gettext('by date'),
+                asc_tooltip = gettext('click to see the oldest questions'),
+                desc_tooltip = gettext('click to see the newest questions'),
+                current_sort_method = sort,
+                search_state = search_state,
+            )
+        }}
+        {{macros.reversible_sort_button(
+                button_sort_criterium = 'activity',
+                label = gettext('by activity'),
+                asc_tooltip = gettext('click to see the least recently updated questions'),
+                desc_tooltip = gettext('click to see the most recently updated questions'),
+                current_sort_method = sort,
+                search_state = search_state,
+            )
+        }}
+        {{macros.reversible_sort_button(
+                button_sort_criterium = 'answers',
+                label = gettext('by answers'),
+                asc_tooltip = gettext('click to see the least answered questions'),
+                desc_tooltip = gettext('click to see the most answered questions'),
+                current_sort_method = sort,
+                search_state = search_state,
+            )
+        }}
+        {{macros.reversible_sort_button(
+                button_sort_criterium = 'votes',
+                label = gettext('by votes'),
+                asc_tooltip = gettext('click to see least voted questions'),
+                desc_tooltip = gettext('click to see most voted questions'),
+                current_sort_method = sort,
+                search_state = search_state,
+            )
+        }}
+    </div>
+</div>
+
+{% endcache %}

@@ -1,0 +1,69 @@
+{#<span class="action-link swap-qa">
+    <a id="swap-question-with-answer-{{answer.id}}">{% trans %}swap with question{% endtrans %}</a>
+</span>uncomment if needed#}
+<span class="action-link">
+    <a  class="permant-link"
+        href="{{ answer.get_absolute_url(question_post=question) }}"
+        title="{% trans %}permanent link{% endtrans %}">
+        {% trans %}link{% endtrans %}
+    </a>
+</span>
+<span 
+    id="post-{{answer.id}}-publish"
+    class="action-link"
+>
+    {% if answer.id in published_answer_ids %}
+        <a 
+            class="answer-unpublish"
+            data-answer-id="{{ answer.id }}"
+        >{% trans %}unpublish{% endtrans %}</a>
+    {% else %}
+        <a 
+            class="answer-publish"
+            data-answer-id="{{ answer.id}}"
+        >{% trans %}publish{% endtrans %}</a>
+    {% endif %}
+</span>
+<span id='post-{{answer.id}}-delete' class="action-link delete-post">
+    <a class="question-delete"
+    >{% if answer.deleted %}{% trans %}undelete{% endtrans %}{% else %}{% trans %}delete{% endtrans %}{% endif %}</a>
+</span>
+{% if answer.offensive_flag_count > 0 %}
+<span 
+    id="answer-offensive-remove-flag-{{ answer.id }}"
+    class="action-link offensive-flag"
+    title="{% trans %}remove offensive flag{% endtrans %}"
+>
+    <a class="question-flag">{% trans %}remove flag{% endtrans %}</a>
+</span>
+<span 
+    id="answer-offensive-flag-{{ answer.id }}"
+    class="action-link offensive-flag"
+    title="{% trans %}report as offensive (i.e containing spam, advertising, malicious text, etc.){% endtrans %}"
+>
+    <a class="question-flag">{% trans %}flag offensive{% endtrans %} ({{ answer.offensive_flag_count }})</a>
+</span>
+{% else %}
+<span 
+    id="answer-offensive-flag-{{ answer.id }}"
+    class="action-link offensive-flag"
+    title="{% trans %}report as offensive (i.e containing spam, advertising, malicious text, etc.){% endtrans %}"
+>
+    <a class="question-flag">{% trans %}flag offensive{% endtrans %}</a>
+</span>
+{% endif %}
+<span id='post-{{answer.id}}-edit' class="action-link">
+    <a class="question-edit" href="{% url edit_answer answer.id %}">{% trans %}edit{% endtrans %}</a>
+</span>
+<span id='post-{{answer.id}}-convert' class="action-link">
+  <form class="answer-convert" action="{% url answer_to_comment %}" method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="answer_id" id="id_answer_id" value="{{answer.id}}"/>
+    <input type="submit" name="" value="{% trans %}convert to comment{% endtrans %}"/>
+  </form>
+</span>
+<script type="text/javascript">
+    askbot['functions']['hideConvertAnswerLinks']('{{ answer.id }}');
+    askbot['functions']['hidePublishAnswerLink']('{{ answer.id }}');
+    askbot['functions']['renderPostControls']('{{ answer.id }}');
+</script>

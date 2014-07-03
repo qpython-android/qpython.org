@@ -1,0 +1,12 @@
+{% extends "email/base_mail.html"%}
+{%block headline%}{% trans %} Your post was rejected. {% endtrans %}{%endblock%}
+{%block title%}{% trans %} Your post was rejected. {% endtrans %}{%endblock%}
+{%block content %}
+<p>{% trans %}Your post (copied in the end), was rejected for the following reason:{% endtrans %}</p>,
+<p>{{reject_reason|safe}}</p>
+<p>{% trans %}Here is your original post{% endtrans %}</p>
+<p>{{post|safe}}</p>
+{% endblock %}
+{%block footer %}
+{% include "email/footer.html" %}
+{% endblock %}

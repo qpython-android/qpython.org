@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- template widget_base.html -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+    {% spaceless %}
+    <head>
+        {% include "meta/html_head_javascript.html" %}
+        {% block before_css %}{% endblock %}
+        {% block forestyle %}{% endblock %}
+        {% block forejs %}{% endblock %}
+    </head>
+    {% endspaceless %}
+    <body class="lang-{{settings.LANGUAGE_CODE}}">
+        {% block body%}
+        {% endblock %}
+        {% block content%}
+        {% endblock %}
+        {% include "meta/bottom_scripts.html" %}
+        {% block endjs %}
+        {% endblock %}
+    </body>
+</html>
+<!-- end template widget_base.html -->

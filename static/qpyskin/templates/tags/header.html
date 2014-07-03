@@ -1,0 +1,38 @@
+<div id="content-header">
+    {% if page_title %}
+            <h1 class="section-title">{{ page_title }}</h1>
+    {% else %}
+        {% if stag %}
+            <h1 class="section-title">{% trans %}Tags, matching "{{ stag }}"{% endtrans %}</h1>
+        {% else %}
+            <h1 class="section-title">{% trans %}Tags{% endtrans %}</h1>
+        {% endif %}
+    {% endif %}
+    <div class="tabBar tabBar-tags">
+        <div class="tabsA">
+            <span class="label">{% trans %}Sort by &raquo;{% endtrans %}</span>
+            <a
+                id="sort_name"
+                href="{% url tags %}?sort=name"
+                {% if tab_id == 'name' %}class="on"{% endif %}
+                title="{% trans %}sorted alphabetically{% endtrans %}"
+            ><span>{% trans %}by name{% endtrans %}</span></a>
+            <a
+                id="sort_used"
+                href="{% url tags %}?sort=used"
+                {% if tab_id == 'used' %}class="on"{% endif %}
+                title="{% trans %}sorted by frequency of tag use{% endtrans %}"
+            ><span>{% trans %}by popularity{% endtrans %}</span></a>
+            {% if settings.ENABLE_TAG_MODERATION %}
+                {% if request.user.is_authenticated() and request.user.is_administrator_or_moderator() %}
+                    <a 
+                        href="{% url list_suggested_tags %}"
+                        {% if tab_id == 'suggested' %}class="on"{% endif %}
+                        title="{% trans %}suggested{% endtrans %}"
+                    ><span>{% trans %}suggested{% endtrans %}</span></a>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>

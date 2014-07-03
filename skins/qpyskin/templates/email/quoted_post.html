@@ -1,0 +1,5 @@
+{% from "email/macros.html" import quoted_post %}
+{{ quoted_post(
+        post, quote_level, is_leaf_post = is_leaf_post, format = format
+    )
+}}

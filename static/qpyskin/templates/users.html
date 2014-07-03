@@ -1,0 +1,146 @@
+{% extends "two_column_body.html" %}
+{% import "macros.html" as macros %}
+<!-- users.html -->
+{% block title %}{% spaceless %}{% trans %}Users{% endtrans %}{% endspaceless %}{% endblock %}
+{% block forestyle %}
+    <link rel="stylesheet" type="text/css" href="{{"/js/wmd/wmd.css"|media}}" />
+{% endblock %}
+{% block content %}
+<div id="content-header">
+    <h1 class="section-title">
+    {% if group %}
+        {% trans name = group.name|replace('-', ' ')|escape %}Users in group {{name}}{% endtrans %}
+    {% else %}
+        {% trans %}Users{% endtrans %}
+    {% endif %}
+    </h1>
+    <div class="tabBar">
+        <div class="tabsA">
+        {#% if settings.GROUPS_ENABLED and user_groups %}
+            <span class="label">{% trans %}Select/Sort by &raquo;{% endtrans %}</span>
+            {% for a_group in user_groups %}
+                <a 
+                    href="{% url users_by_group group_id=a_group.id, group_slug=a_group.name|slugify %}"
+                    {% if group.name == a_group.name  %}class="on"{% endif %}
+                    title="{% trans name=a_group.name|escape %}people in group {{name}}{% endtrans %}"
+                ><span>{{ a_group.name|replace('-',' ')|escape }}</span></a>
+            {% endfor %}
+        {% else %#}
+            <span class="label">{% trans %}Sort by &raquo;{% endtrans %}</span>
+        {#% endif %#}
+            {% if settings.KARMA_MODE == 'public' %}
+            <a 
+                id="sort_reputation"
+                href="{{ request.path }}?sort=reputation"
+                {% if tab_id == 'reputation' %}class="on"{% endif %}
+                title="{% trans %}see people with the highest reputation{% endtrans %}"
+            ><span>{% trans %}karma{% endtrans %}</span></a>
+            {% endif %}
+            <a 
+                id="sort_newest"
+                href="{{ request.path }}?sort=newest"
+                {% if tab_id == 'newest' %}class="on"{% endif %}
+                class="off" title="{% trans %}see people who joined most recently{% endtrans %}"
+            ><span>{% trans %}recent{% endtrans %}</span></a>
+            <a 
+                id="sort_last"
+                href="{{ request.path }}?sort=last"
+                {% if tab_id == 'last' %}class="on"{% endif %}
+                class="off" title="{% trans %}see people who joined the site first{% endtrans %}"
+            ><span>{% trans %}oldest{% endtrans %}<span></a>
+            <a 
+                id="sort_user"
+                href="{{ request.path }}?sort=user"
+                {% if tab_id == 'user' %}class="on"{% endif %}
+                title="{% trans %}see people sorted by name{% endtrans %}"
+            ><span>{% trans %}by username{% endtrans %}</span></a>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+{% if search_query %}
+    <p>{% trans %}users matching query {{search_query}}:{% endtrans %}</p>
+{% endif %}
+{% if not users.object_list %}
+    <p><span>{% trans %}Nothing found.{% endtrans %}</span></p>
+{% endif %}
+{{ macros.user_list(
+        users.object_list, 
+        karma_mode = settings.KARMA_MODE, badges_mode = settings.BADGES_MODE
+    )
+}}
+<div class="pager">
+    {{ macros.paginator(paginator_context) }}
+</div>              
+{% endblock %}
+{% block sidebar %}
+    {% if group %}
+        {# this widget takes variables: group, user_can_join_group, user_is_group_member #}
+        {% include "widgets/group_info.html" %}
+    {% endif %}
+{% endblock %}
+{% block endjs %}
+    <script type='text/javascript'>
+        var Attacklab = Attacklab || {};
+        Attacklab.wmd = 1;{# a trick to launch wmd manually #}
+        askbot['urls']['upload'] = '{% url upload %}';
+        askbot['urls']['load_object_description'] = '{% url load_object_description %}';
+        askbot['urls']['save_object_description'] = '{% url save_object_description %}';
+        askbot['urls']['save_group_logo_url'] = '{% url save_group_logo_url %}';
+        askbot['urls']['delete_group_logo_url'] = '{% url delete_group_logo %}';
+        askbot['urls']['join_or_leave_group'] = '{% url join_or_leave_group %}';
+    </script>
+    <script type='text/javascript' src='{{"/js/editor.js"|media}}'></script>
+    <script type='text/javascript' src='{{"/js/wmd/showdown.js"|media}}'></script>
+    <script type='text/javascript' src='{{"/js/wmd/wmd.js"|media}}'></script>
+    <script type='text/javascript' src='{{"/js/jquery.validate.min.js"|media}}'></script>
+    <script src='{{"/js/post.js"|media}}' type='text/javascript'></script>
+    <script type="text/javascript">
+        //todo move javascript out
+        {% if settings.ENABLE_MATHJAX or settings.MARKUP_CODE_FRIENDLY %}
+            var codeFriendlyMarkdown = true;
+        {% else %}
+            var codeFriendlyMarkdown = false;
+        {% endif %}
+        {% if group and request.user.is_authenticated() %}
+            $().ready(function(){
+                var group_join_btn = new GroupJoinButton();
+                group_join_btn.decorate($('.group-join-btn'));
+                //setup WMD editor
+                if (askbot['data']['userIsAdminOrMod'] === true){
+                    //todo: this is kind of Attacklab.init ... should not be here
+                    Attacklab.wmd = function(){
+                        Attacklab.loadEnv = function(){
+                            var mergeEnv = function(env){
+                                if(!env){
+                                    return;
+                                }
+                            
+                                for(var key in env){
+                                    Attacklab.wmd_env[key] = env[key];
+                                }
+                            };
+                            
+                            mergeEnv(Attacklab.wmd_defaults);
+                            mergeEnv(Attacklab.account_options);
+                            mergeEnv(top["wmd_options"]);
+                            Attacklab.full = true;
+                            
+                            var defaultButtons = "bold italic link blockquote code image ol ul heading hr";
+                            Attacklab.wmd_env.buttons = Attacklab.wmd_env.buttons || defaultButtons;
+                        };
+                        Attacklab.loadEnv();
+                    };
+                    Attacklab.wmd();
+                    Attacklab.wmdBase();
+                    var group_editor = new UserGroupProfileEditor();
+                    group_editor.decorate($('#group-wiki-{{group.id}}'));
+                }
+                Hilite.exact = false;
+                Hilite.elementid = "main-body";
+                Hilite.debug_referrer = location.href;
+            });
+        {% endif %}
+    </script>
+{% endblock %}
+<!-- end users.html -->

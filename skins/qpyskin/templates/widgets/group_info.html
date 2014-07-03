@@ -1,0 +1,114 @@
+{% import "macros.html" as macros %}
+<div id="group-wiki-{{group.id}}" class="box group-wiki">
+    <h2>{% trans %}Group info{% endtrans %}</h2>
+    <img class="group-logo" 
+        {% if group.logo_url %}
+            src="{{ group.logo_url }}"
+        {% else %}
+            style="display:none"
+        {% endif %}
+    />
+    <div class="content">
+        {% if group.description %}
+            {{ group.description.html }}
+        {% endif %}
+    </div>
+    <div class="clearfix"></div>
+        {{ macros.group_join_button(
+                group_id = group.id,
+                acceptance_level = user_acceptance_level,
+                membership_level = user_membership_level
+            )
+        }}
+    {% if request.user.is_authenticated() and request.user.is_administrator() %}
+    <div class="controls">
+        <a class="edit-description"
+        >{% trans %}edit description{% endtrans %}</a>
+        {% if group.logo_url %}
+            <span>|</span>
+            <a class="change-logo"
+            >{% trans %}change logo{% endtrans %}</a>
+            <span>|</span>
+            <a class="delete-logo">{% trans %}delete logo{% endtrans %}</a>
+        {% else %}
+            <span>|</span>
+            <a class="change-logo"
+            >{% trans %}add logo{% endtrans %}</a>
+        {% endif %}
+        <br/>
+        {% if group_email_moderation_enabled %}
+            <input type="checkbox"
+                id="moderate-email"
+                {% if group.moderate_email %}checked="checked"{% endif %}
+                data-toggle-url="{% url toggle_group_profile_property %}"
+            />
+            <label for="moderate-email">
+                {% trans %}moderate emailed questions{% endtrans %}
+            </label>
+            <br/>
+        {% endif %}
+
+        <input
+            type="checkbox"
+            id="moderate-answers-to-enquirers"
+            {% if group.moderate_answers_to_enquirers %}checked="checked"{% endif %}
+            data-toggle-url="{% url toggle_group_profile_property %}"
+        />
+        <label for="moderate-answers-to-enquirers">
+            {% trans %}show only selected answers to enquirers{% endtrans %}
+        </label>
+        <br/>
+
+        <label for="group-openness-selector">
+            {% trans %}How users join this group?{% endtrans %}
+        </label>
+        <br/>
+        <select 
+            id="group-openness-selector"
+            data-url="{% url set_group_openness %}"
+        >
+            {% for choice in group_openness_choices %}
+            <option 
+                {% if choice[0] == group.openness %}
+                selected="selected"
+                {% endif %}
+                value="{{choice[0]}}"
+            >{{ choice[1] }}</option>
+            {% endfor %}
+        </select>
+        <br/>
+        <input
+            type="checkbox"
+            id="vip-toggle"
+            {% if group.is_vip %}checked="checked"{% endif %}
+            data-toggle-url="{% url toggle_group_profile_property %}"
+        />
+        <label for="vip-toggle">
+            {% trans %}Make group VIP{% endtrans %}
+        </label>
+        <br/>
+
+        <a 
+            id="preapproved-emails"
+            title="{% trans %}list of email addresses of pre-approved users{% endtrans %}"
+            data-object-id="{{group.group_ptr_id}}"
+            data-model-name="Group"
+            data-property-name="preapproved_emails"
+            data-url="{% url edit_object_property_text %}"
+            data-editor-heading="{% trans %}List of preapproved email addresses{% endtrans %}"
+            data-help-text="{% trans %}Users with these email adderesses will be added to the group automatically.{% endtrans %}"
+        >{% trans %}edit preapproved emails{% endtrans %}</a>
+        <br/>
+        <a 
+            id="preapproved-email-domains"
+            title="{% trans %}list of preapproved email address domain names{% endtrans %}"
+            data-object-id="{{group.group_ptr_id}}"
+            data-model-name="Group"
+            data-property-name="preapproved_email_domains"
+            data-url="{% url edit_object_property_text %}"
+            data-editor-heading="{% trans %}List of preapproved email domain names{% endtrans %}"
+            data-help-text="{% trans %}Users whose email adderesses belong to these domains will be added to the group automatically.{% endtrans %}"
+        >{% trans %}edit preapproved email domains{% endtrans %}</a>
+    </div>
+    {% endif %}
+</div>

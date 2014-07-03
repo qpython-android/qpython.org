@@ -1,0 +1,36 @@
+{% extends "one_column_body.html" %}
+<!-- template badges.html -->
+{% block title %}{% spaceless %}{% trans %}Widgets{% endtrans %}{% endspaceless %}{% endblock %}
+{% block content %}
+<h1 class="section-title">{% trans %}Widgets{% endtrans %}</h1>
+<p>
+</p>
+<table>
+    <thead>
+        <th colspan="3">
+            {% trans %}Create and embed widgets into your sites, here a list of available widgets.{% endtrans %}
+        </th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{% trans %}Ask a question{% endtrans %}</td>
+            <td><a href="{% url create_widget 'ask' %}">{% trans %}create{% endtrans %}</a></td>
+            <td>
+                {% if ask_widgets > 0 %}
+                    <a href="{% url list_widgets 'ask' %}">{% trans %}view list{% endtrans %}</a>
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td>{% trans %}List of questions{% endtrans %}</td>
+            <td><a href="{% url create_widget 'question' %}">{% trans %}create{% endtrans %}</a></td>
+            <td>
+                {% if question_widgets > 0 %}
+                    <a href="{% url list_widgets 'question' %}">{% trans %}view list{% endtrans %}</a>
+                {% endif %}
+            </td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}
+<!-- end template badges.html -->

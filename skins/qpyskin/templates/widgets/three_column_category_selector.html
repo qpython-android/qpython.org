@@ -1,0 +1,22 @@
+{# just a skeleton for the category selector - filled by js #}
+<table class="category-selector">
+    <thead>
+        <th colspan="3">{% trans %}Categorize your question using this tag selector or entering text in tag box.{% endtrans %}
+            <a style="display:none;"
+                class='category-editor-toggle'
+                data-on-state-text='{% trans %}(done editing){% endtrans %}'
+                data-off-state-text='{% trans %}(edit categories){% endtrans %}'
+                data-on-prompt-text='{% trans %}(edit categories){% endtrans %}'
+                data-off-prompt-text='{% trans %}(done editing){% endtrans %}'
+            >{% trans %}(edit categories){% endtrans %}
+            </a>
+        </th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><ul class="select-box cat-col-0"></ul></td>
+            <td><ul class="select-box cat-col-1"></ul></td>
+            <td><ul class="select-box cat-col-2"></ul></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,14 @@
+{#<ul class="mailboxes">
+    <li><a class="inbox selected">{% trans %}Inbox{% endtrans %}</a></li>
+    <li><a class="sent">{% trans %}Sent{% endtrans %}</a></li>
+    <li><a class="trash">{% trans %}Trash{% endtrans %}</a></li>
+</ul>#}
+{% if senders %}
+<ul class="senders-list">
+    <li>{% trans %}Messages by sender:{% endtrans %}</li>
+    <li><a class="selected" data-sender-id="-1">{% trans %}all users{% endtrans %}</a></li>
+    {% for sender in senders %}
+        <li><a data-sender-id="{{ sender.id }}">{{ sender.username|escape }}</a></li>
+    {% endfor %}
+</ul>
+{% endif %}

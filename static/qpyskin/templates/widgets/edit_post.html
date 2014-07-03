@@ -1,0 +1,115 @@
+{% if edit_title %}
+    <div class="form-item">
+        <label for="id_title" ><strong>{{ post_form.title.label_tag() }}:</strong></label> <span class="form-error"></span><br/>
+        {{ post_form.title }} {{ post_form.title.errors }}
+        <div class="title-desc">
+            {{ post_form.title.help_text }}
+        </div>
+    </div>
+{% endif %}
+{% if editor_type == 'markdown' %}
+    <div class="wmd-container">
+        <div id="wmd-button-bar" class="wmd-panel"></div>
+        {{ post_form.text }}{# this element is resizable and will be wrapped by js #}
+    </div>
+{% else %}
+    <div class="wmd-container">
+        {{ post_form.media }}
+        {{ post_form.text }}
+    </div>
+    <script type="text/javascript">
+        {% if post_html %}
+            askbot['data']['editorContent'] = '{{ post_html|escapejs }}';
+        {% endif %}
+    </script>
+{% endif %}
+<div class="form-item">
+    <label for="editor" class="form-error">{{ post_form.text.errors }}</label>
+    <p class="editor-status action-status"><span></span></p>
+</div>
+{# need label element for resizable input, b/c form validation won't find span #}
+{% if post_type == 'question' %}
+    <div class="form-item">
+        {% if use_category_selector %}
+            {% include "widgets/three_column_category_selector.html" %}
+            <div class="tags-desc">{% trans %}Tags{% endtrans %}</div>
+            {% include "widgets/tag_editor.html" %}
+        {% else %}
+            {% if tags_are_required %}
+                <label for="id_tags">
+                {% if mandatory_tags %}
+                    <strong>{% trans %}tags{% endtrans %}</strong>
+                    {% trans %}, one of these is required{% endtrans %}
+                    {{
+                        tag_list_widget(
+                            mandatory_tags,
+                            make_links = False,
+                            css_class = 'clearfix'
+                        )
+                    }}
+                {% else %}
+                    <strong>{% trans %}tags:{% endtrans %}</strong> 
+                    {% trans %}(required){% endtrans %}
+                {% endif %}
+                </label>
+            {% else %}
+                <strong>{% trans %}tags:{% endtrans %}</strong>
+            {% endif %}
+            <span class="form-error">{{ post_form.tags.errors }}</span><br/>
+            {{ post_form.tags }}
+            <div class="title-desc">
+                {{ post_form.tags.help_text }}
+            </div>
+        {% endif %}
+    </div>
+{% endif %}
+{% if 'summary' in post_form['fields'] %}
+    <div class="form-item">
+        <strong>{{ post_form.summary.label_tag() }}</strong> <br/>
+        {{ post_form.summary }}
+        <div class="title-desc">
+            {{ post_form.summary.help_text }}
+        </div>
+        <div class="form-error" >{{ post_form.summary.errors }}</div>
+    </div>
+{% endif %}
+
+{% if editor_type == 'markdown' %}
+    <div class="preview-toggle">
+        <span 
+            id="pre-collapse" 
+            title="{% trans %}Toggle the real time Markdown editor preview{% endtrans %}"
+        >
+            [{% trans %}hide preview{% endtrans %}]
+        </span>
+    </div>
+    <div id="previewer" class="wmd-preview"></div>
+{% endif %}
+
+{% if user and user.is_authenticated() and user.is_administrator() %}
+    {# admin can post answers or questions on behalf of anyone. #}
+    <table class="proxy-user-info">
+        <tbody>
+            <tr><td colspan="2">
+                <label>
+                    {% trans %}To post on behalf of someone else, enter user name <strong>and</strong> email below.{% endtrans %}
+                </label>
+            </td></tr>
+            <tr>
+                <td>
+                    <div class="form-item">
+                        {{ post_form.post_author_username }}
+                    </div>
+                    <div class="form-item">
+                        {{ post_form.post_author_email }}
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <span class="form-error">{{ post_form.post_author_username.errors }}</span>
+                    <span class="form-error">{{ post_form.post_author_email.errors }}</span>
+                </td>
+        </tbody>
+    </table>
+{% endif %}

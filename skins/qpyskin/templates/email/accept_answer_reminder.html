@@ -1,0 +1,14 @@
+{% extends "email/base_mail.html"%}
+{%block title%}{{reminder_phrase}}{% endblock %}
+{%block headline%}{{reminder_phrase}}{% endblock %}
+
+{%block content %}
+<ul>
+  {% for question in questions %}
+  <li><a href="{{site_url}}{{question.get_absolute_url()}}?sort=latest">{{question.thread.title}}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}
+{%block footer %}
+{% include "email/footer.html" %}
+{% endblock %}

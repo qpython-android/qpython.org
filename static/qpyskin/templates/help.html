@@ -1,0 +1,57 @@
+{% extends "two_column_body.html" %}
+{% block title %}{% trans %}Help{% endtrans %}{% endblock %}
+{% block content %}
+<h1 class='section-title'>{% trans %}Help{% endtrans %}</h1>
+<p>
+    {% if request.user.is_authenticated() %}
+        {% trans username = request.user.username|escape %}Welcome {{username}},{% endtrans %}
+    {% else %}
+        {% trans %}Welcome,{% endtrans %}
+    {% endif %}
+</p>
+<p>
+    {% trans %}Thank you for using {{app_name}}, here is how it works.{% endtrans %}
+</p>
+<a name="content"></a>
+<h2>{% trans %}How questions, answers and comments work{% endtrans %}</h2>
+<p>
+    {% trans %}This site is for asking and answering questions, not for open-ended discussions.{% endtrans %}
+    {% trans %}We encourage everyone to use “question” space for asking and “answer” for answering.{% endtrans %}
+</p>
+<p>
+    {% trans %}Despite that, each question and answer can be commented – 
+    the comments are good for the limited discussions.{% endtrans %}
+</p>
+<a name="search"></a>
+<h2>{% trans %}Please search before asking your questions{% endtrans %}</h2>
+<p>{% trans %}Type your question in the search bar and see whether a similar question has been asked before{% endtrans %}.
+</p>
+<p>{% trans %}Search has advanced capabilities:{% endtrans %}</p>
+<ul>
+    <li>{% trans %}to search in title - enter [title: your text]{% endtrans %}</li>
+    <li>{% trans %}to search by tags - enter [tag: sometag] or #sometag{% endtrans %}</li>
+    <li>{% trans %}to search by user - enter [user: somename] or @somename or @"some name"{% endtrans %}</li>
+</ul>
+<p>{% trans %}In addition, it is possible to click on tags to add them to the search query.{% endtrans %}
+{% if settings.TAG_SEARCH_INPUT_ENABLED %}
+    {% trans %}Finally, a separate tag search box is available in the side bar of the main page, where the search tags can be entered as well{% endtrans %}
+{% endif %}
+</p>
+<p>{% trans %}<em>Important!!!</em> All search terms are combined with a logical "AND" expression - to narrow the search by adding new terms.{% endtrans %}</p>
+<a name="voting"></a>
+<h2>{% trans %}Voting{% endtrans %}</h2>
+<p>
+    {% trans %}Voting in {{app_name}} helps to select best answers and thank most helpful users.{% endtrans %}
+</p>
+<p>
+    {% trans %}Please vote when you find helpful information,
+    it really helps the {{app_name}} community.{% endtrans %}
+</p>
+<a name="other"></a>
+<h2>{% trans %}Other topics{% endtrans %}</h2>
+<p>
+    {% trans %}You can @mention users anywhere in the text to point their attention,
+    follow users and conversations and report inappropriate content by flagging it.{% endtrans %}
+</p>
+<p>{% trans %}Enjoy.{% endtrans %}</p>
+{% endblock %}

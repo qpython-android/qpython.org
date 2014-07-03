@@ -1,0 +1,4 @@
+{% import "macros.html" as macros %}
+{% for group in groups %}
+    <p>{{ macros.user_group(group) }}</p>
+{% endfor %}

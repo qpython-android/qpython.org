@@ -1,0 +1,32 @@
+<a name="{{ answer.id }}"></a>
+{% if answer.old_answer_id %}
+    {# Make old URL anchors/hashes work #}
+    <a class="old_answer_id_anchor" name="{{ answer.old_answer_id }}"></a>
+{% endif %}
+<div
+        id="post-id-{{ answer.id }}"
+        class="{{ macros.answer_classes(answer, question) }}">
+    <div class="vote-buttons">
+        {% include "question/answer_vote_buttons.html" %}
+    </div>
+    <div class="answer-table">
+
+        <div class="item-right">
+            <div class="answer-body">
+                <div class="post-update-info-container">
+                    {% include "question/answer_author_info.html" %}
+                </div>
+                {% if answer.id in published_answer_ids %}
+                    <p><strong>{% trans %}This response is published{% endtrans %}</strong></p>
+                {% endif %}
+                {{ answer.html }}
+            </div>
+            <div class="answer-controls post-controls">
+                {% include "question/answer_controls.html" %}
+            </div>
+            {% include "question/answer_comments.html" %}
+        </div>
+    </div>
+    <div class="clean"></div>
+</div>
+<div class="clean"></div>

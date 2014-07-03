@@ -1,0 +1,43 @@
+{% extends "user_inbox/base.html" %}
+{% import "macros.html" as macros %}
+{% block profilesection %}
+    {% trans %}inbox - responses{% endtrans %}
+{% endblock %}
+{% block inbox_content %}
+    <div id="re_tools">
+        <strong>{% trans %}select:{% endtrans %}</strong>
+        <a id="sel_all">{% trans %}all{% endtrans %}</a> |
+        <a id="sel_seen">{% trans %}seen{% endtrans %}</a> |
+        <a id="sel_new">{% trans %}new{% endtrans %}</a> |
+        <a id="sel_none">{% trans %}none{% endtrans %}</a><br />
+        <div class="btn-group">
+        {% if inbox_section == 'forum' %}
+            <a class="btn" id="re_mark_seen">{% trans %}mark as seen{% endtrans %}</a>
+            <a class="btn" id="re_mark_new">{% trans %}mark as new{% endtrans %}</a>
+            <a class="btn" id="re_dismiss">{% trans %}dismiss{% endtrans %}</a>
+        {% else %}
+            <a class="btn" id="re_remove_flag">{% trans %}remove flags/approve{% endtrans %}</a>
+            <a  
+                class="btn"
+                id="re_delete_post"
+            >{% trans %}delete post{% endtrans %}</a>
+        {% endif %}
+        </div>
+    </div>
+    {% include "user_profile/reject_post_dialog.html" %}
+    <div id="responses">
+    {% for response in responses %}
+        <div class="response-parent" data-response-id="{{response.id}}">
+            <p class="headline">
+                <strong>"{{ response.response_title.strip()|escape}}"</strong>
+            </p>
+            {{ macros.inbox_post_snippet(response, inbox_section) }}
+            {% for nested_response in response.nested_responses %}
+                {{ macros.inbox_post_snippet(nested_response, inbox_section) }}
+            {%endfor%}
+        </div>
+        <div class="clearfix"></div>
+    {% endfor %}
+    </div>
+    </div>
+{% endblock %}

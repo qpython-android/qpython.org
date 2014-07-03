@@ -1,0 +1,50 @@
+{% extends "user_inbox/base.html" %}
+{% import "macros.html" as macros %}
+{% block profilesection %}
+    {% trans %}inbox - group join requests{% endtrans %}
+{% endblock %}
+{% block inbox_content %}
+    <table>
+    {% for join_request in join_requests %}
+        <tr>
+            <td>{% trans 
+                    user=join_request.user,
+                    group=groups_dict[join_request.object_id].name
+                %}{{ user }} wants to join group {{ group }}{% endtrans %}
+            </td>
+            <td>{# forms with accept and reject buttons #}
+                <form action="{% url moderate_group_join_request %}" method="post"
+                >{% csrf_token %}
+                    <input 
+                        type="hidden"
+                        name="request_id"
+                        value="{{join_request.id}}"
+                    />
+                    <input type="hidden" name="action" value="approve"/>
+                    <input
+                        class="btn"
+                        type="submit"
+                        value="{% trans %}Approve{% endtrans %}"
+                    />
+                </form>
+            </td>
+            <td>
+                <form action="{% url moderate_group_join_request %}" method="post">
+                    {% csrf_token %}
+                    <input 
+                        type="hidden"
+                        name="request_id"
+                        value="{{join_request.id}}"
+                    />
+                    <input type="hidden" name="action" value="deny"/>
+                    <input
+                        class="btn"
+                        type="submit"
+                        value="{% trans %}Deny{% endtrans %}"
+                    />
+                </form>
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

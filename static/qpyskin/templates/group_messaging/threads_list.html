@@ -1,0 +1,18 @@
+<table class="threads-list">
+{% if threads %}
+    {% for thread in threads %}
+        {% set thread_data = threads_data[thread.id] %}
+        <tr class="thread-heading {{ thread_data['status'] }}"
+            data-thread-id="{{ thread.id }}"
+        >
+            <td class="senders">{{ thread_data['senders_info']|escape }}</td>
+            <td class="subject">{{ thread.headline|escape }}</td>
+            <td class="timestamp">{{ thread.last_active_at|timesince }}</td>
+        </tr>
+    {% endfor %}
+{% else %}
+    <tr>
+        <td class="empty" colspan="3">{% trans %}there are no messages yet...{% endtrans %}</td>
+    </tr>
+{% endif %}
+</table>

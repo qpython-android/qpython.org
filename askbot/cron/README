@@ -1,0 +1,5 @@
+this directory contains sample commands to be executed
+by cron 
+
+files with names ending "virtuanenv" should work under Python virtualenv system
+other files - with standard unix setup

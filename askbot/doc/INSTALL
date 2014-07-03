@@ -1,0 +1,14 @@
+Askbot is a Question and Answer (Q&A) forum whose design is inspired by StackOverflow_ 
+and YahooAnswers_ and other similar projects (to lesser extent). 
+
+Askbot is written in Python_ on top of Django_ platform and supports MySQL and PostgeSQL database backends.
+
+If you have any questions installing or tweaking askbot - please do not hesitate to ask
+at the forum_ or email to admin@askbot.org.
+
+Online documentation is available at: http://askbot.org/doc/index.html
+
+Also there is an offline copy of the documentation in askbot/doc/source
+
+Code of Askbot grew out of CNPROG_ project originally written by 
+`Mike Chen <http://cn.linkedin.com/in/mikegangchen>`_ and Sailing Cai.
