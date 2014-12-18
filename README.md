@@ -4,7 +4,7 @@ Collection all kinds of Issue about QPython self ;-)
 
 ## background
 
-- QPython is one great app. in Androif for all kinds of Pythonist
+- QPython is one great app. in Android for all kinds of Pythonist
 - base QPython we can:
 
     - Pythonic done self script working in Android mobile implementor
@@ -40,12 +40,4 @@ pls. usage github' Issue , show us u:
     - etc.
 
 
-## Other
-Besides github, you can give us feedback in http://qpython.org also.
-
-The http://QPython.org's sourcecode folks from the askbot free version(https://askbot.com/)
-
-## author
-
-- @ZoomQuiet
 
