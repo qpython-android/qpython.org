@@ -13,7 +13,7 @@ Collection all kinds of Issue about QPython self ;-)
     - Pythonic teching people enjoy Python in Android mobile implementor
     - etc.
 
-- and in fact QPython 's maker just only 4.2 guys ..
+- and in fact QPython 's maker just only 1.5 guys, welcome to join us ..
 
     - and all not full time develop for QPython
     - so means we not enough resource to managment such as:
