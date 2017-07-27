@@ -138,7 +138,7 @@ run(host='localhost', port=8080)</pre>
 <hr />
 <div style='padding:20px'></div>
 <div style='text-align:center'><button style="display:inline" type="submit" value="" class="btn_c" id="step7-btn">Donate author</button></div>
-<p style='text-align:center'>Thank you for donating, which should encourage author greatly</p>
+<p style='text-align:center'><span id='total'>0</span> pepole donate.Thank you for donating, which should encourage author greatly</p>
 <script>
 var milib;
 if (milib==undefined) {
@@ -185,6 +185,10 @@ milib.openUrl("https://m.youtube.com/results?q=python+programming&#038;sm=3");
 //milib.a8playVideoFromGW('http://www.youtube.com/watch?v=72RKMMyLxS8')
 //milib.a8playVideoFromGW('http://www.youtube.com/watch?v=N-ae8Q_7iCA')
 });
+
+var total = milib.getPurchaseNumber('quick-start');
+$('#total').html(total)
+
 });
 </script></p>
                     </div><!-- .entry-content -->
