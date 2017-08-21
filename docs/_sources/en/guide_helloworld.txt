@@ -28,10 +28,10 @@ By the way, if you're going to make your script compatible with SL4A, you should
 
 ::
 
-    try:
-        import androidhelper as android
-    except ImportError:
-        import android
+>    try:
+>        import androidhelper as android
+>    except ImportError:
+>        import android
 
 Ok, next we're creating an object `droid` (actually a class), it is necessary to call RPC functions in order to communicate with Android.
 

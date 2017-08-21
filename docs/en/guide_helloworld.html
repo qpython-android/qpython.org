@@ -128,10 +128,10 @@ data-target="#example-navbar-collapse">
 <h2>SL4A library<a class="headerlink" href="#sl4a-library" title="Permalink to this headline">¶</a></h2>
 <p>It begins with <em>import androidhelper</em> — the most useful module in QPython, which encapsulates almost all interface with Android, available in Python. Any script developed in QPython starts with this statement (at least if it claims to communicate with user). Read more about Python library <a class="reference external" href="http://docs.python.org/2.7/library/intro.html">here</a> and import statement <a class="reference external" href="http://docs.python.org/2.7/reference/simple_stmts.html#import">here</a></p>
 <p>By the way, if you&#8217;re going to make your script compatible with SL4A, you should replace the first line with the following code (and use <cite>android</cite> instead <cite>androidhelper</cite> further in the program):</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
-<span class="kn">import</span> <span class="nn">androidhelper</span> <span class="k">as</span> <span class="nn">android</span>
-<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-<span class="kn">import</span> <span class="nn">android</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;</span>    <span class="k">try</span><span class="p">:</span>
+<span class="o">&gt;</span>        <span class="kn">import</span> <span class="nn">androidhelper</span> <span class="k">as</span> <span class="nn">android</span>
+<span class="o">&gt;</span>    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+<span class="o">&gt;</span>        <span class="kn">import</span> <span class="nn">android</span>
 </pre></div>
 </div>
 <p>Ok, next we&#8217;re creating an object <cite>droid</cite> (actually a class), it is necessary to call RPC functions in order to communicate with Android.</p>
