@@ -96,8 +96,8 @@ a {
 		background: #49B300;
 		position: absolute;
 		left: 50%;
-		bottom: -15px;
 		margin-left: -6px;
+		bottom: -15px;
 		border-radius: 50%;
 	}
 	.search-box {
