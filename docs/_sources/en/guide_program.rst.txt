@@ -5,7 +5,7 @@ QPython's main features
 
 
 Why should I choose QPython
-------------------------
+------------------------------------------------
 The smartphone is becomming people's essential information & technical assitant, so an flexiable script engine could help people complete most jobs efficiently without complex development.
 
 QPython offer **an amazing developing experience**, with it's help, you could implement the program easily without complex installing IDE, compiling, package progress etc.
