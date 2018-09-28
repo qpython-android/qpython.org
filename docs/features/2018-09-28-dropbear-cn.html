@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>如何在QPython 使用 SSH &#8212; QPython 0.9 documentation</title>
+<link rel="stylesheet" href="../static/qpython_theme.css" type="text/css" />
+<link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true,
+SOURCELINK_SUFFIX: '.txt'
+};
+</script>
+<script type="text/javascript" src="../static/jquery.js"></script>
+<script type="text/javascript" src="../static/underscore.js"></script>
+<script type="text/javascript" src="../static/doctools.js"></script>
+<link rel="index" title="Index" href="../genindex.html" />
+<link rel="search" title="Search" href="../search.html" />
+<meta charset="UTF-8">
+<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+</head>
+<body>
+<div class="header doc-header">
+<div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8  index-header">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse"
+data-target="#example-navbar-collapse">
+<span class="sr-only">切换导航</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/index.html" class="logo"><img src="../static/img_logo.png"></a>
+</div>
+<ul class="header-title hidden-xs">
+<li class="header-phone-selected">
+<a href="/index.html">Home</a>
+</li>
+<li>
+<a href="/document.html" class="header-selected">Guide</a>
+<span class="header-title-selected"></span>
+</li>
+<li>
+<a href="http://edu.qpython.org/">Course</a>
+</li>
+<li>
+<a href="http://www.aipy.org">AIPY</a>
+</li>
+<li>
+<a target="_blank" href="https://github.com/qpython-android/qpython">Github</a>
+</li>
+</ul>
+<div class="search-box hidden-xs">
+<form action="../search.html">
+<input type="search" name="q" placeholder="keyword">
+<input type="hidden" name="check_keywords" value="yes" />
+<input type="hidden" name="area" value="default" />
+<button><img src="../static/ic_search.png"></button>
+</form>
+</div>
+</div>
+</div>
+<div class="row doc-content">
+<div class="content-main col-sm-offset-2 col-sm-8">
+<div class="content-wrapper col-sm-4">
+<div class="left-menu">
+<div class="doc-title hidden-xs">QPython</div>
+<div class="sidebar  collapse navbar-collapse"  id="example-navbar-collapse">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../en/guide.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../en/guide.html#programming-guide">Programming Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../en/guide.html#developer-guide">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../en/guide.html#contributor-guide">Contributor Guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../en/faq.html">FAQ</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../zhindex.html">中文用户向导</a></li>
+</ul>
+<div class="search-phone visible-xs">
+<form action="../search.html">
+<input type="search" name="q" placeholder="keyword">
+<input type="hidden" name="check_keywords" value="yes" />
+<input type="hidden" name="area" value="default" />
+<button><img src="../static/ic_search.png"></button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="content col-sm-8">
+<div class="document">
+<ul class="crumbs">
+<li><a href="../document.html">Guide</a> &raquo;</li>
+<li>如何在QPython 使用 SSH</li>
+</ul>
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="qpython-ssh">
+<h1>如何在QPython 使用 SSH<a class="headerlink" href="#qpython-ssh" title="Permalink to this headline">¶</a></h1>
+<p>近来悄悄更新了不少好玩的包，但是我最喜欢的是今天介绍的这个特性，刚被集成到QPython中的dropbear SSH工具。</p>
+<p>Dropbear SSH 是很多嵌入式linux系统首选的ssh工具，结合qpython，能让你方便地进行编程来自动管理服务器或你的手机。</p>
+<div class="section" id="id1">
+<h2>如何远程登录 你的服务器？<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<img alt="1 Dashboard 长按Terminal, 选择Shell Terminal" src="https://mmbiz.qpic.cn/mmbiz_jpg/tuObYW62d0iaJIF2ibzmISF2PBd92KzAPnZfLlIbyOglK3NOvD508VccuQafhhic036KuxGeiasAQDqb2YMDmHWo2w/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" />
+<p><em>1 Dashboard 长按Terminal, 选择Shell Terminal</em></p>
+<img alt="2 Shell中输入ssh &lt;user&gt;&#64;&lt;host&gt;" src="https://mmbiz.qpic.cn/mmbiz_jpg/tuObYW62d0iaJIF2ibzmISF2PBd92KzAPncIibPKFhA6RtwC5tQyia66nDWcnccv8aSrZJDNKzBiaduvy23rib1oLv5A/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" />
+<p><em>2 Shell中输入ssh &lt;user&gt;&#64;&lt;host&gt;</em></p>
+<img alt="3 已经登录到了远端服务器" src="https://mmbiz.qpic.cn/mmbiz_jpg/tuObYW62d0iaJIF2ibzmISF2PBd92KzAPnEpC5zNbJJejeGCvnNgEIHDKLX9S72GjVybShlqvtzvPATsh4Fg13Kw/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" />
+<p><em>3 已经登录到了远端服务器</em></p>
+<p>除了从手机上登录服务器外，你还可以登录到你的手机。</p>
+</div>
+<div class="section" id="id2">
+<h2>如何登录到你的手机?<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>这个功能适合高级玩家，因为一些权限的问题，在手机上开sshd服务需要root权限。
+第一次使用，需要从shell terminal中进行下初始化操作</p>
+<p><a href="#id3"><span class="problematic" id="id4">``</span></a>`
+su -  #切换为root用户，</p>
+<p>mkdir dropbear # 在 /data/data/org.qpython.qpy/files下创建dropbear目录</p>
+<p>初始化对应的key</p>
+<p>dbkey -t dss -f dropbear/dropbear_dss_host_key</p>
+<p>dbkey -t rsa -f dropbear/dropbear_rsa_host_key</p>
+<p>dbkey -t ecdsa -f  dropbear/dropbear_ecdsa_host_key
+<a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a></p>
+<p>完成上述步骤之后，即可启动sshd服务。</p>
+<img alt="启动sshd服务：sshd -p 8088 -P dropbear/db.pid -F # 前台启动，端口 8088" src="https://mmbiz.qpic.cn/mmbiz_jpg/tuObYW62d0iaJIF2ibzmISF2PBd92KzAPnLL1eeZvpzyJXLfBLJT1hmbQEKs1QDodeugXPh8vOvJ77HNvHyT6sDg/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" />
+<p><em>启动sshd服务：sshd -p 8088 -P dropbear/db.pid -F # 前台启动，端口 8088</em></p>
+<p>接下来从你的电脑中就可以登录了你的手机了默认密码就是我们的app名字，你懂得。</p>
+<img alt="从你的笔记本登录手机" src="https://mmbiz.qpic.cn/mmbiz_png/tuObYW62d0iaJIF2ibzmISF2PBd92KzAPn4FOhNFPVKEpZE8mCibia8Cgf4sUK41cldnFWYpqtaY62LfX6MiabwYquQ/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" />
+<p><em>从你的笔记本登录手机</em></p>
+<p><strong>另外还支持下面高级特性：</strong></p>
+<ul class="simple">
+<li>ssh 支持证书登录，借助dbconvert，可以把你的openssh证书转换过来，存到对应的目录，用 ssh -i &lt;id_private&gt;指定证书即可</li>
+<li>sshd 支持 authorized_keys, 只需要把该文件保存到你的dropbear目录下，即可</li>
+<li>scp，远程拷贝文件</li>
+</ul>
+<p>后续计划移植更多有用的工具</p>
+</div>
+<div class="section" id="id9">
+<h2>其他<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>不想玩了记得kill掉sshd进程，之前需要指定pid文件就是方便你获得 pid</p>
+<p>kill <cite>cat dropbear/db.pid</cite></p>
+<p><a class="reference external" href="https://github.com/qpython-android/qpython/releases/tag/v2.4.0">获得QPython App</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fb-comments" data-href="http://qpython.org" data-numposts="10"></div>
+</div>
+</div>
+<div class="col-sm-2"></div>
+</div>
+<footer id="footer">
+<div class="col-sm-offset-2 col-sm-6 footer-div1">
+<div class="footer-block-item">
+<span class="footer-item1">Built with Sphinx using a theme provid by QPython.</span>
+<span class="footer-item2 visible-xs">
+&#169; Copyright 2017, QPython.
+</span>
+</div>
+</div>
+<div class="col-sm-2 footer-div2">
+<a href="/index.html" class="pull-right"><img src="../static/img_logo.png"></a>
+</div>
+</footer>
+<script type="text/javascript">
+$('.fb-comments').attr('data-href', (window.location.href.split('#')[0]).split('?')[0])
+(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1680815145503311";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+$(function(){
+if ($('#footer')[0].offsetTop < $(window).height()){
+$('#footer').addClass('to-bottom')
+}
+})
+</script>
+</body>
+</html>
