@@ -1,1 +1,14 @@
-<script>location.href='https://plus.google.com/u/2/communities/111759148772865961493'</script>
+<script>
+  function getQuery(name) {
+    var url = window.location.search;
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var result = url.substr(1).match(reg);
+    return result ? decodeURIComponent(result[2]) : null;
+}
+
+  if (getQuery("from")=="qpyplus") {
+     location.href='https://segmentfault.com/t/qpython'
+  } else {
+      location.href='https://www.facebook.com/group/qpython'
+  }
+</script>
