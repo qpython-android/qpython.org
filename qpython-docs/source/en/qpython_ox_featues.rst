@@ -21,6 +21,8 @@ Both QPython OL and OS
 - android.permission.ACCESS_SUPERUSER
 - android.permission.WAKE_LOCK
 - android.permission.ACCESS_NETWORK_STATE
+- android.permission.CHANGE_NETWORK_STATE
+- android.permission.ACCESS_WIFI_STATE
 - android.permission.ACCESS_WIFI_STATE
 - android.permission.RECEIVE_BOOT_COMPLETED
 - android.permission.CAMERA
@@ -45,4 +47,15 @@ Both QPython OL and OS
 
 QPython OS
 >>>>>>>>>>>
-
+- android.permission.SEND_SMS
+- android.permission.READ_SMS
+- android.permission.SEND_SMS
+- android.permission.RECEIVE_SMS
+- android.permission.WRITE_SMS
+- android.permission.READ_PHONE_STATE
+- android.permission.CALL_PHONE
+- android.permission.READ_CALL_LOG
+- android.permission.PROCESS_OUTGOING_CALLS
+- android.permission.READ_CONTACTS
+- android.permission.GET_ACCOUNTS
+- android.permission.SYSTEM_ALERT_WINDOW
