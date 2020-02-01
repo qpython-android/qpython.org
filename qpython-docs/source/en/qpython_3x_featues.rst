@@ -34,6 +34,7 @@ Both QPython 3S and 3L
 - com.android.launcher.permission.UNINSTALL_SHORTCUT
 - android.permission.READ_EXTERNAL_STORAGE
 - android.permission.WRITE_EXTERNAL_STORAGE
+- android.permission.READ_MEDIA_STORAGE
 - android.permission.ACCESS_COARSE_LOCATION
 - android.permission.ACCESS_FINE_LOCATION
 - android.permission.FOREGROUND_SERVICE
