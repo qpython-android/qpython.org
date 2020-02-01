@@ -48,7 +48,6 @@ Both QPython 3S and 3L
 
 QPython 3S
 >>>>>>>>>>>
-- android.permission.SEND_SMS
 - android.permission.READ_SMS
 - android.permission.SEND_SMS
 - android.permission.RECEIVE_SMS
