@@ -18,7 +18,6 @@ Both QPython 3S and 3L
 >>>>>>>>>>>>>>>>>>>>>>
 
 - android.permission.INTERNET
-- android.permission.ACCESS_SUPERUSER
 - android.permission.WAKE_LOCK
 - android.permission.ACCESS_NETWORK_STATE
 - android.permission.CHANGE_NETWORK_STATE
@@ -48,6 +47,7 @@ Both QPython 3S and 3L
 
 QPython 3S
 >>>>>>>>>>>
+- android.permission.ACCESS_SUPERUSER
 - android.permission.READ_SMS
 - android.permission.SEND_SMS
 - android.permission.RECEIVE_SMS
