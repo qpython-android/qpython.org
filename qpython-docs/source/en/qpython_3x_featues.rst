@@ -1,7 +1,21 @@
 QPython 3x featues
 ==================
 
+QPython 3x, Previously it was QPython3.
+
 Because google play and some appstores have strict requirements on the permissions of the app, we use different strategies in different appstores, which is why the branch name will be different. For example, L means Limited, and S means it contains Sensitive permissions.
+
+
+WHAT'S NEW
+-----------
+
+QPython 3L v3.0.0 (Published on 2020/2/1)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+- First version of QPython project after restarting
+- New name
+- Fix some minor bugs
+
+
 
 Python
 ------
@@ -13,6 +27,8 @@ Python
 
 Android Permissions
 -------------------
+
+QPython require the BLUETOOTH / LOCATION / BLUETOOTH and OTHER permissions, so that you can program using these FEATURES. AND WE WILL NOT USE THIS PERMISSIONS IN BACKGROUND.
 
 Both QPython 3S and 3L
 >>>>>>>>>>>>>>>>>>>>>>
