@@ -34,11 +34,15 @@ Both QPython OL and OS
 - android.permission.WRITE_EXTERNAL_STORAGE
 - android.permission.ACCESS_COARSE_LOCATION
 - android.permission.ACCESS_FINE_LOCATION
-
-QPython OS
->>>>>>>>>>>
 - android.permission.FOREGROUND_SERVICE
 - android.permission.BLUETOOTH
 - android.permission.BLUETOOTH_ADMIN
 - android.permission.NFC
 - android.permission.RECORD_AUDIO
+- android.permission.ACCESS_NOTIFICATION_POLICY
+- android.permission.KILL_BACKGROUND_PROCESSES
+- net.dinglisch.android.tasker.PERMISSION_RUN_TASKS
+
+QPython OS
+>>>>>>>>>>>
+
