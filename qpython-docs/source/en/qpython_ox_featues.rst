@@ -28,8 +28,6 @@ Both QPython OL and OS
 - android.permission.VIBRATE
 - android.permission.RECEIVE_USER_PRESENT
 - com.android.vending.BILLING
-- com.android.browser.permission.READ_HISTORY_BOOKMARKS
-- com.android.browser.permission.WRITE_HISTORY_BOOKMARKS
 - com.android.launcher.permission.INSTALL_SHORTCUT
 - com.android.launcher.permission.UNINSTALL_SHORTCUT
 - android.permission.READ_EXTERNAL_STORAGE
