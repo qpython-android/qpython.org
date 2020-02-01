@@ -5,9 +5,6 @@ Because of different computer architectures, we cannot guarantee that QPYPI incl
 If you want us to support a package that is not currently supported, you can raise an issue in the QPYPI project
 
 
-Network
---------
-
 QPySLA Package
 --------------
 
@@ -20,8 +17,24 @@ https://github.com/qpython-android/qpy-calcount
 AIPY Packages
 ------------
 
+AIPY is a high-level AI learning app, based on related libraries like Numpy, Scipy, theano, keras, etc.... It was developed with a focus on helping you learn and practise AI programming well and fast.
+
 Numpy
 >>>>>>>
+NumPy is the fundamental package needed for scientific computing with Python. This package contains:
+
+```
+a powerful N-dimensional array object
+sophisticated (broadcasting) functions
+basic linear algebra functions
+basic Fourier transforms
+sophisticated random number capabilities
+tools for integrating Fortran code
+tools for integrating C/C++ code
+```
 
 Scipy
 >>>>>>>>
+
+Other
+------
