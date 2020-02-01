@@ -14,7 +14,8 @@ Python
 Android Permissions
 -------------------
 
-### Both QPython 3S and 3L
+Both QPython 3S and 3L
+>>>>>>>>>>>>>>>>>>>>>>
 
 - android.permission.INTERNET
 - android.permission.ACCESS_SUPERUSER
@@ -36,4 +37,6 @@ Android Permissions
 - android.permission.ACCESS_COARSE_LOCATION
 - android.permission.ACCESS_FINE_LOCATION
 
-### QPython 3S
+QPython 3S
+>>>>>>>>>>>
+
