@@ -13,7 +13,7 @@ QPython 3L v3.0.0 (Published on 2020/2/1)
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 - First version of QPython project after restarting
 - New name
-- Add `qsl4ahelper <https://github.com/qpython-android/qpython.org/blob/master/qpython-docs/source/en/qpypi.rst>`_ package
+- Add `qsl4ahelper <https://github.com/qpython-android/qpython.org/blob/master/qpython-docs/source/en/qpypi.rst>`_ as a built-in package
 - Fix some minor bugs
 
 
