@@ -23,17 +23,27 @@ Numpy
 >>>>>>>
 NumPy is the fundamental package needed for scientific computing with Python. This package contains:
 
-a powerful N-dimensional array object
-sophisticated (broadcasting) functions
-basic linear algebra functions
-basic Fourier transforms
-sophisticated random number capabilities
-tools for integrating Fortran code
-tools for integrating C/C++ code
+::
+
+  a powerful N-dimensional array object
+  sophisticated (broadcasting) functions
+  basic linear algebra functions
+  basic Fourier transforms
+  sophisticated random number capabilities
+  tools for integrating Fortran code
+  tools for integrating C/C++ code
 
 
 Scipy
 >>>>>>>>
+SciPy refers to several related but distinct entities:
+
+::
+
+  The SciPy ecosystem, a collection of open source software for scientific computing in Python.
+  The community of people who use and develop this stack.
+  Several conferences dedicated to scientific computing in Python - SciPy, EuroSciPy and SciPy.in.
+  The SciPy library, one component of the SciPy stack, providing many numerical routines.
 
 Other
 ------
