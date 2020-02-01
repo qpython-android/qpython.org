@@ -14,7 +14,9 @@ Python
 
 Permissions
 ---------
-### Both QPython OL and OS
+Both QPython OL and OS
+>>>>>>>>>>>>>>>>>>>>>>
+
 - android.permission.INTERNET
 - android.permission.ACCESS_SUPERUSER
 - android.permission.WAKE_LOCK
@@ -35,7 +37,8 @@ Permissions
 - android.permission.ACCESS_COARSE_LOCATION
 - android.permission.ACCESS_FINE_LOCATION
 
-### QPython OS
+QPython OS
+>>>>>>>>>>>
 - android.permission.FOREGROUND_SERVICE
 - android.permission.BLUETOOTH
 - android.permission.BLUETOOTH_ADMIN
