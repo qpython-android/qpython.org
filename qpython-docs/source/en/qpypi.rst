@@ -23,7 +23,6 @@ Numpy
 >>>>>>>
 NumPy is the fundamental package needed for scientific computing with Python. This package contains:
 
-```
 a powerful N-dimensional array object
 sophisticated (broadcasting) functions
 basic linear algebra functions
@@ -31,7 +30,7 @@ basic Fourier transforms
 sophisticated random number capabilities
 tools for integrating Fortran code
 tools for integrating C/C++ code
-```
+
 
 Scipy
 >>>>>>>>
