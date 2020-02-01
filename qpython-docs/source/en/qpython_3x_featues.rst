@@ -3,7 +3,7 @@ QPython 3x featues
 
 QPython 3x, Previously it was QPython3.
 
-Because google play and some appstores have strict requirements on the permissions of the app, we use different strategies in different appstores, which is why the branch name will be different. For example, L means Limited, and S means it contains Sensitive permissions.
+Because google play and some appstores have strict requirements on the permissions of the app, It require different permissions in different appstores, which is why the branch name will be different. For example, L means LIMITED, and S means it requires SENSITIVE permissions.
 
 
 WHAT'S NEW
