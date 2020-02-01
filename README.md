@@ -13,7 +13,7 @@ QPython has several millions users in the world already, it's a great project fo
 
 QPython has QPython OS, QPython OL, QPython 3S, QPython 3L branches.
 
-This is the www.qpython.org website's project.
+This is the www.qpython.org website and documentation's project.
 
 ## More information 
 
