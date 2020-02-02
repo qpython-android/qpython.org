@@ -6,6 +6,18 @@ QPython 3x, Previously it was QPython3.
 Because google play and some appstores have strict requirements on the permissions of the app, It require different permissions in different appstores, which is why the branch name will be different. For example, L means LIMITED, and S means it requires SENSITIVE permissions.
 
 
+Amazing Features
+-----------------
+
+- Offline Python 3 interpreter: no Internet is required to run Python programs
+- It supports running multiple types of projects, including: console program, SL4A program, webapp program
+- Convenient QR code reader for transferring codes to your phone
+- QPYPI and a custom repository for prebuilt wheel packages for enhanced scientific libraries, such as numpy, scipy, matplotlib, scikit-learn etc
+- Easy-to-use editor
+- Powerful script layer for android library: Drive your android device work with Python programming
+- Good service support and timely response
+
+
 WHAT'S NEW
 -----------
 
