@@ -14,8 +14,8 @@ Amazing Features
 - Convenient QR code reader for transferring codes to your phone
 - QPYPI and a custom repository for prebuilt wheel packages for enhanced scientific libraries, such as numpy, scipy, matplotlib, scikit-learn etc
 - Easy-to-use editor
-- Powerful script layer for android library: Drive your android device work with Python programming
-- Good service support and timely response
+- INTEGRATED & EXTENDED SCRIPT LAYER FOR ANDROID LIBRARY (SL4A): IT LETS YOU DRIVE THE ANDROID WORK WITH PYTHON
+- Good documentation and customer support
 
 
 WHAT'S NEW
