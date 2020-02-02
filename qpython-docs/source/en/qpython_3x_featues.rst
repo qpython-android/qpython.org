@@ -5,17 +5,6 @@ QPython 3x, Previously it was QPython3.
 
 Because google play and some appstores have strict requirements on the permissions of the app, It require different permissions in different appstores, which is why the branch name will be different. For example, L means LIMITED, and S means it requires SENSITIVE permissions.
 
-Amazing Features
------------------
-
-- Offline Python 3 interpreter: no Internet is required to run Python programs
-- It supports running multiple types of projects, including: console program, SL4A program, webapp program
-- Convenient QR code reader for transferring codes to your phone
-- QPYPI and a custom repository for prebuilt wheel packages for enhanced scientific libraries, such as numpy, scipy, matplotlib, scikit-learn etc
-- Easy-to-use editor
-- INTEGRATED & EXTENDED SCRIPT LAYER FOR ANDROID LIBRARY (SL4A): IT LETS YOU DRIVE THE ANDROID WORK WITH PYTHON
-- Good documentation and customer support
-
 
 WHAT'S NEW
 -----------
@@ -29,6 +18,18 @@ QPython 3L v3.0.0 (Published on 2020/2/1)
 - It added a `QPySL4A App project sample <https://gist.github.com/riverfor/427c4c8762d5c57468e24ec026bbb0e9>`_ into built-in editor, you can create QSLAApp by creating an project
 - It rearranged permissions
 - It fixed `ssl error <https://github.com/qpython-android/qpython3/issues/61>`_ bugs
+
+Amazing Features
+-----------------
+
+- Offline Python 3 interpreter: no Internet is required to run Python programs
+- It supports running multiple types of projects, including: console program, SL4A program, webapp program
+- Convenient QR code reader for transferring codes to your phone
+- QPYPI and a custom repository for prebuilt wheel packages for enhanced scientific libraries, such as numpy, scipy, matplotlib, scikit-learn etc
+- Easy-to-use editor
+- INTEGRATED & EXTENDED SCRIPT LAYER FOR ANDROID LIBRARY (SL4A): IT LETS YOU DRIVE THE ANDROID WORK WITH PYTHON
+- Good documentation and customer support
+
 
 
 Android Permissions
