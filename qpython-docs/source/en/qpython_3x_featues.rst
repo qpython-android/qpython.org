@@ -5,7 +5,6 @@ QPython 3x, Previously it was QPython3.
 
 Because google play and some appstores have strict requirements on the permissions of the app, It require different permissions in different appstores, which is why the branch name will be different. For example, L means LIMITED, and S means it requires SENSITIVE permissions.
 
-
 Amazing Features
 -----------------
 
@@ -31,14 +30,6 @@ QPython 3L v3.0.0 (Published on 2020/2/1)
 - It rearranged permissions
 - It fixed `ssl error <https://github.com/qpython-android/qpython3/issues/61>`_ bugs
 
-
-Python
-------
-- Python3.6.6
-- QRCode Reader
-- Editor
-- QPYPI
-- Ftp
 
 Android Permissions
 -------------------

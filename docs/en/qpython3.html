@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>QPython 3x featues &#8212; QPython 0.9 documentation</title>
+<title>&lt;no title&gt; &#8212; QPython 0.9 documentation</title>
 <link rel="stylesheet" href="../static/qpython_theme.css" type="text/css" />
 <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
 <script type="text/javascript">
@@ -100,94 +100,50 @@ data-target="#example-navbar-collapse">
 <div class="document">
 <ul class="crumbs">
 <li><a href="../document.html">Guide</a> &raquo;</li>
-<li>QPython 3x featues</li>
+<li>&lt;no title&gt;</li>
 </ul>
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="qpython-3x-featues">
-<h1>QPython 3x featues<a class="headerlink" href="#qpython-3x-featues" title="Permalink to this headline">¶</a></h1>
-<p>QPython 3x, Previously it was QPython3.</p>
-<p>Because google play and some appstores have strict requirements on the permissions of the app, It require different permissions in different appstores, which is why the branch name will be different. For example, L means LIMITED, and S means it requires SENSITIVE permissions.</p>
-<div class="section" id="amazing-features">
-<h2>Amazing Features<a class="headerlink" href="#amazing-features" title="Permalink to this headline">¶</a></h2>
+<p># About QPython 3L
+QPython is the Python engine for android. It contains some amazing features such as Python interpreter, runtime environment, editor and QPYI and integrated SL4A. It makes it easy for you to use Python on Android. And it’s FREE.</p>
+<p>QPython already has millions of users worldwide and it is also an open source project.</p>
+<p>For different usage scenarios, QPython has two branches, namely QPython Ox and 3x.</p>
+<p>QPython Ox is mainly aimed at programming learners, and it provides more friendly features for beginners. QPython 3x is mainly for experienced Python users, and it provides some in-depth technical features.</p>
+<p>This is the QPython 3L, it is the only Python interpreter which works under android 4.0 in google play.</p>
+<p># Amazing Features
+- Offline Python 3 interpreter: no Internet is required to run Python programs
+- It supports running multiple types of projects, including: console program, SL4A program, webapp program
+- Convenient QR code reader for transferring codes to your phone
+- QPYPI and a custom repository for prebuilt wheel packages for enhanced scientific libraries, such as numpy, scipy, matplotlib, scikit-learn etc
+- Easy-to-use editor
+- INTEGRATED &amp; EXTENDED SCRIPT LAYER FOR ANDROID LIBRARY (SL4A): IT LETS YOU DRIVE THE ANDROID WORK WITH PYTHON
+- Good documentation and customer support</p>
+<p># SL4A Features
+With SL4A features, you can use Python programming to control Android work:</p>
 <ul class="simple">
-<li>Offline Python 3 interpreter: no Internet is required to run Python programs</li>
-<li>It supports running multiple types of projects, including: console program, SL4A program, webapp program</li>
-<li>Convenient QR code reader for transferring codes to your phone</li>
-<li>QPYPI and a custom repository for prebuilt wheel packages for enhanced scientific libraries, such as numpy, scipy, matplotlib, scikit-learn etc</li>
-<li>Easy-to-use editor</li>
-<li>INTEGRATED &amp; EXTENDED SCRIPT LAYER FOR ANDROID LIBRARY (SL4A): IT LETS YOU DRIVE THE ANDROID WORK WITH PYTHON</li>
-<li>Good documentation and customer support</li>
+<li>Android Apps API, such as: Application, Activity, Intent &amp; startActivity, SendBroadcast,  PackageVersion, System, Toast, Notify, Settings, Preferences, GUI</li>
+<li>Android Resources Manager, such as: Contact, Location, Phone, Sms, ToneGenerator, WakeLock, WifiLock, Clipboard, NetworkStatus, MediaPlayer</li>
+<li>Third App Integrations, such as: Barcode, Browser, SpeechRecongition, SendEmail, TextToSpeech</li>
+<li>Hardwared Manager: Carmer, Sensor, Ringer &amp; Media Volume, Screen Brightness, Battery, Bluetooth, SignalStrength, WebCam, Vibrate, NFC, USB</li>
 </ul>
-</div>
-<div class="section" id="what-s-new">
-<h2>WHAT’S NEW<a class="headerlink" href="#what-s-new" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="qpython-3l-v3-0-0-published-on-2020-2-1">
-<h3>QPython 3L v3.0.0 (Published on 2020/2/1)<a class="headerlink" href="#qpython-3l-v3-0-0-published-on-2020-2-1" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>The first version of the QPython project has been restarted, with a new name</li>
-<li>It added the <a class="reference external" href="https://github.com/qpython-android/qpython.org/blob/master/qpython-docs/source/en/qpypi.rst">qsl4ahelper</a> as a built-in package</li>
-<li>It added a <a class="reference external" href="https://gist.github.com/riverfor/427c4c8762d5c57468e24ec026bbb0e9">QPySL4A App project sample</a> into built-in editor, you can create QSLAApp by creating an project</li>
-<li>It rearranged permissions</li>
-<li>It fixed <a class="reference external" href="https://github.com/qpython-android/qpython3/issues/61">ssl error</a> bugs</li>
-</ul>
-</div>
-</div>
-<div class="section" id="android-permissions">
-<h2>Android Permissions<a class="headerlink" href="#android-permissions" title="Permalink to this headline">¶</a></h2>
-<p>QPython require the BLUETOOTH / LOCATION / BLUETOOTH and OTHER permissions, so that you can program using these FEATURES. AND WE WILL NOT USE THIS PERMISSIONS IN BACKGROUND.</p>
-<div class="section" id="both-qpython-3s-and-3l">
-<h3>Both QPython 3S and 3L<a class="headerlink" href="#both-qpython-3s-and-3l" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>android.permission.INTERNET</li>
-<li>android.permission.WAKE_LOCK</li>
-<li>android.permission.ACCESS_NETWORK_STATE</li>
-<li>android.permission.CHANGE_NETWORK_STATE</li>
-<li>android.permission.ACCESS_WIFI_STATE</li>
-<li>android.permission.CHANGE_WIFI_STATE</li>
-<li>android.permission.RECEIVE_BOOT_COMPLETED</li>
-<li>android.permission.CAMERA</li>
-<li>android.permission.FLASHLIGHT</li>
-<li>android.permission.VIBRATE</li>
-<li>android.permission.RECEIVE_USER_PRESENT</li>
-<li>com.android.vending.BILLING</li>
-<li>com.android.launcher.permission.INSTALL_SHORTCUT</li>
-<li>com.android.launcher.permission.UNINSTALL_SHORTCUT</li>
-<li>android.permission.READ_EXTERNAL_STORAGE</li>
-<li>android.permission.WRITE_EXTERNAL_STORAGE</li>
-<li>android.permission.READ_MEDIA_STORAGE</li>
-<li>android.permission.ACCESS_COARSE_LOCATION</li>
-<li>android.permission.ACCESS_FINE_LOCATION</li>
-<li>android.permission.FOREGROUND_SERVICE</li>
-<li>android.permission.BLUETOOTH</li>
-<li>android.permission.BLUETOOTH_ADMIN</li>
-<li>android.permission.NFC</li>
-<li>android.permission.RECORD_AUDIO</li>
-<li>android.permission.ACCESS_NOTIFICATION_POLICY</li>
-<li>android.permission.KILL_BACKGROUND_PROCESSES</li>
-<li>net.dinglisch.android.tasker.PERMISSION_RUN_TASKS</li>
-</ul>
-</div>
-<div class="section" id="qpython-3s">
-<h3>QPython 3S<a class="headerlink" href="#qpython-3s" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>android.permission.ACCESS_SUPERUSER</li>
-<li>android.permission.READ_SMS</li>
-<li>android.permission.SEND_SMS</li>
-<li>android.permission.RECEIVE_SMS</li>
-<li>android.permission.WRITE_SMS</li>
-<li>android.permission.READ_PHONE_STATE</li>
-<li>android.permission.CALL_PHONE</li>
-<li>android.permission.READ_CALL_LOG</li>
-<li>android.permission.PROCESS_OUTGOING_CALLS</li>
-<li>android.permission.READ_CONTACTS</li>
-<li>android.permission.GET_ACCOUNTS</li>
-<li>android.permission.SYSTEM_ALERT_WINDOW</li>
-</ul>
-</div>
-</div>
-</div>
+<p>[ API Documentation Link ]
+<a class="reference external" href="https://github.com/qpython-android/qpysl4a/blob/master/README.md">https://github.com/qpython-android/qpysl4a/blob/master/README.md</a></p>
+<p>[ API Samples ]
+<a class="reference external" href="https://github.com/qpython-android/qpysl4a/issues/1">https://github.com/qpython-android/qpysl4a/issues/1</a></p>
+<p>[ IMPORTANT NOTE ]
+IT MAY REQUIRE THE BLUETOOTH / LOCATION / READ_SMS / SEND_SMS / CALL_PHONE AND OTHER PERMISSIONS, SO THAT YOU CAN PROGRAM ITH THESE FEATURES. QPYTHON WILL NOT USE THESE PERMISSIONS IN BACKGROUND.</p>
+<p>IF YOU GET EXCEPTION IN RUNTIME WHILE USING SL4A API, PLEASE CHECK WHETHER THE RELEVANT PERMISSIONS IN THE SYSTEM SETTINGS ARE ENABLED.</p>
+<p># How To Get Professional Customer Support
+Please follow the guide to get support <a class="reference external" href="https://github.com/qpython-android/qpython/blob/master/README.md">https://github.com/qpython-android/qpython/blob/master/README.md</a></p>
+<p>[ QPython community ]
+<a class="reference external" href="https://www.facebook.com/groups/qpython">https://www.facebook.com/groups/qpython</a></p>
+<p>[ FAQ ]
+A: Why can’t I use the SMS API of SL4A
+Q: Because Google Play and some app stores have strict requirements on the permissions of apps, in QPython 3x, we use x to distinguish branches with different permissions or appstores. For example, L means LIMITED and S means SENSITIVE.
+Sometimes you cannot use the corresponding SL4A APIs because the version you installed does not have the corresponding permissions, so you can consider replace what you have installed with the right one.</p>
+<p>You can find other versions here:
+<a class="reference external" href="https://www.qpython.org/en/qpython_3x_featues.html">https://www.qpython.org/en/qpython_3x_featues.html</a></p>
 </div>
 </div>
 </div>
