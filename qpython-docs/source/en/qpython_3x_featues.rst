@@ -7,7 +7,7 @@ A: Why are there so many branches?
 
 Q: Because Google Play and some appstores have strict requirements for application permissions, they require different permissions, we use different branch codes, for example, 3 means it was QPython3, L means LIMITED, S means SENSITIVE permission is required.
 
-A: Where can I get Historical version?
+A: Where can I get old versions?
 
 Q: Take a look at `this link <https://github.com/qpython-android/qpython3/releases>`_.
 
