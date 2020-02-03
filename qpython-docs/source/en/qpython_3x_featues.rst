@@ -9,7 +9,7 @@ Because google play and some appstores have strict requirements on the permissio
 WHAT'S NEW
 -----------
 
-QPython 3L v3.0.0 (Published on 2020/2/1)
+QPython 3x v3.0.0 (Published on 2020/2/1)
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
