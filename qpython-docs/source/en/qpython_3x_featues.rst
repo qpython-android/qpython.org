@@ -19,7 +19,7 @@ This is the first version after we restarting the QPython project
 - It rearranged permissions
 - It fixed `ssl error <https://github.com/qpython-android/qpython3/issues/61>`_ bugs
 
-Amazing Features
+App's Features
 -----------------
 
 - Offline Python 3 interpreter: no Internet is required to run Python programs
@@ -31,9 +31,8 @@ Amazing Features
 - Good documentation and customer support
 
 
-
-Android Permissions
--------------------
+Android Permissions that QPython requires
+------------------------------------------
 
 QPython require the BLUETOOTH / LOCATION / BLUETOOTH and OTHER permissions, so that you can program using these FEATURES. AND WE WILL NOT USE THIS PERMISSIONS IN BACKGROUND.
 
