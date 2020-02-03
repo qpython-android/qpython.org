@@ -12,8 +12,8 @@ WHAT'S NEW
 QPython 3x v3.0.0 (Published on 2020/2/1)
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+This is the first version after we restarting the QPython project
 
-- The first version of the QPython project has been restarted, with a new name
 - It added the `qsl4ahelper <https://github.com/qpython-android/qpython.org/blob/master/qpython-docs/source/en/qpypi.rst>`_ as a built-in package
 - It added a `QPySL4A App project sample <https://gist.github.com/riverfor/427c4c8762d5c57468e24ec026bbb0e9>`_ into built-in editor, you can create QSLAApp by creating an project
 - It rearranged permissions
