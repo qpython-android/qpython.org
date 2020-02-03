@@ -5,7 +5,7 @@ QPython 3x, Previously it was QPython3.
 
 A: Why are there so many branches?
 
-Q: Because Google Play and some appstores have strict requirements for application permissions, they require different permissions, we use different branch codes, for example, L means LIMITED, S means SENSITIVE permission is required.
+Q: Because Google Play and some appstores have strict requirements for application permissions, they require different permissions, we use different branch codes, for example, 3 means it was QPython3, L means LIMITED, S means SENSITIVE permission is required.
 
 WHAT'S NEW
 -----------
