@@ -3,23 +3,24 @@ QPython 3x featues
 
 QPython 3x, Previously it was QPython3.
 
-Because google play and some appstores have strict requirements on the permissions of the app, It require different permissions in different appstores, which is why the branch name will be different. For example, L means LIMITED, and S means it requires SENSITIVE permissions.
+A: Why are there so many branches?
 
+Q: Because Google Play and some appstores have strict requirements for application permissions, they require different permissions, we use different branch codes, for example, 3 means it was QPython3, L means LIMITED, S means SENSITIVE permission is required.
 
 WHAT'S NEW
 -----------
 
-QPython 3L v3.0.0 (Published on 2020/2/1)
+QPython 3x v3.0.0 (Published on 2020/2/1)
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+This is the first version after we restarting the QPython project
 
-- The first version of the QPython project has been restarted, with a new name
 - It added the `qsl4ahelper <https://github.com/qpython-android/qpython.org/blob/master/qpython-docs/source/en/qpypi.rst>`_ as a built-in package
 - It added a `QPySL4A App project sample <https://gist.github.com/riverfor/427c4c8762d5c57468e24ec026bbb0e9>`_ into built-in editor, you can create QSLAApp by creating an project
 - It rearranged permissions
 - It fixed `ssl error <https://github.com/qpython-android/qpython3/issues/61>`_ bugs
 
-Amazing Features
+App's Features
 -----------------
 
 - Offline Python 3 interpreter: no Internet is required to run Python programs
@@ -31,9 +32,8 @@ Amazing Features
 - Good documentation and customer support
 
 
-
-Android Permissions
--------------------
+Android Permissions that QPython requires
+------------------------------------------
 
 QPython require the BLUETOOTH / LOCATION / BLUETOOTH and OTHER permissions, so that you can program using these FEATURES. AND WE WILL NOT USE THIS PERMISSIONS IN BACKGROUND.
 
