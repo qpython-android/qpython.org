@@ -5,7 +5,16 @@ QPython 3x, Previously it was QPython3.
 
 A: Why are there so many branches?
 
-Q: Because Google Play and some appstores have strict requirements for application permissions, they require different permissions, we use different branch codes, for example, 3 means it was QPython3, L means LIMITED, S means SENSITIVE permission is required.
+Q: Because Google Play and some appstores have strict requirements for application permissions,
+they require different permissions, we use different branch codes, for example, 3 means it was QPython3, 
+L means LIMITED, S means SENSITIVE permission is required.
+
+A: I know there was a QPython before, what is the difference between it and QPython 3x?
+
+Q: It is now called QPython Ox now, which is mainly aimed at programming learners, and 
+it provides more friendly features for beginners. QPython 3x is mainly for experienced 
+Python users, and it provides some advanced technical features.
+
 
 A: Where can I get old versions?
 
