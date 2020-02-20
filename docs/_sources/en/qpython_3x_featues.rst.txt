@@ -16,7 +16,7 @@ it provides more friendly features for beginners. QPython 3x is mainly for exper
 Python users, and it provides some advanced technical features.
 
 
-A: Where can I get old versions?
+A: Where can I get different branches or versions ?
 
 Q: Take a look at `this link <https://github.com/qpython-android/qpython3/releases>`_.
 
