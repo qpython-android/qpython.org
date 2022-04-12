@@ -1,81 +1,84 @@
 <!DOCTYPE html>
 <html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>QPython built-in Libraries &#8212; QPython 0.9 documentation</title>
-<link rel="stylesheet" href="../static/qpython_theme.css" type="text/css" />
-<link rel="stylesheet" href="../static/pygments.css" type="text/css" />
-<script type="text/javascript">
-var DOCUMENTATION_OPTIONS = {
-URL_ROOT:    '../',
-VERSION:     '0.9',
-COLLAPSE_INDEX: false,
-FILE_SUFFIX: '.html',
-HAS_SOURCE:  true,
-SOURCELINK_SUFFIX: '.txt'
-};
-</script>
-<script type="text/javascript" src="../static/jquery.js"></script>
-<script type="text/javascript" src="../static/underscore.js"></script>
-<script type="text/javascript" src="../static/doctools.js"></script>
-<link rel="index" title="Index" href="../genindex.html" />
-<link rel="search" title="Search" href="../search.html" />
-<link rel="next" title="AndroidFacade" href="guide_androidhelpers.html" />
-<link rel="prev" title="Use the best way for developing" href="guide_ide.html" />
-<meta charset="UTF-8">
-<link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
-</head>
-<body>
-<div class="header doc-header">
-<div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8  index-header">
-<div class="navbar-header">
-<button type="button" class="navbar-toggle" data-toggle="collapse"
-data-target="#example-navbar-collapse">
-<span class="sr-only">切换导航</span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-<a href="/index.html" class="logo"><img src="../static/img_logo.png"></a>
-</div>
-<ul class="header-title hidden-xs">
-<li class="header-phone-selected">
-<a href="/index.html">Home</a>
-</li>
-<li>
-<a href="/document.html" class="header-selected">Guide</a>
-<span class="header-title-selected"></span>
-</li>
-<li>
-<a href="//edu.qpython.org/">Course</a>
-</li>
-<li>
-<a href="//www.aipy.org">AIPY</a>
-</li>
-<li>
-<a target="_blank" href="//github.com/qpython-android/qpython">Github</a>
-</li>
-</ul>
-<div class="search-box hidden-xs">
-<form action="../search.html">
-<input type="search" name="q" placeholder="keyword">
-<input type="hidden" name="check_keywords" value="yes" />
-<input type="hidden" name="area" value="default" />
-<button><img src="../static/ic_search.png"></button>
-</form>
-</div>
-</div>
-</div>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>QPython built-in Libraries &#8212; QPython 0.9 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../static/qpython_theme.css" />
+    <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js"></script>
+    <script src="../static/jquery.js"></script>
+    <script src="../static/underscore.js"></script>
+    <script src="../static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="AndroidFacade" href="guide_androidhelpers.html" />
+    <link rel="prev" title="Use the best way for developing" href="guide_ide.html" />
+    <meta charset="UTF-8">
+    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+
+  </head><body>
+  <div class="header doc-header">
+      <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8  index-header">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse"
+              data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/index.html" class="logo"><img src="../static/img_logo.png"></a>
+        </div>
+
+        <ul class="header-title hidden-xs">
+          <li class="header-phone-selected">
+            <a href="/index.html">Home</a>
+          </li>
+          <li>
+            <a href="/document.html" class="header-selected">Guide</a>
+            <span class="header-title-selected"></span>
+          </li>
+          <li>
+            <a href="//edu.qpython.org/">Course</a>
+          </li>
+          <li>
+            <a href="//www.aipy.org">AIPY</a>
+          </li>
+
+	  <li>
+              <a target="_blank" href="//github.com/qpython-android/qpython">Github</a>
+          </li>
+        </ul>
+        <div class="search-box hidden-xs">
+          <form action="../search.html">
+            <input type="search" name="q" placeholder="keyword">
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+            <button><img src="../static/ic_search.png"></button>
+          </form>
+        </div>
+      </div>
+    </div>
+
 <div class="row doc-content">
-<div class="content-main col-sm-offset-2 col-sm-8">
-<div class="content-wrapper col-sm-4">
-<div class="left-menu">
-<div class="doc-title hidden-xs">QPython</div>
-<div class="sidebar  collapse navbar-collapse"  id="example-navbar-collapse">
-<ul class="current">
+    <div class="content-main col-sm-offset-2 col-sm-8">
+          <div class="content-wrapper col-sm-4">
+              <div class="left-menu">
+                  <div class="doc-title hidden-xs">QPython</div>
+                  <div class="sidebar  collapse navbar-collapse"  id="example-navbar-collapse">
+                    
+                    
+                        
+                      
+                      
+                        <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="guide.html">Getting started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="guide.html#programming-guide">Programming Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="guide_program.html">QPython’s main features</a></li>
@@ -130,308 +133,317 @@ data-target="#example-navbar-collapse">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../zhindex.html">中文用户向导</a></li>
 </ul>
-<div class="search-phone visible-xs">
-<form action="../search.html">
-<input type="search" name="q" placeholder="keyword">
-<input type="hidden" name="check_keywords" value="yes" />
-<input type="hidden" name="area" value="default" />
-<button><img src="../static/ic_search.png"></button>
-</form>
-</div>
-</div>
-</div>
-</div>
-<div class="content col-sm-8">
-<div class="document">
-<ul class="crumbs">
-<li><a href="../document.html">Guide</a> &raquo;</li>
-<li><a href="guide.html">Getting started</a> &raquo;</li>
-<li>QPython built-in Libraries</li>
-</ul>
-<div class="documentwrapper">
-<div class="bodywrapper">
-<div class="body" role="main">
-<div class="section" id="qpython-built-in-libraries">
+
+                    
+                    
+                      <div class="search-phone visible-xs">
+                        <form action="../search.html">
+                          <input type="search" name="q" placeholder="keyword">
+                          <input type="hidden" name="check_keywords" value="yes" />
+                          <input type="hidden" name="area" value="default" />
+                          <button><img src="../static/ic_search.png"></button>
+                        </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="content col-sm-8">
+            <div class="document">
+            
+            <ul class="crumbs">
+               <li><a href="../document.html">Guide</a> &raquo;</li>
+                
+                  <li><a href="guide.html">Getting started</a> &raquo;</li>
+                
+                <li>QPython built-in Libraries</li>
+            </ul>
+            
+                
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="qpython-built-in-libraries">
 <h1>QPython built-in Libraries<a class="headerlink" href="#qpython-built-in-libraries" title="Permalink to this headline">¶</a></h1>
 <p>QPython is using the Python 2.7.2 and it support most Python stardard libraries. And you could see their documentation through Python documentation.</p>
-<div class="section" id="qpython-dynload-libraries">
+<section id="qpython-dynload-libraries">
 <h2>QPython dynload libraries<a class="headerlink" href="#qpython-dynload-libraries" title="Permalink to this headline">¶</a></h2>
 <p>Just like Python, QPython contains python built-in .so libraries.</p>
 <p>Usually, you don’t need to  import them manually, they were used in stardard libraries, and could be imported automatically.</p>
 <ul class="simple">
-<li>_codecs_cn.so</li>
-<li>_codecs_hk.so</li>
-<li>_codecs_iso2022.so</li>
-<li>_codecs_jp.so</li>
-<li>_codecs_kr.so</li>
-<li>_codecs_tw.so</li>
-<li>_csv.so</li>
-<li>_ctypes.so</li>
-<li>_ctypes_test.so</li>
-<li>_hashlib.so</li>
-<li>_heapq.so</li>
-<li>_hotshot.so</li>
-<li>_io.so</li>
-<li>_json.so</li>
-<li>_lsprof.so</li>
-<li>_multibytecodec.so</li>
-<li>_sqlite3.so</li>
-<li>_ssl.so</li>
-<li>_testcapi.so</li>
-<li>audioop.so</li>
-<li>future_builtins.so</li>
-<li>grp.so</li>
-<li>mmap.so</li>
-<li>resource.so</li>
-<li>syslog.so</li>
-<li>termios.so</li>
-<li>unicodedata.so</li>
+<li><p>_codecs_cn.so</p></li>
+<li><p>_codecs_hk.so</p></li>
+<li><p>_codecs_iso2022.so</p></li>
+<li><p>_codecs_jp.so</p></li>
+<li><p>_codecs_kr.so</p></li>
+<li><p>_codecs_tw.so</p></li>
+<li><p>_csv.so</p></li>
+<li><p>_ctypes.so</p></li>
+<li><p>_ctypes_test.so</p></li>
+<li><p>_hashlib.so</p></li>
+<li><p>_heapq.so</p></li>
+<li><p>_hotshot.so</p></li>
+<li><p>_io.so</p></li>
+<li><p>_json.so</p></li>
+<li><p>_lsprof.so</p></li>
+<li><p>_multibytecodec.so</p></li>
+<li><p>_sqlite3.so</p></li>
+<li><p>_ssl.so</p></li>
+<li><p>_testcapi.so</p></li>
+<li><p>audioop.so</p></li>
+<li><p>future_builtins.so</p></li>
+<li><p>grp.so</p></li>
+<li><p>mmap.so</p></li>
+<li><p>resource.so</p></li>
+<li><p>syslog.so</p></li>
+<li><p>termios.so</p></li>
+<li><p>unicodedata.so</p></li>
 </ul>
-</div>
-<div class="section" id="qpython-stardard-libraries">
+</section>
+<section id="qpython-stardard-libraries">
 <h2>QPython stardard libraries<a class="headerlink" href="#qpython-stardard-libraries" title="Permalink to this headline">¶</a></h2>
 <p>The following libraries are the stardard QPython libraries which are the same as Python:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://docs.python.org/2/library/basehttpserver.html">BaseHTTPServer.py</a></li>
-<li><a class="reference external" href="https://docs.python.org/2/library/binhex.html">binhex.py</a></li>
-<li><a class="reference external" href="https://docs.python.org/2/library/fnmatch.html">fnmatch.py</a></li>
-<li>mhlib.py</li>
-<li>quopri.py</li>
-<li>sysconfig.py</li>
-<li>Bastion.py</li>
-<li>bisect.py</li>
-<li>formatter.py</li>
-<li>mimetools.py</li>
-<li>random.py</li>
-<li>tabnanny.py</li>
-<li>CGIHTTPServer.py</li>
-<li>bsddb</li>
-<li>fpformat.py</li>
-<li>mimetypes.py</li>
-<li>re.py</li>
-<li>tarfile.py</li>
-<li>ConfigParser.py</li>
-<li>cProfile.py</li>
-<li>fractions.py</li>
-<li>mimify.py</li>
-<li>repr.py</li>
-<li>telnetlib.py</li>
-<li>Cookie.py</li>
-<li>calendar.py</li>
-<li>ftplib.py</li>
-<li>modulefinder.py</li>
-<li>rexec.py</li>
-<li>tempfile.py</li>
-<li>DocXMLRPCServer.py</li>
-<li>cgi.py</li>
-<li>functools.py</li>
-<li>multifile.py</li>
-<li>rfc822.py</li>
-<li>textwrap.py</li>
-<li>HTMLParser.py</li>
-<li>cgitb.py</li>
-<li>genericpath.py</li>
-<li>mutex.py</li>
-<li>rlcompleter.py</li>
-<li>this.py</li>
-<li>chunk.py</li>
-<li>getopt.py</li>
-<li>netrc.py</li>
-<li>robotparser.py</li>
-<li>threading.py</li>
-<li>MimeWriter.py</li>
-<li>cmd.py</li>
-<li>getpass.py</li>
-<li>new.py</li>
-<li>runpy.py</li>
-<li>timeit.py</li>
-<li>Queue.py</li>
-<li>code.py</li>
-<li>gettext.py</li>
-<li>nntplib.py</li>
-<li>sched.py</li>
-<li>toaiff.py</li>
-<li>SimpleHTTPServer.py</li>
-<li>codecs.py</li>
-<li>glob.py</li>
-<li>ntpath.py</li>
-<li>sets.py</li>
-<li>token.py</li>
-<li>SimpleXMLRPCServer.py</li>
-<li>codeop.py</li>
-<li>gzip.py</li>
-<li>nturl2path.py</li>
-<li>sgmllib.py</li>
-<li>tokenize.py</li>
-<li>SocketServer.py</li>
-<li>collections.py</li>
-<li>hashlib.py</li>
-<li>numbers.py</li>
-<li>sha.py</li>
-<li>trace.py</li>
-<li>StringIO.py</li>
-<li>colorsys.py</li>
-<li>heapq.py</li>
-<li>opcode.py</li>
-<li>shelve.py</li>
-<li>traceback.py</li>
-<li>UserDict.py</li>
-<li>commands.py</li>
-<li>hmac.py</li>
-<li>optparse.py</li>
-<li>shlex.py</li>
-<li>tty.py</li>
-<li>UserList.py</li>
-<li>compileall.py</li>
-<li>hotshot</li>
-<li>os.py</li>
-<li>shutil.py</li>
-<li>types.py</li>
-<li>UserString.py</li>
-<li>compiler</li>
-<li>htmlentitydefs.py</li>
-<li>os2emxpath.py</li>
-<li>site.py</li>
-<li>unittest</li>
-<li>_LWPCookieJar.py</li>
-<li>config</li>
-<li>htmllib.py</li>
-<li>smtpd.py</li>
-<li>urllib.py</li>
-<li>_MozillaCookieJar.py</li>
-<li>contextlib.py</li>
-<li>httplib.py</li>
-<li>pdb.py</li>
-<li>smtplib.py</li>
-<li>urllib2.py</li>
-<li>__future__.py</li>
-<li>cookielib.py</li>
-<li>ihooks.py</li>
-<li>pickle.py</li>
-<li>sndhdr.py</li>
-<li>urlparse.py</li>
-<li>__phello__.foo.py</li>
-<li>copy.py</li>
-<li>imaplib.py</li>
-<li>pickletools.py</li>
-<li>socket.py</li>
-<li>user.py</li>
-<li>_abcoll.py</li>
-<li>copy_reg.py</li>
-<li>imghdr.py</li>
-<li>pipes.py</li>
-<li>sqlite3</li>
-<li>uu.py</li>
-<li>_pyio.py</li>
-<li>csv.py</li>
-<li>importlib</li>
-<li>pkgutil.py</li>
-<li>sre.py</li>
-<li>uuid.py</li>
-<li>_strptime.py</li>
-<li>ctypes</li>
-<li>imputil.py</li>
-<li>plat-linux4</li>
-<li>sre_compile.py</li>
-<li>warnings.py</li>
-<li>_threading_local.py</li>
-<li>dbhash.py</li>
-<li>inspect.py</li>
-<li>platform.py</li>
-<li>sre_constants.py</li>
-<li>wave.py</li>
-<li>_weakrefset.py</li>
-<li>decimal.py</li>
-<li>io.py</li>
-<li>plistlib.py</li>
-<li>sre_parse.py</li>
-<li>weakref.py</li>
-<li>abc.py</li>
-<li>difflib.py</li>
-<li>json</li>
-<li>popen2.py</li>
-<li>ssl.py</li>
-<li>webbrowser.py</li>
-<li>aifc.py</li>
-<li>dircache.py</li>
-<li>keyword.py</li>
-<li>poplib.py</li>
-<li>stat.py</li>
-<li>whichdb.py</li>
-<li>antigravity.py</li>
-<li>dis.py</li>
-<li>lib-tk</li>
-<li>posixfile.py</li>
-<li>statvfs.py</li>
-<li>wsgiref</li>
-<li>anydbm.py</li>
-<li>distutils</li>
-<li>linecache.py</li>
-<li>posixpath.py</li>
-<li>string.py</li>
-<li>argparse.py</li>
-<li>doctest.py</li>
-<li>locale.py</li>
-<li>pprint.py</li>
-<li>stringold.py</li>
-<li>xdrlib.py</li>
-<li>ast.py</li>
-<li>dumbdbm.py</li>
-<li>logging</li>
-<li>profile.py</li>
-<li>stringprep.py</li>
-<li>xml</li>
-<li>asynchat.py</li>
-<li>dummy_thread.py</li>
-<li>macpath.py</li>
-<li>pstats.py</li>
-<li>struct.py</li>
-<li>xmllib.py</li>
-<li>asyncore.py</li>
-<li>dummy_threading.py</li>
-<li>macurl2path.py</li>
-<li>pty.py</li>
-<li>subprocess.py</li>
-<li>xmlrpclib.py</li>
-<li>atexit.py</li>
-<li>email</li>
-<li>mailbox.py</li>
-<li>py_compile.py</li>
-<li>sunau.py</li>
-<li>zipfile.py</li>
-<li>audiodev.py</li>
-<li>encodings</li>
-<li>mailcap.py</li>
-<li>pyclbr.py</li>
-<li>sunaudio.py</li>
-<li>base64.py</li>
-<li>filecmp.py</li>
-<li>markupbase.py</li>
-<li>pydoc.py</li>
-<li>symbol.py</li>
-<li>bdb.py</li>
-<li>fileinput.py</li>
-<li>md5.py</li>
-<li>pydoc_data</li>
-<li>symtable.py</li>
+<li><p><a class="reference external" href="https://docs.python.org/2/library/basehttpserver.html">BaseHTTPServer.py</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/2/library/binhex.html">binhex.py</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/2/library/fnmatch.html">fnmatch.py</a></p></li>
+<li><p>mhlib.py</p></li>
+<li><p>quopri.py</p></li>
+<li><p>sysconfig.py</p></li>
+<li><p>Bastion.py</p></li>
+<li><p>bisect.py</p></li>
+<li><p>formatter.py</p></li>
+<li><p>mimetools.py</p></li>
+<li><p>random.py</p></li>
+<li><p>tabnanny.py</p></li>
+<li><p>CGIHTTPServer.py</p></li>
+<li><p>bsddb</p></li>
+<li><p>fpformat.py</p></li>
+<li><p>mimetypes.py</p></li>
+<li><p>re.py</p></li>
+<li><p>tarfile.py</p></li>
+<li><p>ConfigParser.py</p></li>
+<li><p>cProfile.py</p></li>
+<li><p>fractions.py</p></li>
+<li><p>mimify.py</p></li>
+<li><p>repr.py</p></li>
+<li><p>telnetlib.py</p></li>
+<li><p>Cookie.py</p></li>
+<li><p>calendar.py</p></li>
+<li><p>ftplib.py</p></li>
+<li><p>modulefinder.py</p></li>
+<li><p>rexec.py</p></li>
+<li><p>tempfile.py</p></li>
+<li><p>DocXMLRPCServer.py</p></li>
+<li><p>cgi.py</p></li>
+<li><p>functools.py</p></li>
+<li><p>multifile.py</p></li>
+<li><p>rfc822.py</p></li>
+<li><p>textwrap.py</p></li>
+<li><p>HTMLParser.py</p></li>
+<li><p>cgitb.py</p></li>
+<li><p>genericpath.py</p></li>
+<li><p>mutex.py</p></li>
+<li><p>rlcompleter.py</p></li>
+<li><p>this.py</p></li>
+<li><p>chunk.py</p></li>
+<li><p>getopt.py</p></li>
+<li><p>netrc.py</p></li>
+<li><p>robotparser.py</p></li>
+<li><p>threading.py</p></li>
+<li><p>MimeWriter.py</p></li>
+<li><p>cmd.py</p></li>
+<li><p>getpass.py</p></li>
+<li><p>new.py</p></li>
+<li><p>runpy.py</p></li>
+<li><p>timeit.py</p></li>
+<li><p>Queue.py</p></li>
+<li><p>code.py</p></li>
+<li><p>gettext.py</p></li>
+<li><p>nntplib.py</p></li>
+<li><p>sched.py</p></li>
+<li><p>toaiff.py</p></li>
+<li><p>SimpleHTTPServer.py</p></li>
+<li><p>codecs.py</p></li>
+<li><p>glob.py</p></li>
+<li><p>ntpath.py</p></li>
+<li><p>sets.py</p></li>
+<li><p>token.py</p></li>
+<li><p>SimpleXMLRPCServer.py</p></li>
+<li><p>codeop.py</p></li>
+<li><p>gzip.py</p></li>
+<li><p>nturl2path.py</p></li>
+<li><p>sgmllib.py</p></li>
+<li><p>tokenize.py</p></li>
+<li><p>SocketServer.py</p></li>
+<li><p>collections.py</p></li>
+<li><p>hashlib.py</p></li>
+<li><p>numbers.py</p></li>
+<li><p>sha.py</p></li>
+<li><p>trace.py</p></li>
+<li><p>StringIO.py</p></li>
+<li><p>colorsys.py</p></li>
+<li><p>heapq.py</p></li>
+<li><p>opcode.py</p></li>
+<li><p>shelve.py</p></li>
+<li><p>traceback.py</p></li>
+<li><p>UserDict.py</p></li>
+<li><p>commands.py</p></li>
+<li><p>hmac.py</p></li>
+<li><p>optparse.py</p></li>
+<li><p>shlex.py</p></li>
+<li><p>tty.py</p></li>
+<li><p>UserList.py</p></li>
+<li><p>compileall.py</p></li>
+<li><p>hotshot</p></li>
+<li><p>os.py</p></li>
+<li><p>shutil.py</p></li>
+<li><p>types.py</p></li>
+<li><p>UserString.py</p></li>
+<li><p>compiler</p></li>
+<li><p>htmlentitydefs.py</p></li>
+<li><p>os2emxpath.py</p></li>
+<li><p>site.py</p></li>
+<li><p>unittest</p></li>
+<li><p>_LWPCookieJar.py</p></li>
+<li><p>config</p></li>
+<li><p>htmllib.py</p></li>
+<li><p>smtpd.py</p></li>
+<li><p>urllib.py</p></li>
+<li><p>_MozillaCookieJar.py</p></li>
+<li><p>contextlib.py</p></li>
+<li><p>httplib.py</p></li>
+<li><p>pdb.py</p></li>
+<li><p>smtplib.py</p></li>
+<li><p>urllib2.py</p></li>
+<li><p>__future__.py</p></li>
+<li><p>cookielib.py</p></li>
+<li><p>ihooks.py</p></li>
+<li><p>pickle.py</p></li>
+<li><p>sndhdr.py</p></li>
+<li><p>urlparse.py</p></li>
+<li><p>__phello__.foo.py</p></li>
+<li><p>copy.py</p></li>
+<li><p>imaplib.py</p></li>
+<li><p>pickletools.py</p></li>
+<li><p>socket.py</p></li>
+<li><p>user.py</p></li>
+<li><p>_abcoll.py</p></li>
+<li><p>copy_reg.py</p></li>
+<li><p>imghdr.py</p></li>
+<li><p>pipes.py</p></li>
+<li><p>sqlite3</p></li>
+<li><p>uu.py</p></li>
+<li><p>_pyio.py</p></li>
+<li><p>csv.py</p></li>
+<li><p>importlib</p></li>
+<li><p>pkgutil.py</p></li>
+<li><p>sre.py</p></li>
+<li><p>uuid.py</p></li>
+<li><p>_strptime.py</p></li>
+<li><p>ctypes</p></li>
+<li><p>imputil.py</p></li>
+<li><p>plat-linux4</p></li>
+<li><p>sre_compile.py</p></li>
+<li><p>warnings.py</p></li>
+<li><p>_threading_local.py</p></li>
+<li><p>dbhash.py</p></li>
+<li><p>inspect.py</p></li>
+<li><p>platform.py</p></li>
+<li><p>sre_constants.py</p></li>
+<li><p>wave.py</p></li>
+<li><p>_weakrefset.py</p></li>
+<li><p>decimal.py</p></li>
+<li><p>io.py</p></li>
+<li><p>plistlib.py</p></li>
+<li><p>sre_parse.py</p></li>
+<li><p>weakref.py</p></li>
+<li><p>abc.py</p></li>
+<li><p>difflib.py</p></li>
+<li><p>json</p></li>
+<li><p>popen2.py</p></li>
+<li><p>ssl.py</p></li>
+<li><p>webbrowser.py</p></li>
+<li><p>aifc.py</p></li>
+<li><p>dircache.py</p></li>
+<li><p>keyword.py</p></li>
+<li><p>poplib.py</p></li>
+<li><p>stat.py</p></li>
+<li><p>whichdb.py</p></li>
+<li><p>antigravity.py</p></li>
+<li><p>dis.py</p></li>
+<li><p>lib-tk</p></li>
+<li><p>posixfile.py</p></li>
+<li><p>statvfs.py</p></li>
+<li><p>wsgiref</p></li>
+<li><p>anydbm.py</p></li>
+<li><p>distutils</p></li>
+<li><p>linecache.py</p></li>
+<li><p>posixpath.py</p></li>
+<li><p>string.py</p></li>
+<li><p>argparse.py</p></li>
+<li><p>doctest.py</p></li>
+<li><p>locale.py</p></li>
+<li><p>pprint.py</p></li>
+<li><p>stringold.py</p></li>
+<li><p>xdrlib.py</p></li>
+<li><p>ast.py</p></li>
+<li><p>dumbdbm.py</p></li>
+<li><p>logging</p></li>
+<li><p>profile.py</p></li>
+<li><p>stringprep.py</p></li>
+<li><p>xml</p></li>
+<li><p>asynchat.py</p></li>
+<li><p>dummy_thread.py</p></li>
+<li><p>macpath.py</p></li>
+<li><p>pstats.py</p></li>
+<li><p>struct.py</p></li>
+<li><p>xmllib.py</p></li>
+<li><p>asyncore.py</p></li>
+<li><p>dummy_threading.py</p></li>
+<li><p>macurl2path.py</p></li>
+<li><p>pty.py</p></li>
+<li><p>subprocess.py</p></li>
+<li><p>xmlrpclib.py</p></li>
+<li><p>atexit.py</p></li>
+<li><p>email</p></li>
+<li><p>mailbox.py</p></li>
+<li><p>py_compile.py</p></li>
+<li><p>sunau.py</p></li>
+<li><p>zipfile.py</p></li>
+<li><p>audiodev.py</p></li>
+<li><p>encodings</p></li>
+<li><p>mailcap.py</p></li>
+<li><p>pyclbr.py</p></li>
+<li><p>sunaudio.py</p></li>
+<li><p>base64.py</p></li>
+<li><p>filecmp.py</p></li>
+<li><p>markupbase.py</p></li>
+<li><p>pydoc.py</p></li>
+<li><p>symbol.py</p></li>
+<li><p>bdb.py</p></li>
+<li><p>fileinput.py</p></li>
+<li><p>md5.py</p></li>
+<li><p>pydoc_data</p></li>
+<li><p>symtable.py</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="python-3rd-libraries">
+</section>
+</section>
+<section id="python-3rd-libraries">
 <h1>Python 3rd Libraries<a class="headerlink" href="#python-3rd-libraries" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs3/documentation.html">BeautifulSoup.py(3)</a></li>
-<li>pkg_resources.py</li>
-<li>androidhelper</li>
-<li>plyer</li>
-<li><a class="reference external" href="http://bottlepy.org/docs/dev/">bottle.py</a></li>
-<li>qpy.py</li>
-<li>qpythoninit.py</li>
-<li>setuptools</li>
-<li><a class="reference external" href="https://pypi.python.org/pypi/pip/">pip</a></li>
+<li><p><a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs3/documentation.html">BeautifulSoup.py(3)</a></p></li>
+<li><p>pkg_resources.py</p></li>
+<li><p>androidhelper</p></li>
+<li><p>plyer</p></li>
+<li><p><a class="reference external" href="http://bottlepy.org/docs/dev/">bottle.py</a></p></li>
+<li><p>qpy.py</p></li>
+<li><p>qpythoninit.py</p></li>
+<li><p>setuptools</p></li>
+<li><p><a class="reference external" href="https://pypi.python.org/pypi/pip/">pip</a></p></li>
 </ul>
-</div>
-<div class="section" id="androidhelper-apis">
+</section>
+<section id="androidhelper-apis">
 <h1>Androidhelper APIs<a class="headerlink" href="#androidhelper-apis" title="Permalink to this headline">¶</a></h1>
 <p>To simplify QPython SL4A development in IDEs with a
 “hepler” class derived from the default Android class containing
@@ -532,43 +544,50 @@ SL4A facade functions &amp; API documentation</p>
 </li>
 </ul>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="fb-comments" data-href="http://qpython.org" data-numposts="10"></div>
-</div>
-</div>
-<div class="col-sm-2"></div>
-</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+            </div>
+            <div class="fb-comments" data-href="http://qpython.org" data-numposts="10"></div>
+          </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+
+
 <footer id="footer">
-<div class="col-sm-offset-2 col-sm-6 footer-div1">
-<div class="footer-block-item">
-<span class="footer-item1">Built with Sphinx using a theme provid by QPython.</span>
-<span class="footer-item2 visible-xs">
-&#169; Copyright 2017, QPython.
-</span>
-</div>
-</div>
-<div class="col-sm-2 footer-div2">
-<a href="/index.html" class="pull-right"><img src="../static/img_logo.png"></a>
-</div>
-</footer>
-<script type="text/javascript">
-$('.fb-comments').attr('data-href', (window.location.href.split('#')[0]).split('?')[0])
-(function(d, s, id) {
-var js, fjs = d.getElementsByTagName(s)[0];
-if (d.getElementById(id)) return;
-js = d.createElement(s); js.id = id;
-js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1680815145503311";
-fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-$(function(){
-if ($('#footer')[0].offsetTop < $(window).height()){
-$('#footer').addClass('to-bottom')
-}
-})
-</script>
-</body>
+    <div class="col-sm-offset-2 col-sm-6 footer-div1">
+      <div class="footer-block-item">
+        <span class="footer-item1">Built with Sphinx using a theme provid by QPython.</span>
+        <span class="footer-item2 visible-xs">
+              &#169; Copyright 2017, QPython.
+        </span>
+      </div>
+    </div>
+    <div class="col-sm-2 footer-div2">
+      <a href="/index.html" class="pull-right"><img src="../static/img_logo.png"></a>
+    </div>
+  </footer>
+  <script type="text/javascript">
+  $('.fb-comments').attr('data-href', (window.location.href.split('#')[0]).split('?')[0])
+
+  (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1680815145503311";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    $(function(){
+      if ($('#footer')[0].offsetTop < $(window).height()){
+        $('#footer').addClass('to-bottom')
+      }
+    })
+  </script>
+  </body>
 </html>
