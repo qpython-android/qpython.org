@@ -9,8 +9,8 @@
 <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<script type="module" src="https://chat.pgpt.cloud/assets/index.js"></script>
-<link rel="stylesheet" href="https://chat.pgpt.cloud/assets/index.css"/>
+<script src="https://chat.pgpt.cloud/index.js"></script>
+<link rel="stylesheet" href="https://chat.pgpt.cloud/index.css"/>
 	
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <link rel="stylesheet" type="text/css" href="static/qpython_theme.css">
@@ -83,10 +83,10 @@ QPython is a Python programming engine on your Android device. It integrates an 
 						<a target="_brank" href="https://play.google.com/store/apps/details?id=org.qpython.qpy
 "><img class="index-shop-img" src="static/ic_googleplay_2x.png"></a>
 					</li>
-					<li style="text-align: center;" class="visible-xs">
+					<!--li style="text-align: center;" class="visible-xs">
 						<a target="_brank" href="https://play.google.com/store/apps/details?id=org.qpython.qpy3
 "><img class="index-shop-img" src="static/ic_googleplay_3_2x.png"></a>
-					</li>
+				</li-->
 					<!--li style="text-align: center;" class="visible-xs">
 						<a target="_brank" href="https://github.com/qpython-android/qpython/releases
 "><img class="index-shop-img" src="static/apk_down.png"></a>
@@ -144,8 +144,9 @@ QPython is a Python programming engine on your Android device. It integrates an 
 		</div>
 		<div class="row index-faq clear-margin">
 			<div class="col-sm-offset-2 col-sm-8">
+
 				<ul>
-					<li class="index-faq-li col-sm-4">
+					<li class="index-faq-li col-sm-4  hidden-xs">
 						<a href="http://www.facebook.com/qpython" target="_brank"><img class="index-link-logo" src="static/ic_facebook.png" width="44px"></a>
 						<a href="http://www.twitter.com/qpython" target="_brank"><img class="index-link-logo" src="static/ic_twitter.png" width="44px"></a>
 					</li>
@@ -164,7 +165,6 @@ QPython is a Python programming engine on your Android device. It integrates an 
 							<a target="_brank" href="https://play.google.com/store/apps/details?id=org.qpython.qpy
 "><img class="index-shop-img" src="static/ic_googleplay_2x.png"></a>		
 						</div>
-						<div style="text-align: right;" ><div id="sima-popchat" data-key="AGPK-MWZmYWM2ODU3ZmEwYWU2MjIzZWRkNjBhZTJkNzQ5MDQ="></div></div>
 
 						<!--div style="text-align: right;">
 							<a target="_brank" href="https://play.google.com/store/apps/details?id=org.qpython.qpy3
@@ -186,6 +186,8 @@ QPython is a Python programming engine on your Android device. It integrates an 
 		</div>
 	</div>
 	<footer>
+		<div style="text-align: right;" ><div id="sima-popchat" data-key="AGPK-MWZmYWM2ODU3ZmEwYWU2MjIzZWRkNjBhZTJkNzQ5MDQ="></div></div>
+
 		<div class="col-sm-offset-2 col-sm-6 footer-div1">
 			<div class="footer-block-item">
 				<span class="footer-item1 visible-xs">Built with Sphinx using a theme provid by QPython.</span>
@@ -199,13 +201,13 @@ QPython is a Python programming engine on your Android device. It integrates an 
 </body>
 </html>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3GZ8CTQYNC"></script>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  ga('create', 'UA-36070037-1', 'auto');
-  ga('send', 'pageview');
-
+  gtag('config', 'G-3GZ8CTQYNC');
 </script>
+
