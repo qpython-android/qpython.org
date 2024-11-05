@@ -1,84 +1,71 @@
 <!DOCTYPE html>
 <html>
-
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-    <title>Writing “Hello World” &#8212; QPython 0.9 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../static/qpython_theme.css" />
-    <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js"></script>
-    <script src="../static/jquery.js"></script>
-    <script src="../static/underscore.js"></script>
-    <script src="../static/doctools.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="QPython’s main features" href="guide_program.html" />
-    <link rel="prev" title="QPython: How To Start" href="guide_howtostart.html" />
-    <meta charset="UTF-8">
-    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
-
-  </head><body>
-  <div class="header doc-header">
-      <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8  index-header">
-
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse"
-              data-target="#example-navbar-collapse">
-            <span class="sr-only">切换导航</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="/index.html" class="logo"><img src="../static/img_logo.png"></a>
-        </div>
-
-        <ul class="header-title hidden-xs">
-          <li class="header-phone-selected">
-            <a href="/index.html">Home</a>
-          </li>
-          <li>
-            <a href="/document.html" class="header-selected">Guide</a>
-            <span class="header-title-selected"></span>
-          </li>
-          <li>
-            <a href="//edu.qpython.org/">Course</a>
-          </li>
-          <li>
-            <a href="//www.aipy.org">AIPY</a>
-          </li>
-
-	  <li>
-              <a target="_blank" href="//github.com/qpython-android/qpython">Github</a>
-          </li>
-        </ul>
-        <div class="search-box hidden-xs">
-          <form action="../search.html">
-            <input type="search" name="q" placeholder="keyword">
-            <input type="hidden" name="check_keywords" value="yes" />
-            <input type="hidden" name="area" value="default" />
-            <button><img src="../static/ic_search.png"></button>
-          </form>
-        </div>
-      </div>
-    </div>
-
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Writing “Hello World” &#8212; QPython 0.9 documentation</title>
+<link rel="stylesheet" type="text/css" href="../static/pygments.css?v=fa44fd50" />
+<link rel="stylesheet" type="text/css" href="../static/qpython_theme.css?v=7f84cac3" />
+<script data-url_root="../" id="documentation_options" src="../static/documentation_options.js?v=23d2e95a"></script>
+<script src="../static/doctools.js?v=888ff710"></script>
+<script src="../static/sphinx_highlight.js?v=4825356b"></script>
+<link rel="index" title="Index" href="../genindex.html" />
+<link rel="search" title="Search" href="../search.html" />
+<link rel="next" title="QPython’s main features" href="guide_program.html" />
+<link rel="prev" title="QPython: How To Start" href="guide_howtostart.html" />
+<meta charset="UTF-8">
+<link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+</head><body>
+<div class="header doc-header">
+<div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8  index-header">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse"
+data-target="#example-navbar-collapse">
+<span class="sr-only">切换导航</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/index.html" class="logo"><img src="../static/img_logo.png"></a>
+</div>
+<ul class="header-title hidden-xs">
+<li class="header-phone-selected">
+<a href="/index.html">Home</a>
+</li>
+<li>
+<a href="/document.html" class="header-selected">Guide</a>
+<span class="header-title-selected"></span>
+</li>
+<li>
+<a href="//edu.qpython.org/">Course</a>
+</li>
+<li>
+<a href="//www.aipy.org">AIPY</a>
+</li>
+<li>
+<a target="_blank" href="//github.com/qpython-android/qpython">Github</a>
+</li>
+</ul>
+<div class="search-box hidden-xs">
+<form action="../search.html">
+<input type="search" name="q" placeholder="keyword">
+<input type="hidden" name="check_keywords" value="yes" />
+<input type="hidden" name="area" value="default" />
+<button><img src="../static/ic_search.png"></button>
+</form>
+</div>
+</div>
+</div>
 <div class="row doc-content">
-    <div class="content-main col-sm-offset-2 col-sm-8">
-          <div class="content-wrapper col-sm-4">
-              <div class="left-menu">
-                  <div class="doc-title hidden-xs">QPython</div>
-                  <div class="sidebar  collapse navbar-collapse"  id="example-navbar-collapse">
-                    
-                    
-                        
-                      
-                      
-                        <ul class="current">
+<div class="content-main col-sm-offset-2 col-sm-8">
+<div class="content-wrapper col-sm-4">
+<div class="left-menu">
+<div class="doc-title hidden-xs">QPython</div>
+<div class="sidebar  collapse navbar-collapse"  id="example-navbar-collapse">
+<ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="guide.html">Getting started</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="guide_howtostart.html">QPython: How To Start</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Writing “Hello World”</a><ul>
@@ -99,40 +86,31 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../zhindex.html">中文用户向导</a></li>
 </ul>
-
-                    
-                    
-                      <div class="search-phone visible-xs">
-                        <form action="../search.html">
-                          <input type="search" name="q" placeholder="keyword">
-                          <input type="hidden" name="check_keywords" value="yes" />
-                          <input type="hidden" name="area" value="default" />
-                          <button><img src="../static/ic_search.png"></button>
-                        </form>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="content col-sm-8">
-            <div class="document">
-            
-            <ul class="crumbs">
-               <li><a href="../document.html">Guide</a> &raquo;</li>
-                
-                  <li><a href="guide.html">Getting started</a> &raquo;</li>
-                
-                <li>Writing “Hello World”</li>
-            </ul>
-            
-                
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <section id="writing-hello-world">
-<h1>Writing “Hello World”<a class="headerlink" href="#writing-hello-world" title="Permalink to this headline">¶</a></h1>
+<div class="search-phone visible-xs">
+<form action="../search.html">
+<input type="search" name="q" placeholder="keyword">
+<input type="hidden" name="check_keywords" value="yes" />
+<input type="hidden" name="area" value="default" />
+<button><img src="../static/ic_search.png"></button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="content col-sm-8">
+<div class="document">
+<ul class="crumbs">
+<li><a href="../document.html">Guide</a> &raquo;</li>
+<li><a href="guide.html">Getting started</a> &raquo;</li>
+<li>Writing “Hello World”</li>
+</ul>
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<section id="writing-hello-world">
+<h1>Writing “Hello World”<a class="headerlink" href="#writing-hello-world" title="Permalink to this heading">¶</a></h1>
 <section id="hello-world">
-<h2>Hello world<a class="headerlink" href="#hello-world" title="Permalink to this headline">¶</a></h2>
+<h2>Hello world<a class="headerlink" href="#hello-world" title="Permalink to this heading">¶</a></h2>
 <img alt="hello world" src="../images/guide_helloworld_pic1.png" />
 <p>Well, after you became a bit more familiar with QPython, let’s create our first program in QPython. Obviously, it will be <cite>helloworld.py</cite>. ;)</p>
 <p>Start QPython, open editor and enter the following code:</p>
@@ -144,7 +122,7 @@
 <p>No wonder, it’s just similar to any other hello-world program. When executed, it just shows pop-up message on the screen (see screenshot on the top). Anyway, it’s a good example of QPython program.</p>
 </section>
 <section id="sl4a-library">
-<h2>SL4A library<a class="headerlink" href="#sl4a-library" title="Permalink to this headline">¶</a></h2>
+<h2>SL4A library<a class="headerlink" href="#sl4a-library" title="Permalink to this heading">¶</a></h2>
 <p>It begins with <em>import androidhelper</em> — the most useful module in QPython, which encapsulates almost all interface with Android, available in Python. Any script developed in QPython starts with this statement (at least if it claims to communicate with user). Read more about Python library <a class="reference external" href="http://docs.python.org/2.7/library/intro.html">here</a> and import statement <a class="reference external" href="http://docs.python.org/2.7/reference/simple_stmts.html#import">here</a></p>
 <p>By the way, if you’re going to make your script compatible with SL4A, you should replace the first line with the following code (and use <cite>android</cite> instead <cite>androidhelper</cite> further in the program):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span>    <span class="k">try</span><span class="p">:</span>
@@ -158,7 +136,7 @@
 <p>Well, let’s add some more functionality. Let it ask the user name and greet them.</p>
 </section>
 <section id="more-samples">
-<h2>More samples<a class="headerlink" href="#more-samples" title="Permalink to this headline">¶</a></h2>
+<h2>More samples<a class="headerlink" href="#more-samples" title="Permalink to this heading">¶</a></h2>
 <p>We can display a simple dialog box with the title, prompt, edit field and buttons <strong>Ok</strong> and <strong>Cancel</strong> using <cite>dialogGetInput</cite> call. Replace the last line of your code and save it as <cite>hello1.py</cite>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">androidhelper</span>
 <span class="n">droid</span> <span class="o">=</span> <span class="n">androidhelper</span><span class="o">.</span><span class="n">Android</span><span class="p">()</span>
@@ -191,9 +169,9 @@
 <p>First of all, I want to put text entered by user to a separate variable: <cite>name = respond.result</cite>. Then I’m going to check it, and if it contains any real text, it will be considered as a name and will be used in greeting. Otherwise another message will be shown. Replace fifth line <cite>message = ‘Hello, %s!’ % respond.result</cite> with the following code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="n">respond</span><span class="o">.</span><span class="n">result</span>
 <span class="k">if</span> <span class="n">name</span><span class="p">:</span>
-    <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Hello, </span><span class="si">%s</span><span class="s1">!&#39;</span> <span class="o">%</span> <span class="n">name</span>
+<span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Hello, </span><span class="si">%s</span><span class="s1">!&#39;</span> <span class="o">%</span> <span class="n">name</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Hey! And you&#39;re not very polite, %Username%!&quot;</span>
+<span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Hey! And you&#39;re not very polite, %Username%!&quot;</span>
 </pre></div>
 </div>
 <p>Use <strong>&lt;</strong> and <strong>&gt;</strong> buttons on the toolbar to indent/unindent lines in if-statement (or just use space/backspace keys). You can read more about indentation in Python <a class="reference external" href="http://docs.python.org/2.7/tutorial/introduction.html?highlight=indent#first-steps-towards-programming">here</a>; if-statement described <a class="reference external" href="http://docs.python.org/2.7/tutorial/controlflow.html#if-statements">here</a>.</p>
@@ -205,58 +183,52 @@
 <span class="nb">print</span> <span class="n">respond</span>
 <span class="n">name</span> <span class="o">=</span> <span class="n">respond</span><span class="o">.</span><span class="n">result</span>
 <span class="k">if</span> <span class="n">name</span><span class="p">:</span>
-    <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Hello, </span><span class="si">%s</span><span class="s1">!&#39;</span> <span class="o">%</span> <span class="n">name</span>
+<span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Hello, </span><span class="si">%s</span><span class="s1">!&#39;</span> <span class="o">%</span> <span class="n">name</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Hey! And you&#39;re not very polite, %Username%!&quot;</span>
+<span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Hey! And you&#39;re not very polite, %Username%!&quot;</span>
 <span class="n">droid</span><span class="o">.</span><span class="n">makeToast</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
 </pre></div>
 </div>
 <p><a class="reference external" href="http://onetimeblog.logdown.com/posts/2014/01/23/first-program-in-qpython">Thanks dmych offer the first draft in his blog</a></p>
 </section>
 </section>
-
-
-            <div class="clearer"></div>
-          </div>
-        </div>
-      </div>
-            </div>
-            <div class="fb-comments" data-href="http://qpython.org" data-numposts="10"></div>
-          </div>
-        </div>
-        <div class="col-sm-2"></div>
-    </div>
-
-
+<div class="clearer"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="fb-comments" data-href="http://qpython.org" data-numposts="10"></div>
+</div>
+</div>
+<div class="col-sm-2"></div>
+</div>
 <footer id="footer">
-    <div class="col-sm-offset-2 col-sm-6 footer-div1">
-      <div class="footer-block-item">
-        <span class="footer-item1">Built with Sphinx using a theme provid by QPython.</span>
-        <span class="footer-item2 visible-xs">
-              &#169; Copyright 2017, QPython.
-        </span>
-      </div>
-    </div>
-    <div class="col-sm-2 footer-div2">
-      <a href="/index.html" class="pull-right"><img src="../static/img_logo.png"></a>
-    </div>
-  </footer>
-  <script type="text/javascript">
-  $('.fb-comments').attr('data-href', (window.location.href.split('#')[0]).split('?')[0])
-
-  (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1680815145503311";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-    $(function(){
-      if ($('#footer')[0].offsetTop < $(window).height()){
-        $('#footer').addClass('to-bottom')
-      }
-    })
-  </script>
-  </body>
+<div class="col-sm-offset-2 col-sm-6 footer-div1">
+<div class="footer-block-item">
+<span class="footer-item1">Built with Sphinx using a theme provid by QPython.</span>
+<span class="footer-item2 visible-xs">
+&#169; Copyright 2017, QPython.
+</span>
+</div>
+</div>
+<div class="col-sm-2 footer-div2">
+<a href="/index.html" class="pull-right"><img src="../static/img_logo.png"></a>
+</div>
+</footer>
+<script type="text/javascript">
+$('.fb-comments').attr('data-href', (window.location.href.split('#')[0]).split('?')[0])
+(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1680815145503311";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+$(function(){
+if ($('#footer')[0].offsetTop < $(window).height()){
+$('#footer').addClass('to-bottom')
+}
+})
+</script>
+</body>
 </html>

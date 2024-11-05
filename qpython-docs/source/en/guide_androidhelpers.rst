@@ -1446,11 +1446,7 @@ TextToSpeechFacade
 EyesFreeFacade
 =========================
 
-.. py:function:: ttsSpeak(message)
 
-   Speaks the provided message via TTS
-
-   :param str message: message
 
 
 BluetoothFacade

@@ -39,11 +39,12 @@ mkdir dropbear # 在 /data/data/org.qpython.qpy/files下创建dropbear目录
 
 初始化对应的key
 
-dbkey -t dss -f dropbear/dropbear_dss_host_key 
+dbkey -t dss -f dropbear/dropbear_dss_host_key
 
 dbkey -t rsa -f dropbear/dropbear_rsa_host_key
 
 dbkey -t ecdsa -f  dropbear/dropbear_ecdsa_host_key
+
 ```
 
 完成上述步骤之后，即可启动sshd服务。

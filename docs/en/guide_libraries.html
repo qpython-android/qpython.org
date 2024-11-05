@@ -1,84 +1,71 @@
 <!DOCTYPE html>
 <html>
-
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-    <title>QPython built-in Libraries &#8212; QPython 0.9 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../static/qpython_theme.css" />
-    <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js"></script>
-    <script src="../static/jquery.js"></script>
-    <script src="../static/underscore.js"></script>
-    <script src="../static/doctools.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="AndroidFacade" href="guide_androidhelpers.html" />
-    <link rel="prev" title="Use the best way for developing" href="guide_ide.html" />
-    <meta charset="UTF-8">
-    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
-
-  </head><body>
-  <div class="header doc-header">
-      <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8  index-header">
-
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse"
-              data-target="#example-navbar-collapse">
-            <span class="sr-only">切换导航</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="/index.html" class="logo"><img src="../static/img_logo.png"></a>
-        </div>
-
-        <ul class="header-title hidden-xs">
-          <li class="header-phone-selected">
-            <a href="/index.html">Home</a>
-          </li>
-          <li>
-            <a href="/document.html" class="header-selected">Guide</a>
-            <span class="header-title-selected"></span>
-          </li>
-          <li>
-            <a href="//edu.qpython.org/">Course</a>
-          </li>
-          <li>
-            <a href="//www.aipy.org">AIPY</a>
-          </li>
-
-	  <li>
-              <a target="_blank" href="//github.com/qpython-android/qpython">Github</a>
-          </li>
-        </ul>
-        <div class="search-box hidden-xs">
-          <form action="../search.html">
-            <input type="search" name="q" placeholder="keyword">
-            <input type="hidden" name="check_keywords" value="yes" />
-            <input type="hidden" name="area" value="default" />
-            <button><img src="../static/ic_search.png"></button>
-          </form>
-        </div>
-      </div>
-    </div>
-
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>QPython built-in Libraries &#8212; QPython 0.9 documentation</title>
+<link rel="stylesheet" type="text/css" href="../static/pygments.css?v=fa44fd50" />
+<link rel="stylesheet" type="text/css" href="../static/qpython_theme.css?v=7f84cac3" />
+<script data-url_root="../" id="documentation_options" src="../static/documentation_options.js?v=23d2e95a"></script>
+<script src="../static/doctools.js?v=888ff710"></script>
+<script src="../static/sphinx_highlight.js?v=4825356b"></script>
+<link rel="index" title="Index" href="../genindex.html" />
+<link rel="search" title="Search" href="../search.html" />
+<link rel="next" title="AndroidFacade" href="guide_androidhelpers.html" />
+<link rel="prev" title="Use the best way for developing" href="guide_ide.html" />
+<meta charset="UTF-8">
+<link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+</head><body>
+<div class="header doc-header">
+<div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8  index-header">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse"
+data-target="#example-navbar-collapse">
+<span class="sr-only">切换导航</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/index.html" class="logo"><img src="../static/img_logo.png"></a>
+</div>
+<ul class="header-title hidden-xs">
+<li class="header-phone-selected">
+<a href="/index.html">Home</a>
+</li>
+<li>
+<a href="/document.html" class="header-selected">Guide</a>
+<span class="header-title-selected"></span>
+</li>
+<li>
+<a href="//edu.qpython.org/">Course</a>
+</li>
+<li>
+<a href="//www.aipy.org">AIPY</a>
+</li>
+<li>
+<a target="_blank" href="//github.com/qpython-android/qpython">Github</a>
+</li>
+</ul>
+<div class="search-box hidden-xs">
+<form action="../search.html">
+<input type="search" name="q" placeholder="keyword">
+<input type="hidden" name="check_keywords" value="yes" />
+<input type="hidden" name="area" value="default" />
+<button><img src="../static/ic_search.png"></button>
+</form>
+</div>
+</div>
+</div>
 <div class="row doc-content">
-    <div class="content-main col-sm-offset-2 col-sm-8">
-          <div class="content-wrapper col-sm-4">
-              <div class="left-menu">
-                  <div class="doc-title hidden-xs">QPython</div>
-                  <div class="sidebar  collapse navbar-collapse"  id="example-navbar-collapse">
-                    
-                    
-                        
-                      
-                      
-                        <ul class="current">
+<div class="content-main col-sm-offset-2 col-sm-8">
+<div class="content-wrapper col-sm-4">
+<div class="left-menu">
+<div class="doc-title hidden-xs">QPython</div>
+<div class="sidebar  collapse navbar-collapse"  id="example-navbar-collapse">
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="guide.html">Getting started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="guide.html#programming-guide">Programming Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="guide_program.html">QPython’s main features</a></li>
@@ -133,41 +120,32 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../zhindex.html">中文用户向导</a></li>
 </ul>
-
-                    
-                    
-                      <div class="search-phone visible-xs">
-                        <form action="../search.html">
-                          <input type="search" name="q" placeholder="keyword">
-                          <input type="hidden" name="check_keywords" value="yes" />
-                          <input type="hidden" name="area" value="default" />
-                          <button><img src="../static/ic_search.png"></button>
-                        </form>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="content col-sm-8">
-            <div class="document">
-            
-            <ul class="crumbs">
-               <li><a href="../document.html">Guide</a> &raquo;</li>
-                
-                  <li><a href="guide.html">Getting started</a> &raquo;</li>
-                
-                <li>QPython built-in Libraries</li>
-            </ul>
-            
-                
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <section id="qpython-built-in-libraries">
-<h1>QPython built-in Libraries<a class="headerlink" href="#qpython-built-in-libraries" title="Permalink to this headline">¶</a></h1>
+<div class="search-phone visible-xs">
+<form action="../search.html">
+<input type="search" name="q" placeholder="keyword">
+<input type="hidden" name="check_keywords" value="yes" />
+<input type="hidden" name="area" value="default" />
+<button><img src="../static/ic_search.png"></button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="content col-sm-8">
+<div class="document">
+<ul class="crumbs">
+<li><a href="../document.html">Guide</a> &raquo;</li>
+<li><a href="guide.html">Getting started</a> &raquo;</li>
+<li>QPython built-in Libraries</li>
+</ul>
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<section id="qpython-built-in-libraries">
+<h1>QPython built-in Libraries<a class="headerlink" href="#qpython-built-in-libraries" title="Permalink to this heading">¶</a></h1>
 <p>QPython is using the Python 2.7.2 and it support most Python stardard libraries. And you could see their documentation through Python documentation.</p>
 <section id="qpython-dynload-libraries">
-<h2>QPython dynload libraries<a class="headerlink" href="#qpython-dynload-libraries" title="Permalink to this headline">¶</a></h2>
+<h2>QPython dynload libraries<a class="headerlink" href="#qpython-dynload-libraries" title="Permalink to this heading">¶</a></h2>
 <p>Just like Python, QPython contains python built-in .so libraries.</p>
 <p>Usually, you don’t need to  import them manually, they were used in stardard libraries, and could be imported automatically.</p>
 <ul class="simple">
@@ -201,7 +179,7 @@
 </ul>
 </section>
 <section id="qpython-stardard-libraries">
-<h2>QPython stardard libraries<a class="headerlink" href="#qpython-stardard-libraries" title="Permalink to this headline">¶</a></h2>
+<h2>QPython stardard libraries<a class="headerlink" href="#qpython-stardard-libraries" title="Permalink to this heading">¶</a></h2>
 <p>The following libraries are the stardard QPython libraries which are the same as Python:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://docs.python.org/2/library/basehttpserver.html">BaseHTTPServer.py</a></p></li>
@@ -430,7 +408,7 @@
 </section>
 </section>
 <section id="python-3rd-libraries">
-<h1>Python 3rd Libraries<a class="headerlink" href="#python-3rd-libraries" title="Permalink to this headline">¶</a></h1>
+<h1>Python 3rd Libraries<a class="headerlink" href="#python-3rd-libraries" title="Permalink to this heading">¶</a></h1>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs3/documentation.html">BeautifulSoup.py(3)</a></p></li>
 <li><p>pkg_resources.py</p></li>
@@ -444,7 +422,7 @@
 </ul>
 </section>
 <section id="androidhelper-apis">
-<h1>Androidhelper APIs<a class="headerlink" href="#androidhelper-apis" title="Permalink to this headline">¶</a></h1>
+<h1>Androidhelper APIs<a class="headerlink" href="#androidhelper-apis" title="Permalink to this heading">¶</a></h1>
 <p>To simplify QPython SL4A development in IDEs with a
 “hepler” class derived from the default Android class containing
 SL4A facade functions &amp; API documentation</p>
@@ -466,14 +444,44 @@ SL4A facade functions &amp; API documentation</p>
 <li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#manager-apis">Manager APIs</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#camerafacade">CameraFacade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#camerafacade">CameraFacade</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#cameraCapturePicture"><code class="docutils literal notranslate"><span class="pre">cameraCapturePicture()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#cameraInteractiveCapturePicture"><code class="docutils literal notranslate"><span class="pre">cameraInteractiveCapturePicture()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#commonintentsfacade">CommonIntentsFacade</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#barcode">Barcode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#view-apis">View APIs</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#contactsfacade">ContactsFacade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#eventfacade">EventFacade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#contactsfacade">ContactsFacade</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#pickContact"><code class="docutils literal notranslate"><span class="pre">pickContact()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#pickPhone"><code class="docutils literal notranslate"><span class="pre">pickPhone()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#contactsGetAttributes"><code class="docutils literal notranslate"><span class="pre">contactsGetAttributes()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#contactsGetIds"><code class="docutils literal notranslate"><span class="pre">contactsGetIds()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#contactsGet"><code class="docutils literal notranslate"><span class="pre">contactsGet()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#contactsGetById"><code class="docutils literal notranslate"><span class="pre">contactsGetById()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#contactsGetCount"><code class="docutils literal notranslate"><span class="pre">contactsGetCount()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#queryContent"><code class="docutils literal notranslate"><span class="pre">queryContent()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#queryAttributes"><code class="docutils literal notranslate"><span class="pre">queryAttributes()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#eventfacade">EventFacade</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#eventClearBuffer"><code class="docutils literal notranslate"><span class="pre">eventClearBuffer()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#eventRegisterForBroadcast"><code class="docutils literal notranslate"><span class="pre">eventRegisterForBroadcast()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#eventUnregisterForBroadcast"><code class="docutils literal notranslate"><span class="pre">eventUnregisterForBroadcast()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#eventGetBrodcastCategories"><code class="docutils literal notranslate"><span class="pre">eventGetBrodcastCategories()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#eventPoll"><code class="docutils literal notranslate"><span class="pre">eventPoll()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#eventWaitFor"><code class="docutils literal notranslate"><span class="pre">eventWaitFor()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#eventWait"><code class="docutils literal notranslate"><span class="pre">eventWait()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#eventPost"><code class="docutils literal notranslate"><span class="pre">eventPost()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#rpcPostEvent"><code class="docutils literal notranslate"><span class="pre">rpcPostEvent()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#receiveEvent"><code class="docutils literal notranslate"><span class="pre">receiveEvent()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#waitForEvent"><code class="docutils literal notranslate"><span class="pre">waitForEvent()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#startEventDispatcher"><code class="docutils literal notranslate"><span class="pre">startEventDispatcher()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#stopEventDispatcher"><code class="docutils literal notranslate"><span class="pre">stopEventDispatcher()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#locationfacade">LocationFacade</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#providers-apis">Providers APIs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#location-apis">Location APIs</a></li>
@@ -506,25 +514,142 @@ SL4A facade functions &amp; API documentation</p>
 <li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#screen-brightness">Screen Brightness</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#smsfacade">SmsFacade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#speechrecognitionfacade">SpeechRecognitionFacade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#tonegeneratorfacade">ToneGeneratorFacade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#wakelockfacade">WakeLockFacade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#wififacade">WifiFacade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#batterymanagerfacade">BatteryManagerFacade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#activityresultfacade">ActivityResultFacade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#smsfacade">SmsFacade</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#smsSend"><code class="docutils literal notranslate"><span class="pre">smsSend()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#smsGetMessageCount"><code class="docutils literal notranslate"><span class="pre">smsGetMessageCount()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#smsGetMessageIds"><code class="docutils literal notranslate"><span class="pre">smsGetMessageIds()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#smsGetMessages"><code class="docutils literal notranslate"><span class="pre">smsGetMessages()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#smsGetMessageById"><code class="docutils literal notranslate"><span class="pre">smsGetMessageById()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#smsGetAttributes"><code class="docutils literal notranslate"><span class="pre">smsGetAttributes()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#smsDeleteMessage"><code class="docutils literal notranslate"><span class="pre">smsDeleteMessage()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#smsMarkMessageRead"><code class="docutils literal notranslate"><span class="pre">smsMarkMessageRead()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#speechrecognitionfacade">SpeechRecognitionFacade</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#recognizeSpeech"><code class="docutils literal notranslate"><span class="pre">recognizeSpeech()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#tonegeneratorfacade">ToneGeneratorFacade</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#generateDtmfTones"><code class="docutils literal notranslate"><span class="pre">generateDtmfTones()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#wakelockfacade">WakeLockFacade</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#wakeLockAcquireFull"><code class="docutils literal notranslate"><span class="pre">wakeLockAcquireFull()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#wakeLockAcquirePartial"><code class="docutils literal notranslate"><span class="pre">wakeLockAcquirePartial()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#wakeLockAcquireBright"><code class="docutils literal notranslate"><span class="pre">wakeLockAcquireBright()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#wakeLockAcquireDim"><code class="docutils literal notranslate"><span class="pre">wakeLockAcquireDim()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#wakeLockRelease"><code class="docutils literal notranslate"><span class="pre">wakeLockRelease()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#wififacade">WifiFacade</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#wifiGetScanResults"><code class="docutils literal notranslate"><span class="pre">wifiGetScanResults()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#wifiLockAcquireFull"><code class="docutils literal notranslate"><span class="pre">wifiLockAcquireFull()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#wifiLockAcquireScanOnly"><code class="docutils literal notranslate"><span class="pre">wifiLockAcquireScanOnly()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#wifiLockRelease"><code class="docutils literal notranslate"><span class="pre">wifiLockRelease()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#wifiStartScan"><code class="docutils literal notranslate"><span class="pre">wifiStartScan()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#checkWifiState"><code class="docutils literal notranslate"><span class="pre">checkWifiState()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#toggleWifiState"><code class="docutils literal notranslate"><span class="pre">toggleWifiState()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#wifiDisconnect"><code class="docutils literal notranslate"><span class="pre">wifiDisconnect()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#wifiGetConnectionInfo"><code class="docutils literal notranslate"><span class="pre">wifiGetConnectionInfo()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#wifiReassociate"><code class="docutils literal notranslate"><span class="pre">wifiReassociate()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#wifiReconnect"><code class="docutils literal notranslate"><span class="pre">wifiReconnect()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#batterymanagerfacade">BatteryManagerFacade</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#readBatteryData"><code class="docutils literal notranslate"><span class="pre">readBatteryData()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#batteryStartMonitoring"><code class="docutils literal notranslate"><span class="pre">batteryStartMonitoring()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#batteryStopMonitoring"><code class="docutils literal notranslate"><span class="pre">batteryStopMonitoring()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#batteryGetStatus"><code class="docutils literal notranslate"><span class="pre">batteryGetStatus()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#batteryGetHealth"><code class="docutils literal notranslate"><span class="pre">batteryGetHealth()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#batteryGetPlugType"><code class="docutils literal notranslate"><span class="pre">batteryGetPlugType()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#batteryCheckPresent"><code class="docutils literal notranslate"><span class="pre">batteryCheckPresent()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#batteryGetLevel"><code class="docutils literal notranslate"><span class="pre">batteryGetLevel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#batteryGetVoltage"><code class="docutils literal notranslate"><span class="pre">batteryGetVoltage()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#batteryGetTemperature"><code class="docutils literal notranslate"><span class="pre">batteryGetTemperature()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#batteryGetTechnology"><code class="docutils literal notranslate"><span class="pre">batteryGetTechnology()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#activityresultfacade">ActivityResultFacade</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#setResultBoolean"><code class="docutils literal notranslate"><span class="pre">setResultBoolean()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#setResultByte"><code class="docutils literal notranslate"><span class="pre">setResultByte()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#setResultShort"><code class="docutils literal notranslate"><span class="pre">setResultShort()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#setResultChar"><code class="docutils literal notranslate"><span class="pre">setResultChar()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#setResultInteger"><code class="docutils literal notranslate"><span class="pre">setResultInteger()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#setResultLong"><code class="docutils literal notranslate"><span class="pre">setResultLong()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#setResultFloat"><code class="docutils literal notranslate"><span class="pre">setResultFloat()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#setResultDouble"><code class="docutils literal notranslate"><span class="pre">setResultDouble()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#setResultString"><code class="docutils literal notranslate"><span class="pre">setResultString()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#setResultBooleanArray"><code class="docutils literal notranslate"><span class="pre">setResultBooleanArray()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#setResultByteArray"><code class="docutils literal notranslate"><span class="pre">setResultByteArray()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#setResultShortArray"><code class="docutils literal notranslate"><span class="pre">setResultShortArray()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#setResultCharArray"><code class="docutils literal notranslate"><span class="pre">setResultCharArray()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#setResultIntegerArray"><code class="docutils literal notranslate"><span class="pre">setResultIntegerArray()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#setResultLongArray"><code class="docutils literal notranslate"><span class="pre">setResultLongArray()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#setResultFloatArray"><code class="docutils literal notranslate"><span class="pre">setResultFloatArray()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#setResultDoubleArray"><code class="docutils literal notranslate"><span class="pre">setResultDoubleArray()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#setResultStringArray"><code class="docutils literal notranslate"><span class="pre">setResultStringArray()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#setResultSerializable"><code class="docutils literal notranslate"><span class="pre">setResultSerializable()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#mediaplayerfacade">MediaPlayerFacade</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#control">Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#get-information">Get Information</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#preferencesfacade">PreferencesFacade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#qpyinterfacefacade">QPyInterfaceFacade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#texttospeechfacade">TextToSpeechFacade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#preferencesfacade">PreferencesFacade</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#prefGetValue"><code class="docutils literal notranslate"><span class="pre">prefGetValue()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#prefPutValue"><code class="docutils literal notranslate"><span class="pre">prefPutValue()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#prefGetAll"><code class="docutils literal notranslate"><span class="pre">prefGetAll()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#qpyinterfacefacade">QPyInterfaceFacade</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#executeQPy"><code class="docutils literal notranslate"><span class="pre">executeQPy()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#texttospeechfacade">TextToSpeechFacade</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#ttsSpeak"><code class="docutils literal notranslate"><span class="pre">ttsSpeak()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#ttsIsSpeaking"><code class="docutils literal notranslate"><span class="pre">ttsIsSpeaking()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#eyesfreefacade">EyesFreeFacade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#bluetoothfacade">BluetoothFacade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#signalstrengthfacade">SignalStrengthFacade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#webcamfacade">WebCamFacade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#bluetoothfacade">BluetoothFacade</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#bluetoothActiveConnections"><code class="docutils literal notranslate"><span class="pre">bluetoothActiveConnections()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#bluetoothWriteBinary"><code class="docutils literal notranslate"><span class="pre">bluetoothWriteBinary()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#bluetoothReadBinary"><code class="docutils literal notranslate"><span class="pre">bluetoothReadBinary()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#bluetoothConnect"><code class="docutils literal notranslate"><span class="pre">bluetoothConnect()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#bluetoothAccept"><code class="docutils literal notranslate"><span class="pre">bluetoothAccept()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#bluetoothMakeDiscoverable"><code class="docutils literal notranslate"><span class="pre">bluetoothMakeDiscoverable()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#bluetoothWrite"><code class="docutils literal notranslate"><span class="pre">bluetoothWrite()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#bluetoothReadReady"><code class="docutils literal notranslate"><span class="pre">bluetoothReadReady()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#bluetoothRead"><code class="docutils literal notranslate"><span class="pre">bluetoothRead()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#bluetoothReadLine"><code class="docutils literal notranslate"><span class="pre">bluetoothReadLine()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#bluetoothGetRemoteDeviceName"><code class="docutils literal notranslate"><span class="pre">bluetoothGetRemoteDeviceName()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#bluetoothGetLocalName"><code class="docutils literal notranslate"><span class="pre">bluetoothGetLocalName()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#bluetoothSetLocalName"><code class="docutils literal notranslate"><span class="pre">bluetoothSetLocalName()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#bluetoothGetScanMode"><code class="docutils literal notranslate"><span class="pre">bluetoothGetScanMode()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#bluetoothGetConnectedDeviceName"><code class="docutils literal notranslate"><span class="pre">bluetoothGetConnectedDeviceName()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#checkBluetoothState"><code class="docutils literal notranslate"><span class="pre">checkBluetoothState()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#toggleBluetoothState"><code class="docutils literal notranslate"><span class="pre">toggleBluetoothState()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#bluetoothStop"><code class="docutils literal notranslate"><span class="pre">bluetoothStop()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#bluetoothGetLocalAddress"><code class="docutils literal notranslate"><span class="pre">bluetoothGetLocalAddress()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#bluetoothDiscoveryStart"><code class="docutils literal notranslate"><span class="pre">bluetoothDiscoveryStart()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#bluetoothDiscoveryCancel"><code class="docutils literal notranslate"><span class="pre">bluetoothDiscoveryCancel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#bluetoothIsDiscovering"><code class="docutils literal notranslate"><span class="pre">bluetoothIsDiscovering()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#signalstrengthfacade">SignalStrengthFacade</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#startTrackingSignalStrengths"><code class="docutils literal notranslate"><span class="pre">startTrackingSignalStrengths()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#readSignalStrengths"><code class="docutils literal notranslate"><span class="pre">readSignalStrengths()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#stopTrackingSignalStrengths"><code class="docutils literal notranslate"><span class="pre">stopTrackingSignalStrengths()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#webcamfacade">WebCamFacade</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#webcamStart"><code class="docutils literal notranslate"><span class="pre">webcamStart()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#webcamAdjustQuality"><code class="docutils literal notranslate"><span class="pre">webcamAdjustQuality()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#cameraStartPreview"><code class="docutils literal notranslate"><span class="pre">cameraStartPreview()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#cameraStopPreview"><code class="docutils literal notranslate"><span class="pre">cameraStopPreview()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="guide_androidhelpers.html#uifacade">UiFacade</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#dialog">Dialog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="guide_androidhelpers.html#nfc">NFC</a></li>
@@ -545,49 +670,43 @@ SL4A facade functions &amp; API documentation</p>
 </ul>
 </div>
 </section>
-
-
-            <div class="clearer"></div>
-          </div>
-        </div>
-      </div>
-            </div>
-            <div class="fb-comments" data-href="http://qpython.org" data-numposts="10"></div>
-          </div>
-        </div>
-        <div class="col-sm-2"></div>
-    </div>
-
-
+<div class="clearer"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="fb-comments" data-href="http://qpython.org" data-numposts="10"></div>
+</div>
+</div>
+<div class="col-sm-2"></div>
+</div>
 <footer id="footer">
-    <div class="col-sm-offset-2 col-sm-6 footer-div1">
-      <div class="footer-block-item">
-        <span class="footer-item1">Built with Sphinx using a theme provid by QPython.</span>
-        <span class="footer-item2 visible-xs">
-              &#169; Copyright 2017, QPython.
-        </span>
-      </div>
-    </div>
-    <div class="col-sm-2 footer-div2">
-      <a href="/index.html" class="pull-right"><img src="../static/img_logo.png"></a>
-    </div>
-  </footer>
-  <script type="text/javascript">
-  $('.fb-comments').attr('data-href', (window.location.href.split('#')[0]).split('?')[0])
-
-  (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1680815145503311";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-    $(function(){
-      if ($('#footer')[0].offsetTop < $(window).height()){
-        $('#footer').addClass('to-bottom')
-      }
-    })
-  </script>
-  </body>
+<div class="col-sm-offset-2 col-sm-6 footer-div1">
+<div class="footer-block-item">
+<span class="footer-item1">Built with Sphinx using a theme provid by QPython.</span>
+<span class="footer-item2 visible-xs">
+&#169; Copyright 2017, QPython.
+</span>
+</div>
+</div>
+<div class="col-sm-2 footer-div2">
+<a href="/index.html" class="pull-right"><img src="../static/img_logo.png"></a>
+</div>
+</footer>
+<script type="text/javascript">
+$('.fb-comments').attr('data-href', (window.location.href.split('#')[0]).split('?')[0])
+(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1680815145503311";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+$(function(){
+if ($('#footer')[0].offsetTop < $(window).height()){
+$('#footer').addClass('to-bottom')
+}
+})
+</script>
+</body>
 </html>
