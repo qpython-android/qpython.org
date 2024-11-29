@@ -1,14 +1,22 @@
 <script>
-  function getQuery(name) {
+function isBrowserLanguageChinese() {
+    // 获取浏览器的语言设置
+    const language = navigator.language || navigator.userLanguage;
+
+    // 判断语言是否为中文
+    return language.startsWith('zh');
+}
+
+function getQuery(name) {
     var url = window.location.search;
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
     var result = url.substr(1).match(reg);
     return result ? decodeURIComponent(result[2]) : null;
 }
 
-  if (getQuery("from")=="qpyplus") {
-     location.href='https://segmentfault.com/t/qpython'
+  if (isBrowserLanguageChinese()) {
+    location.href='https://www.qpython.com.cn/?from=app'
   } else {
-      location.href='https://www.facebook.com/groups/qpython'
+    location.href='https://discord.gg/hV2chuD'
   }
 </script>
