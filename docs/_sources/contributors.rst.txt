@@ -10,6 +10,8 @@ Developers
 -----------
 `River <https://github.com/riverfor>`_
 
+`乘着船 <https://gitee.com/buddygr>`_
+
 `kyle kersey <https://github.com/kylelk>`_
 
 `Mae <https://github.com/pollyfat>`_
