@@ -6,13 +6,14 @@ cd build/html
 
 REM 使用 Python 执行 add-analytics.py 脚本
 @REM for /r %%f in (*.html) do (
-    python ..\..\add-analytics-window.py "%%f"
+    python ..\..\add-analytics.py "%%f"
 @REM )
 
 REM 替换 _static 为 static，_images 为 images
 for /r %%f in (*.html) do (
-    powershell -Command "(Get-Content '%%f') -replace '_static', 'static' | Set-Content '%%f'"
-    powershell -Command "(Get-Content '%%f') -replace '_images', 'images' | Set-Content '%%f'"
+    echo Processing: %%f
+    powershell -Command "(Get-Content '%%f' -Encoding UTF8) -replace '_static', 'static' | Set-Content '%%f' -Encoding UTF8"
+    powershell -Command "(Get-Content '%%f' -Encoding UTF8) -replace '_images', 'images' | Set-Content '%%f' -Encoding UTF8"
 )
 
 REM 删除临时文件
