@@ -35,3 +35,7 @@ nosetests.xml
 .pydevproject
 
 .log
+
+.idea
+qpython-docs/venv/*
+qpython-docs/build/*
