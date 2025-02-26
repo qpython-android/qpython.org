@@ -1,73 +1,86 @@
 <!DOCTYPE html>
 <html>
+
 <html lang="en-US">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AndroidFacade &#8212; QPython 0.9 documentation</title>
-<link rel="stylesheet" type="text/css" href="../static/pygments.css?v=fa44fd50" />
-<link rel="stylesheet" type="text/css" href="../static/qpython_theme.css?v=7f84cac3" />
-<script data-url_root="../" id="documentation_options" src="../static/documentation_options.js?v=23d2e95a"></script>
-<script src="../static/doctools.js?v=888ff710"></script>
-<script src="../static/sphinx_highlight.js?v=4825356b"></script>
-<link rel="index" title="Index" href="../genindex.html" />
-<link rel="search" title="Search" href="../search.html" />
-<link rel="next" title="QPython Open API" href="guide_extend.html" />
-<link rel="prev" title="QPython built-in Libraries" href="guide_libraries.html" />
-<meta charset="UTF-8">
-<script src="/static/jquery.min.js"></script>
-<script src="/static/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="/static/bootstrap.min.css">
-<!--link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script-->
-<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
-</head><body>
-<div class="header doc-header">
-<div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8  index-header">
-<div class="navbar-header">
-<button type="button" class="navbar-toggle" data-toggle="collapse"
-data-target="#example-navbar-collapse">
-<span class="sr-only">切换导航</span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-<a href="/index.html" class="logo"><img src="../static/img_logo.png"></a>
-</div>
-<ul class="header-title collapse navbar-collapse" id="example-navbar-collapse">
-<li class="header-phone-selected">
-<a href="/index.html" class="header-selected">Home</a>
-<!-- <span class="header-title-selected"></span> -->
-</li>
-<li><a href="https://play.google.com/store/apps/details?id=org.qpython.qpy" target="_blank">Install</a></li>
-<li><a href="https://developer.qpython.org" target="_blank">Docs</a></li>
-<!--li>
-<a href="http://edu.qpython.org/">Course</a>
-</li-->
-<li><a href="https://x.com/qpython" target="_blank">News</a></li>
-<li><a href="https://discord.gg/hV2chuD" target="_blank">Discuss</a></li>
-<li><a href="https://www.youtube.com/@qpythonplus" target="_blank">YouTube</a></li>
-<!--li>
-<a href="http://www.aipy.org">AIPY</a>
-</li-->
-</ul>
-<div class="search-box hidden-xs">
-<form action="../search.html">
-<input type="search" name="q" placeholder="keyword">
-<input type="hidden" name="check_keywords" value="yes" />
-<input type="hidden" name="area" value="default" />
-<button><img src="../static/ic_search.png"></button>
-</form>
-</div>
-</div>
-</div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>AndroidFacade &#8212; QPython 0.9 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../static/qpython_theme.css?v=7f84cac3" />
+    <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js?v=23d2e95a"></script>
+    <script src="../static/doctools.js?v=888ff710"></script>
+    <script src="../static/sphinx_highlight.js?v=4825356b"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="QPython Open API" href="guide_extend.html" />
+    <link rel="prev" title="QPython built-in Libraries" href="guide_libraries.html" />
+    <meta charset="UTF-8">
+
+    <script src="/static/jquery.min.js"></script>
+    <script src="/static/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap.min.css">
+    <!--link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script-->
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+
+  </head><body>
+  <div class="header doc-header">
+      <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8  index-header">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse"
+              data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/index.html" class="logo"><img src="../static/img_logo.png"></a>
+        </div>
+
+        <ul class="header-title collapse navbar-collapse" id="example-navbar-collapse">
+            <li class="header-phone-selected">
+                <a href="/index.html" class="header-selected">Home</a>
+                <!-- <span class="header-title-selected"></span> -->
+            </li>
+            <li><a href="https://play.google.com/store/apps/details?id=org.qpython.qpy" target="_blank">Install</a></li>
+            <li><a href="https://developer.qpython.org" target="_blank">Docs</a></li>
+            <!--li>
+                    <a href="http://edu.qpython.org/">Course</a>
+                  </li-->
+            <li><a href="https://x.com/qpython" target="_blank">News</a></li>
+            <li><a href="https://discord.gg/hV2chuD" target="_blank">Discuss</a></li>
+            <li><a href="https://www.youtube.com/@qpythonplus" target="_blank">YouTube</a></li>
+
+            <!--li>
+                <a href="http://www.aipy.org">AIPY</a>
+            </li-->
+        </ul>
+        <div class="search-box hidden-xs">
+          <form action="../search.html">
+            <input type="search" name="q" placeholder="keyword">
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+            <button><img src="../static/ic_search.png"></button>
+          </form>
+        </div>
+      </div>
+    </div>
+
 <div class="row doc-content">
-<div class="content-main col-sm-offset-2 col-sm-8">
-<div class="content-wrapper col-sm-4">
-<div class="left-menu">
-<div class="doc-title hidden-xs">QPython</div>
-<div class="sidebar  collapse navbar-collapse"  id="example-navbar-collapse">
-<ul class="current">
+    <div class="content-main col-sm-offset-2 col-sm-8">
+          <div class="content-wrapper col-sm-4">
+              <div class="left-menu">
+                  <div class="doc-title hidden-xs">QPython</div>
+                  <div class="sidebar  collapse navbar-collapse"  id="example-navbar-collapse">
+                    
+                    
+                        
+                      
+                      
+                        <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="guide.html">Getting started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="guide.html#programming-guide">Programming Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="guide_program.html">QPython’s main features</a></li>
@@ -118,29 +131,39 @@ data-target="#example-navbar-collapse">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../zhindex.html">中文用户向导</a></li>
 </ul>
-<div class="search-phone visible-xs">
-<form action="../search.html">
-<input type="search" name="q" placeholder="keyword">
-<input type="hidden" name="check_keywords" value="yes" />
-<input type="hidden" name="area" value="default" />
-<button><img src="../static/ic_search.png"></button>
-</form>
-</div>
-</div>
-</div>
-</div>
-<div class="content col-sm-8">
-<div class="document">
-<ul class="crumbs">
-<li><a href="../document.html">Guide</a> &raquo;</li>
-<li><a href="guide.html">Getting started</a> &raquo;</li>
-<li><a href="guide_libraries.html">QPython built-in Libraries</a> &raquo;</li>
-<li>AndroidFacade</li>
-</ul>
-<div class="documentwrapper">
-<div class="bodywrapper">
-<div class="body" role="main">
-<p>The Scripting Layer for Android (abridged as SL4A, and previously named Android Scripting Environment or ASE) is a library that allows the creation and running of scripts written in various scripting languages directly on Android devices. QPython start to extend the SL4A project and integrate it.</p>
+
+                    
+                    
+                      <div class="search-phone visible-xs">
+                        <form action="../search.html">
+                          <input type="search" name="q" placeholder="keyword">
+                          <input type="hidden" name="check_keywords" value="yes" />
+                          <input type="hidden" name="area" value="default" />
+                          <button><img src="../static/ic_search.png"></button>
+                        </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="content col-sm-8">
+            <div class="document">
+            
+            <ul class="crumbs">
+               <li><a href="../document.html">Guide</a> &raquo;</li>
+                
+                  <li><a href="guide.html">Getting started</a> &raquo;</li>
+                
+                  <li><a href="guide_libraries.html">QPython built-in Libraries</a> &raquo;</li>
+                
+                <li>AndroidFacade</li>
+            </ul>
+            
+                
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <p>The Scripting Layer for Android (abridged as SL4A, and previously named Android Scripting Environment or ASE) is a library that allows the creation and running of scripts written in various scripting languages directly on Android devices. QPython start to extend the SL4A project and integrate it.</p>
 <img alt="../images/sl4a.jpg" src="../images/sl4a.jpg" />
 <p>There are many SL4A APIs, if you found any issue, please <a class="reference external" href="https://github.com/qpython-android/qpython/issues">report an issue</a>.</p>
 <section id="androidfacade">
@@ -157,6 +180,7 @@ data-target="#example-navbar-collapse">
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getClipboard">
 <span class="sig-name descname"><span class="pre">getClipboard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#getClipboard" title="Permalink to this definition">¶</a></dt>
@@ -167,10 +191,13 @@ data-target="#example-navbar-collapse">
 </dd>
 </dl>
 </dd></dl>
+
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">androidhelper</span> <span class="kn">import</span> <span class="n">Android</span>
 <span class="n">droid</span> <span class="o">=</span> <span class="n">Android</span><span class="p">()</span>
+
 <span class="c1">#setClipboard</span>
 <span class="n">droid</span><span class="o">.</span><span class="n">setClipboard</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
+
 <span class="c1">#getClipboard</span>
 <span class="n">clipboard</span> <span class="o">=</span> <span class="n">droid</span><span class="o">.</span><span class="n">getClipboard</span><span class="p">()</span><span class="o">.</span><span class="n">result</span>
 </pre></div>
@@ -200,6 +227,7 @@ data-target="#example-navbar-collapse">
 </dd>
 </dl>
 </dd></dl>
+
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="n">code</span> <span class="n">to</span> <span class="n">show</span> <span class="n">makeIntent</span>
 </pre></div>
 </div>
@@ -208,6 +236,7 @@ data-target="#example-navbar-collapse">
 <span class="sig-name descname"><span class="pre">getIntent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getIntent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the intent that launched the script</p>
 </dd></dl>
+
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="n">code</span> <span class="n">to</span> <span class="n">show</span> <span class="n">getIntent</span>
 </pre></div>
 </div>
@@ -231,6 +260,7 @@ data-target="#example-navbar-collapse">
 </dd>
 </dl>
 </dd></dl>
+
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="n">code</span> <span class="n">to</span> <span class="n">show</span> <span class="n">startActivityForResult</span>
 </pre></div>
 </div>
@@ -247,6 +277,7 @@ data-target="#example-navbar-collapse">
 </dd>
 </dl>
 </dd></dl>
+
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="n">code</span> <span class="n">to</span> <span class="n">show</span> <span class="n">startActivityForResultIntent</span>
 </pre></div>
 </div>
@@ -263,6 +294,7 @@ data-target="#example-navbar-collapse">
 </dd>
 </dl>
 </dd></dl>
+
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="n">code</span> <span class="n">to</span> <span class="n">show</span> <span class="n">startActivityIntent</span>
 </pre></div>
 </div>
@@ -284,6 +316,7 @@ data-target="#example-navbar-collapse">
 </dd>
 </dl>
 </dd></dl>
+
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="n">code</span> <span class="n">to</span> <span class="n">show</span> <span class="n">startActivityForResultIntent</span>
 </pre></div>
 </div>
@@ -307,6 +340,7 @@ data-target="#example-navbar-collapse">
 </dd>
 </dl>
 </dd></dl>
+
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="n">code</span> <span class="n">to</span> <span class="n">show</span> <span class="n">sendBroadcast</span>
 </pre></div>
 </div>
@@ -320,6 +354,7 @@ data-target="#example-navbar-collapse">
 </dd>
 </dl>
 </dd></dl>
+
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="n">code</span> <span class="n">to</span> <span class="n">show</span> <span class="n">sendBroadcastIntent</span>
 </pre></div>
 </div>
@@ -336,6 +371,7 @@ data-target="#example-navbar-collapse">
 </dd>
 </dl>
 </dd></dl>
+
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="n">code</span> <span class="n">to</span> <span class="n">show</span> <span class="n">vibrate</span>
 </pre></div>
 </div>
@@ -347,6 +383,7 @@ data-target="#example-navbar-collapse">
 <span class="sig-name descname"><span class="pre">getNetworkStatus</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getNetworkStatus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the status of network connection</p>
 </dd></dl>
+
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="n">code</span> <span class="n">to</span> <span class="n">show</span> <span class="n">getNetworkStatus</span>
 </pre></div>
 </div>
@@ -366,6 +403,7 @@ data-target="#example-navbar-collapse">
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getPackageVersionCode">
 <span class="sig-name descname"><span class="pre">getPackageVersionCode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">packageName</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#getPackageVersionCode" title="Permalink to this definition">¶</a></dt>
@@ -379,6 +417,7 @@ data-target="#example-navbar-collapse">
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getPackageVersion">
 <span class="sig-name descname"><span class="pre">getPackageVersion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">packageName</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#getPackageVersion" title="Permalink to this definition">¶</a></dt>
@@ -392,6 +431,7 @@ data-target="#example-navbar-collapse">
 </dd>
 </dl>
 </dd></dl>
+
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="n">code</span> <span class="n">to</span> <span class="n">show</span> <span class="n">getPackageVersionCode</span> <span class="o">&amp;</span> <span class="n">getPackageVersion</span>
 </pre></div>
 </div>
@@ -411,6 +451,7 @@ data-target="#example-navbar-collapse">
 </dd>
 </dl>
 </dd></dl>
+
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="n">code</span> <span class="n">to</span> <span class="n">show</span> <span class="n">getConstants</span>
 </pre></div>
 </div>
@@ -424,6 +465,7 @@ data-target="#example-navbar-collapse">
 </dd>
 </dl>
 </dd></dl>
+
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="n">code</span> <span class="n">to</span> <span class="n">show</span> <span class="n">environment</span>
 </pre></div>
 </div>
@@ -437,6 +479,7 @@ data-target="#example-navbar-collapse">
 </dd>
 </dl>
 </dd></dl>
+
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="n">code</span> <span class="n">to</span> <span class="n">show</span> <span class="n">log</span>
 </pre></div>
 </div>
@@ -458,6 +501,7 @@ data-target="#example-navbar-collapse">
 </dd>
 </dl>
 </dd></dl>
+
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="n">code</span> <span class="n">to</span> <span class="n">show</span> <span class="n">sendEmail</span>
 </pre></div>
 </div>
@@ -474,6 +518,7 @@ data-target="#example-navbar-collapse">
 </dd>
 </dl>
 </dd></dl>
+
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="n">code</span> <span class="n">to</span> <span class="n">show</span> <span class="n">makeToast</span>
 </pre></div>
 </div>
@@ -490,6 +535,7 @@ data-target="#example-navbar-collapse">
 </dd>
 </dl>
 </dd></dl>
+
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="n">code</span> <span class="n">to</span> <span class="n">show</span> <span class="n">getInput</span>
 </pre></div>
 </div>
@@ -506,6 +552,7 @@ data-target="#example-navbar-collapse">
 </dd>
 </dl>
 </dd></dl>
+
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="n">code</span> <span class="n">to</span> <span class="n">show</span> <span class="n">getPassword</span>
 </pre></div>
 </div>
@@ -523,6 +570,7 @@ data-target="#example-navbar-collapse">
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="simple">
 <dt>::</dt><dd><p>import androidhelper
 droid = androidhelper.Android()
@@ -545,6 +593,7 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 </dd>
 </dl>
 </dd></dl>
+
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="n">code</span> <span class="n">to</span> <span class="n">show</span> <span class="n">getLaunchableApplications</span>
 </pre></div>
 </div>
@@ -558,6 +607,7 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 </dd>
 </dl>
 </dd></dl>
+
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="n">code</span> <span class="n">to</span> <span class="n">show</span> <span class="n">launch</span>
 </pre></div>
 </div>
@@ -571,6 +621,7 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 </dd>
 </dl>
 </dd></dl>
+
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="n">code</span> <span class="n">to</span> <span class="n">show</span> <span class="n">getRunningPackages</span>
 </pre></div>
 </div>
@@ -584,6 +635,7 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 </dd>
 </dl>
 </dd></dl>
+
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="n">code</span> <span class="n">to</span> <span class="n">show</span> <span class="n">forceStopPackage</span>
 </pre></div>
 </div>
@@ -601,11 +653,13 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="cameraInteractiveCapturePicture">
 <span class="sig-name descname"><span class="pre">cameraInteractiveCapturePicture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targetPath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cameraInteractiveCapturePicture" title="Permalink to this definition">¶</a></dt>
 <dd><p>Starts the image capture application to take a picture and saves it to the specified path</p>
 </dd></dl>
+
 </section>
 <section id="commonintentsfacade">
 <h1>CommonIntentsFacade<a class="headerlink" href="#commonintentsfacade" title="Permalink to this heading">¶</a></h1>
@@ -621,6 +675,7 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 <section id="view-apis">
 <h2>View APIs<a class="headerlink" href="#view-apis" title="Permalink to this heading">¶</a></h2>
@@ -634,31 +689,37 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="view">
 <span class="sig-name descname"><span class="pre">view</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uri</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extras</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#view" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start activity with view action by URI (i.e. browser, contacts, etc.)</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="viewMap">
 <span class="sig-name descname"><span class="pre">viewMap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#viewMap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Opens a map search for query (e.g. pizza, 123 My Street)</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="viewContacts">
 <span class="sig-name descname"><span class="pre">viewContacts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#viewContacts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Opens the list of contacts</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="viewHtml">
 <span class="sig-name descname"><span class="pre">viewHtml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#viewHtml" title="Permalink to this definition">¶</a></dt>
 <dd><p>Opens the browser to display a local HTML file</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="search">
 <span class="sig-name descname"><span class="pre">search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#search" title="Permalink to this definition">¶</a></dt>
 <dd><p>Starts a search for the given query</p>
 </dd></dl>
+
 </section>
 </section>
 <section id="contactsfacade">
@@ -673,6 +734,7 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="pickPhone">
 <span class="sig-name descname"><span class="pre">pickPhone</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pickPhone" title="Permalink to this definition">¶</a></dt>
@@ -683,6 +745,7 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="contactsGetAttributes">
 <span class="sig-name descname"><span class="pre">contactsGetAttributes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#contactsGetAttributes" title="Permalink to this definition">¶</a></dt>
@@ -693,26 +756,31 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="contactsGetIds">
 <span class="sig-name descname"><span class="pre">contactsGetIds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#contactsGetIds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a List of all contact IDs</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="contactsGet">
 <span class="sig-name descname"><span class="pre">contactsGet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attributes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#contactsGet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a List of all contacts</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="contactsGetById">
 <span class="sig-name descname"><span class="pre">contactsGetById</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#contactsGetById" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns contacts by ID</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="contactsGetCount">
 <span class="sig-name descname"><span class="pre">contactsGetCount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#contactsGetCount" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of contacts</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="queryContent">
 <span class="sig-name descname"><span class="pre">queryContent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uri</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selectionArgs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#queryContent" title="Permalink to this definition">¶</a></dt>
@@ -723,6 +791,7 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="queryAttributes">
 <span class="sig-name descname"><span class="pre">queryAttributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uri</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#queryAttributes" title="Permalink to this definition">¶</a></dt>
@@ -733,6 +802,7 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 <section id="eventfacade">
 <h1>EventFacade<a class="headerlink" href="#eventfacade" title="Permalink to this heading">¶</a></h1>
@@ -741,21 +811,25 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 <span class="sig-name descname"><span class="pre">eventClearBuffer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#eventClearBuffer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clears all events from the event buffer</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="eventRegisterForBroadcast">
 <span class="sig-name descname"><span class="pre">eventRegisterForBroadcast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enqueue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eventRegisterForBroadcast" title="Permalink to this definition">¶</a></dt>
 <dd><p>Registers a listener for a new broadcast signal</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="eventUnregisterForBroadcast">
 <span class="sig-name descname"><span class="pre">eventUnregisterForBroadcast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eventUnregisterForBroadcast" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop listening for a broadcast signal</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="eventGetBrodcastCategories">
 <span class="sig-name descname"><span class="pre">eventGetBrodcastCategories</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#eventGetBrodcastCategories" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all the broadcast signals we are listening for</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="eventPoll">
 <span class="sig-name descname"><span class="pre">eventPoll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_of_events</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eventPoll" title="Permalink to this definition">¶</a></dt>
@@ -766,6 +840,7 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="eventWaitFor">
 <span class="sig-name descname"><span class="pre">eventWaitFor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eventName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eventWaitFor" title="Permalink to this definition">¶</a></dt>
@@ -776,6 +851,7 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="eventWait">
 <span class="sig-name descname"><span class="pre">eventWait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eventWait" title="Permalink to this definition">¶</a></dt>
@@ -786,16 +862,19 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="eventPost">
 <span class="sig-name descname"><span class="pre">eventPost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enqueue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eventPost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Post an event to the event queue</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="rpcPostEvent">
 <span class="sig-name descname"><span class="pre">rpcPostEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rpcPostEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Post an event to the event queue</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="receiveEvent">
 <span class="sig-name descname"><span class="pre">receiveEvent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#receiveEvent" title="Permalink to this definition">¶</a></dt>
@@ -806,6 +885,7 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="waitForEvent">
 <span class="sig-name descname"><span class="pre">waitForEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eventName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#waitForEvent" title="Permalink to this definition">¶</a></dt>
@@ -816,16 +896,19 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="startEventDispatcher">
 <span class="sig-name descname"><span class="pre">startEventDispatcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#startEventDispatcher" title="Permalink to this definition">¶</a></dt>
 <dd><p>Opens up a socket where you can read for events posted</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="stopEventDispatcher">
 <span class="sig-name descname"><span class="pre">stopEventDispatcher</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stopEventDispatcher" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops the event server, you can’t read in the port anymore</p>
 </dd></dl>
+
 </section>
 <section id="locationfacade">
 <h1>LocationFacade<a class="headerlink" href="#locationfacade" title="Permalink to this heading">¶</a></h1>
@@ -836,11 +919,13 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 <span class="sig-name descname"><span class="pre">locationProviders</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#locationProviders" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns availables providers on the phone</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="locationProviderEnabled">
 <span class="sig-name descname"><span class="pre">locationProviderEnabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">provider</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#locationProviderEnabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Ask if provider is enabled</p>
 </dd></dl>
+
 </section>
 <section id="location-apis">
 <h2>Location APIs<a class="headerlink" href="#location-apis" title="Permalink to this heading">¶</a></h2>
@@ -849,6 +934,7 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 <span class="sig-name descname"><span class="pre">startLocating</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minDistance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minUpdateDistance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#startLocating" title="Permalink to this definition">¶</a></dt>
 <dd><p>Starts collecting location data</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="readLocation">
 <span class="sig-name descname"><span class="pre">readLocation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#readLocation" title="Permalink to this definition">¶</a></dt>
@@ -859,11 +945,13 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="stopLocating">
 <span class="sig-name descname"><span class="pre">stopLocating</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stopLocating" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops collecting location data</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getLastKnownLocation">
 <span class="sig-name descname"><span class="pre">getLastKnownLocation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getLastKnownLocation" title="Permalink to this definition">¶</a></dt>
@@ -874,6 +962,7 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 </dd>
 </dl>
 </dd></dl>
+
 <p><em>sample code</em></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Droid</span> <span class="o">=</span> <span class="n">androidhelper</span><span class="o">.</span><span class="n">Android</span><span class="p">()</span>
 <span class="n">location</span> <span class="o">=</span> <span class="n">Droid</span><span class="o">.</span><span class="n">getLastKnownLocation</span><span class="p">()</span><span class="o">.</span><span class="n">result</span>
@@ -893,6 +982,7 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 </section>
 <section id="phonefacade">
@@ -904,6 +994,7 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 <span class="sig-name descname"><span class="pre">startTrackingPhoneState</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#startTrackingPhoneState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Starts tracking phone state</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="readPhoneState">
 <span class="sig-name descname"><span class="pre">readPhoneState</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#readPhoneState" title="Permalink to this definition">¶</a></dt>
@@ -914,11 +1005,13 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="stopTrackingPhoneState">
 <span class="sig-name descname"><span class="pre">stopTrackingPhoneState</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stopTrackingPhoneState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops tracking phone state</p>
 </dd></dl>
+
 </section>
 <section id="call-dia-apis">
 <h2>Call &amp; Dia APIs<a class="headerlink" href="#call-dia-apis" title="Permalink to this heading">¶</a></h2>
@@ -927,21 +1020,25 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 <span class="sig-name descname"><span class="pre">phoneCall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uri</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#phoneCall" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calls a contact/phone number by URI</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="phoneCallNumber">
 <span class="sig-name descname"><span class="pre">phoneCallNumber</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#phoneCallNumber" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calls a phone number</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="phoneDial">
 <span class="sig-name descname"><span class="pre">phoneDial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uri</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#phoneDial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dials a contact/phone number by URI</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="phoneDialNumber">
 <span class="sig-name descname"><span class="pre">phoneDialNumber</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#phoneDialNumber" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dials a phone number</p>
 </dd></dl>
+
 </section>
 <section id="get-information-apis">
 <h2>Get information APIs<a class="headerlink" href="#get-information-apis" title="Permalink to this heading">¶</a></h2>
@@ -950,91 +1047,109 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 <span class="sig-name descname"><span class="pre">getCellLocation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getCellLocation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the current cell location</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getNetworkOperator">
 <span class="sig-name descname"><span class="pre">getNetworkOperator</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getNetworkOperator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the numeric name (MCC+MNC) of current registered operator</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getNetworkOperatorName">
 <span class="sig-name descname"><span class="pre">getNetworkOperatorName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getNetworkOperatorName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the alphabetic name of current registered operator</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getNetworkType">
 <span class="sig-name descname"><span class="pre">getNetworkType</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getNetworkType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a the radio technology (network type) currently in use on the device</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getPhoneType">
 <span class="sig-name descname"><span class="pre">getPhoneType</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getPhoneType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the device phone type</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getSimCountryIso">
 <span class="sig-name descname"><span class="pre">getSimCountryIso</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getSimCountryIso" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the ISO country code equivalent for the SIM provider’s country code</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getSimOperator">
 <span class="sig-name descname"><span class="pre">getSimOperator</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getSimOperator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the MCC+MNC (mobile country code + mobile network code) of the provider of the SIM. 5 or 6 decimal digits</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getSimOperatorName">
 <span class="sig-name descname"><span class="pre">getSimOperatorName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getSimOperatorName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the Service Provider Name (SPN)</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getSimSerialNumber">
 <span class="sig-name descname"><span class="pre">getSimSerialNumber</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getSimSerialNumber" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the serial number of the SIM, if applicable. Return null if it is unavailable</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getSimState">
 <span class="sig-name descname"><span class="pre">getSimState</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getSimState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the state of the device SIM card</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getSubscriberId">
 <span class="sig-name descname"><span class="pre">getSubscriberId</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getSubscriberId" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the unique subscriber ID, for example, the IMSI for a GSM phone. Return null if it is unavailable</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getVoiceMailAlphaTag">
 <span class="sig-name descname"><span class="pre">getVoiceMailAlphaTag</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getVoiceMailAlphaTag" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the alphabetic identifier associated with the voice mail number</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getVoiceMailNumber">
 <span class="sig-name descname"><span class="pre">getVoiceMailNumber</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getVoiceMailNumber" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the voice mail number. Return null if it is unavailable</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="checkNetworkRoaming">
 <span class="sig-name descname"><span class="pre">checkNetworkRoaming</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checkNetworkRoaming" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns true if the device is considered roaming on the current network, for GSM purposes</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getDeviceId">
 <span class="sig-name descname"><span class="pre">getDeviceId</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getDeviceId" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the unique device ID, for example, the IMEI for GSM and the MEID for CDMA phones. Return null if device ID is not available</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getDeviceSoftwareVersion">
 <span class="sig-name descname"><span class="pre">getDeviceSoftwareVersion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getDeviceSoftwareVersion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the software version number for the device, for example, the IMEI/SV for GSM phones. Return null if the software version is not available</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getLine1Number">
 <span class="sig-name descname"><span class="pre">getLine1Number</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getLine1Number" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the phone number string for line 1, for example, the MSISDN for a GSM phone. Return null if it is unavailable</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getNeighboringCellInfo">
 <span class="sig-name descname"><span class="pre">getNeighboringCellInfo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getNeighboringCellInfo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the neighboring cell information of the device</p>
 </dd></dl>
+
 </section>
 </section>
 <section id="mediarecorderfacade">
@@ -1046,6 +1161,7 @@ droid.notify(‘Hello’,’QPython’,’<a class="reference external" href="ht
 <span class="sig-name descname"><span class="pre">recorderStartMicrophone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targetPath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#recorderStartMicrophone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Records audio from the microphone and saves it to the given location</p>
 </dd></dl>
+
 </section>
 <section id="video-apis">
 <h2>Video APIs<a class="headerlink" href="#video-apis" title="Permalink to this heading">¶</a></h2>
@@ -1059,6 +1175,7 @@ when recorderStop is called or when a scripts exits.
 Otherwise it will block for the time period equal to the duration argument.
 videoSize: 0=160x120, 1=320x240, 2=352x288, 3=640x480, 4=800x480.</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="recorderCaptureVideo">
 <span class="sig-name descname"><span class="pre">recorderCaptureVideo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targetPath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recordAudio</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#recorderCaptureVideo" title="Permalink to this definition">¶</a></dt>
@@ -1068,11 +1185,13 @@ If duration is not provided this method will return immediately and the recordin
 when recorderStop is called or when a scripts exits.
 Otherwise it will block for the time period equal to the duration argument.</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="startInteractiveVideoRecording">
 <span class="sig-name descname"><span class="pre">startInteractiveVideoRecording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#startInteractiveVideoRecording" title="Permalink to this definition">¶</a></dt>
 <dd><p>Starts the video capture application to record a video and saves it to the specified path</p>
 </dd></dl>
+
 </section>
 <section id="stop">
 <h2>Stop<a class="headerlink" href="#stop" title="Permalink to this heading">¶</a></h2>
@@ -1081,6 +1200,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 <span class="sig-name descname"><span class="pre">recorderStop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#recorderStop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops a previously started recording</p>
 </dd></dl>
+
 </section>
 </section>
 <section id="sensormanagerfacade">
@@ -1092,21 +1212,25 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 <span class="sig-name descname"><span class="pre">startSensingTimed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sensorNumber</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delayTime</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#startSensingTimed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Starts recording sensor data to be available for polling</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="startSensingThreshold">
 <span class="sig-name descname"><span class="pre">startSensingThreshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ensorNumber</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#startSensingThreshold" title="Permalink to this definition">¶</a></dt>
 <dd><p>Records to the Event Queue sensor data exceeding a chosen threshold</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="startSensing">
 <span class="sig-name descname"><span class="pre">startSensing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sampleSize</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#startSensing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Starts recording sensor data to be available for polling</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="stopSensing">
 <span class="sig-name descname"><span class="pre">stopSensing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stopSensing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops collecting sensor data</p>
 </dd></dl>
+
 </section>
 <section id="read-data-apis">
 <h2>Read data APIs<a class="headerlink" href="#read-data-apis" title="Permalink to this heading">¶</a></h2>
@@ -1115,16 +1239,19 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 <span class="sig-name descname"><span class="pre">readSensors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#readSensors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the most recently recorded sensor data</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="sensorsGetAccuracy">
 <span class="sig-name descname"><span class="pre">sensorsGetAccuracy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensorsGetAccuracy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the most recently received accuracy value</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="sensorsGetLight">
 <span class="sig-name descname"><span class="pre">sensorsGetLight</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensorsGetLight" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the most recently received light value</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="sensorsReadAccelerometer">
 <span class="sig-name descname"><span class="pre">sensorsReadAccelerometer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensorsReadAccelerometer" title="Permalink to this definition">¶</a></dt>
@@ -1135,6 +1262,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="sensorsReadMagnetometer">
 <span class="sig-name descname"><span class="pre">sensorsReadMagnetometer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensorsReadMagnetometer" title="Permalink to this definition">¶</a></dt>
@@ -1145,6 +1273,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="sensorsReadOrientation">
 <span class="sig-name descname"><span class="pre">sensorsReadOrientation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensorsReadOrientation" title="Permalink to this definition">¶</a></dt>
@@ -1155,6 +1284,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <p><em>sample code</em></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Droid</span> <span class="o">=</span> <span class="n">androidhelper</span><span class="o">.</span><span class="n">Android</span><span class="p">()</span>
 <span class="n">Droid</span><span class="o">.</span><span class="n">startSensingTimed</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
@@ -1178,6 +1308,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getScreenTimeout">
 <span class="sig-name descname"><span class="pre">getScreenTimeout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getScreenTimeout" title="Permalink to this definition">¶</a></dt>
@@ -1188,6 +1319,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 <section id="airplanermode">
 <h2>AirplanerMode<a class="headerlink" href="#airplanermode" title="Permalink to this heading">¶</a></h2>
@@ -1201,6 +1333,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="toggleAirplaneMode">
 <span class="sig-name descname"><span class="pre">toggleAirplaneMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#toggleAirplaneMode" title="Permalink to this definition">¶</a></dt>
@@ -1211,6 +1344,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 <section id="ringer-silent-mode">
 <h2>Ringer Silent Mode<a class="headerlink" href="#ringer-silent-mode" title="Permalink to this heading">¶</a></h2>
@@ -1224,6 +1358,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="toggleRingerSilentMode">
 <span class="sig-name descname"><span class="pre">toggleRingerSilentMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#toggleRingerSilentMode" title="Permalink to this definition">¶</a></dt>
@@ -1234,6 +1369,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 <section id="vibrate-mode">
 <h2>Vibrate Mode<a class="headerlink" href="#vibrate-mode" title="Permalink to this heading">¶</a></h2>
@@ -1247,6 +1383,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getVibrateMode">
 <span class="sig-name descname"><span class="pre">getVibrateMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ringer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#getVibrateMode" title="Permalink to this definition">¶</a></dt>
@@ -1257,6 +1394,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 <section id="ringer-media-volume">
 <h2>Ringer &amp; Media Volume<a class="headerlink" href="#ringer-media-volume" title="Permalink to this heading">¶</a></h2>
@@ -1265,31 +1403,37 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 <span class="sig-name descname"><span class="pre">getMaxRingerVolume</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getMaxRingerVolume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the maximum ringer volume</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getRingerVolume">
 <span class="sig-name descname"><span class="pre">getRingerVolume</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getRingerVolume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the current ringer volume</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="setRingerVolume">
 <span class="sig-name descname"><span class="pre">setRingerVolume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volume</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setRingerVolume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the ringer volume</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getMaxMediaVolume">
 <span class="sig-name descname"><span class="pre">getMaxMediaVolume</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getMaxMediaVolume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the maximum media volume</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="getMediaVolume">
 <span class="sig-name descname"><span class="pre">getMediaVolume</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getMediaVolume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the current media volume</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="setMediaVolume">
 <span class="sig-name descname"><span class="pre">setMediaVolume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volume</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setMediaVolume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the media volume</p>
 </dd></dl>
+
 </section>
 <section id="screen-brightness">
 <h2>Screen Brightness<a class="headerlink" href="#screen-brightness" title="Permalink to this heading">¶</a></h2>
@@ -1303,6 +1447,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="setScreenBrightness">
 <span class="sig-name descname"><span class="pre">setScreenBrightness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setScreenBrightness" title="Permalink to this definition">¶</a></dt>
@@ -1313,6 +1458,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="checkScreenOn">
 <span class="sig-name descname"><span class="pre">checkScreenOn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checkScreenOn" title="Permalink to this definition">¶</a></dt>
@@ -1323,6 +1469,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 </section>
 <section id="smsfacade">
@@ -1340,6 +1487,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="smsGetMessageCount">
 <span class="sig-name descname"><span class="pre">smsGetMessageCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unreadOnly</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">folder</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smsGetMessageCount" title="Permalink to this definition">¶</a></dt>
@@ -1353,6 +1501,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="smsGetMessageIds">
 <span class="sig-name descname"><span class="pre">smsGetMessageIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unreadOnly</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">folder</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smsGetMessageIds" title="Permalink to this definition">¶</a></dt>
@@ -1366,6 +1515,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="smsGetMessages">
 <span class="sig-name descname"><span class="pre">smsGetMessages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unreadOnly</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">folder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smsGetMessages" title="Permalink to this definition">¶</a></dt>
@@ -1383,6 +1533,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="smsGetMessageById">
 <span class="sig-name descname"><span class="pre">smsGetMessageById</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smsGetMessageById" title="Permalink to this definition">¶</a></dt>
@@ -1399,11 +1550,13 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="smsGetAttributes">
 <span class="sig-name descname"><span class="pre">smsGetAttributes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#smsGetAttributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a List of all possible message attributes</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="smsDeleteMessage">
 <span class="sig-name descname"><span class="pre">smsDeleteMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smsDeleteMessage" title="Permalink to this definition">¶</a></dt>
@@ -1417,6 +1570,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="smsMarkMessageRead">
 <span class="sig-name descname"><span class="pre">smsMarkMessageRead</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ids</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">read</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#smsMarkMessageRead" title="Permalink to this definition">¶</a></dt>
@@ -1433,6 +1587,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 <section id="speechrecognitionfacade">
 <h1>SpeechRecognitionFacade<a class="headerlink" href="#speechrecognitionfacade" title="Permalink to this heading">¶</a></h1>
@@ -1453,6 +1608,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 <section id="tonegeneratorfacade">
 <h1>ToneGeneratorFacade<a class="headerlink" href="#tonegeneratorfacade" title="Permalink to this heading">¶</a></h1>
@@ -1469,6 +1625,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 <section id="wakelockfacade">
 <h1>WakeLockFacade<a class="headerlink" href="#wakelockfacade" title="Permalink to this heading">¶</a></h1>
@@ -1477,26 +1634,31 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 <span class="sig-name descname"><span class="pre">wakeLockAcquireFull</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wakeLockAcquireFull" title="Permalink to this definition">¶</a></dt>
 <dd><p>Acquires a full wake lock (CPU on, screen bright, keyboard bright)</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="wakeLockAcquirePartial">
 <span class="sig-name descname"><span class="pre">wakeLockAcquirePartial</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wakeLockAcquirePartial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Acquires a partial wake lock (CPU on)</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="wakeLockAcquireBright">
 <span class="sig-name descname"><span class="pre">wakeLockAcquireBright</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wakeLockAcquireBright" title="Permalink to this definition">¶</a></dt>
 <dd><p>Acquires a bright wake lock (CPU on, screen bright)</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="wakeLockAcquireDim">
 <span class="sig-name descname"><span class="pre">wakeLockAcquireDim</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wakeLockAcquireDim" title="Permalink to this definition">¶</a></dt>
 <dd><p>Acquires a dim wake lock (CPU on, screen dim)</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="wakeLockRelease">
 <span class="sig-name descname"><span class="pre">wakeLockRelease</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wakeLockRelease" title="Permalink to this definition">¶</a></dt>
 <dd><p>Releases the wake lock</p>
 </dd></dl>
+
 </section>
 <section id="wififacade">
 <h1>WifiFacade<a class="headerlink" href="#wififacade" title="Permalink to this heading">¶</a></h1>
@@ -1505,21 +1667,25 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 <span class="sig-name descname"><span class="pre">wifiGetScanResults</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wifiGetScanResults" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the list of access points found during the most recent Wifi scan</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="wifiLockAcquireFull">
 <span class="sig-name descname"><span class="pre">wifiLockAcquireFull</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wifiLockAcquireFull" title="Permalink to this definition">¶</a></dt>
 <dd><p>Acquires a full Wifi lock</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="wifiLockAcquireScanOnly">
 <span class="sig-name descname"><span class="pre">wifiLockAcquireScanOnly</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wifiLockAcquireScanOnly" title="Permalink to this definition">¶</a></dt>
 <dd><p>Acquires a scan only Wifi lock</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="wifiLockRelease">
 <span class="sig-name descname"><span class="pre">wifiLockRelease</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wifiLockRelease" title="Permalink to this definition">¶</a></dt>
 <dd><p>Releases a previously acquired Wifi lock</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="wifiStartScan">
 <span class="sig-name descname"><span class="pre">wifiStartScan</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wifiStartScan" title="Permalink to this definition">¶</a></dt>
@@ -1530,6 +1696,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="checkWifiState">
 <span class="sig-name descname"><span class="pre">checkWifiState</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checkWifiState" title="Permalink to this definition">¶</a></dt>
@@ -1540,6 +1707,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="toggleWifiState">
 <span class="sig-name descname"><span class="pre">toggleWifiState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#toggleWifiState" title="Permalink to this definition">¶</a></dt>
@@ -1553,6 +1721,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="wifiDisconnect">
 <span class="sig-name descname"><span class="pre">wifiDisconnect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wifiDisconnect" title="Permalink to this definition">¶</a></dt>
@@ -1563,11 +1732,13 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="wifiGetConnectionInfo">
 <span class="sig-name descname"><span class="pre">wifiGetConnectionInfo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wifiGetConnectionInfo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns information about the currently active access point</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="wifiReassociate">
 <span class="sig-name descname"><span class="pre">wifiReassociate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wifiReassociate" title="Permalink to this definition">¶</a></dt>
@@ -1578,6 +1749,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="wifiReconnect">
 <span class="sig-name descname"><span class="pre">wifiReconnect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wifiReconnect" title="Permalink to this definition">¶</a></dt>
@@ -1588,6 +1760,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 <section id="batterymanagerfacade">
 <h1>BatteryManagerFacade<a class="headerlink" href="#batterymanagerfacade" title="Permalink to this heading">¶</a></h1>
@@ -1596,16 +1769,19 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 <span class="sig-name descname"><span class="pre">readBatteryData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#readBatteryData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the most recently recorded battery data</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="batteryStartMonitoring">
 <span class="sig-name descname"><span class="pre">batteryStartMonitoring</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#batteryStartMonitoring" title="Permalink to this definition">¶</a></dt>
 <dd><p>Starts tracking battery state</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="batteryStopMonitoring">
 <span class="sig-name descname"><span class="pre">batteryStopMonitoring</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#batteryStopMonitoring" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops tracking battery state</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="batteryGetStatus">
 <span class="sig-name descname"><span class="pre">batteryGetStatus</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#batteryGetStatus" title="Permalink to this definition">¶</a></dt>
@@ -1616,6 +1792,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 4 - not charging;
 5 - full</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="batteryGetHealth">
 <span class="sig-name descname"><span class="pre">batteryGetHealth</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#batteryGetHealth" title="Permalink to this definition">¶</a></dt>
@@ -1627,6 +1804,7 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 5 - over voltage;
 6 - unspecified failure</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="batteryGetPlugType">
 <span class="sig-name descname"><span class="pre">batteryGetPlugType</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#batteryGetPlugType" title="Permalink to this definition">¶</a></dt>
@@ -1636,31 +1814,37 @@ Otherwise it will block for the time period equal to the duration argument.</p>
 1 - power source is an AC charger
 2 - power source is a USB port</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="batteryCheckPresent">
 <span class="sig-name descname"><span class="pre">batteryCheckPresent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#batteryCheckPresent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the most recently received battery presence data</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="batteryGetLevel">
 <span class="sig-name descname"><span class="pre">batteryGetLevel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#batteryGetLevel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the most recently received battery level (percentage)</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="batteryGetVoltage">
 <span class="sig-name descname"><span class="pre">batteryGetVoltage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#batteryGetVoltage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the most recently received battery voltage</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="batteryGetTemperature">
 <span class="sig-name descname"><span class="pre">batteryGetTemperature</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#batteryGetTemperature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the most recently received battery temperature</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="batteryGetTechnology">
 <span class="sig-name descname"><span class="pre">batteryGetTechnology</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#batteryGetTechnology" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the most recently received battery technology data</p>
 </dd></dl>
+
 </section>
 <section id="activityresultfacade">
 <h1>ActivityResultFacade<a class="headerlink" href="#activityresultfacade" title="Permalink to this heading">¶</a></h1>
@@ -1678,6 +1862,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="setResultByte">
 <span class="sig-name descname"><span class="pre">setResultByte</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resultCode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultValue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setResultByte" title="Permalink to this definition">¶</a></dt>
@@ -1692,6 +1877,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="setResultShort">
 <span class="sig-name descname"><span class="pre">setResultShort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resultCode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultValue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setResultShort" title="Permalink to this definition">¶</a></dt>
@@ -1706,6 +1892,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="setResultChar">
 <span class="sig-name descname"><span class="pre">setResultChar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resultCode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultValue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setResultChar" title="Permalink to this definition">¶</a></dt>
@@ -1720,6 +1907,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="setResultInteger">
 <span class="sig-name descname"><span class="pre">setResultInteger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resultCode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultValue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setResultInteger" title="Permalink to this definition">¶</a></dt>
@@ -1734,6 +1922,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="setResultLong">
 <span class="sig-name descname"><span class="pre">setResultLong</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resultCode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultValue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setResultLong" title="Permalink to this definition">¶</a></dt>
@@ -1748,6 +1937,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="setResultFloat">
 <span class="sig-name descname"><span class="pre">setResultFloat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resultCode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultValue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setResultFloat" title="Permalink to this definition">¶</a></dt>
@@ -1762,6 +1952,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="setResultDouble">
 <span class="sig-name descname"><span class="pre">setResultDouble</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resultCode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultValue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setResultDouble" title="Permalink to this definition">¶</a></dt>
@@ -1776,6 +1967,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="setResultString">
 <span class="sig-name descname"><span class="pre">setResultString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resultCode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultValue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setResultString" title="Permalink to this definition">¶</a></dt>
@@ -1790,6 +1982,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="setResultBooleanArray">
 <span class="sig-name descname"><span class="pre">setResultBooleanArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resultCode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultValue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setResultBooleanArray" title="Permalink to this definition">¶</a></dt>
@@ -1804,6 +1997,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="setResultByteArray">
 <span class="sig-name descname"><span class="pre">setResultByteArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resultCode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultValue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setResultByteArray" title="Permalink to this definition">¶</a></dt>
@@ -1818,6 +2012,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="setResultShortArray">
 <span class="sig-name descname"><span class="pre">setResultShortArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resultCode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultValue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setResultShortArray" title="Permalink to this definition">¶</a></dt>
@@ -1832,6 +2027,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="setResultCharArray">
 <span class="sig-name descname"><span class="pre">setResultCharArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resultCode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultValue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setResultCharArray" title="Permalink to this definition">¶</a></dt>
@@ -1846,6 +2042,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="setResultIntegerArray">
 <span class="sig-name descname"><span class="pre">setResultIntegerArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resultCode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultValue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setResultIntegerArray" title="Permalink to this definition">¶</a></dt>
@@ -1860,6 +2057,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="setResultLongArray">
 <span class="sig-name descname"><span class="pre">setResultLongArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resultCode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultValue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setResultLongArray" title="Permalink to this definition">¶</a></dt>
@@ -1874,6 +2072,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="setResultFloatArray">
 <span class="sig-name descname"><span class="pre">setResultFloatArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resultCode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultValue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setResultFloatArray" title="Permalink to this definition">¶</a></dt>
@@ -1888,6 +2087,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="setResultDoubleArray">
 <span class="sig-name descname"><span class="pre">setResultDoubleArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resultCode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultValue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setResultDoubleArray" title="Permalink to this definition">¶</a></dt>
@@ -1902,6 +2102,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="setResultStringArray">
 <span class="sig-name descname"><span class="pre">setResultStringArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resultCode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultValue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setResultStringArray" title="Permalink to this definition">¶</a></dt>
@@ -1916,6 +2117,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="setResultSerializable">
 <span class="sig-name descname"><span class="pre">setResultSerializable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resultCode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resultValue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#setResultSerializable" title="Permalink to this definition">¶</a></dt>
@@ -1930,6 +2132,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 <section id="mediaplayerfacade">
 <h1>MediaPlayerFacade<a class="headerlink" href="#mediaplayerfacade" title="Permalink to this heading">¶</a></h1>
@@ -1952,6 +2155,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="mediaPlayPause">
 <span class="sig-name descname"><span class="pre">mediaPlayPause</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mediaPlayPause" title="Permalink to this definition">¶</a></dt>
@@ -1965,6 +2169,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="mediaPlayStart">
 <span class="sig-name descname"><span class="pre">mediaPlayStart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mediaPlayStart" title="Permalink to this definition">¶</a></dt>
@@ -1978,6 +2183,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="mediaPlayClose">
 <span class="sig-name descname"><span class="pre">mediaPlayClose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mediaPlayClose" title="Permalink to this definition">¶</a></dt>
@@ -1991,6 +2197,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="mediaIsPlaying">
 <span class="sig-name descname"><span class="pre">mediaIsPlaying</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mediaIsPlaying" title="Permalink to this definition">¶</a></dt>
@@ -2004,6 +2211,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="mediaPlaySetLooping">
 <span class="sig-name descname"><span class="pre">mediaPlaySetLooping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mediaPlaySetLooping" title="Permalink to this definition">¶</a></dt>
@@ -2020,6 +2228,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="mediaPlaySeek">
 <span class="sig-name descname"><span class="pre">mediaPlaySeek</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mediaPlaySeek" title="Permalink to this definition">¶</a></dt>
@@ -2036,6 +2245,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 <section id="get-information">
 <h2>Get Information<a class="headerlink" href="#get-information" title="Permalink to this heading">¶</a></h2>
@@ -2052,6 +2262,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="mediaPlayList">
 <span class="sig-name descname"><span class="pre">mediaPlayList</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mediaPlayList" title="Permalink to this definition">¶</a></dt>
@@ -2062,6 +2273,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 </section>
 <section id="preferencesfacade">
@@ -2079,6 +2291,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="prefPutValue">
 <span class="sig-name descname"><span class="pre">prefPutValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prefPutValue" title="Permalink to this definition">¶</a></dt>
@@ -2093,6 +2306,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="prefGetAll">
 <span class="sig-name descname"><span class="pre">prefGetAll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prefGetAll" title="Permalink to this definition">¶</a></dt>
@@ -2103,6 +2317,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 <section id="qpyinterfacefacade">
 <h1>QPyInterfaceFacade<a class="headerlink" href="#qpyinterfacefacade" title="Permalink to this heading">¶</a></h1>
@@ -2119,6 +2334,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 <section id="texttospeechfacade">
 <h1>TextToSpeechFacade<a class="headerlink" href="#texttospeechfacade" title="Permalink to this heading">¶</a></h1>
@@ -2132,11 +2348,13 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="ttsIsSpeaking">
 <span class="sig-name descname"><span class="pre">ttsIsSpeaking</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ttsIsSpeaking" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns True if speech is currently in progress</p>
 </dd></dl>
+
 </section>
 <section id="eyesfreefacade">
 <h1>EyesFreeFacade<a class="headerlink" href="#eyesfreefacade" title="Permalink to this heading">¶</a></h1>
@@ -2148,6 +2366,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 <span class="sig-name descname"><span class="pre">bluetoothActiveConnections</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bluetoothActiveConnections" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns active Bluetooth connections</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="bluetoothWriteBinary">
 <span class="sig-name descname"><span class="pre">bluetoothWriteBinary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base64</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bluetoothWriteBinary" title="Permalink to this definition">¶</a></dt>
@@ -2161,6 +2380,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="bluetoothReadBinary">
 <span class="sig-name descname"><span class="pre">bluetoothReadBinary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bufferSize</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bluetoothReadBinary" title="Permalink to this definition">¶</a></dt>
@@ -2174,6 +2394,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="bluetoothConnect">
 <span class="sig-name descname"><span class="pre">bluetoothConnect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uuid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">address</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bluetoothConnect" title="Permalink to this definition">¶</a></dt>
@@ -2190,6 +2411,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="bluetoothAccept">
 <span class="sig-name descname"><span class="pre">bluetoothAccept</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uuid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bluetoothAccept" title="Permalink to this definition">¶</a></dt>
@@ -2203,6 +2425,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="bluetoothMakeDiscoverable">
 <span class="sig-name descname"><span class="pre">bluetoothMakeDiscoverable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">duration</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bluetoothMakeDiscoverable" title="Permalink to this definition">¶</a></dt>
@@ -2213,6 +2436,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="bluetoothWrite">
 <span class="sig-name descname"><span class="pre">bluetoothWrite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ascii</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bluetoothWrite" title="Permalink to this definition">¶</a></dt>
@@ -2226,6 +2450,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="bluetoothReadReady">
 <span class="sig-name descname"><span class="pre">bluetoothReadReady</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bluetoothReadReady" title="Permalink to this definition">¶</a></dt>
@@ -2239,6 +2464,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="bluetoothRead">
 <span class="sig-name descname"><span class="pre">bluetoothRead</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bufferSize</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bluetoothRead" title="Permalink to this definition">¶</a></dt>
@@ -2252,6 +2478,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="bluetoothReadLine">
 <span class="sig-name descname"><span class="pre">bluetoothReadLine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bluetoothReadLine" title="Permalink to this definition">¶</a></dt>
@@ -2262,6 +2489,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="bluetoothGetRemoteDeviceName">
 <span class="sig-name descname"><span class="pre">bluetoothGetRemoteDeviceName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bluetoothGetRemoteDeviceName" title="Permalink to this definition">¶</a></dt>
@@ -2272,11 +2500,13 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="bluetoothGetLocalName">
 <span class="sig-name descname"><span class="pre">bluetoothGetLocalName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bluetoothGetLocalName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the Bluetooth Visible device name</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="bluetoothSetLocalName">
 <span class="sig-name descname"><span class="pre">bluetoothSetLocalName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bluetoothSetLocalName" title="Permalink to this definition">¶</a></dt>
@@ -2287,6 +2517,7 @@ the resulting intent will contain SCRIPT_RESULT extra with the given value</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="bluetoothGetScanMode">
 <span class="sig-name descname"><span class="pre">bluetoothGetScanMode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bluetoothGetScanMode" title="Permalink to this definition">¶</a></dt>
@@ -2297,6 +2528,7 @@ Return values:
 1 connectable non discoverable.
 3 connectable and discoverable.</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="bluetoothGetConnectedDeviceName">
 <span class="sig-name descname"><span class="pre">bluetoothGetConnectedDeviceName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bluetoothGetConnectedDeviceName" title="Permalink to this definition">¶</a></dt>
@@ -2307,6 +2539,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="checkBluetoothState">
 <span class="sig-name descname"><span class="pre">checkBluetoothState</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checkBluetoothState" title="Permalink to this definition">¶</a></dt>
@@ -2317,6 +2550,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="toggleBluetoothState">
 <span class="sig-name descname"><span class="pre">toggleBluetoothState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#toggleBluetoothState" title="Permalink to this definition">¶</a></dt>
@@ -2333,6 +2567,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="bluetoothStop">
 <span class="sig-name descname"><span class="pre">bluetoothStop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bluetoothStop" title="Permalink to this definition">¶</a></dt>
@@ -2343,11 +2578,13 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="bluetoothGetLocalAddress">
 <span class="sig-name descname"><span class="pre">bluetoothGetLocalAddress</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bluetoothGetLocalAddress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the hardware address of the local Bluetooth adapter</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="bluetoothDiscoveryStart">
 <span class="sig-name descname"><span class="pre">bluetoothDiscoveryStart</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bluetoothDiscoveryStart" title="Permalink to this definition">¶</a></dt>
@@ -2358,6 +2595,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="bluetoothDiscoveryCancel">
 <span class="sig-name descname"><span class="pre">bluetoothDiscoveryCancel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bluetoothDiscoveryCancel" title="Permalink to this definition">¶</a></dt>
@@ -2368,11 +2606,13 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="bluetoothIsDiscovering">
 <span class="sig-name descname"><span class="pre">bluetoothIsDiscovering</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bluetoothIsDiscovering" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return true if the local Bluetooth adapter is currently in the device discovery process</p>
 </dd></dl>
+
 </section>
 <section id="signalstrengthfacade">
 <h1>SignalStrengthFacade<a class="headerlink" href="#signalstrengthfacade" title="Permalink to this heading">¶</a></h1>
@@ -2381,6 +2621,7 @@ Return values:
 <span class="sig-name descname"><span class="pre">startTrackingSignalStrengths</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#startTrackingSignalStrengths" title="Permalink to this definition">¶</a></dt>
 <dd><p>Starts tracking signal strengths</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="readSignalStrengths">
 <span class="sig-name descname"><span class="pre">readSignalStrengths</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#readSignalStrengths" title="Permalink to this definition">¶</a></dt>
@@ -2391,11 +2632,13 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="stopTrackingSignalStrengths">
 <span class="sig-name descname"><span class="pre">stopTrackingSignalStrengths</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stopTrackingSignalStrengths" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops tracking signal strength</p>
 </dd></dl>
+
 </section>
 <section id="webcamfacade">
 <h1>WebCamFacade<a class="headerlink" href="#webcamfacade" title="Permalink to this heading">¶</a></h1>
@@ -2413,6 +2656,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="webcamAdjustQuality">
 <span class="sig-name descname"><span class="pre">webcamAdjustQuality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resolutionLevel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jpegQuality</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webcamAdjustQuality" title="Permalink to this definition">¶</a></dt>
@@ -2426,6 +2670,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="cameraStartPreview">
 <span class="sig-name descname"><span class="pre">cameraStartPreview</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resolutionLevel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jpegQuality</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cameraStartPreview" title="Permalink to this definition">¶</a></dt>
@@ -2443,11 +2688,13 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="cameraStopPreview">
 <span class="sig-name descname"><span class="pre">cameraStopPreview</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cameraStopPreview" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop the preview mode</p>
 </dd></dl>
+
 </section>
 <section id="uifacade">
 <h1>UiFacade<a class="headerlink" href="#uifacade" title="Permalink to this heading">¶</a></h1>
@@ -2468,6 +2715,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="dialogCreatePassword">
 <span class="sig-name descname"><span class="pre">dialogCreatePassword</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dialogCreatePassword" title="Permalink to this definition">¶</a></dt>
@@ -2481,6 +2729,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="dialogGetInput">
 <span class="sig-name descname"><span class="pre">dialogGetInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaultText</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dialogGetInput" title="Permalink to this definition">¶</a></dt>
@@ -2495,6 +2744,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="dialogGetPassword">
 <span class="sig-name descname"><span class="pre">dialogGetPassword</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dialogGetPassword" title="Permalink to this definition">¶</a></dt>
@@ -2508,6 +2758,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="dialogCreateSeekBar">
 <span class="sig-name descname"><span class="pre">dialogCreateSeekBar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dialogCreateSeekBar" title="Permalink to this definition">¶</a></dt>
@@ -2522,6 +2773,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="dialogCreateTimePicker">
 <span class="sig-name descname"><span class="pre">dialogCreateTimePicker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hour</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is24hour</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dialogCreateTimePicker" title="Permalink to this definition">¶</a></dt>
@@ -2536,6 +2788,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="dialogCreateDatePicker">
 <span class="sig-name descname"><span class="pre">dialogCreateDatePicker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">year</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">month</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">day</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dialogCreateDatePicker" title="Permalink to this definition">¶</a></dt>
@@ -2550,6 +2803,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 <section id="nfc">
 <h2>NFC<a class="headerlink" href="#nfc" title="Permalink to this heading">¶</a></h2>
@@ -2577,6 +2831,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="NFCBeamMessage">
 <span class="sig-name descname"><span class="pre">NFCBeamMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#NFCBeamMessage" title="Permalink to this definition">¶</a></dt>
@@ -2592,6 +2847,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="dialogCreateNFCBeamSlave">
 <span class="sig-name descname"><span class="pre">dialogCreateNFCBeamSlave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dialogCreateNFCBeamSlave" title="Permalink to this definition">¶</a></dt>
@@ -2605,6 +2861,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 <section id="progress">
 <h2>Progress<a class="headerlink" href="#progress" title="Permalink to this heading">¶</a></h2>
@@ -2621,6 +2878,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="dialogSetCurrentProgress">
 <span class="sig-name descname"><span class="pre">dialogSetCurrentProgress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dialogSetCurrentProgress" title="Permalink to this definition">¶</a></dt>
@@ -2631,6 +2889,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="dialogSetMaxProgress">
 <span class="sig-name descname"><span class="pre">dialogSetMaxProgress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dialogSetMaxProgress" title="Permalink to this definition">¶</a></dt>
@@ -2641,6 +2900,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="dialogCreateHorizontalProgress">
 <span class="sig-name descname"><span class="pre">dialogCreateHorizontalProgress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximumProgress</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dialogCreateHorizontalProgress" title="Permalink to this definition">¶</a></dt>
@@ -2655,6 +2915,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 <section id="alert">
 <h2>Alert<a class="headerlink" href="#alert" title="Permalink to this heading">¶</a></h2>
@@ -2672,6 +2933,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 <section id="dialog-control">
 <h2>Dialog Control<a class="headerlink" href="#dialog-control" title="Permalink to this heading">¶</a></h2>
@@ -2685,6 +2947,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="dialogSetNegativeButtonText">
 <span class="sig-name descname"><span class="pre">dialogSetNegativeButtonText</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dialogSetNegativeButtonText" title="Permalink to this definition">¶</a></dt>
@@ -2695,6 +2958,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="dialogSetNeutralButtonText">
 <span class="sig-name descname"><span class="pre">dialogSetNeutralButtonText</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dialogSetNeutralButtonText" title="Permalink to this definition">¶</a></dt>
@@ -2705,6 +2969,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="dialogSetItems">
 <span class="sig-name descname"><span class="pre">dialogSetItems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">items</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dialogSetItems" title="Permalink to this definition">¶</a></dt>
@@ -2715,6 +2980,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="dialogSetSingleChoiceItems">
 <span class="sig-name descname"><span class="pre">dialogSetSingleChoiceItems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">items</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dialogSetSingleChoiceItems" title="Permalink to this definition">¶</a></dt>
@@ -2728,6 +2994,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="dialogSetMultiChoiceItems">
 <span class="sig-name descname"><span class="pre">dialogSetMultiChoiceItems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">items</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dialogSetMultiChoiceItems" title="Permalink to this definition">¶</a></dt>
@@ -2741,6 +3008,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="addContextMenuItem">
 <span class="sig-name descname"><span class="pre">addContextMenuItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eventData</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#addContextMenuItem" title="Permalink to this definition">¶</a></dt>
@@ -2755,6 +3023,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="addOptionsMenuItem">
 <span class="sig-name descname"><span class="pre">addOptionsMenuItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eventData</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iconName</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#addOptionsMenuItem" title="Permalink to this definition">¶</a></dt>
@@ -2770,26 +3039,31 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="dialogGetResponse">
 <span class="sig-name descname"><span class="pre">dialogGetResponse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dialogGetResponse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns dialog response</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="dialogGetSelectedItems">
 <span class="sig-name descname"><span class="pre">dialogGetSelectedItems</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dialogGetSelectedItems" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method provides list of items user selected</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="dialogDismiss">
 <span class="sig-name descname"><span class="pre">dialogDismiss</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dialogDismiss" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dismiss dialog</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="dialogShow">
 <span class="sig-name descname"><span class="pre">dialogShow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dialogShow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Show dialog</p>
 </dd></dl>
+
 </section>
 <section id="layout">
 <h2>Layout<a class="headerlink" href="#layout" title="Permalink to this heading">¶</a></h2>
@@ -2803,16 +3077,19 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="fullDismiss">
 <span class="sig-name descname"><span class="pre">fullDismiss</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fullDismiss" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dismiss Full Screen</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="fullQuery">
 <span class="sig-name descname"><span class="pre">fullQuery</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fullQuery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get Fullscreen Properties</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="fullQueryDetail">
 <span class="sig-name descname"><span class="pre">fullQueryDetail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fullQueryDetail" title="Permalink to this definition">¶</a></dt>
@@ -2823,6 +3100,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="fullSetProperty">
 <span class="sig-name descname"><span class="pre">fullSetProperty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fullSetProperty" title="Permalink to this definition">¶</a></dt>
@@ -2837,6 +3115,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="fullSetList">
 <span class="sig-name descname"><span class="pre">fullSetList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fullSetList" title="Permalink to this definition">¶</a></dt>
@@ -2850,6 +3129,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="fullKeyOverride">
 <span class="sig-name descname"><span class="pre">fullKeyOverride</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keycodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fullKeyOverride" title="Permalink to this definition">¶</a></dt>
@@ -2863,6 +3143,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 <section id="webview">
 <h2>WebView<a class="headerlink" href="#webview" title="Permalink to this heading">¶</a></h2>
@@ -2879,6 +3160,7 @@ Return values:
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 </section>
 <section id="usb-host-serial-facade">
@@ -2932,6 +3214,7 @@ you can see the commit log in it.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="usbserialDisconnect">
 <span class="sig-name descname"><span class="pre">usbserialDisconnect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usbserialDisconnect" title="Permalink to this definition">¶</a></dt>
@@ -2942,6 +3225,7 @@ you can see the commit log in it.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="usbserialActiveConnections">
 <span class="sig-name descname"><span class="pre">usbserialActiveConnections</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#usbserialActiveConnections" title="Permalink to this definition">¶</a></dt>
@@ -2952,6 +3236,7 @@ you can see the commit log in it.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="usbserialWriteBinary">
 <span class="sig-name descname"><span class="pre">usbserialWriteBinary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base64</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usbserialWriteBinary" title="Permalink to this definition">¶</a></dt>
@@ -2965,6 +3250,7 @@ you can see the commit log in it.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="usbserialReadBinary">
 <span class="sig-name descname"><span class="pre">usbserialReadBinary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bufferSize</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usbserialReadBinary" title="Permalink to this definition">¶</a></dt>
@@ -2978,6 +3264,7 @@ you can see the commit log in it.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="usbserialConnect">
 <span class="sig-name descname"><span class="pre">usbserialConnect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hash</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usbserialConnect" title="Permalink to this definition">¶</a></dt>
@@ -2994,6 +3281,7 @@ you can see the commit log in it.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="usbserialHostEnable">
 <span class="sig-name descname"><span class="pre">usbserialHostEnable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#usbserialHostEnable" title="Permalink to this definition">¶</a></dt>
@@ -3004,6 +3292,7 @@ you can see the commit log in it.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="usbserialWrite">
 <span class="sig-name descname"><span class="pre">usbserialWrite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">String</span> <span class="pre">ascii</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">String</span> <span class="pre">connID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usbserialWrite" title="Permalink to this definition">¶</a></dt>
@@ -3017,6 +3306,7 @@ you can see the commit log in it.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="usbserialReadReady">
 <span class="sig-name descname"><span class="pre">usbserialReadReady</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usbserialReadReady" title="Permalink to this definition">¶</a></dt>
@@ -3029,6 +3319,7 @@ you can see the commit log in it.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="usbserialRead">
 <span class="sig-name descname"><span class="pre">usbserialRead</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connID</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bufferSize</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usbserialRead" title="Permalink to this definition">¶</a></dt>
@@ -3042,6 +3333,7 @@ you can see the commit log in it.</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="usbserialGetDeviceName">
 <span class="sig-name descname"><span class="pre">usbserialGetDeviceName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usbserialGetDeviceName" title="Permalink to this definition">¶</a></dt>
@@ -3052,45 +3344,52 @@ you can see the commit log in it.</p>
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 </section>
-<div class="clearer"></div>
-</div>
-</div>
-</div>
-</div>
-<div class="fb-comments" data-href="http://qpython.org" data-numposts="10"></div>
-</div>
-</div>
-<div class="col-sm-2"></div>
-</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+            </div>
+            <div class="fb-comments" data-href="http://qpython.org" data-numposts="10"></div>
+          </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+
+
 <footer id="footer">
-<div class="col-sm-offset-2 col-sm-6 footer-div1">
-<div class="footer-block-item">
-<span class="footer-item1">Built with Sphinx using a theme provid by QPython.</span>
-<span class="footer-item2 visible-xs">
-&#169; Copyright 2017, QPython.
-</span>
-</div>
-</div>
-<div class="col-sm-2 footer-div2">
-<a href="/index.html" class="pull-right"><img src="../static/img_logo.png"></a>
-</div>
-</footer>
-<script type="text/javascript">
-$('.fb-comments').attr('data-href', (window.location.href.split('#')[0]).split('?')[0])
-(function(d, s, id) {
-var js, fjs = d.getElementsByTagName(s)[0];
-if (d.getElementById(id)) return;
-js = d.createElement(s); js.id = id;
-js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1680815145503311";
-fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-$(function(){
-if ($('#footer')[0].offsetTop < $(window).height()){
-$('#footer').addClass('to-bottom')
-}
-})
-</script>
-</body>
+    <div class="col-sm-offset-2 col-sm-6 footer-div1">
+      <div class="footer-block-item">
+        <span class="footer-item1">Built with Sphinx using a theme provid by QPython.</span>
+        <span class="footer-item2 visible-xs">
+              &#169; Copyright 2017, QPython.
+        </span>
+      </div>
+    </div>
+    <div class="col-sm-2 footer-div2">
+      <a href="/index.html" class="pull-right"><img src="../static/img_logo.png"></a>
+    </div>
+  </footer>
+  <script type="text/javascript">
+  $('.fb-comments').attr('data-href', (window.location.href.split('#')[0]).split('?')[0])
+
+  (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1680815145503311";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    $(function(){
+      if ($('#footer')[0].offsetTop < $(window).height()){
+        $('#footer').addClass('to-bottom')
+      }
+    })
+  </script>
+  </body>
 </html>

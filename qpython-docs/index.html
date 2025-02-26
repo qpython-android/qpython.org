@@ -16,6 +16,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <link rel="stylesheet" type="text/css" href="static/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="static/qpython_theme.css">
+<style>
+p {
+    font-size:16px;
+}
+pre {
+    white-space: pre-wrap; /* 保留空白符和换行符，并允许自动换行 */
+    word-wrap: break-word; /* 允许长单词在必要时进行换行 */
+    word-break: break-all; /* 在必要时打断单词 */
+}
+</style>
 </head>
 <body>
 	<header>
@@ -37,7 +47,6 @@
 					<a href="/index.html" class="header-selected">Home</a>
 					<!-- <span class="header-title-selected"></span> -->
 				</li>
-				<li><a href="https://play.google.com/store/apps/details?id=org.qpython.qpy" target="_blank">Install</a></li>
 				<li><a href="https://developer.qpython.org" target="_blank">Docs</a></li>
 				<!--li>
 			            <a href="http://edu.qpython.org/">Course</a>
@@ -81,7 +90,7 @@ QPython is a Python programming engine on your Android device. It integrates an 
 				</div>
 				<ul class="index-shop-logo-ul">
 					<li style="text-align: center;" class="visible-xs">
-						<a target="_brank" href="https://play.google.com/store/apps/details?id=org.qpython.qpy"><img class="index-shop-img" src="static/ic_googleplay_2x.png"></a>
+						<a target="_brank" href="https://www.qpython.com"><img class="index-shop-img" src="static/ic_googleplay_2x.png"></a>
 					</li>
 					<!--li style="text-align: center;" class="visible-xs">
 						<a target="_brank" href="https://play.google.com/store/apps/details?id=org.qpython.qpy3
@@ -107,33 +116,44 @@ QPython is a Python programming engine on your Android device. It integrates an 
 					<li class="col-sm-4 index-more-li">
 						<div class="index-more-item">
 							<h4><img src="static/ic_new@2x.png" width="19px"> What's NEW</h4>
-							<p>QPython has made a remarkable comeback in January 2024! Are you prepared to embark on a journey to explore its enhanced features?<br />
-<br />- Python upgraded to 3.11.6, offering advanced capabilities.
-<br />- OpenAI and langchain libraries included for mastering Generative AI.
-<br />- Improved stability and fewer bugs for a smoother experience.</p>
+							<pre>
+<b>## v3.5.2 (2025/2/25)</b>
+Achieve seamless integration with the open source LLM deployment tool Ollama and deepseek developed by DeepSeek! This means:
+✅ Zero threshold to run various large language models locally on mobile devices
+✅ Quickly deploy cutting-edge AI models such as DeepSeek
+✅ Enjoy a minimalist API calling experience
+✅ Build a completely offline intelligent programming environment
+
+With this update, you will be able to experience immediately:
+🔧 Load/manage LLM models directly on the mobile phone
+⚡ Real-time low-latency response based on local computing
+
+
+</pre>
 							<div style="text-align: right;"><a href='https://play.google.com/store/apps/details?id=org.qpython.qpy' target='_blank'>Check it out now!</a></div>
 						</div>
 					</li>
 					<li class="col-sm-4 index-more-li">
 						<div class="index-more-item">
-							<h4><img src="static/ic_community@2x.png" width="19px"> QPython Courses</h4>
-							<p>- <a href='https://youtu.be/LL4DE98h2uQ?si=P3fIPYS_UmHNckpP' target='_blank'>Practice Generative AI development within QPython (Video)</a> <br />
-								- <a href="https://www.youtube.com/watch?v=0Zf9kbFruXQ" target="_blank">Create a Flask web application in QPython</a><br />
-								- <a href="https://www.youtube.com/watch?v=fb_DVMdHfSE&list=PLoqGKGzSZw0dPCrpVnoKxbKo0Ceemg5nC" target="_blank">QPython tutorials created by enthusiastic internet users</a> <br />
-								- <a href="https://www.youtube.com/watch?v=HqfUUiftrRw" target="_blank">QPython - Code Anywhere，Study Anytime</a>
+							<h4><img src="static/ic_community@2x.png" width="19px"> QPython download resources</h4>
+                            <p>We recommend that you download and install the latest version of QPython and its related resources from your mobile app store first. If you cannot get it from the app store, you can also download it from the following network disk.</p>
+                            <a href='https://drive.weixin.qq.com/s?k=AM0A8wffAAc5HYFbqJ' target="_blank"><img src='/static/wecomdrive.jpg' width="100%"/></a>
+                            <a href='https://drive.google.com/drive/folders/1lFqvlmArrV35ikcdW61MdVAx2UUWMcLh?usp=drive_link' target="_blank"><img src='/static/googledrive.jpg' width="100%"/></a>
 
-							</p>
 
 						</div>
 					</li>
 					<li class="col-sm-4 index-more-li">
 						<div class="index-more-item">
-							<h4><img src="static/ic_support@2x.png" width="19px"> QPython Community</h4>
-							- <a target="_blank" href='https://twitter.com/qpython'>Stay informed about QPython-related news and tips by following the QPython Twitter Account</a> <br />
-							- <a target="_blank" href='https://www.facebook.com/qpython'>Stay updated with official news from the QPython Facebook Page</a><br /> 
-							- <a target="_blank" href='https://www.facebook.com/groups/qpython'>Engage in programming discussions with fellow Python enthusiasts in the QPython Group</a> <br />
-							- <a href="https://discord.gg/hV2chuD" target="_blank">Or you can join QPython Discord</a> <br />
-							- <a href="https://join.slack.com/t/qpython/shared_invite/zt-bsyw9868-nNJyJP_3IHABVtIk3BK5SA" target="_blank">Join the QPython slack community and start contributing to QPython</a>
+							<h4><img src="static/ic_support@2x.png" width="19px"> Community & Feedback</h4>
+                            <p>Welcome to join the QPython community to learn and discuss with many QPythoneers.</p>
+
+							- <a href="https://www.qpython.com.cn/qpy-forum/" target="_blank">加入中文交流社区</a> <br />
+							- <a href="https://discord.gg/hV2chuD" target="_blank">Join QPython Discord</a> <br />
+
+                            <p>We recommend that you contact us and provide feedback through the QPython community, which is a relatively convenient way. Of course, you can also share your feedback with us through the following channels.</p>
+							- <a target="_blank" href='https://github.com/qpython-android/qpython/issues'>Report App's Issue</a> <br />
+							- <a target="_blank" href='https://github.com/qpython-android/qpypi.qpython.org/issues'>Request Extension Package</a> <br />
 							<ul>
 						</div>
 					</li>
@@ -158,12 +178,12 @@ QPython is a Python programming engine on your Android device. It integrates an 
 					<li class="index-faq-li col-sm-4 hidden-xs">
 						<!-- <div style="text-align: right;">
 							<img class="index-shop-img" src="static/ic_appstore_2x.png">
-						</div> -->
+						</div> 
 						<div style="text-align: right;">
 							<a target="_brank" href="https://play.google.com/store/apps/details?id=org.qpython.qpy
 "><img class="index-shop-img" src="static/ic_googleplay_2x.png"></a>		
 						</div>
-
+-->
 						<!--div style="text-align: right;">
 							<a target="_brank" href="https://play.google.com/store/apps/details?id=org.qpython.qpy3
 "><img class="index-shop-img" src="static/ic_googleplay_3_2x.png"></a>		
@@ -189,7 +209,7 @@ QPython is a Python programming engine on your Android device. It integrates an 
 		<div class="col-sm-offset-2 col-sm-6 footer-div1">
 			<div class="footer-block-item">
 				<span class="footer-item1 visible-xs">Built with Sphinx using a theme provid by QPython.</span>
-				<span class="footer-item2 ">© QPython (2012-2024)</span>
+				<span class="footer-item2 ">© QPython (2012-2025)</span>
 			</div>
 		</div>
 		<div class="col-sm-2 footer-div2">
