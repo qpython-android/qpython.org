@@ -6,7 +6,7 @@ cd build/html
 
 REM 使用 Python 执行 add-analytics.py 脚本
 @REM for /r %%f in (*.html) do (
-    python ..\..\add-analytics.py "%%f"
+    python ..\..\add-analytics-window.py "%%f"
 @REM )
 
 REM 替换 _static 为 static，_images 为 images
