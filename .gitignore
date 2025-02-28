@@ -39,3 +39,4 @@ nosetests.xml
 .idea
 qpython-docs/venv/*
 qpython-docs/build/*
+qpython-docs/static/*
