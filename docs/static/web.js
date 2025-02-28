@@ -16,7 +16,6 @@ function submenu_init() {
             return true;
         }
 
-        console.log(ele.data('click_first'));
         // 判断显示隐藏
         if (ele.is(':visible')) {
             ele.hide();
