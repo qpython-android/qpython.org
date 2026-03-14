@@ -1,0 +1,133 @@
+/* QPython Custom Styles */
+
+/* Header styling - black background */
+.md-header {
+    background-color: #000000 !important;
+}
+
+/* Tab styling - white background for clear navigation separation */
+.md-tabs {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.md-tabs__link {
+    color: #666 !important;
+}
+
+.md-tabs__link:hover {
+    color: #49B300 !important;
+}
+
+.md-tabs__link--active {
+    color: #49B300 !important;
+    font-weight: 600;
+}
+
+/* Primary color accent - QPython green #49B300 */
+.md-typeset a {
+    color: #49B300;
+}
+
+.md-typeset a:hover {
+    color: #3a8f00;
+}
+
+.md-nav__link--active {
+    color: #49B300;
+}
+
+.md-nav__link:focus,
+.md-nav__link:hover {
+    color: #49B300;
+}
+
+.md-typeset h1 {
+    color: #4A4A4A;
+    font-weight: 600;
+}
+
+.md-typeset h2 {
+    color: #4A4A4A;
+    font-weight: 600;
+}
+
+.md-typeset h3 {
+    color: #4A4A4A;
+    font-weight: 600;
+}
+
+/* Search highlight */
+.md-search-result mark {
+    background-color: rgba(73, 179, 0, 0.3);
+    color: inherit;
+}
+
+/* Code block styling */
+.md-typeset code {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.md-typeset pre {
+    background-color: #263238;
+}
+
+/* Button styling */
+.md-typeset .md-button {
+    color: #49B300;
+    border-color: #49B300;
+}
+
+.md-typeset .md-button:hover {
+    background-color: #49B300;
+    border-color: #49B300;
+    color: white;
+}
+
+.md-typeset .md-button--primary {
+    background-color: #49B300;
+    border-color: #49B300;
+    color: white;
+}
+
+/* Admonition styling */
+.md-typeset .admonition {
+    border-left-color: #49B300;
+}
+
+.md-typeset .admonition-title {
+    background-color: rgba(73, 179, 0, 0.1);
+}
+
+/* Table styling */
+.md-typeset table:not([class]) th {
+    background-color: #49B300;
+    color: white;
+}
+
+/* Footer styling */
+.md-footer {
+    background-color: #2F2F2F;
+}
+
+.md-footer-meta {
+    background-color: #000000;
+}
+
+/* Ensure logo is properly sized */
+.md-header__button.md-logo img {
+    height: 40px;
+}
+
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] {
+    --md-primary-fg-color: #000000;
+    --md-accent-fg-color: #49B300;
+}
+
+/* Light mode adjustments */
+[data-md-color-scheme="default"] {
+    --md-primary-fg-color: #000000;
+    --md-accent-fg-color: #49B300;
+}

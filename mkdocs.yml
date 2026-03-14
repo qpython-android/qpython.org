@@ -1,17 +1,19 @@
-site_name: QPython Documentation
-site_url: https://www.qpython.org/
+site_name: QPython
+site_url: https://www.qpython.org/en/
 site_description: QPython - Learn Python & AI on Mobile
 theme:
   name: material
+  logo: _static/img_logo.png
+  favicon: _static/img_logo.png
   palette:
     - scheme: default
-      primary: green
+      primary: black
       accent: green
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - scheme: slate
-      primary: green
+      primary: black
       accent: green
       toggle:
         icon: material/brightness-4
@@ -23,21 +25,26 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+extra_css:
+  - _static/extra.css
 
 docs_dir: source/en
-site_dir: site
+site_dir: site/en
 
 nav:
-  - Home: index.md
-  - Getting Started:
-    - Getting Started: getting-started.md
-    - Hello World Tutorial: tutorial-hello-world.md
+  - Home:
+    - Overview: index.md
+    - What's NEW: whats-new.md
   - Guides:
     - QPython Branches: qpython-x.md
     - QPYPI Guide: qpypi-guide.md
     - Editor Guide: editor-guide.md
     - External API: external-api.md
-  - QSL4A API:
+  - QSL4A:
     - Overview: qsl4a/index.md
     - Core:
       - Android Base: qsl4a/core/android-base.md
@@ -70,6 +77,9 @@ nav:
     - Special:
       - Cipher: qsl4a/special/cipher.md
       - PGPT AI: qsl4a/special/pgptai.md
+  - Tutorial:
+    - Getting Started: getting-started.md
+    - Hello World Tutorial: tutorial-hello-world.md
 
 markdown_extensions:
   - pymdownx.highlight:

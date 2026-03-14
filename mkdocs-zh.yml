@@ -1,0 +1,61 @@
+site_name: QPython
+site_url: https://www.qpython.org/zh/
+site_description: QPython - 移动设备上的 Python & AI 开发环境
+theme:
+  name: material
+  logo: _static/img_logo.png
+  favicon: _static/img_logo.png
+  palette:
+    - scheme: default
+      primary: black
+      accent: green
+      toggle:
+        icon: material/brightness-7
+        name: 切换暗色模式
+    - scheme: slate
+      primary: black
+      accent: green
+      toggle:
+        icon: material/brightness-4
+        name: 切换亮色模式
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+extra_css:
+  - _static/extra.css
+
+docs_dir: source/zh
+site_dir: site/zh
+clean: false  # Don't clean to preserve English build
+
+nav:
+  - 首页: index.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - tables
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/qpython-android/qpython
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/hV2chuD
+    - icon: fontawesome/brands/facebook
+      link: http://www.facebook.com/qpython
+    - icon: fontawesome/brands/twitter
+      link: http://www.twitter.com/qpython

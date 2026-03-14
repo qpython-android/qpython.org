@@ -1,3 +1,33 @@
+#!/bin/bash
+
+# Build script for QPython documentation
+# Supports both English and Chinese
+
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR"
+
+PYTHON="$SCRIPT_DIR/venv/bin/python"
+
+echo "Building QPython documentation..."
+echo ""
+
+# Clean previous build
+echo "Cleaning previous build..."
+rm -rf site
+
+# Build English site
+echo "Building English site..."
+$PYTHON -m mkdocs build
+
+# Build Chinese site
+echo "Building Chinese site..."
+$PYTHON -m mkdocs build -f mkdocs-zh.yml
+
+# Create root index.html
+echo "Creating root index.html..."
+cat > site/index.html << 'EOF'
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,3 +91,15 @@
     </div>
 </body>
 </html>
+EOF
+
+echo ""
+echo "Build complete!"
+echo ""
+echo "Output directories:"
+echo "  - English: site/en/"
+echo "  - Chinese: site/zh/"
+echo "  - Root: site/index.html"
+echo ""
+echo "To preview locally:"
+echo "  cd site && python -m http.server 8000"
