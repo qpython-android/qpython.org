@@ -93,6 +93,18 @@ cat > site/index.html << 'EOF'
 </html>
 EOF
 
+# Copy additional HTML files from source to site
+if ls source/*.html 1> /dev/null 2>&1; then
+    echo "Copying additional HTML files..."
+    cp source/*.html site/
+fi
+
+# Copy CNAME file if exists
+if [ -f source/CNAME ]; then
+    echo "Copying CNAME file..."
+    cp source/CNAME site/
+fi
+
 echo ""
 echo "Build complete!"
 echo ""

@@ -37,4 +37,4 @@ With it's help, you could write from browser and run from your android phone. It
 
 ## Develop from your computer
 
-Besides the above ways, you could develop the script with your way, then upload to your phone and run with QPython also.
+Besides the methods mentioned above, you can also develop the script in your own way, then upload it to your phone using the built-in FTP service and run it with QPython.

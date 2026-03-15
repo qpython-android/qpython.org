@@ -1,6 +1,6 @@
 site_name: QPython
 site_url: https://www.qpython.org/en/
-site_description: QPython - Learn Python & AI on Mobile
+site_description: QPython - AI-Enabled Python IDE for Android
 theme:
   name: material
   logo: _static/img_logo.png
@@ -38,12 +38,12 @@ site_dir: site/en
 nav:
   - Home:
     - Overview: index.md
-    - What's NEW: whats-new.md
+    - Branches: qpython-x.md
+    - Updates: whats-new.md
   - Guides:
-    - QPython Branches: qpython-x.md
-    - QPYPI Guide: qpypi-guide.md
-    - Editor Guide: editor-guide.md
-    - External API: external-api.md
+    - QPYPI: qpypi-guide.md
+    - Editor: editor-guide.md
+    - OpenAPI: external-api.md
   - QSL4A:
     - Overview: qsl4a/index.md
     - Core:

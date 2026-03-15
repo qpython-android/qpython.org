@@ -100,26 +100,3 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 [Checkout the full project from github ](https://github.com/qpython-android/app-call-qpython-api)
 
 And there is [a production application - QPython Plugin for Tasker ](https://play.google.com/store/apps/details?id=com.qpython.tasker2)
-
-# QPython Online Service
-
-Now the QPython online service only open for QPython, not QPython3.
-
-## QPypi
-
-Can I install some packages which required pre-compiled ?
-Sure, you could install some pre-compiled packages from QPypi, you could find it through "Libraries" on dashboard.
-
-![](_static/guide_extend_pic2.png)
-
-If you couldn't found the package here, you could send email to river@qpython.org .
-
-## QPY.IO
-
-Can I build an independent APK from QPython script?
-
-Sure you can. now the service is **in BETA**, it's a challenging thing. We will publish it as a online service, for we want to let the development process is simple, you don't need to own the development environment set up when you want to build a application.
-
-![](_static/guide_extend_pic1.png)
-
-If you want to try it out or have some business proposal, please contact with us by sending email to river@qpython.org .

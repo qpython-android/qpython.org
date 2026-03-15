@@ -6,7 +6,8 @@ QPython already has millions of users worldwide and it is also an open source pr
 
 For different usage scenarios, QPython has several branches:
 
-## QPython - IDE for Python & AI
+## QPython 
+`Standard Edition: Optimized for AI performance and universal app store compatibility`
 
 The main version available on Google Play and other app stores. This version focuses on AI features, making it easier for users to learn and use Python in the AI era.
 
@@ -23,7 +24,9 @@ The main version available on Google Play and other app stores. This version foc
 
 **Download:** Available on Google Play and major app stores.
 
-## QPython+ - Python for Android
+## QPython+ 
+
+`Community Edition: Openly supports various community-driven features; available on select app stores.`
 
 The community open-source version (in planning and preparation). This version is designed for contributors who want to participate in QPython project development and supports customization for different manufacturers.
 
@@ -39,7 +42,9 @@ The community open-source version (in planning and preparation). This version is
 
 **Note:** This version is currently in planning and preparation phase. Stay tuned for updates!
 
-## QPython Plus
+## QPython Plus 
+
+`QPython+ Full Access Edition: Grants complete permissions to call all Android interfaces. Download link available exclusively via the official cloud drive.`
 
 A special version with extended permissions that provides maximum control over the device. This version is **NOT** published on app stores due to its sensitive permission requirements.
 
@@ -61,49 +66,3 @@ A special version with extended permissions that provides maximum control over t
 **Download:** Not available on app stores. Distributed through special channels only.
 
 **Important:** QPython will not use these permissions in background without your knowledge. If you get exceptions while using SL4A APIs, please check whether the relevant permissions are enabled in system settings.
-
----
-
-# Amazing Features (All Versions)
-
-- Offline Python 3.12 interpreter: no Internet is required to run Python programs
-- It supports running multiple types of projects, including: console program, SL4A program, webapp program
-- Convenient QR code reader for transferring codes to your phone
-- QPYPI and a custom repository for prebuilt wheel packages for enhanced scientific libraries, such as numpy, scipy, matplotlib, scikit-learn etc
-- Easy-to-use editor
-- INTEGRATED & EXTENDED SCRIPT LAYER FOR ANDROID LIBRARY (SL4A): IT LETS YOU DRIVE THE ANDROID WORK WITH PYTHON
-- Good documentation and customer support
-
-# SL4A Features
-
-With SL4A features, you can use Python programming to control Android work:
-
-- Android Apps API, such as: Application, Activity, Intent & startActivity, SendBroadcast, PackageVersion, System, Toast, Notify, Settings, Preferences, GUI
-- Android Resources Manager, such as: Contact, Location, Phone, Sms, ToneGenerator, WakeLock, WifiLock, Clipboard, NetworkStatus, MediaPlayer
-- Third App Integrations, such as: Barcode, Browser, SpeechRecognition, SendEmail, TextToSpeech
-- Hardware Manager: Camera, Sensor, Ringer & Media Volume, Screen Brightness, Battery, Bluetooth, SignalStrength, WebCam, Vibrate, NFC, USB
-
-[API Documentation Link]
-https://github.com/qpython-android/qpysl4a/blob/master/README.md
-
-[API Samples]
-https://github.com/qpython-android/qpysl4a/issues/1
-
-# How To Get Professional Customer Support
-
-Please follow the guide to get support https://github.com/qpython-android/qpython/blob/master/README.md
-
-[QPython community]
-https://www.facebook.com/groups/qpython
-
-# FAQ
-
-**Q: Why can't I use the SMS API of SL4A?**
-
-A: Different QPython versions have different permission levels:
-
-- **QPython - IDE for Python & AI**: Basic permissions, some sensitive APIs may not be available
-- **QPython+**: Basic permissions, community version for development
-- **QPython Plus**: Full permissions including SMS, Call, and other sensitive features
-
-If you cannot use certain SL4A APIs, check which version you have installed and consider switching to the appropriate version for your needs.

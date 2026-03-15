@@ -28,7 +28,9 @@ You can install pre-compiled packages in the following ways:
 
 If you need a package that is not currently supported:
 
-- **Raise an issue** in the QPYPI project
+- **Raise an issue** in the [qpython.org project](https://github.com/qpython-android/qpython.org/issues)
 - The QPython team will consider pre-compiling and adding it to the repository
 
-Because of different computer architectures, we cannot guarantee that QPYPI includes all packages from PyPI.
+For more ways to get help and engage with the community, see the [Community & Feedback](index.md#community--feedback) section.
+
+> **Note**: Because of different computer architectures, we cannot guarantee that QPYPI includes all packages from PyPI.
