@@ -23,15 +23,15 @@ You could run the QPython script directly when you develop from QEditor, so when
 QPython has a built-in script which is **qedit4web.py**, you could see it when you click the start button and choose  "Run local script".
 After run it, you could see the result.
 
-![QPython qedit4web](_static/guide_ide_qedit4web.png)
+![QPython qedit4web](static/guide_ide_qedit4web.png)
 
 Then, you could access the url from your PC/Laptop's browser for developing, just like the below pics.
 
-![QPython qedit4web choose project or file](_static/guide_ide_qedit4web_choose.png)
+![QPython qedit4web choose project or file](static/guide_ide_qedit4web_choose.png)
 
 *After choose some project or script, you could start to develop*
 
-![QPython qedit4web](_static/guide_ide_qedit4web_develop.png)
+![QPython qedit4web](static/guide_ide_qedit4web_develop.png)
 
 With it's help, you could write from browser and run from your android phone. It is very convenient.
 

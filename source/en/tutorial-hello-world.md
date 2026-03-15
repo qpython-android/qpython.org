@@ -2,7 +2,7 @@
 
 ## Hello world
 
-![hello world](_static/guide_helloworld_pic1.png)
+![hello world](static/guide_helloworld_pic1.png)
 
 Well, after you became a bit more familiar with QPython, let's create our first program in QPython. Obviously, it will be `helloworld.py`. ;)
 

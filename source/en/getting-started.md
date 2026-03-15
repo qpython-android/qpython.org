@@ -31,7 +31,7 @@ For different usage scenarios, QPython has several branches:
 
 ## 1. Dashboard
 
-![QPython start](_static/guide_howtostart_pic1.png)
+![QPython start](static/guide_howtostart_pic1.png)
 
 After you install QPython, start it by tapping its icon. You will see the main dashboard with the QPython logo and the following features:
 
@@ -56,7 +56,7 @@ Tap any icon to access the corresponding feature.
 
 ### Terminal
 
-![QPython console](_static/guide_howtostart_pic3.png)
+![QPython console](static/guide_howtostart_pic3.png)
 
 The Terminal provides a Python console where you can:
 - Explore object properties
@@ -65,13 +65,13 @@ The Terminal provides a Python console where you can:
 
 Open additional Terminal tabs with the plus button (1), switch between them from the dropdown (2), and close with the close button (3).
 
-![QPython notification](_static/guide_howtostart_pic4.png)
+![QPython notification](static/guide_howtostart_pic4.png)
 
 A notification will remain in the notification bar while the Terminal is running. Tap it to return to the Terminal.
 
 ### Editor
 
-![QPython editor](_static/guide_howtostart_pic5.png)
+![QPython editor](static/guide_howtostart_pic5.png)
 
 The editor features:
 - Python syntax highlighting

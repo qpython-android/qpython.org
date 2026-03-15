@@ -2,7 +2,7 @@
 
 **QPython 不仅是一个强大的 Android Python IDE，也是一个活跃的技术社区。**
 
-![QPython 横幅](_static/img_banner-1@2x.jpg)
+![QPython 横幅](static/img_banner2x.jpg)
 
 ## 支持 AI 的 Android Python IDE
 

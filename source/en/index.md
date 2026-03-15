@@ -2,7 +2,7 @@
 
 **QPython project is not only a powerful Python IDE for Android, but also an active technology community.**
 
-![QPython Banner](_static/img_banner-1@2x.jpg)
+![QPython Banner](static/img_banner2x.jpg)
 
 ## AI-Enabled Python IDE for Android
 

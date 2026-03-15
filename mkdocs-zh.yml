@@ -3,8 +3,8 @@ site_url: https://www.qpython.org/zh/
 site_description: QPython - 移动设备上的 Python & AI 开发环境
 theme:
   name: material
-  logo: _static/img_logo.png
-  favicon: _static/img_logo.png
+  logo: static/img_logo.png
+  favicon: static/img_logo.png
   palette:
     - scheme: default
       primary: black
@@ -30,7 +30,7 @@ theme:
     code: Roboto Mono
 
 extra_css:
-  - _static/extra.css
+  - static/extra.css
 
 docs_dir: source/zh
 site_dir: site/zh
