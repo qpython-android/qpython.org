@@ -69,16 +69,16 @@ else
     echo "Committed: $COMMIT_MSG"
 fi
 
-# Push to remote
+# Push to remote with force (gh-pages is safe to force push)
 read -p "Push to origin/gh-pages? (y/N) " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-    git push origin gh-pages
+    git push origin gh-pages --force
     echo ""
     echo "Deployed successfully!"
     echo "Site will be available at: https://qpython-android.github.io/qpython.org/"
 else
-    echo "Push aborted. You can push manually with: git push origin gh-pages"
+    echo "Push aborted. You can push manually with: git push origin gh-pages --force"
 fi
 
 # Cleanup
