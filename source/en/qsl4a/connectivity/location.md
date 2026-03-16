@@ -8,13 +8,13 @@ Access GPS and network location services.
 Start location updates.
 
 ```python
-startLocating(provider="gps", minUpdateDistance=1, minUpdateTime=5000)
+startLocating(minUpdateTime=60000, minUpdateDistance=30, updateGnssStatus=False)
 ```
 
 **Parameters:**
-- `provider` (str): "gps" or "network"
-- `minUpdateDistance` (float): Minimum distance for update (meters)
-- `minUpdateTime` (int): Minimum time between updates (ms)
+- `minUpdateTime` (int): Minimum time between updates in milliseconds (default: 60000)
+- `minUpdateDistance` (float): Minimum distance for update in meters (default: 30)
+- `updateGnssStatus` (bool): Enable GNSS status updates (default: False)
 
 ### stopLocating()
 Stop location updates.
@@ -56,8 +56,8 @@ import time
 
 droid = androidhelper.Android()
 
-# Start GPS
-droid.startLocating("gps", 1, 5000)
+# Start location updates
+droid.startLocating(minUpdateTime=5000, minUpdateDistance=1, updateGnssStatus=False)
 
 # Wait for fix
 time.sleep(10)

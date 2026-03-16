@@ -64,6 +64,68 @@ Set list widget items.
 fullSetList(id, list, isHtml=False, listType=0)
 ```
 
+### fullSetList2()
+Set list widget items with resource ID.
+
+```python
+fullSetList2(id, list, intRes)
+```
+
+**Parameters:**
+- `id` (str): Widget ID
+- `list` (list): List of items
+- `intRes` (int): Android resource ID for list item layout
+
+### fullSetListSelected()
+Set selected item in a list.
+
+```python
+fullSetListSelected(id, selected)
+```
+
+**Parameters:**
+- `id` (str): List widget ID
+- `selected` (int): Index of item to select
+
+### fullGetListSelected()
+Get the currently selected list item index.
+
+```python
+fullGetListSelected(id)
+```
+
+**Parameters:**
+- `id` (str): List widget ID
+
+**Returns:** Selected item index
+
+## Batch Property Operations
+
+### fullGetProperties()
+Get properties for multiple widgets at once.
+
+```python
+fullGetProperties(ids, property)
+```
+
+**Parameters:**
+- `ids` (list): List of widget IDs
+- `property` (str): Property name to get
+
+**Returns:** Dict mapping widget IDs to property values
+
+### fullSetProperties()
+Set property for multiple widgets at once.
+
+```python
+fullSetProperties(ids, property, value)
+```
+
+**Parameters:**
+- `ids` (list): List of widget IDs
+- `property` (str): Property name to set
+- `value`: Property value
+
 ## Screenshot
 
 ### fullGetScreenShot()

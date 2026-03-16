@@ -27,6 +27,42 @@ documentFileListFiles(Folder)
 
 ## File Operations
 
+### documentFileExists()
+Check if file or directory exists.
+
+```python
+documentFileExists(path)
+```
+
+**Parameters:**
+- `path` (str): File or directory path
+
+**Returns:** True if exists, False otherwise
+
+### documentFileIsFile()
+Check if path is a file.
+
+```python
+documentFileIsFile(path)
+```
+
+**Parameters:**
+- `path` (str): Path to check
+
+**Returns:** True if file, False if not a file, None if not exists
+
+### documentFileIsDirectory()
+Check if path is a directory.
+
+```python
+documentFileIsDirectory(path)
+```
+
+**Parameters:**
+- `path` (str): Path to check
+
+**Returns:** True if directory, False if not a directory, None if not exists
+
 ### documentFileDelete()
 Delete file or directory.
 
@@ -81,6 +117,44 @@ documentFileOutputStream(destFile, src, EncodingFormat="", append=None)
 - `src`: Data to write
 - `EncodingFormat` (str): Encoding format
 - `append` (bool): Append mode
+
+## File Information
+
+### documentFileLength()
+Get file size in bytes.
+
+```python
+documentFileLength(path)
+```
+
+**Parameters:**
+- `path` (str): File path
+
+**Returns:** File size in bytes (0 if not exists)
+
+### documentFileLastModified()
+Get last modified time.
+
+```python
+documentFileLastModified(path)
+```
+
+**Parameters:**
+- `path` (str): File path
+
+**Returns:** Timestamp (0 if not exists)
+
+### documentFileGetStat()
+Get comprehensive file statistics.
+
+```python
+documentFileGetStat(path)
+```
+
+**Parameters:**
+- `path` (str): File path
+
+**Returns:** Dict with length, last modified, and read/write permissions, or None if not exists
 
 ## URI Operations
 

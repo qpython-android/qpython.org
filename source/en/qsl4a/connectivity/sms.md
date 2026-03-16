@@ -36,6 +36,28 @@ Get message details.
 smsGetMessages(unreadOnly=False, folder="inbox", attributes=None)
 ```
 
+### smsGetMessageById()
+Get a specific message by ID.
+
+```python
+smsGetMessageById(id, attributes=None)
+```
+
+**Parameters:**
+- `id` (int): Message ID
+- `attributes` (list, optional): Specific attributes to retrieve
+
+**Returns:** Message data dict
+
+### smsGetAttributes()
+Get available SMS message attributes.
+
+```python
+smsGetAttributes()
+```
+
+**Returns:** List of available attribute names
+
 ### smsDeleteMessage()
 Delete message.
 

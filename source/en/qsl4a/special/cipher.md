@@ -2,6 +2,25 @@
 
 Encryption and decryption utilities for secure data storage.
 
+## Initialization
+
+### cipherInit()
+Initialize the cipher with encryption key and algorithm.
+
+```python
+cipherInit(key, algorithm="AES/CBC/PKCS5Padding", encodingFormat="", initialVector="")
+```
+
+**Parameters:**
+- `key` (str or bytes): Encryption key
+- `algorithm` (str): Cipher algorithm (default: "AES/CBC/PKCS5Padding")
+- `encodingFormat` (str): Encoding format
+- `initialVector` (str or bytes): Initial vector for encryption
+
+**Returns:** Initialization result
+
+**Note:** Must be called before any encrypt/decrypt operations.
+
 ## Encryption Methods
 
 ### encryptString()
@@ -97,6 +116,9 @@ import androidhelper
 
 droid = androidhelper.Android()
 
+# Initialize cipher with your encryption key
+droid.cipherInit("my_secret_key_1234")
+
 # Encrypt string
 encrypted = droid.encryptString("Secret message!").result
 print(f"Encrypted: {encrypted}")
@@ -111,4 +133,11 @@ droid.encryptStringToFile("My secret data", "/sdcard/secret.dat")
 # Decrypt from file
 data = droid.decryptFileToString("/sdcard/secret.dat").result
 print(data)
+
+# Initialize with custom algorithm and IV
+droid.cipherInit(
+    key="my_key",
+    algorithm="AES/CBC/PKCS5Padding",
+    initialVector="0123456789abcdef"
+)
 ```

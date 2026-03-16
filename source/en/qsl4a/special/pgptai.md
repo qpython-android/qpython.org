@@ -24,6 +24,26 @@ speechToText(RecordSecond=10, AmrFile=None, Language=None)
 
 **Returns:** Transcribed text
 
+## Text to Speech
+
+### textToSpeech()
+Convert text to speech and optionally play it.
+
+```python
+textToSpeech(Text, AutoPlay=True, WavFile=None, VoiceName=None)
+```
+
+**Parameters:**
+- `Text` (str): Text to convert to speech
+- `AutoPlay` (bool): Automatically play the generated audio (default: True)
+- `WavFile` (str, optional): Path to save the WAV file. If None, uses temporary file
+- `VoiceName` (str, optional): Voice name to use (e.g., 'en-US-JennyNeural', 'zh-CN-XiaoxiaoNeural')
+
+**Returns:** Dict with speech synthesis result including:
+  - `text`: The input text
+  - `url`: URL to download the audio file
+  - `WavFile`: Path to the saved WAV file (if saved locally)
+
 ## Configuration
 
 The API uses configuration from `/sdcard/Android/data/org.qpython.qpy/files/apigpt.conf`:
@@ -52,6 +72,18 @@ print(f"You said: {text}")
 # Transcribe existing file
 text = droid.speechToText(AmrFile="/sdcard/recording.amr").result
 print(f"Transcription: {text}")
+
+# Text to speech
+droid.textToSpeech("Hello, this is a test message.", AutoPlay=True, Language='en')
+
+# Text to speech with custom voice and save to file
+result = droid.textToSpeech(
+    "Welcome to QPython!",
+    AutoPlay=False,
+    WavFile="/sdcard/welcome.wav",
+    VoiceName="en-US-JennyNeural"
+).result
+print(f"Audio saved to: {result.get('WavFile')}")
 ```
 
 ## Class Usage
