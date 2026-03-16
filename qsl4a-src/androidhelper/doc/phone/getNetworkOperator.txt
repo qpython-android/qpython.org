@@ -1,0 +1,2 @@
+getNetworkOperator()
+Returns the numeric name (MCC+MNC) of current registered operator.

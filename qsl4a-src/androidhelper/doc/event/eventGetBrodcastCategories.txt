@@ -1,0 +1,2 @@
+eventGetBrodcastCategories()
+Lists all the broadcast signals we are listening for

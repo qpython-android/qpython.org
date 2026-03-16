@@ -1,0 +1,5 @@
+cameraSetTorchMode(enabled)
+set Camera Torch on/off
+    enabled (Boolean) True=on, False=off.
+Need Camera Permission
+return None

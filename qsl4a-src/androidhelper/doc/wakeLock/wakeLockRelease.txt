@@ -1,0 +1,2 @@
+wakeLockRelease()
+Releases the wake lock.

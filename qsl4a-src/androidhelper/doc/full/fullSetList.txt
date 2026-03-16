@@ -1,0 +1,29 @@
+fullSetList(id, list, isHtml=False, listType=fullSetList.SIMPLE)
+  Attach a text/html list to a fullscreen widget.
+
+  • id  (String) :
+    The ID of the layout widget to attach the list.
+
+  • list  (Message List of String or Dictionary) :
+    * The list of items to display.
+    * String: A plain text string.
+    * Dictionary: An object with the following documented keys:
+      - msg   (String Optional) : The content to display. If omitted, displays a blank line.
+      - bg   (String Optional) : Background color (Hex format, e.g., "#RRGGBB", "#AARRGGBB").
+      - fg   (String Optional) : Foreground color (Text color, Hex format, e.g., "#RRGGBB", "#AARRGGBB").
+
+  • isHtml  (Boolean, Optional, Default=False) :
+    If True , treats the message (List of String or List of Dictionary with the msg field) as HTML. If False , treats it as plain text.
+
+  • listType  (Integer, Optional, Default=0) :
+    - The style of the list.
+    - 0 : Simple List (No selector)
+    - 1 : Single Choice List (Radio button on left)
+    - 2 : Single Choice List (Radio button on right)
+    - 3 : Multi Choice List (Checkbox on left)
+    - 4 : Multi Choice List (Checkbox on right)
+
+  Examples :
+    fullSetList('list1', ('item1','item2','item3'), False, fullSetList.SIMPLE)
+    fullSetList('list2', ({'msg':'item1','bg':'#00ff00','fg':'#ff00ff'},{'msg':'item2','bg':'#ff0000','fg':'#00ffff'},{'msg':'item3','bg':'#0000ff','fg':'#ffff00'}), False, fullSetList.SINGLE_CHOICE_LEFT)
+    fullSetList('list3', ('<font color=#00ff00>item1</font>','<u>item2</u>','<big>item3</big>'), True, fullSetList.MULTI_CHOICE_RIGHT)

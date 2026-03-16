@@ -1,0 +1,4 @@
+smsGetMessageById(id,attributes=None)
+Returns message attributes.
+    id (Integer) message ID
+    attributes (JSONArray)  (optional)

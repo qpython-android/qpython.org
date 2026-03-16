@@ -1,0 +1,3 @@
+readSignalStrengths()
+Returns the current signal strengths. GSM/CDMA/EVDO/LTE
+returns: (Bundle) A map of "signal_strength"

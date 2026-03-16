@@ -1,0 +1,2 @@
+ttsStop()
+Stop the speaking TTS .

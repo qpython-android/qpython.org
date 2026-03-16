@@ -1,0 +1,4 @@
+fullGetProperty(id,property)
+Get a fullscreen property for a specific widget
+    id (String) id of layout widget
+    property (String) property of layout widget

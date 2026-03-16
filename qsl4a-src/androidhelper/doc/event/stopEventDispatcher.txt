@@ -1,0 +1,2 @@
+stopEventDispatcher()
+Stops the event server, you can\'t read in the port anymore

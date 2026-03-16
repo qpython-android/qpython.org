@@ -1,0 +1,2 @@
+cameraStopPreview()
+Stop the preview mode.

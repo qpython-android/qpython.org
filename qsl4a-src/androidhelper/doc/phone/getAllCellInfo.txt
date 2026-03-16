@@ -1,0 +1,2 @@
+getAllCellInfo()
+Returns all the neighboring cell information of the device.

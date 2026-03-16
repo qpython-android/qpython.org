@@ -1,0 +1,4 @@
+videoPlay(path, wait=True)
+Play a video file
+    path (String) video file path
+    wait (Boolean Optional) wait for the end of video file viewing

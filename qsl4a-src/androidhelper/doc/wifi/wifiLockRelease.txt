@@ -1,0 +1,2 @@
+wifiLockRelease()
+Releases a previously acquired Wifi lock.

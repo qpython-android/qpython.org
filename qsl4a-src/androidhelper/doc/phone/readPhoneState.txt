@@ -1,0 +1,3 @@
+readPhoneState()
+Returns the current phone state and incoming number.
+returns: (Bundle) A Map of \"state\" and \"incomingNumber\"

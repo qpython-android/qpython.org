@@ -1,0 +1,4 @@
+takePicture(path = None)
+Take Picture with system camera .
+path (String Optional) if omitted, use default path
+return path if success, return None if canceled .

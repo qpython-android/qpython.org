@@ -1,0 +1,3 @@
+dialogSetMaxProgress(max)
+Set progress dialog maximum value.
+    max (Integer)

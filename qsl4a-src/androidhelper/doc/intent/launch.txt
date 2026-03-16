@@ -1,0 +1,8 @@
+launch(classname=None,packagename=None,wait=True)
+Start activity with the given classname and/or packagename .
+If classname is packagename.sub0, packagename can be omitted,
+if classname is packagename.sub1.sub2.…, packagename must be specified,
+if classname is omitted, packagename must be specified .
+    classname (String Optional)
+    packagename (String Optional)
+    wait (Boolean Optional) wait for the launched application operation end

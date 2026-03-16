@@ -1,0 +1,10 @@
+fullSetListSelected(id,selected)
+Set option(s) for the displayed text/html list ,
+Set one option for the single choice list ,
+Set multiple options for the multiple choice list .
+    id (String) id of layout widget
+    selected (Integer or List of Integers or Boolean)
+        Integer for Single Choice : an Integer greater than or equal to zero for Single Choice , -1 means all unselect ;
+        List of Integers for Multi Choice : a List of Integers greater than or equal to zero like [0, 3, 5] , 0 is the first item , the last item is ( length - 1 )  , [ ] ( empty list ) means all unselect , [ 0, 1, 2, …… , length-1 ] means all select ;
+        Boolean for Multi Choice : all True or all False .
+return None

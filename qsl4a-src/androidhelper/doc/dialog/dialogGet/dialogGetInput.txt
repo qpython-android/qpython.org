@@ -1,0 +1,29 @@
+dialogGetInput ( title = "Value" , message = "Please enter value :" , defaultText = None , messageIsHtml = False )
+Queries the user for a text input.
+    title (String) title of the input box (default=Value)
+    message (String) message to display above the input box (default=Please enter value:)
+    defaultText (String) text to insert into the input box (optional)
+    messageIsHtml (Boolean)  indicates message is Html or Plain Text
+The result is the user's input, or None if cancel was hit.
+
+Example :
+from androidhelper import Android
+droid = Android()
+print(droid.dialogGetInput("Title","Message","Default").result)
+print(droid.dialogGetInput("Title","<font color=red>Red</font> Flower","Default",True).result)
+
+This function is the same as these code :
+def dialogGetInput ( title = "Value" , message = "Please enter value :" , defaultText = None , messageIsHtml = False ):
+    droid.dialogCreateInput(title,message,defaultText,"textMultiLine")
+    droid.dialogSetMessageIsHtml(messageIsHtml)
+    droid.dialogSetNegativeButtonText("Cancel")
+    droid.dialogSetPositiveButtonText("OK")
+    droid.dialogShow()
+    try:
+        result=droid.dialogGetResponse().result
+        if result["which"]=="positive":
+            return result['value']
+        else:
+            return None
+    except:
+        return None

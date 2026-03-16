@@ -1,0 +1,2 @@
+getMemoryInfo()
+get Memory Information

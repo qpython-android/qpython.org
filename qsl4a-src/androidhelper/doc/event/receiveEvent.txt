@@ -1,0 +1,4 @@
+receiveEvent()
+Returns and removes the oldest event (i.e. location or sensor update, etc.) from the event buffer.
+returns: (Event) Map of event properties.
+Deprecated in r4. Use eventPoll instead.

@@ -1,0 +1,2 @@
+usbserialWrite(ascii, connID = "")
+Sends ASCII characters over the currently open USB Serial connection.

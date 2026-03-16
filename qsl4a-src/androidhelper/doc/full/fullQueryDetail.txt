@@ -1,0 +1,3 @@
+fullQueryDetail(id)
+Get fullscreen properties for a specific widget
+    id (String) id of layout widget

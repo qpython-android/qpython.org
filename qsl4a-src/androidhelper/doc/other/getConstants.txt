@@ -1,0 +1,3 @@
+getConstants(classname)
+Get list of constants (static final fields) for a class
+    classname (String) Class to get constants from

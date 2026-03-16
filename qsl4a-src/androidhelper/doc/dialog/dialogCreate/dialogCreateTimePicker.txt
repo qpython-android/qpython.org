@@ -1,0 +1,5 @@
+dialogCreateTimePicker(hour=0,minute=0,is24hour=False)
+Create time picker dialog.
+    hour (Integer)  (default=0)
+    minute (Integer)  (default=0)
+    is24hour (Boolean) Use 24 hour clock (default=false)

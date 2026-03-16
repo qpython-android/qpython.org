@@ -1,0 +1,10 @@
+htmlPictureSetSize(widthFixed = None, heightFixed = None, widthRatio = None, heightRatio = None)
+  widthFixed , heightFixed (Integer Optional) :
+    set the picture fixed size,
+    if ommitted to None, use intrinsic width and height .
+  widthRatio , heightRatio (Float Optional) :
+    set the picture size ratio,
+    if >1.0 , pictures will zoom in ,
+    if <1.0 , pictures will zoom out,
+    if ommitted to None or is 1.0 , the picture width and height will not zoom .
+  Return None .

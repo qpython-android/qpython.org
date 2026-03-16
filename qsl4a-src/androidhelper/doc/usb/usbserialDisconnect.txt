@@ -1,0 +1,2 @@
+usbserialDisconnect(connID = "")
+Disconnect all USB-device.

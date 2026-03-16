@@ -1,0 +1,11 @@
+startActivity(action,uri=None,type=None,extras=None,wait=None,packagename=None,classname=None,flags=None)
+Starts an activity.
+    action (String)
+    uri (String)  (optional)
+    type (String) MIME type/subtype of the URI (optional)
+    extras (JSONObject) a Map of extras to add to the Intent (optional)
+    wait (Boolean) block until the user exits the started activity (optional)
+    packagename (String) name of package. If used, requires classname to be useful (optional)
+    classname (String) name of class. If used, requires packagename to be useful (optional)
+packagename and classname, if provided, are used in a 'setComponent' call.
+    flags (Integer) Intent flags (optional)

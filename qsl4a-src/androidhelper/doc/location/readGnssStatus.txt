@@ -1,0 +1,3 @@
+readGnssStatus()
+Returns the current Global Navigation Satellite System status , data type is dict in list .
+Need Android >= 8 .

@@ -1,0 +1,8 @@
+fullGetListSelected(id)
+Get option(s) for the displayed text/html list ,
+Get one option for the single choice list ,
+Get multiple options for the multiple choice list .
+    id (String) id of layout widget
+return an Integer or a List of Integers .
+    Integer : return an integer greater than or equal to zero when selected from a Single Choice list , -1 means all unselect for Single Choice list ;
+    List of Integers : return a list of integer greater than or equal to zero like [0, 4, 7] when selected from a Multi Choice list , 0 is the first item , the last item is ( length - 1 )  , [ ] ( empty list ) means all unselected for Multi Choice list , [ 0, 1, 2, …… , length-1 ] means all selected for Multi Choice list .

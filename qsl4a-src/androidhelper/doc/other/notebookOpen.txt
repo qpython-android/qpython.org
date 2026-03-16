@@ -1,0 +1,4 @@
+notebookOpen(path = None)
+  Open the path with Jupyter Notebook .
+  path (String) can be .ipynb/.py/.txt files or folders , but path must in sdcard .
+  if path is omitted , will open Jupyter Notebook Home Page .

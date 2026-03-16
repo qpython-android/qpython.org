@@ -1,0 +1,8 @@
+sendEmail(to,subject,text,attachmentPath=None,extras=None,wait=True)
+Launches an activity that sends an e-mail message to given recipient(s) or attachmentPath(s) .
+    to (String) A single recipient or a comma separated of recipients , like "abc@def.com" or "ghi@jkl.com,mno@pqr.com" .
+    subject (String) .
+    text (String) .
+    attachmentPaths (a String or a list of Strings , Optional) , like "/sdcard/abc.jpg" or [ "/sdcard/def.bmp" , "/sdcard/ghi.png" ] , if this parameter is not None , the "to" parameter may lose efficacy .
+    extras (Dict Optional) , like { droid.Intent.EXTRA_HTML_TEXT:"<font color=red>abc</font>" } .
+    wait (Boolean Optional , default to True) , wait for the end of the email send operation .

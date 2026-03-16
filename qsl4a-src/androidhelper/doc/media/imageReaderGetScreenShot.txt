@@ -1,0 +1,5 @@
+imageReaderGetScreenShot(path = None, delayMilliSec = 1000)
+Get Screen Shot to path .
+    path (String Optional) jpeg file path, if omitted, use default path
+    delayMilliSec (Integer Optional) wait delayMilliSec to get Screen Shot
+return path

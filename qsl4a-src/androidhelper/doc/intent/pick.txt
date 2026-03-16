@@ -1,0 +1,4 @@
+pick(uri)
+Display content to be picked by URI (e.g. contacts)
+    uri (String)
+returns: (Intent) A map of result values.

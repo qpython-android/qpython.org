@@ -1,0 +1,3 @@
+getConnectedInfo()
+    return Dict in List of IpAddress,MacAddress,Device .
+    Only support Android <= 9 .

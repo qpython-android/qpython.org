@@ -1,0 +1,9 @@
+queryContent(uri,attributes=None,selection=None,selectionArgs=None,order=None)
+Content Resolver Query
+    uri (String) The URI, using the content:// scheme, for the content to retrieve.
+    attributes (JSONArray) A list of which columns to return. Passing null will return all columns (optional)
+    selection (String) A filter declaring which rows to return (optional)
+    selectionArgs (JSONArray) You may include ?s in selection, which will be replaced by the values from selectionArgs (optional)
+    order (String) How to order the rows (optional)
+returns: (List) result of query as Maps
+Exactly as per ContentResolver.query

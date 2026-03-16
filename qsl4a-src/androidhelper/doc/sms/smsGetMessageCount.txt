@@ -1,0 +1,4 @@
+smsGetMessageCount(unreadOnly,folder="inbox")
+Returns the number of messages.
+    unreadOnly (Boolean)
+    folder (String)  (default=inbox)

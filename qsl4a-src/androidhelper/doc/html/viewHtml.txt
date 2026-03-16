@@ -1,0 +1,6 @@
+viewHtml(path,title=None,wait=True)
+webViewShow is the same as viewHtml
+Opens the browser to display a local HTML/text/audio/video File or http(s) Website .
+    path (String) the path to the HTML/text/audio/video File or http(s) Website
+    title (String Optional) title bar text, if omitted, use app name as default title, if title is empty String, title bar will hidden to show a full screen webpage.
+    wait (Boolean Optional) wait for the file operation end

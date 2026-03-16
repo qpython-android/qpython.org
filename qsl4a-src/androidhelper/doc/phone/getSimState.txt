@@ -1,0 +1,2 @@
+getSimState()
+Returns the state of the device SIM card.

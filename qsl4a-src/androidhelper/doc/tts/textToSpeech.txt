@@ -1,0 +1,5 @@
+textToSpeech(Text, AutoPlay = True, WavFile = None, VoiceName = None)
+    Text (String) the String to convert to speech ,
+    AutoPlay (Boolean Optional) auto play the speech ,
+    WavFile (String Optional) the wav file to store the speech, if it is None, means os.environ['TMP']+'/tmp.wav' ,
+    VoiceName (String Optional) 

@@ -1,0 +1,3 @@
+ftpGet()
+    ftp get ip address and port number .
+    return a list of ftp address like ["ftp://12.34.56.78:4321", "ftp://12.34.56.90:4321"], if ftp address is "ftp://0.0.0.0:4321", means ftp address not valid, you should connect wifi or open wifi hotspot .

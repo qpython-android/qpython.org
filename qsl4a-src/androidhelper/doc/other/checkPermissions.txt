@@ -1,0 +1,2 @@
+checkPermissions()
+  Return a dict contains key "granted" and "denied", which indicate the permission that QPython have and not have .

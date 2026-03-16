@@ -1,0 +1,2 @@
+getLastLog(logFileName='last.log')
+    Return Log with Log File Name

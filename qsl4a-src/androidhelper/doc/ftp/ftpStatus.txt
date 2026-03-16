@@ -1,0 +1,2 @@
+ftpStatus()
+    Return the Status of the FTP Server , include "running", "stopped", "uninitial" and "failed" .

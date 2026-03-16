@@ -1,0 +1,4 @@
+floatViewRemove(index = -1)
+Remove Float View with index,
+    index (Integer Optional) If index is omitted ( i.e. floatViewRemove.ALL = -1 ) , Remove All Float Views ,
+    Return the number of removed Float Views .

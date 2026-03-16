@@ -1,0 +1,4 @@
+toggleWifiState(enabled=None)
+Toggle Wifi on and off.
+    enabled (Boolean)  (optional)
+returns: (Boolean) True if Wifi is enabled.

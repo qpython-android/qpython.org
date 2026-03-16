@@ -1,0 +1,7 @@
+dialogSetSingleChoiceItems(items,selected=-1)
+Set dialog single choice items and selected item.
+    items (JSONArray)
+    selected (Integer Optional) selected item index (default=-1 , means no select)
+This creates a list of radio buttons. You can select one item out of the list.
+A response will not be returned until the dialog is closed, either with the Cancel key or a button
+(positive/negative/neutral). Use dialogGetSelectedItems() to find out what was selected.

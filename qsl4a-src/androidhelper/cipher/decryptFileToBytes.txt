@@ -1,0 +1,6 @@
+decryptFileToBytes( srcFile )
+Decrypt a File to another Bytes,
+needs to run droid.cipherInit first , and encodingFormat must omitted .
+if you want to operate files in Media Storage Device or /sdcard/Android/data/<packagename> , run droid.documentTreeShowOpen first .
+srcFile (String)
+return Decrypted Bytes

@@ -1,0 +1,2 @@
+fullQuery()
+Get Fullscreen Properties

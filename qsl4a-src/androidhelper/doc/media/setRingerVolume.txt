@@ -1,0 +1,3 @@
+setRingerVolume(volume)
+Sets the ringer volume.
+    volume (Integer)

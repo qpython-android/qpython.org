@@ -1,0 +1,15 @@
+scanBarcodeFromImage( path, compressRatio = 0, x = 0, y = 0, width = 0, height = 0)
+Scan the QR code from the picture,
+path (String):
+    original Picture path;
+compressRatio (Integer Optional):
+    if a Picture is 1000x800;
+    if compressRatio == 0 or 1, the Picture will not compress;
+    if compressRatio == 2, the Picture will compress to 500x400;
+    if compressRatio == 4, the Picture will compress to 250x200;
+    and so on;
+x or y (Integer Optional):
+    Position of the original Picture, x==y==0 is the top left corner;
+width or height (Integer Optional):
+    Intercept Size of the original Picture, width==height==0 means original width and height;
+returns the result String of Barcode .

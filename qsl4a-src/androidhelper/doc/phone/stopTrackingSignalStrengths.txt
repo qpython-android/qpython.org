@@ -1,0 +1,2 @@
+stopTrackingSignalStrengths()
+Stops tracking signal strength. GSM/CDMA/EVDO

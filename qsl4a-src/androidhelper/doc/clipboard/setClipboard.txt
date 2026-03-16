@@ -1,0 +1,4 @@
+setClipboard(text)
+Put text in the clipboard.
+    text (String)
+Creates a new AndroidFacade that simplifies the interface to various Android APIs.

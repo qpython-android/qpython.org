@@ -1,0 +1,117 @@
+
+#### Parameters ####
+
+### key : ( str or bytes ): ###
+    *   The secret key used for encryption and decryption.
+    *   If a `bytes` or `bytearray` object is provided, it is automatically converted to a **Base64-Encoded-String** before being sent to the backend.
+    *   If `encodingFormat` is `""`, the string will be **Base64** directly .
+    *   Otherwise, the string is converted to **Base64** using the specified `encodingFormat` (e.g., UTF-8, GBK).
+    *   The key must be of a length appropriate for the chosen algorithm (e.g., 16, 24, or 32 bytes for AES , e.g., 8 bytes for DES).
+
+### algorithm : ( str , default: "AES/CBC/PKCS5Padding" ): ###
+    *   Specifies the cipher algorithm, mode, and padding scheme in the format `Algorithm/Mode/Padding`.
+    *   **Common Examples:**
+        *   "AES/CBC/PKCS5Padding" (Default)
+        *   "AES/GCM/NoPadding"
+        *   "DES/CBC/PKCS5Padding"
+    *   The algorithm determines the **suggested IV length**:
+        *   `AES/GCM`: 12 bytes (96 bits) - *Recommended for GCM mode.*
+        *   `DES`: 8 bytes.
+        *   Other block cipher modes (e.g., CBC): 16 bytes.
+        *   `ECB` mode: 0 bytes (IV not used).
+
+### encodingFormat : (str, default: ""): ###
+    *   Specifies the character encoding used to convert string `key` and `initialVector` to bytes.
+    *   An empty string (`""`) indicates that the `key` and `initialVector` are provided in **`bytes` or `base64`** format.
+    *   Other valid values include "UTF-8", "GBK", etc., indicates that the `key` and `initialVector` are provided in "UTF-8", "GBK" format .
+
+### initialVector : ( str , bytes , or int , default: "" ): ###
+    *   Controls the initialization vector (IV) behavior. The type of this parameter determines the mode:
+    ## str (String but **not empty**) - Use a Fixed IV (Legacy/Compatibility Mode): ##
+        *   The string is interpreted as the IV value.
+        *   If `encodingFormat` is `""`, the string will be decode to **Base64**.
+        *   Otherwise, the string is converted to **Base64** using the specified `encodingFormat` (e.g., UTF-8, GBK).
+        *   **Important:** The IV is **NOT** written to the output file or byte-string. This mode requires the IV to be known or shared out-of-band for decryption.
+    ## bytes (but **not empty**) - Use a Fixed IV (Legacy/Compatibility Mode): ##
+        *   If `encodingFormat` is `""`, initialVector can be byte-string which will be decode to **Base64**.
+    ## int (Integer) - Generate a Random IV (New System Mode): ##
+        *   The integer value specifies the `length (in bytes)` of the random IV to generate.
+        *   A cryptographically secure random IV of the specified length is generated.
+        *   **Important:** The **entire** generated IV is **prepended to the ciphertext** in the output file or byte-string. This is the secure and recommended method, as the IV is needed for decryption.
+        *   The IV used for the cipher operation is derived from this random IV:
+            *   If the generated IV's length is greater than the `SuggestIVLength` for the algorithm, only the **first `SuggestIVLength` bytes** are used as the actual cipher IV.
+            *   The remaining bytes can serve as obfuscation or reserved space.
+        *   **Example:** `initialVector=56` generates a 56-byte random sequence. The first 12 (for GCM) or 16 (for CBC) bytes are used as the cipher IV, and all 56 bytes are written to the output header.
+    ## `""` (Empty String - Default) - Generate a Random IV with Suggested Length: ##
+        *   This is a convenience mode equivalent to passing `initialVector=SuggestIVLength`.
+        *   A random IV of the **suggested length** for the chosen algorithm (e.g., 12 for GCM, 16 for CBC, 8 for DES) is generated.
+        *   The **entire** IV is **prepended to the ciphertext** in the output. This is the recommended default for new applications.
+
+#### Return Value ####
+
+    *   If this function is run correct, it will return a **Result of the None** :
+        *   Result(id=1, result=None, error=None)
+
+#### Example Usage ####
+
+# 1. Used a Bytes or Base64 Key (Simplest , IV is written to output, algorithm is default to AES/CBC/PKCS5Padding) :
+```python
+>>> from base64 import b64encode
+>>> from androidhelper import *
+>>> droid = Android()
+>>> bs = b"it need 16 bytes" # bytes
+>>> b64 = b64encode(bs).decode() # to base64
+>>> droid.cipherInit(b64)
+Result(id=1, result=None, error=None)
+>>> droid.cipherInit(bs) # the same as cipherInit(b64)
+Result(id=2, result=None, error=None)
+```
+
+# 2. Use a fixed Bytes or Base64 Key and IV (Legacy, IV not written to output)
+```python
+>>> from androidhelper import *
+>>> droid = Android()
+>>> ks = b"it need 16 bytes" # bytes
+>>> bs = b"it needs 16 byte" # bytes
+>>> droid.cipherInit(key=ks, algorithm="AES/CBC/PKCS5Padding", encodingFormat="", initialVector=bs)
+Result(id=1, result=None, error=None)
+```
+
+# 3. Use a fixed UTF-8 or GBK string as Key and IV (Legacy, IV not written to output)
+```python
+>>> from androidhelper import *
+>>> droid = Android()
+>>> ks = "key is 16 bytes." # string
+>>> bs = "the iv 16 bytes." # string
+>>> droid.cipherInit(key=ks, algorithm="AES/CBC/PKCS5Padding", encodingFormat="UTF-8", initialVector=bs)
+Result(id=1, result=None, error=None)
+```
+
+# 4. Use a 256-bit-key (32 bytes, for AES-256), generate a random 16-byte IV and write it to the output (Recommended for CBC)
+```python
+>>> from androidhelper import *
+>>> droid = Android()
+>>> ks = "This key is 32 bytes for AES-256" # string
+>>> droid.cipherInit(key=ks, algorithm="AES/CBC/PKCS5Padding", encodingFormat="GBK",initialVector=16)
+Result(id=1, result=None, error=None)
+```
+
+# 5. Generate a random 12-byte IV (suggested for GCM) and write it to the output (Recommended for GCM)
+```python
+>>> from androidhelper import *
+>>> droid = Android()
+>>> ks = b"This key is 32 bytes for AES-256" # bytes
+>>> droid.cipherInit(key=ks, algorithm="AES/GCM/NoPadding", encodingFormat="", initialVector=12)
+Result(id=1, result=None, error=None)
+```
+
+# 6. Generate a random IV of suggested length and write it to the output
+```python
+>>> from androidhelper import *
+>>> droid = Android()
+>>> ks = b"key is 16 bytes." # bytes
+>>> droid.cipherInit(key=ks, algorithm="AES/GCM/NoPadding", encodingFormat="", initialVector="") # Uses random 12-byte IV
+Result(id=1, result=None, error=None)
+>>> droid.cipherInit(key=ks, algorithm="AES/CBC/PKCS5Padding", encodingFormat="", initialVector="") # Uses random 16-byte IV
+Result(id=2, result=None, error=None)
+```

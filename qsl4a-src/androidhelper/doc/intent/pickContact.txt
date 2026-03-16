@@ -1,0 +1,3 @@
+pickContact()
+Displays a list of contacts to pick from.
+returns: (Intent) A map of result values.

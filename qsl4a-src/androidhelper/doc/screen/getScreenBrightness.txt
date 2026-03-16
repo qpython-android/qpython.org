@@ -1,0 +1,3 @@
+getScreenBrightness()
+Returns the screen backlight brightness.
+returns: (Integer) the current screen brightness between 0 and 255

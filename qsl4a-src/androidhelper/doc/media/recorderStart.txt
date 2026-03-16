@@ -1,0 +1,2 @@
+recorderStart()
+Start a prepared recording.

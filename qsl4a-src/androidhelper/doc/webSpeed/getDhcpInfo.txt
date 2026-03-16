@@ -1,0 +1,4 @@
+getDhcpInfo(ipConvertToString=True)
+    return DHCP Infomation Dict .
+    If ipConvertToString is True, IP address is like "10.0.3.193",
+    If ipConvertToString is False, IP address is like 167773121.

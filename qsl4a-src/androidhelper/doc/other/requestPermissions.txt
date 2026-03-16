@@ -1,0 +1,3 @@
+requestPermissions(permissions = None)
+  Request Permissions that QPython do not have, some permission cannot be granted succesfully,
+  permissions (List of String, Optional) if permissions is None, use all denied permissions .

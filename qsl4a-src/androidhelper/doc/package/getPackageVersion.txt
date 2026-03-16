@@ -1,0 +1,3 @@
+getPackageVersion(packageName)
+Returns package version name.
+    packageName (String)

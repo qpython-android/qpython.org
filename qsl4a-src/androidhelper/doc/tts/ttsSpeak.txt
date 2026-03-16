@@ -1,0 +1,5 @@
+ttsSpeak(message,pitch=1,pitchRate=1)
+Speaks the provided message via TTS.
+    message (String)
+    pitch (Float Optional) speech pitch
+    pitchRate (Float Optional) speech pitch rate

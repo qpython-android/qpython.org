@@ -1,0 +1,2 @@
+getVoiceMailNumber()
+Returns the voice mail number. Return null if it is unavailable.

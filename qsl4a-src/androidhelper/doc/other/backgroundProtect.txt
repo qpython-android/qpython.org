@@ -1,0 +1,5 @@
+backgroundProtect(enabled = True)
+Open the hide suspension window to prevent QPython from being accidentally closed in the background .
+    Only support Android >= 8.0 .
+    enabled (Boolean Optional) start or close Background Protect hide suspension window .
+    Return None .

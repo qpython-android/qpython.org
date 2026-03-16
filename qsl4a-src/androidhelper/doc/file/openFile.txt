@@ -1,0 +1,5 @@
+openFile(path, type=None, wait=True)
+Open the file in the default open mode with content:// .
+    path (String) file path
+    type (String Optional) MIME-type self-defined
+    wait (Boolean Optional) wait for the end of the file open operation

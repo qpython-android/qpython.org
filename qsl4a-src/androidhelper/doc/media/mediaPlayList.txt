@@ -1,0 +1,3 @@
+mediaPlayList()
+Lists currently loaded media
+returns: (Set) List of Media Tags

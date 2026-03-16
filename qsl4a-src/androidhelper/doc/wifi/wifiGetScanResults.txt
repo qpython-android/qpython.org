@@ -1,0 +1,2 @@
+wifiGetScanResults()
+Returns the list of access points found during the most recent Wifi scan.

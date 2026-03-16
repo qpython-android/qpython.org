@@ -1,0 +1,15 @@
+fullSetList2(id,list,intRes)
+Attach a 2-line list to a fullscreen widget
+    id (String) id of layout widget
+    list (JSONArray) List to set like [1Up,1Down,2Up,2Down,……]
+    intRes (JSONArray) constant integer like :
+        [R.layout.simple_list_item_2,R.id.text1,R.id.text2]
+        [R.layout.simple_list_item_1,R.id.text1]
+        [R.layout.simple_spinner_item,R.id.text1,R.layout.simple_spinner_dropdown_item]
+        [R.layout.simple_expandable_list_item_2,R.id.text1,R.id.text2]
+        [R.layout.simple_expandable_list_item_1,R.id.text1]
+        [R.layout.simple_spinner_dropdown_item,R.id.text1,R.layout.simple_spinner_item]
+        R is (
+            from androidhelper.R import R
+            R=R()
+        )

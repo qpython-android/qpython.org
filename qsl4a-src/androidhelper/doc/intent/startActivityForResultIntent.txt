@@ -1,0 +1,4 @@
+startActivityForResultIntent(intent)
+Starts an activity and returns the result.
+    intent (Intent) Intent in the format as returned from makeIntent
+returns: (Intent) A Map representation of the result Intent.

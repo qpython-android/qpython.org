@@ -1,0 +1,6 @@
+geocode(latitude,longitude,maxResults=1)
+Returns a list of addresses for the given latitude and longitude.
+    latitude (Double)
+    longitude (Double)
+    maxResults (Integer) maximum number of results (default=1)
+returns: (List) A list of addresses.

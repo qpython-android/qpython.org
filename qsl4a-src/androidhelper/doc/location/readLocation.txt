@@ -1,0 +1,3 @@
+readLocation()
+Returns the current location as indicated by all available providers.
+returns: (Map) A map of location information by provider.

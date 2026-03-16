@@ -1,0 +1,5 @@
+cipherInit(key, algorithm="AES/CBC/PKCS5Padding", encodingFormat="", initialVector="")
+
+Initializes the underlying cipher engine for encryption and decryption operations. This function configures the cryptographic algorithm, key, and initialization vector (IV) mode according to the specified parameters.
+
+You can read HTML formatted cipherInit() function help by using : droid.viewHtml(f'file://{os.environ["HOME"]}/lib/python3.12/site-packages/androidhelper/cipher/_init.htm') .

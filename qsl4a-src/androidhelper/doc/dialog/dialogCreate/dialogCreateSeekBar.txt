@@ -1,0 +1,11 @@
+dialogCreateSeekBar(starting_value=50,maximum_value=100,title,message)
+Create seek bar dialog.
+    starting value (Integer)  (default=50)
+    maximum value (Integer)  (default=100)
+    title (String)
+    message (String)
+Will produce "dialog" events on change, containing:
+"progress" - Position chosen, between 0 and max
+"which" = "seekbar"
+"fromuser" = true/false change is from user input
+Response will contain a "progress" element.

@@ -1,0 +1,4 @@
+startSensingTimed(sensorNumber,delayTime)
+Starts recording sensor data to be available for polling.
+    sensorNumber (Integer) 1 = All, 2 = Accelerometer, 3 = Magnetometer, 4 = Light, 5 = StepCounter, 6 = Gyroscope
+    delayTime (Integer) Minimum time between readings in milliseconds

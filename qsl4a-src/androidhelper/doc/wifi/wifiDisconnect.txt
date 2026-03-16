@@ -1,0 +1,3 @@
+wifiDisconnect()
+Disconnects from the currently active access point.
+returns: (Boolean) True if the operation succeeded.

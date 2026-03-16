@@ -1,0 +1,9 @@
+sendBroadcast(action,uri=None,type=None,extras=None,packagename=None,classname=None,flags=None)
+Send a broadcast.
+    action (String)
+    uri (String)  (optional)
+    type (String) MIME type/subtype of the URI (optional)
+    extras (JSONObject) a Map of extras to add to the Intent (optional)
+    packagename (String) name of package. If used, requires classname to be useful (optional)
+    classname (String) name of class. If used, requires packagename to be useful (optional)
+    flags (Integer) Intent flags (optional)

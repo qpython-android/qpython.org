@@ -1,0 +1,2 @@
+getVoiceMailAlphaTag()
+Retrieves the alphabetic identifier associated with the voice mail number.

@@ -1,0 +1,3 @@
+ftpStop()
+    Stop ftp server .
+    return None

@@ -1,0 +1,5 @@
+smsMarkMessageRead(ids,read)
+Marks messages as read.
+    ids (JSONArray) List of message IDs to mark as read.
+    read (Boolean)
+returns: (Integer) number of messages marked read

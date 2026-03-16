@@ -1,0 +1,3 @@
+dialogSetNeutralButtonText(text)
+Set alert dialog button text.
+    text (String)

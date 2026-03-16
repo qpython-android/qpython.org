@@ -1,0 +1,4 @@
+floatViewResult(index = -1)
+Return Float View Result with index:
+    x, y, time (miliseconds) , operation, index .
+index (Integer Optional) if index is omitted ( i.e. floatViewResult.LAST = -1 ) , return the Result of the last Float View .

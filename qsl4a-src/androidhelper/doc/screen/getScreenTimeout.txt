@@ -1,0 +1,3 @@
+getScreenTimeout()
+Returns the current screen timeout in seconds.
+returns: (Integer) the current screen timeout in seconds.

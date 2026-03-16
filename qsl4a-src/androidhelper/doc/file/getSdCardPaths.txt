@@ -1,0 +1,2 @@
+getSdCardPaths()
+  Return Paths of Emulated, SD Card and USB Disk .

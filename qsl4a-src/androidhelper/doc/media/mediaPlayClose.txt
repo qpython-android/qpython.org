@@ -1,0 +1,4 @@
+mediaPlayClose(tag="default")
+Close media file
+    tag (String) string identifying resource (default=default)
+returns: (boolean) true if successful

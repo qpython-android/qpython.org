@@ -1,0 +1,6 @@
+decryptFileToString( srcFile )
+Decrypt a File to another Normal / Base64 String,
+needs to run droid.cipherInit first .
+if you want to operate files in Media Storage Device or /sdcard/Android/data/<packagename> , run droid.documentTreeShowOpen first .
+srcFile (String)
+return Decrypted String

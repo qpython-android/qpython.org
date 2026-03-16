@@ -1,0 +1,2 @@
+wifiLockAcquireFull()
+Acquires a full Wifi lock.

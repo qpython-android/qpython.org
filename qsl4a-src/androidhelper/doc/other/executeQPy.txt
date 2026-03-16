@@ -1,0 +1,5 @@
+executeQPy(scriptPath='',arg=None)
+Run a QPython script with path .
+    scriptPath (String)
+    arg (String Optional)
+    If scriptPath is empty, open python shell only .

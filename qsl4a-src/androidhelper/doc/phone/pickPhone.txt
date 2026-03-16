@@ -1,0 +1,3 @@
+pickPhone()
+Displays a list of phone numbers to pick from.
+returns: (String) The selected phone number.

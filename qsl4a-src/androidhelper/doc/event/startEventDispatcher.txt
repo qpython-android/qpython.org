@@ -1,0 +1,3 @@
+startEventDispatcher(port=None)
+Opens up a socket where you can read for events posted
+    port (Integer) Port to use (optional) (default=0)

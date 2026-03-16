@@ -1,0 +1,6 @@
+sharedVariableGet(key)
+Get Shared Variable of SL4A which can be use by other QPython scripts .
+    key (String)
+Return the value string corresponding to the key string .
+If the key does not exist, an error will be reported.
+Note: when qpython is closed, these shared variables will be cleared.

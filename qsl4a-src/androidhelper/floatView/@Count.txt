@@ -1,0 +1,3 @@
+floatViewCount()
+Count Float View number ,
+  Returns an integer .

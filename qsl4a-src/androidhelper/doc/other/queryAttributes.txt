@@ -1,0 +1,4 @@
+queryAttributes(uri)
+Content Resolver Query Attributes
+    uri (String) The URI, using the content:// scheme, for the content to retrieve.
+returns: (JSONArray) a list of available columns for a given content uri

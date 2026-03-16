@@ -1,0 +1,3 @@
+eventClearBuffer()
+Clears all events from the event buffer.
+Example (python): droid.eventClearBuffer()

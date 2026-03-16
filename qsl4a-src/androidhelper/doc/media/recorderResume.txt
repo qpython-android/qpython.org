@@ -1,0 +1,2 @@
+recorderResume()
+Resume a previously paused recording.

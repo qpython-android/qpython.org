@@ -1,0 +1,3 @@
+dialogSetPositiveButtonText(text)
+Set alert dialog positive button text.
+    text (String)

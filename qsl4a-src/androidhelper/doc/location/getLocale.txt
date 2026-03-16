@@ -1,0 +1,2 @@
+getLocale()
+Get system language and country .

@@ -1,0 +1,4 @@
+eventWait(timeout=None)
+Blocks until an event occurs. The returned event is removed from the buffer.
+    timeout (Integer) the maximum time to wait (optional)
+returns: (Event) Map of event properties.

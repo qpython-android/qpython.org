@@ -1,0 +1,4 @@
+toggleAirplaneMode(enabled=None)
+Toggles airplane mode on and off.
+    enabled (Boolean)  (optional)
+returns: (Boolean) True if airplane mode is enabled.

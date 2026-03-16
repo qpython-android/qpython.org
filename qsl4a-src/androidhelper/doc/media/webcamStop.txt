@@ -1,0 +1,2 @@
+webcamStop()
+Stops the webcam stream.

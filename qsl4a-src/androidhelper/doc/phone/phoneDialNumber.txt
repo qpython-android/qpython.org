@@ -1,0 +1,3 @@
+phoneDialNumber(phone_number)
+Dials a phone number.
+    phone number (String)

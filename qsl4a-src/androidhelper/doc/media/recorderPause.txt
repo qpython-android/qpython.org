@@ -1,0 +1,2 @@
+recorderPause()
+Pause a previously started recording.

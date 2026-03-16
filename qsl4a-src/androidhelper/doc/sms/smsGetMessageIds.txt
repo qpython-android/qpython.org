@@ -1,0 +1,4 @@
+smsGetMessageIds(unreadOnly,folder="inbox")
+Returns a List of all message IDs.
+    unreadOnly (Boolean)
+    folder (String)  (default=inbox)

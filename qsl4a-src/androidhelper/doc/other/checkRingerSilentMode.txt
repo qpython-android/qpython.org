@@ -1,0 +1,3 @@
+checkRingerSilentMode()
+Checks the ringer silent mode setting.
+returns: (Boolean) True if ringer silent mode is enabled.

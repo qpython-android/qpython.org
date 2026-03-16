@@ -1,0 +1,4 @@
+webcamAdjustQuality(resolutionLevel=0,jpegQuality=20)
+Adjusts the quality of the webcam stream while it is running.
+    resolutionLevel (Integer) increasing this number provides higher resolution (default=0)
+    jpegQuality (Integer) a number from 0-100 (default=20)

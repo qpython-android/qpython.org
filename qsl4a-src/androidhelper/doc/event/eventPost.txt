@@ -1,0 +1,11 @@
+eventPost(name,data,enqueue=None)
+Post an event to the event queue.
+    name (String) Name of event
+    data (String) Data contained in event.
+    enqueue (Boolean) Set to False if you don\'t want your events to be added to the event queue, just dispatched. (optional) (default=false)
+Example:
+import android
+from datetime import datetime
+droid = android.Android()
+t = datetime.now()
+droid.eventPost('Some Event', t)

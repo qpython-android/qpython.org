@@ -1,0 +1,3 @@
+checkAirplaneMode()
+Checks the airplane mode setting.
+returns: (Boolean) True if airplane mode is enabled.

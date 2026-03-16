@@ -1,0 +1,3 @@
+dialogSetProgressMessage(message)
+Set progress dialog message .
+    message (String)

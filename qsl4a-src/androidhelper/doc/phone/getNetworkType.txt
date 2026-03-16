@@ -1,0 +1,2 @@
+getNetworkType()
+Returns a the radio technology (network type) currently in use on the device.

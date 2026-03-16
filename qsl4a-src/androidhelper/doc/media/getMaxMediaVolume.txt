@@ -1,0 +1,2 @@
+getMaxMediaVolume()
+Returns the maximum media volume.

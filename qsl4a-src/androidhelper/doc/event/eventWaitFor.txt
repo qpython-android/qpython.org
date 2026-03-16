@@ -1,0 +1,5 @@
+eventWaitFor(eventName,timeout=None)
+Blocks until an event with the supplied name occurs. The returned event is not removed from the buffer.
+    eventName (String)
+    timeout (Integer) the maximum time to wait (in ms) (optional)
+returns: (Event) Map of event properties.

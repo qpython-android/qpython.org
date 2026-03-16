@@ -1,0 +1,5 @@
+fullSetProperty(id,property,value)
+Set a fullscreen widget's a property
+    id (String) id of layout widget
+    property (String) name of property to set
+    value (String) value to set property to

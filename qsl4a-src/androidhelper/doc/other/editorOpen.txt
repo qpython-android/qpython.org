@@ -1,0 +1,4 @@
+editorOpen(path)
+Open the QPython Editor to display a local Text File ,
+or open the QPython File Browser to display a local Folder .
+    path (String)

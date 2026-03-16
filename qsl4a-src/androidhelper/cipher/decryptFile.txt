@@ -1,0 +1,7 @@
+decryptFile( srcFile, dstFile )
+Decrypt a File to another File,
+needs to run droid.cipherInit first .
+if you want to operate files in Media Storage Device or /sdcard/Android/data/<packagename> , run droid.documentTreeShowOpen first .
+srcFile (String)
+dstFile (String)
+return None

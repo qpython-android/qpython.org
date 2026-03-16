@@ -1,0 +1,2 @@
+getSimCountryIso()
+Returns the ISO country code equivalent for the SIM provider\'s country code.

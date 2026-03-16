@@ -1,0 +1,3 @@
+forceStopPackage(packageName)
+Force stops a package.
+    packageName (String) name of package

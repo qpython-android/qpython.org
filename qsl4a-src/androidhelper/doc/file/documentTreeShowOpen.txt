@@ -1,0 +1,16 @@
+documentTreeShowOpen( rootPath = '/sdcard' )
+    Request for Media Storage Write or "/sdcard/Android/<subPath>" Read/Write Permissions .
+    documentFileShowOpen is the same as documentTreeShowOpen .
+    rootPath (String)
+    Return Uri String if Success , if Fail return None .
+
+Use This Function to Read/Write Media Storage Device or "/sdcard/Android/<subPath>" ,
+    documentTreeShowOpen will get all documentFile functions to androidhelper at the same time ,
+    documentFile functions are very slow .
+
+    For Media Storage Devices :
+        use rootPath = "/storage/ABCD-EFGH" or "/mnt/ext_sdcard" , return $URI .
+
+    For "/sdcard/Android/<subPath>" :
+        For Android  7-10 , use rootPath = "/sdcard/Android/data"                  , return "file://<paths>" ;
+        For Android 11-13 , use rootPath = "/sdcard/Android/data/the.package.name" , return $URI .
