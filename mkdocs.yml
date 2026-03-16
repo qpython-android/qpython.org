@@ -29,6 +29,8 @@ theme:
     text: Roboto
     code: Roboto Mono
 
+copyright: © QPython 2012-2026
+
 extra_css:
   - static/extra.css
 
