@@ -48,11 +48,11 @@ if git show-ref --verify --quiet refs/heads/gh-pages; then
     git checkout gh-pages
 else
     git checkout --orphan gh-pages
-    git rm -rf .
+    git rm -rf . -- ':!deploy.sh'
 fi
 
-# Remove old files (except .git)
-find . -maxdepth 1 ! -name '.git' ! -name '.' ! -name '..' -exec rm -rf {} \;
+# Remove old files (except .git and deploy.sh)
+find . -maxdepth 1 ! -name '.git' ! -name 'deploy.sh' ! -name '.' ! -name '..' -exec rm -rf {} \;
 
 # Copy new site content
 cp -r "$TEMP_DIR"/* .
