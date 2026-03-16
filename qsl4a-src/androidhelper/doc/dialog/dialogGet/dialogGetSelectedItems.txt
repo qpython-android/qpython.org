@@ -1,0 +1,3 @@
+dialogGetSelectedItems()
+This method provides list of items user selected.
+returns: (Set) Selected items

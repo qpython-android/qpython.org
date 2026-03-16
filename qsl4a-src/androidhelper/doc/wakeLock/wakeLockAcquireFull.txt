@@ -1,0 +1,2 @@
+wakeLockAcquireFull()
+Acquires a full wake lock (CPU on, screen bright, keyboard bright).

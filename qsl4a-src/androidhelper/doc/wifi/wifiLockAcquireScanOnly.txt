@@ -1,0 +1,2 @@
+wifiLockAcquireScanOnly()
+Acquires a scan only Wifi lock.

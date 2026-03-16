@@ -1,0 +1,4 @@
+recorderSoundVolumeGetDb()
+Get current Sound Volume Decibel,
+    Return Sound Volume Decibel float .
+    Need to run droid.recorderSoundVolumeDetect(interval = 100) first .

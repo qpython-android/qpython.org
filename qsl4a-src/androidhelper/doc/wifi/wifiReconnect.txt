@@ -1,0 +1,3 @@
+wifiReconnect()
+Reconnects to the currently active access point.
+returns: (Boolean) True if the operation succeeded.

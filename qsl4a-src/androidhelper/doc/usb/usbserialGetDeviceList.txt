@@ -1,0 +1,3 @@
+usbserialGetDeviceList()
+Returns USB devices reported by USB Host API.,
+returns Map of id and string information ',' separated

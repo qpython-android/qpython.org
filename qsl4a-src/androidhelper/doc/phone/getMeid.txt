@@ -1,0 +1,5 @@
+getMeid( slotIndex = None )
+Returns MEID for CDMA phones .
+Return null if MEID is not available.
+slotIndex (Integer Optional)
+If Android <= 7.1, return legacy deviceId .

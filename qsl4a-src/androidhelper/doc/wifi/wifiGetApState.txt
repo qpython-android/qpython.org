@@ -1,0 +1,2 @@
+wifiGetApState()
+    return "disabling","disabled","enabling","enabled","failed"

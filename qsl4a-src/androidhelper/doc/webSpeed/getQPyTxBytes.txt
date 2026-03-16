@@ -1,0 +1,2 @@
+getQPyTxBytes()
+Return a map of QPython Transmit Bytes since startup and Startup Time Millis .

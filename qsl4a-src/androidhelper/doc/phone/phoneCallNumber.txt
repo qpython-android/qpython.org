@@ -1,0 +1,3 @@
+phoneCallNumber(phone_number)
+Calls a phone number.
+    phone number (String)

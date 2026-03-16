@@ -1,0 +1,5 @@
+toggleVibrateMode(enabled=None,ringer=None)
+Toggles vibrate mode on and off. If ringer=true then set Ringer setting, else set Notification setting
+    enabled (Boolean)  (optional)
+    ringer (Boolean)  (optional)
+returns: (Boolean) True if vibrate mode is enabled.

@@ -1,0 +1,2 @@
+startTrackingPhoneState()
+Starts tracking phone state.

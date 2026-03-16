@@ -1,0 +1,2 @@
+getMediaVolume()
+Returns the current media volume.

@@ -1,0 +1,4 @@
+contactsGet(attributes=None)
+Returns a List of all contacts.
+    attributes (JSONArray)  (optional)
+returns: (List) a List of contacts as Maps

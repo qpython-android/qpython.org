@@ -1,0 +1,8 @@
+createScriptShortCut(scriptPath,label=None,iconPath=None,scriptArg=None)
+create Python Script ShortCut, Create ShortCut Permission is Required .
+    scriptPath (String)
+    label (String Optional) Text to Show on ShortCut
+    iconPath (String Optional) Image Path to Show as ShortCut's Icon
+    scriptArg (String Optional)
+    return None
+Need Android >= 8.0 .

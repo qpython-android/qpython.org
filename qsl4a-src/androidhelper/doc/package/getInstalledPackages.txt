@@ -1,0 +1,8 @@
+getInstalledPackages(flag = 4)
+Returns a list of installed packages with application name .
+    flag (Integer Optional) :
+        5 - All apps
+        4 - User apps (default)
+        3 - System apps
+        2 - Updated System apps
+        1 - Not Updated System apps

@@ -1,0 +1,6 @@
+smsGetMessages(unreadOnly,folder="inbox",attributes=None)
+Returns a List of all messages.
+    unreadOnly (Boolean)
+    folder (String)  (default=inbox)
+    attributes (JSONArray)  (optional)
+returns: (List) a List of messages as Maps

@@ -1,0 +1,6 @@
+send(uri,type=None,extras=None,wait=True)
+Start activity with send action by URI (i.e. browser, contacts, etc.).
+    uri (String)
+    type (String) MIME type/subtype of the URI (optional)
+    extras (JSONObject) a Map of extras to add to the Intent (optional)
+    wait (Boolean Optional) wait for the send operation end

@@ -1,0 +1,3 @@
+getRunningPackages()
+Returns a list of packages running activities or services.
+returns: (List) List of packages running activities.

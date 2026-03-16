@@ -1,0 +1,3 @@
+getTrafficStats(flags=7)
+flags (Integer Optional) ALL(7,Default) = TOTAL(1) + MOBILE(2) + QPYTHON(4)
+Return a map of Rx/Tx Bytes since startup and Startup Time millis .

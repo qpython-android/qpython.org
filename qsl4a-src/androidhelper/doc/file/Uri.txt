@@ -1,0 +1,3 @@
+Uri(uriString)
+    Convert Uri String to Uri Object, use for droid.makeIntent / droid.startActivity / droid.startActivityForResult / droid.startActivityIntent extras .
+    return Uri Object .

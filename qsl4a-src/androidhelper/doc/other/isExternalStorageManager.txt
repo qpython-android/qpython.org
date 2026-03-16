@@ -1,0 +1,3 @@
+isExternalStorageManager()
+return None if Android <= 10 .
+return QPython is External Storage Manager (True or False) if Android >= 11 .

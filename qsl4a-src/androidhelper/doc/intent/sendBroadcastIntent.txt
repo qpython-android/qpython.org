@@ -1,0 +1,3 @@
+sendBroadcastIntent(intent)
+Send Broadcast Intent
+    intent (Intent) Intent in the format as returned from makeIntent

@@ -1,0 +1,3 @@
+wifiReassociate()
+Reassociates with the currently active access point.
+returns: (Boolean) True if the operation succeeded.

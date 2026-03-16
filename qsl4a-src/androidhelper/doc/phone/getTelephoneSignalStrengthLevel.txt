@@ -1,0 +1,4 @@
+getTelephoneSignalStrengthLevel()
+Return Signal Strength Level,
+    for different models have (0 to 5) or (0 to 4) ,
+    need Android >= 9.0 .

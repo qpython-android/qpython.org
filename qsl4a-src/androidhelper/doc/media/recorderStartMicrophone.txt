@@ -1,0 +1,4 @@
+recorderStartMicrophone(targetPath=None)
+Records audio from the microphone and saves it to the given location.
+    targetPath (String Optional) if omitted, use default path
+  If you want to detect Sound Volume Decibel while record sound , you need run recorderStartMicrophone first , then call recorderSoundVolumeDetect .

@@ -1,0 +1,7 @@
+cameraStartPreview(resolutionLevel=0,jpegQuality=20,filepath=None)
+Start Preview Mode. Throws \'preview\' events.
+    resolutionLevel (Integer) increasing this number provides higher resolution (default=0)
+    jpegQuality (Integer) a number from 0-100 (default=20)
+    filepath (String) Path to store jpeg files. (optional)
+Need Camera Permission
+returns: (boolean) True if successful

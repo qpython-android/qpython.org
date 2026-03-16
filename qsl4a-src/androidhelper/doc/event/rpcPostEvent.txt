@@ -1,0 +1,5 @@
+rpcPostEvent(name,data)
+Post an event to the event queue.
+    name (String)
+    data (String)
+Deprecated in r4. Use eventPost instead.

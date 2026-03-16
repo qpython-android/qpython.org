@@ -1,0 +1,7 @@
+encryptBytesToFile( srcBytes, dstFile )
+Encrypt a Bytes to another File ,
+needs to run droid.cipherInit first , and encodingFormat must omitted .
+if you want to operate files in Media Storage Device or /sdcard/Android/data/<packagename> , run droid.documentTreeShowOpen first .
+srcBytes (Bytes)
+dstFile (String)
+return None

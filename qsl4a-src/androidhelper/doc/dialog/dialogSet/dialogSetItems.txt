@@ -1,0 +1,5 @@
+dialogSetItems(items)
+Set alert dialog list items.
+    items (JSONArray)
+This effectively creates list of options. Clicking on an item will immediately return an "item"
+element, which is the index of the selected item.

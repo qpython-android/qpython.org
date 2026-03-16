@@ -1,0 +1,3 @@
+log(message)
+Writes message to logcat.
+    message (String)

@@ -1,0 +1,7 @@
+cameraCapturePicture(targetPath = None, cameraId = cameraCapturePicture.CAMERA_BACK, useAutoFocus = True)
+Take a picture and save it to the specified path.
+    targetPath (String Optional) if omitted, use default path
+    cameraId (Integer Optional)
+    useAutoFocus (Boolean Optional)
+Need Camera Permission
+returns: targetPath

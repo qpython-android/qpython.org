@@ -1,0 +1,2 @@
+recorderStop()
+Stops a previously started recording.

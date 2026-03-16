@@ -1,0 +1,7 @@
+sharedVariableSet(key, value)
+set Shared Variable of SL4A which can be use by other QPython scripts .
+    key (String)
+    value (String)
+If the key exists, return the original value string corresponding to the key string ,
+If the key not exist, return None .
+note: when qpython is closed, these shared variables will be cleared.

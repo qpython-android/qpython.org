@@ -1,0 +1,3 @@
+viewContacts(wait=True)
+Opens the list of contacts.
+wait (Boolean Optional) wait for the contacts operation end

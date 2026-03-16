@@ -1,0 +1,6 @@
+viewMap(query,wait=True)
+Opens a map search for query .
+    query (String) :
+      └  address : "pizza, 123 My Street" ;
+      └  latitude,longitude : "30,40" for (N30°,E40°) .
+    wait (Boolean Optional) wait for the map operation end

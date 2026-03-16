@@ -1,0 +1,3 @@
+checkWifiState()
+Checks Wifi state.
+returns: (Boolean) True if Wifi is enabled.

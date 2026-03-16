@@ -1,0 +1,14 @@
+environment()
+A map of various useful environment details
+Map returned:
+TZ = Timezone
+id = Timezone ID
+display = Timezone display name
+offset = Offset from UTC (in ms)
+SDK = SDK Version
+download = default download path
+appcache = Location of application cache
+sdcard = Space on sdcard
+availblocks = Available blocks
+blockcount = Total Blocks
+blocksize = size of block.

@@ -1,0 +1,4 @@
+getTelephoneSignalStrengthDetail()
+Return Signal Strength Detail Information,
+    like RSRP, RSRQ, SNR .
+    need Android >= 9.0 .

@@ -1,0 +1,5 @@
+getImei( slotIndex = None )
+Returns IMEI for GSM phones .
+Return null if IMEI is not available.
+slotIndex (Integer Optional)
+If Android <= 7.1, return legacy deviceId .

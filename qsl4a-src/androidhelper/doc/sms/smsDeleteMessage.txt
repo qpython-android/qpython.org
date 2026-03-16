@@ -1,0 +1,4 @@
+smsDeleteMessage(id)
+Deletes a message.
+    id (Integer)
+returns: (Boolean) True if the message was deleted

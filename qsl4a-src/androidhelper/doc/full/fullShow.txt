@@ -1,0 +1,9 @@
+fullShow(layout,title=None,theme=None)
+Show Full Screen.
+    layout (String) String containing View layout
+    title  (String Optional)
+    theme  (Integer Optional) See https://developer.android.google.cn/reference/android/R.style for Integer constant .
+Commonly used theme please use :
+    from androidhelper.R import R
+    R=R()
+    R.style

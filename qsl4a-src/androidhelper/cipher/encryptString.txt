@@ -1,0 +1,5 @@
+encryptString( srcString )
+Encrypt a Normal / Base64 String to another Base64 String ,
+needs to run droid.cipherInit first .
+srcString (String)
+return Encrypted Base64 String

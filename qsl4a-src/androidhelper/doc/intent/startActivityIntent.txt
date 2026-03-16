@@ -1,0 +1,4 @@
+startActivityIntent(intent,wait=None)
+Start Activity using Intent
+    intent (Intent) Intent in the format as returned from makeIntent
+    wait (Boolean) block until the user exits the started activity (optional)

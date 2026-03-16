@@ -1,0 +1,4 @@
+generateDtmfTones(phoneNumber,toneDuration=100)
+Generate DTMF tones for the given phone number.
+    phoneNumber (String)
+    toneDuration (Integer) duration of each tone in milliseconds (default=100)

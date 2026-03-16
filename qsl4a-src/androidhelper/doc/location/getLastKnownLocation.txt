@@ -1,0 +1,3 @@
+getLastKnownLocation()
+Returns the last known location of the device.
+returns: (Map) A map of location information by provider.

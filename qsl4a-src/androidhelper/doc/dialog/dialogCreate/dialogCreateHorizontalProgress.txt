@@ -1,0 +1,5 @@
+dialogCreateHorizontalProgress(title=None,message=None,maximum_progress=100)
+Create a horizontal progress dialog.
+    title (String)  (optional)
+    message (String)  (optional)
+    maximum progress (Integer)  (default=100)

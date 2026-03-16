@@ -1,0 +1,5 @@
+startLocating(minUpdateTime=60000,minUpdateDistance=30,updateGnssStatus=False)
+Starts collecting location data.
+    minUpdateTime (Integer) minimum time between updates in milliseconds (default=60000) ,
+    minUpdateDistance (Integer) minimum distance between updates in meters (default=30) ,
+    updateGnssStatus (Boolean) if Android >= 9 and updateGnssStatus is True (default=False) , update Global Navigation Satellite System status .

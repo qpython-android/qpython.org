@@ -1,0 +1,5 @@
+getApplicationInfo(packageName = None)
+Get Application Information with Package Name .
+    packageName (String Optional)
+        If omitted, use QPython Package Name .
+        If Package Name not exists , android.content.pm.PackageManager$NameNotFoundException will be ocured .

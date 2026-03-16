@@ -1,0 +1,2 @@
+getInternetInterfaceAddress()
+Returns a dict of InterfaceName and InetAddressList .

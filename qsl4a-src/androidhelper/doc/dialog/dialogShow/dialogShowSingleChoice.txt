@@ -1,0 +1,29 @@
+dialogShowSingleChoice(self, title = "Alert",message = "The message of the alert .", items = None, selected = -1, positiveButtonText = "OK", negativeButtonText = None, neutralButtonText = None, messageIsHtml = False )
+Show the alert to the user .
+    title (String Optional) title of the alert box (default=Alert)
+    message (String Optional) message to display above the alert box (default=The message of the alert .)
+    items (List of String Optional) the list of texts to show on the choice dialog
+    selected (Integer Optional) the default selected item on the choice dialog
+    positiveButtonText (String Optional) the text to show on the positive button (default=OK)
+    negativeButtonText (String Optional) the text to show on the negative button (default=None)
+    neutralButtonText (String Optional) the text to show on the neutral button (default=None)
+    messageIsHtml (Boolean)  indicates message is Html or Plain Text (default=False)
+    
+Example :
+from androidhelper import Android
+droid = Android()
+print(droid.dialogShowSingleChoice("Title","Message",("Apple","Banana")).result)
+print(droid.dialogShowSingleChoice("Title","<font color=red>Warning</font> Information",("First","<font color=#00ffff>Second</font>","Third"),1,"Yes","No","Cancel",True).result)
+
+This function is the same as these code :
+dialogShowSingleChoice(self, title = "Alert",message = "The message of the alert .", items = None, selected = -1, positiveButtonText = "OK", negativeButtonText = None, neutralButtonText = None, messageIsHtml = False ):
+    droid.dialogCreateAlert(title,message)
+    droid.dialogSetMessageIsHtml(messageIsHtml)
+    droid.dialogSetPositiveButtonText(positiveButtonText)
+    droid.dialogSetNegativeButtonText(negativeButtonText)
+    droid.dialogSetNeutralButtonText(neutralButtonText)
+    droid.dialogSetSingleChoiceItems(items,selected)
+    droid.dialogShow()
+    result = droid.dialogGetResponse().result
+    result["selected"] = droid.dialogGetSelected().result[0]
+    return result

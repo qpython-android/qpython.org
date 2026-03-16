@@ -1,0 +1,5 @@
+takeVideo(path = None, quality = 1)
+Take Video with system camera .
+path (String Optional) if omitted, use default path
+quality (Integer Optional) default 1 is high quality, 0 is low quality.
+return path if success, return None if canceled .

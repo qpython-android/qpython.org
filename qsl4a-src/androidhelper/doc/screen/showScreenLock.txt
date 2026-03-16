@@ -1,0 +1,4 @@
+showScreenLock()
+Show Screen Lock Verify with password or fingerprint .
+    return True  if verify ok   ,
+    return False if verify fail .

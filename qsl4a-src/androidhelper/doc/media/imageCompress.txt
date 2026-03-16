@@ -1,0 +1,7 @@
+imageCompress(srcPath,destPath,targetByteSize=0,targetWidth=0,targetHeight=0)
+    Compress images based on given parameters .
+    srcPath (String) source image path
+    destPath (String) destination image path
+    targetByteSize (Integer Optional) size of bytes of target image , if omitted to 0 , do not limit size of target image
+    targetWidth (Integer Optional) width of target image , if omitted to 0 , do not limit width of target image
+    targetHeight (Integer Optional) height of target image , if omitted to 0 , do not limit height of target image

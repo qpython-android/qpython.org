@@ -1,0 +1,3 @@
+getClipboard()
+Read text from the clipboard.
+returns: (String) The text in the clipboard.

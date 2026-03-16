@@ -1,0 +1,2 @@
+smsGetAttributes()
+Returns a List of all possible message attributes.

@@ -1,0 +1,2 @@
+getNetworkOperatorName()
+Returns the alphabetic name of current registered operator.

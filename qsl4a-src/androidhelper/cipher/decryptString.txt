@@ -1,0 +1,5 @@
+decryptString( srcString )
+Decrypt a Base64 String to another Normal / Base64 String,
+needs to run droid.cipherInit first .
+srcString (String)
+return Decrypted String

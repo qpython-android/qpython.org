@@ -1,0 +1,2 @@
+getDeviceSoftwareVersion()
+Returns the software version number for the device, for example, the IMEI/SV for GSM phones. Return null if the software version is not available.

@@ -1,0 +1,2 @@
+getTotalRxBytes()
+Return a map of Total Received Bytes since startup and Startup Time Millis .

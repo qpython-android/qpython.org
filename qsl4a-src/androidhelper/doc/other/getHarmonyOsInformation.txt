@@ -1,0 +1,2 @@
+getHarmonyOsInformation()
+Returns a dict of isHarmonyOs and HarmonyVersion(if isHarmonyOs is true) .

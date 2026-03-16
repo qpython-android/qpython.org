@@ -1,0 +1,20 @@
+'android.R.style Constants, for more style Constants, please refer https://developer.android.google.cn/reference/android/R.style.html .'
+Default=0
+Theme_Black=16973832
+Theme_Black_NoTitleBar=16973833
+Theme_Black_NoTitleBar_Fullscreen=16973834
+Theme_Light=16973836
+Theme_Light_NoTitleBar=16973837
+Theme_Light_NoTitleBar_Fullscreen=16973838
+Theme_Light_Panel=16973914
+Theme_Wallpaper=16973918
+Theme_Wallpaper_NoTitleBar=16973919
+Theme_Wallpaper_NoTitleBar_Fullscreen=16973920
+Theme_Holo=16973931
+Theme_Holo_Wallpaper=16973949
+Theme_DeviceDefault_Panel=16974138
+Theme_DeviceDefault_Wallpaper=16974140
+Theme_DeviceDefault_Wallpaper_NoTitleBar=16974141
+TextAppearance_DeviceDefault_Large_Inverse=16974256
+TextAppearance_DeviceDefault_Medium_Inverse=16974258
+Theme_DeviceDefault_Settings=16974371

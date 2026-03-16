@@ -1,0 +1,16 @@
+recorderStartScreenRecord ( path = None , audio = recorderStartScreenRecord.MICROPHONE , targetPixels = None , frameRate = 30 , bitRate = None , rotation = False , autoStart = True )
+Record Screen to path .
+    path (String Optional) mpeg4 file path, if omitted, use default path
+    audio (Integer Optional) record audio, default is recorderStartScreenRecord.MICROPHONE( integer 1 )
+    targetPixels (Integer Optional) target pixels for generated video of record screen , default(None) is ScreenWidth*ScreenHeight
+    frameRate (Integer Optional) frames per second for generated video of record screen , default is 30
+    bitRate (Integer Optional) bit per second for generated video of record screen , default(None) is ScreenWidth*ScreenHeight
+    rotation (Boolean Optional) width and height rotation exchange
+    autoStart (Boolean Optional) Auto Start Record after Prepare
+    { rotation = True and autoStart = False } : {
+        is for some incompatible devices horizontal screen record,
+        which can only prepare screen record on the vertical screen,
+        then switch to the horizontal screen,
+        then start recording with recorderStart() .
+    }
+return path

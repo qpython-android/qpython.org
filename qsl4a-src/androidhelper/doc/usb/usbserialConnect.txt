@@ -1,0 +1,2 @@
+usbserialConnect(hash = "", options ="")
+Connect to a device with USB-Host. request the connection and exit.

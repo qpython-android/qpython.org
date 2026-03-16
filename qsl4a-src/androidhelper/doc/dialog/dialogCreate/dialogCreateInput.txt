@@ -1,0 +1,8 @@
+dialogCreateInput(title="Value",message="Please enter value:",defaultText=None,inputType=None)
+Create a text input dialog.
+    title (String) title of the input box (default=Value)
+    message (String) message to display above the input box (default=Please enter value:)
+    defaultText (String) text to insert into the input box (optional)
+    inputType (String) type of input data, ie number or text (optional)
+For inputType, see InputTypes. Some useful ones are text, number, and textUri. Multiple flags can be
+supplied, seperated by "|", ie: "textUri|textAutoComplete"

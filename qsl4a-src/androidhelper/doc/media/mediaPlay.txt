@@ -1,0 +1,6 @@
+mediaPlay(url,tag="default",play=True)
+Open a media file
+    url (String) url of media resource
+    tag (String) string identifying resource (default=default)
+    play (Boolean) start playing immediately (default=true)
+returns: (boolean) true if play successful

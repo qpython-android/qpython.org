@@ -1,0 +1,5 @@
+eventRegisterForBroadcast(category,enqueue=True)
+Registers a listener for a new broadcast signal
+    category (String)
+    enqueue (Boolean) Should this events be added to the event queue or only dispatched (default=true)
+Registers a listener for a new broadcast signal

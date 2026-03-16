@@ -1,0 +1,2 @@
+ftpIsRunning()
+    return True/False

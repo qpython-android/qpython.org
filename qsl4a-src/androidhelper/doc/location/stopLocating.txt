@@ -1,0 +1,2 @@
+stopLocating()
+Stops collecting location data.

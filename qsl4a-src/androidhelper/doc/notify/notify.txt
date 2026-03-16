@@ -1,0 +1,9 @@
+notify(title, message, uri=None, arg=None)
+Displays a notification that will be disappeared when the user clicks on it.
+    title (String)
+    message (String)
+    uri (String Optional)
+    arg (String Optional)
+If uri is not None, after the user clicks on it, these operation will be doing :
+    # uri is web url like http:// or https:// --> open system browser
+    # uri is .py script path --> run .py script with script arg

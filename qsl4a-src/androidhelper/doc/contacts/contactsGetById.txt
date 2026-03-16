@@ -1,0 +1,4 @@
+contactsGetById(id,attributes=None)
+Returns contacts by ID.
+    id (Integer)
+    attributes (JSONArray)  (optional)

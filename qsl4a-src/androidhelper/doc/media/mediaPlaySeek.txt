@@ -1,0 +1,5 @@
+mediaPlaySeek(msec,tag="default")
+Seek To Position
+    msec (Integer) Position in millseconds
+    tag (String) string identifying resource (default=default)
+returns: (int) New Position (in ms)

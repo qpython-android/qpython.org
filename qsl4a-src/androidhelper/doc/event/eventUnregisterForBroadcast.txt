@@ -1,0 +1,3 @@
+eventUnregisterForBroadcast(category)
+Stop listening for a broadcast signal
+    category (String)

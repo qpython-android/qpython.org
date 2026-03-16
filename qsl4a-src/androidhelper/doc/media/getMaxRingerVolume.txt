@@ -1,0 +1,2 @@
+getMaxRingerVolume()
+Returns the maximum ringer volume.

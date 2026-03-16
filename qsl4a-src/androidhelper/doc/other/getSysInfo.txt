@@ -1,0 +1,2 @@
+getSysInfo()
+get system information

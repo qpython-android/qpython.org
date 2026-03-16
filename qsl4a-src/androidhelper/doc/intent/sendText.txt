@@ -1,0 +1,5 @@
+sendText(text,extras=None,wait=True)
+Start activity with send action by text .
+    text (String)
+    extras (Dict Optional) Extras self-defined, it is not recommended to fill in droid.Intent.EXTRA_TEXT ( "android.intent.extra.TEXT" )
+    wait (Boolean Optional) wait for the send operation end

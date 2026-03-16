@@ -1,0 +1,4 @@
+mediaPlayPause(tag="default")
+pause playing media file
+    tag (String) string identifying resource (default=default)
+returns: (boolean) true if successful

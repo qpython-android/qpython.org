@@ -1,0 +1,33 @@
+floatView(Args=None)
+    Show Float View .
+# FloatView Args is a dict which default (empty) value is :
+{
+    'index':-1,
+    # if index is omitted ( i.e. floatView.INDEX_NEW = -1 ) , create a new Float View,
+    # if index > 0, modify an existed Float View with index .
+    'text':"drag move\nlong click close",
+    # FloatView Drag Move , Long Click Close
+    'html':<omitted>,
+    # if has text, html will be omitted, if text is omitted and html has content, FloatView will use html
+    'width':300,
+    'height':150,
+    'x':0,
+    'y':0,
+    # original point (x=y=0) is the center of screen
+    # x,y,width,height can omitted means "last state"
+    'backColor':'7f7f7f7f',
+    'textColor':'ff000000',
+    # backColor and textColor can omitted means "last state"
+    'textSize':10,
+    'textAlign':0,
+    # floatView.TEXT_ALIGNMENT_INHERIT = 0
+    # textSize and textAlign can omitted means "last state"
+    'script':<omitted>, # script path
+    # after Long Click Close the FloatView, run script with script arg, if script is omitted, do nothing after Long Click Close the FloatView
+    'arg':<omitted>, # script arg
+    # script arg is use with script
+    'clickRemove':True,
+    'flag':40
+    # floatView.FLAG_DEFAULT_TOUCHABLE = 40
+}
+    Return Float View current chain list length (not the number of Float Views) .

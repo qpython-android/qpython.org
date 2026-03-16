@@ -1,0 +1,2 @@
+getMobileTxBytes()
+Return a map of Mobile Transmit Bytes since startup and Startup Time Millis .

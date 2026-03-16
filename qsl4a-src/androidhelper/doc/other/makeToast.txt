@@ -1,0 +1,10 @@
+makeToast(message,length=makeToast.SHORT,isHtml=False,backColor=None,textColor=None,textSize=0,textAlign=0)
+Displays a Toast notification.
+    message (String)
+    length  (Integer Optional) SHORT is 2 second , LONG is 3.5 second
+    isHtml  (Boolean Optional) Indicates that the message is html, the values are True (HTML, HyperText Markup Language) / False (Default, Plain Text with new Toast) / None (Plain Text with original Toast, Background support)
+    If isHtml is not None, you can also use these parameters, but not support Background:
+    backColor (String Optional) default is 'efefefef'
+    textColor (String Optional) default is 'ff000000'
+    textSize (Interger Optional) default determined by the system
+    textAlign (Interger Optional) default determined by the system

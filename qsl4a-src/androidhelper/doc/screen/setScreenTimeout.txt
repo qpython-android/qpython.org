@@ -1,0 +1,4 @@
+setScreenTimeout(value)
+Sets the screen timeout to this number of seconds.
+    value (Integer)
+returns: (Integer) The original screen timeout.

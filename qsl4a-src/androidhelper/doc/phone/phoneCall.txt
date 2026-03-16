@@ -1,0 +1,3 @@
+phoneCall(uri)
+Calls a contact/phone number by URI.
+    uri (String)

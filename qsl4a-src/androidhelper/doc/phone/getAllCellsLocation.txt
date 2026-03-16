@@ -1,0 +1,2 @@
+getAllCellsLocation()
+Returns all the cells location : LAC/CID/SID/NID/BID/MccMnc/Arcfn and signal dbm of NR/LTE/WCDMA/CDMA/GSM .

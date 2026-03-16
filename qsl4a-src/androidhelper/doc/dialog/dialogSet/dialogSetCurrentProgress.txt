@@ -1,0 +1,3 @@
+dialogSetCurrentProgress(current)
+Set progress dialog current value.
+    current (Integer)

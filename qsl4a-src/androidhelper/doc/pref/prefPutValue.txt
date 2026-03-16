@@ -1,0 +1,5 @@
+prefPutValue(key,value,filename=None)
+Write a value to shared preferences
+    key (String)
+    value (Object)
+    filename (String) Desired preferences file. If not defined, uses the default Shared Preferences. (optional)

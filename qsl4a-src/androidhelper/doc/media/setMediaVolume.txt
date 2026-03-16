@@ -1,0 +1,3 @@
+setMediaVolume(volume)
+Sets the media volume.
+    volume (Integer)

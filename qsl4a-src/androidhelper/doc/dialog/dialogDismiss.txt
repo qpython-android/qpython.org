@@ -1,0 +1,2 @@
+dialogDismiss()
+Dismiss dialog.

@@ -1,0 +1,3 @@
+checkBluetoothState()
+Checks Bluetooth state.
+returns: (Boolean) True if Bluetooth is enabled.

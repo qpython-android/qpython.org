@@ -1,0 +1,5 @@
+webcamStart(resolutionLevel=0,jpegQuality=20,port=0)
+Starts an MJPEG stream and returns a Tuple of address and port for the stream.
+    resolutionLevel (Integer) increasing this number provides higher resolution (default=0)
+    jpegQuality (Integer) a number from 0-100 (default=20)
+    port (Integer) If port is specified, the webcam service will bind to port, otherwise it will pick any available port. (default=0)

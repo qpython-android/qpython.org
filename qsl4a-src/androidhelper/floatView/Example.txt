@@ -1,0 +1,25 @@
+===== ===== ===== =====
+Float View Functions Example :
+
+>>> from androidhelper import *
+>>> droid = Android()
+>>> droid.floatView({'index':0,'text':'Hello World','width':400,'height':300,'x':-300,'y':-400,'backColor':'ff0000','textColor':'0000ff','textSize':16,'textAlign':droid.floatView.TEXT_ALIGNMENT_CENTER})
+Result(id=1, result=1, error=None)
+>>> droid.floatViewCount()
+Result(id=2, result=1, error=None)
+>>> droid.floatViewResult()
+Result(id=3, result={'x': -300, 'y': -400, 'time': 1772600484698, 'operation': 'initial', 'index': 0}, error=None)
+>>> droid.floatView({'index':0,'text':'QPython FloatView','width':300,'height':400,'x':400,'y':300}) #Then manually move FloatView to a different position
+Result(id=4, result=1, error=None)
+>>> droid.floatViewResult()
+Result(id=5, result={'x': -13, 'y': -580, 'time': 1772600575836, 'operation': 'move', 'index': 0}, error=None)
+>>> droid.floatViewRemove(0)
+Result(id=6, result=1, error=None)
+>>> droid.floatViewResult()
+Result(id=7, result={'removed': True, 'x': -13, 'y': -580, 'time': 1772600575836, 'operation': 'move', 'index': 0}, error=None)
+>>> droid.floatViewRemove()
+Result(id=8, result=0, error=None)
+>>> droid.floatViewResult()
+java.lang.Exception: Float View Index Out of Range .
+Result(id=9, result=None, error='java.lang.Exception: Float View Index Out of Range .')
+===== ===== ===== =====

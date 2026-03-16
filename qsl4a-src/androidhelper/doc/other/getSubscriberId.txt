@@ -1,0 +1,2 @@
+getSubscriberId()
+Returns the unique subscriber ID, for example, the IMSI for a GSM phone. Return null if it is unavailable.

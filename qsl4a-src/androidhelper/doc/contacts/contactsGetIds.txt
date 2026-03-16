@@ -1,0 +1,2 @@
+contactsGetIds()
+Returns a List of all contact IDs.

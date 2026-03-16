@@ -1,0 +1,4 @@
+scanBarcode( title = None )
+Starts the barcode scanner.
+returns the result String of Barcode .
+title (String Optional)

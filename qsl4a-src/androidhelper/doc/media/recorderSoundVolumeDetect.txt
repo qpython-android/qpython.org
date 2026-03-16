@@ -1,0 +1,7 @@
+recorderSoundVolumeDetect(interval = 100)
+Start or Stop to detect Sound Volume Decibel,
+    interval (Integer Optional)
+        interval > 0 --> start to detect sound volume decibel according to the time interval (miliseconds),
+        interval <= 0 --> stop to detect sound volume decibel,
+    Return None .
+  If you want to detect Sound Volume Decibel while record sound , you need run recorderStartMicrophone first , then call recorderSoundVolumeDetect .

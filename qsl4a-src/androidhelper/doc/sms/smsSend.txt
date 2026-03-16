@@ -1,0 +1,4 @@
+smsSend(destinationAddress,text)
+Sends an SMS. You need start SMS permission first .
+    destinationAddress (String) typically a phone number
+    text (String)

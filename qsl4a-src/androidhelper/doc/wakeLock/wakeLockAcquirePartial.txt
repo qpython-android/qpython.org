@@ -1,0 +1,2 @@
+wakeLockAcquirePartial()
+Acquires a partial wake lock (CPU on).

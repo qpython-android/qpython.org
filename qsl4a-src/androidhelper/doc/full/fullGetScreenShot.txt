@@ -1,0 +1,4 @@
+fullGetScreenShot(path = None)
+Get the Full Screen Activity ScreenShot to path .
+    path (String Optional) jpeg file path, if omitted, use default path
+return path

@@ -1,0 +1,5 @@
+startSensingThreshold(sensorNumber,threshold,axis)
+Records to the Event Queue sensor data exceeding a chosen threshold.
+    sensorNumber (Integer) 1 = All, 2 = Accelerometer, 3 = Magnetometer, 4 = Light, 5 = StepCounter, 6 = Gyroscope
+    threshold (Integer) Threshold level for chosen sensor (integer)
+    axis (Integer) 0 = No axis, 1 = X, 2 = Y, 3 = X+Y, 4 = Z, 5= X+Z, 6 = Y+Z, 7 = X+Y+Z

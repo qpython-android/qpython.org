@@ -1,0 +1,5 @@
+decryptBytes( srcBytes )
+Decrypt a Bytes to another Bytes,
+needs to run droid.cipherInit first , and encodingFormat must omitted .
+srcBytes (Bytes)
+return Decrypted Bytes

@@ -1,0 +1,5 @@
+dialogCreateSpinnerProgress(title=None,message=None,maximum_progress=100)
+Create a spinner progress dialog.
+    title (String)  (optional)
+    message (String)  (optional)
+    maximum progress (Integer)  (default=100)

@@ -1,0 +1,5 @@
+setScreenBrightness(value=None)
+Sets the the screen backlight brightness.
+    value (Integer) brightness value between 0 and 255,
+    if value defaults to None, use automatic brightness .
+returns: (Integer) the original screen brightness.

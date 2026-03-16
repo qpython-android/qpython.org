@@ -1,0 +1,3 @@
+getFileStat(path)
+Return a dict of file length , last modified , file can read/write and disk space .
+    path (String)

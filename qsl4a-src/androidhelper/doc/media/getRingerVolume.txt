@@ -1,0 +1,2 @@
+getRingerVolume()
+Returns the current ringer volume.

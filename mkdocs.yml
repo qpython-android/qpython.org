@@ -1,0 +1,106 @@
+site_name: QPython
+site_url: https://www.qpython.org/en/
+site_description: QPython - AI-Enabled Python IDE for Android
+theme:
+  name: material
+  logo: static/img_logo.png
+  favicon: static/img_logo.png
+  palette:
+    - scheme: default
+      primary: black
+      accent: green
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      accent: green
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+extra_css:
+  - static/extra.css
+
+docs_dir: source/en
+site_dir: site/en
+
+nav:
+  - Home:
+    - Overview: index.md
+    - Branches: qpython-x.md
+    - Updates: whats-new.md
+  - Guides:
+    - QPYPI: qpypi-guide.md
+    - Editor: editor-guide.md
+    - OpenAPI: external-api.md
+  - QSL4A:
+    - Overview: qsl4a/index.md
+    - Core:
+      - Android Base: qsl4a/core/android-base.md
+      - Intent System: qsl4a/core/intent.md
+      - Event System: qsl4a/core/events.md
+    - UI:
+      - Dialogs: qsl4a/ui/dialogs.md
+      - FullScreen UI: qsl4a/ui/fullscreen.md
+      - FloatView: qsl4a/ui/floatview.md
+      - Accessibility: qsl4a/ui/accessibility.md
+    - System:
+      - Battery: qsl4a/system/battery.md
+      - Sensors: qsl4a/system/sensors.md
+      - Application: qsl4a/system/application.md
+      - System Info: qsl4a/system/sysinfo.md
+    - Hardware:
+      - Bluetooth: qsl4a/hardware/bluetooth.md
+      - Camera: qsl4a/hardware/camera.md
+      - Audio/Recorder: qsl4a/hardware/recorder.md
+    - Connectivity:
+      - WiFi: qsl4a/connectivity/wifi.md
+      - Location: qsl4a/connectivity/location.md
+      - SMS: qsl4a/connectivity/sms.md
+    - Storage:
+      - DocumentFile: qsl4a/storage/documentfile.md
+      - Clipboard: qsl4a/storage/clipboard.md
+    - Media:
+      - Media Player: qsl4a/media/mediaplayer.md
+      - Image Processing: qsl4a/media/image.md
+    - Special:
+      - Cipher: qsl4a/special/cipher.md
+      - PGPT AI: qsl4a/special/pgptai.md
+  - Tutorial:
+    - Getting Started: getting-started.md
+    - Hello World Tutorial: tutorial-hello-world.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - tables
+  - toc:
+      permalink: true
+
+extra:
+  analytics:
+    provider: google
+    property: G-3GZ8CTQYNC
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/qpython-android/qpython
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/hV2chuD
+    - icon: fontawesome/brands/facebook
+      link: http://www.facebook.com/qpython
+    - icon: fontawesome/brands/twitter
+      link: http://www.twitter.com/qpython

@@ -1,0 +1,2 @@
+fullDismiss()
+Dismiss Full Screen.

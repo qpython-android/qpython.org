@@ -1,0 +1,2 @@
+wakeLockAcquireBright()
+Acquires a bright wake lock (CPU on, screen bright).

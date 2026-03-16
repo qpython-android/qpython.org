@@ -1,0 +1,4 @@
+getVibrateMode(ringer=None)
+Checks Vibration setting. If ringer=true then query Ringer setting, else query Notification setting
+    ringer (Boolean)  (optional)
+returns: (Boolean) True if vibrate mode is enabled.

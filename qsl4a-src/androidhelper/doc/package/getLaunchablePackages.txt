@@ -1,0 +1,3 @@
+getLaunchablePackages(needClassName=False)
+If needClassName is True , returns a list of all launchable packages with class name and application name .
+If needClassName is False default , returns a list of all launchable packages with application name .

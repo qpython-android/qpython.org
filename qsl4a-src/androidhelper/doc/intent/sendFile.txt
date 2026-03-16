@@ -1,0 +1,6 @@
+sendFile(path, type=None, extras=None, wait=True)
+Send file(s) with the type and extras with content:// .
+    path (single String or List of Strings) file path(s) , like "/sdcard/path/to/file.ext" or [ "/sdcard/a/b.txt" , "/sdcard/c/d/e/f.jpg" ]
+    type (String Optional) MIME-type self-defined
+    extras (Dict Optional) Extras self-defined, it is not recommended to fill in droid.Intent.EXTRA_STREAM ( "android.intent.extra.STREAM" )
+    wait (Boolean Optional) wait for the end of the file send operation

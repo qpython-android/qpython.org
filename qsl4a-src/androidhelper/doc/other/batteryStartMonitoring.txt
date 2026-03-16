@@ -1,0 +1,3 @@
+batteryStartMonitoring()
+Starts tracking battery state.
+throws "battery" events

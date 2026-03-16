@@ -1,0 +1,5 @@
+toggleBluetoothState(enabled=None,prompt=True)
+Toggle Bluetooth on and off.
+    enabled (Boolean)  (optional)
+    prompt (Boolean) Prompt the user to confirm changing the Bluetooth state. (default=true)
+returns: (Boolean) True if Bluetooth is enabled.

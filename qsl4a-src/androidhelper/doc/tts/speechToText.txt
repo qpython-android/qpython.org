@@ -1,0 +1,6 @@
+speechToText(RecordSecond = 10, AmrFile = None, Language = None)
+    RecordSecond ( Integer , Optional ) Recording duration ,
+    AmrFile ( String , Optional ) Temporary stored amr file ,
+    If RecordSecond is None , use only AmrFile to input speech content .
+    If AmrFile is None , use AmrFile = os.environ['TMP']+'/tmp.amr' .
+    If Language is None, use system language .

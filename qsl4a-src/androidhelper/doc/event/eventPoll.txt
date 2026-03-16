@@ -1,0 +1,22 @@
+eventPoll(number_of_events=1)
+Returns and removes the oldest n events (i.e. location or sensor update, etc.) from the event buffer.
+    number_of_events (Integer)  (default=1)
+returns: (List) A List of Maps of event properties.
+Actual data returned in the map will depend on the type of event.
+Example (python):
+import android, time
+droid = android.Android()
+droid.startSensing()
+time.sleep(1)
+droid.eventClearBuffer()
+time.sleep(1)
+e = eventPoll(1).result
+event_entry_number = 0
+x = e[event_entry_ number]['data']['xforce']
+e has the format:
+[{u'data': {u'accuracy': 0, u'pitch': -0.48766891956329345, u'xmag': -5.6875, u'azimuth':
+0.3312483489513397, u'zforce': 8.3492730000000002, u'yforce': 4.5628165999999997, u'time':
+1297072704.813, u'ymag': -11.125, u'zmag': -42.375, u'roll': -0.059393649548292161, u'xforce':
+0.42223078000000003}, u'name': u'sensors', u'time': 1297072704813000L}]
+x has the string value of the x force data (0.42223078000000003) at the time of the event
+entry.

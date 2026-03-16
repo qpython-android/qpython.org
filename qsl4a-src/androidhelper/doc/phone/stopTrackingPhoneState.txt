@@ -1,0 +1,2 @@
+stopTrackingPhoneState()
+Stops tracking phone state.

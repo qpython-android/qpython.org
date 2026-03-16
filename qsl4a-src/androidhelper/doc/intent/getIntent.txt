@@ -1,0 +1,2 @@
+getIntent()
+Returns the intent that launched the script.

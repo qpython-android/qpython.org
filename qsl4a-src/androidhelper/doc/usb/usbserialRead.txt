@@ -1,0 +1,2 @@
+usbserialRead(connID = "", bufferSize = 4096)
+Read up to bufferSize ASCII characters.

@@ -1,0 +1,3 @@
+getCellLocation()
+Returns the current cell location : LAC/CID/SID/NID/BID and signal dbm of NR/LTE/WCDMA/CDMA/GSM ,
+and cells count around .

@@ -1,0 +1,9 @@
+pathToUri(path, fileProvider=True, uriObject=False)
+Convert normal path to content:// .
+    path (String) file path
+    fileProvider (Boolean Optional)
+      True is default means content://<qpython>.provider/ ,
+      False is default means content://media/external/ .
+    uriObject (Boolean Optional)
+        True means return uriObject ,
+        False means return uriString .

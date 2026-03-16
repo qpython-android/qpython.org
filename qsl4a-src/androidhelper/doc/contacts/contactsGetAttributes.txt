@@ -1,0 +1,2 @@
+contactsGetAttributes()
+Returns a List of all possible attributes for contacts.

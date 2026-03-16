@@ -1,0 +1,8 @@
+dialogSetMultiChoiceItems(items,selected=None)
+Set dialog multiple choice items and selection.
+    items (JSONArray)
+    selected (JSONArray) list of selected items (optional)
+This creates a list of check boxes. You can select multiple items out of the list. A response
+will not be returned until the dialog is closed, either with the Cancel key or a button
+(positive/negative/neutral). Use dialogGetSelectedItems() to find out what was
+selected.

@@ -1,0 +1,4 @@
+toggleRingerSilentMode(enabled=None)
+Toggles ringer silent mode on and off.
+    enabled (Boolean)  (optional)
+returns: (Boolean) True if ringer silent mode is enabled.

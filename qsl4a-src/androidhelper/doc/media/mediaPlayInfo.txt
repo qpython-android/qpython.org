@@ -1,0 +1,4 @@
+mediaPlayInfo(tag="default")
+Information on current media
+    tag (String) string identifying resource (default=default)
+returns: (Map) Media Information

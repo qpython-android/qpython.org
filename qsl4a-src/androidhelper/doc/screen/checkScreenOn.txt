@@ -1,0 +1,3 @@
+checkScreenOn()
+Checks if the screen is on or off (requires API level 7).
+returns: (Boolean) True if the screen is currently on.

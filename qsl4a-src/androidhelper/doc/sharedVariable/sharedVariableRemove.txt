@@ -1,0 +1,6 @@
+sharedVariableRemove(key)
+remove Shared Variable of SL4A which will cannot use by other QPython scripts .
+    key (String) which need to remove
+If the key exists, return the original value string corresponding to the key string ,
+If the key not exist, return None .
+note: when qpython is closed, these shared variables will be cleared.

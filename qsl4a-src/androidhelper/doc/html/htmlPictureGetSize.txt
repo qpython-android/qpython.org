@@ -1,0 +1,2 @@
+htmlPictureGetSize()
+  Return a dict of widthFixed , heightFixed , widthRatio , heightRatio .

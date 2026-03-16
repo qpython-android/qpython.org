@@ -1,0 +1,9 @@
+ftpSet(port = None, rootDir = None, username = None, password = None)
+    Change FTP Server Settings
+    port (Integer Optional)
+    chrootDir (String Optional)
+    username (String Optional)
+    password (String Optional)
+    return a Dict of port, rootDir, username and password ,
+    you can use this function with no parameter to get FTP Server Settings ,
+    if the current FTP Server is running, you need to restart the FTP Server to take effect .

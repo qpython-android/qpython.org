@@ -1,0 +1,2 @@
+getSimSerialNumber()
+Returns the serial number of the SIM, if applicable. Return null if it is unavailable.

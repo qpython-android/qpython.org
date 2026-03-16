@@ -1,0 +1,2 @@
+wakeLockAcquireDim()
+Acquires a dim wake lock (CPU on, screen dim).

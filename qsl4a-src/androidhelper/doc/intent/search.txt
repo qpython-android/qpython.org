@@ -1,0 +1,3 @@
+search(query)
+Starts a search for the given query.
+    query (String)

@@ -1,0 +1,3 @@
+wifiStartScan()
+Starts a scan for Wifi access points.
+returns: (Boolean) True if the scan was initiated successfully.

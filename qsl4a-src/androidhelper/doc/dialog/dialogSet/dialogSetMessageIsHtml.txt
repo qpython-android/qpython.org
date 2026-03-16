@@ -1,0 +1,6 @@
+dialogSetMessageIsHtml(messageIsHtml = True)
+    Make Alert Dialog Message from Plain Text to Html .
+    messageIsHtml (Boolean Optional)
+    use this function after dialogCreateAlert/dialogCreateInput/dialogCreatePassword function ,
+    and use this function before dialogSetItems/dialogSetSingleChoiceItems/dialogSetMultiChoiceItems function .
+    Return None .
