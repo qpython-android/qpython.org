@@ -15,8 +15,12 @@ droid.makeToast('Hello QPython!')
 # Vibrate the device
 droid.vibrate(500)
 
-# Get battery level
+# Get battery level (start monitoring first)
+import time
+droid.batteryStartMonitoring()
+time.sleep(0.5)  # Wait for data
 battery = droid.readBatteryData().result
+print(f"Battery: {battery['level']}%")
 ```
 
 ## Documentation Structure
