@@ -81,7 +81,7 @@ cat > site/index.html << 'EOF'
 <body>
     <div class="container">
         <div class="logo">
-            <img src="en/_static/img_logo.png" alt="QPython">
+            <img src="en/static/img_logo.png" alt="QPython">
         </div>
         <h1>Choose your language / 选择语言</h1>
         <div class="languages">
