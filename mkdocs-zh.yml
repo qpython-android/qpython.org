@@ -50,6 +50,9 @@ markdown_extensions:
       permalink: true
 
 extra:
+  analytics:
+    provider: google
+    property: G-3GZ8CTQYNC
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/qpython-android/qpython
