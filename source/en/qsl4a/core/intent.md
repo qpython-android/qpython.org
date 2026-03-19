@@ -104,6 +104,155 @@ Pick content from URI.
 pick(uri)
 ```
 
+## Common Intent Methods *ASL4A*
+
+### scanBarcode() *ASL4A*
+Launch the barcode scanner.
+
+```python
+scanBarcode()
+```
+
+**Returns:** Scanned barcode string
+
+### send() *ASL4A*
+Send content via share intent.
+
+```python
+send(type, content)
+```
+
+**Parameters:**
+- `type` (str): MIME type
+- `content` (str): Content to share
+
+### sendText() *ASL4A*
+Send text content.
+
+```python
+sendText(text)
+```
+
+**Parameters:**
+- `text` (str): Text to send
+
+### sendEmail() *ASL4A*
+Send an email.
+
+```python
+sendEmail(to, subject, body, attachment=None)
+```
+
+**Parameters:**
+- `to` (str or list): Recipient email address(es)
+- `subject` (str): Email subject
+- `body` (str): Email body
+- `attachment` (str, optional): Attachment file path
+
+### pathToUri() *ASL4A*
+Convert file path to content URI.
+
+```python
+pathToUri(path)
+```
+
+**Parameters:**
+- `path` (str): File path
+
+**Returns:** Content URI string
+
+### openFile() *ASL4A*
+Open a file with appropriate app.
+
+```python
+openFile(path)
+```
+
+**Parameters:**
+- `path` (str): File path to open
+
+### sendFile() *ASL4A*
+Send a file via share intent.
+
+```python
+sendFile(path)
+```
+
+**Parameters:**
+- `path` (str): File path to send
+
+### getPathType() *ASL4A*
+Get the MIME type for a file path.
+
+```python
+getPathType(path)
+```
+
+**Parameters:**
+- `path` (str): File path
+
+**Returns:** MIME type string
+
+### viewMap() *ASL4A*
+Open map at a location.
+
+```python
+viewMap(latitude, longitude)
+```
+
+**Parameters:**
+- `latitude` (float): Latitude
+- `longitude` (float): Longitude
+
+### viewContacts() *ASL4A*
+Open the contacts app.
+
+```python
+viewContacts()
+```
+
+### search() *ASL4A*
+Perform a web search.
+
+```python
+search(query)
+```
+
+**Parameters:**
+- `query` (str): Search query
+
+### viewHtml() *ASL4A*
+View HTML content.
+
+```python
+viewHtml(content, encoding=None)
+```
+
+**Parameters:**
+- `content` (str): HTML content
+- `encoding` (str, optional): Character encoding
+
+### webViewShow() *ASL4A*
+Display web content in WebView. Deprecated, use viewHtml.
+
+```python
+webViewShow(url)
+```
+
+**Parameters:**
+- `url` (str): Web page URL
+
+### editorOpen() *ASL4A*
+Open a text editor.
+
+```python
+editorOpen(path=None, create=False)
+```
+
+**Parameters:**
+- `path` (str, optional): File path to edit
+- `create` (bool, optional): Create if doesn't exist
+
 ## Helper Class: Uri
 
 Create URI objects for Intents:

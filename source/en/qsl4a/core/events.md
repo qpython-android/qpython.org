@@ -109,6 +109,40 @@ eventGetBrodcastCategories()
 
 **Returns:** List of registered categories
 
+## Event Dispatcher *ASL4A*
+
+### startEventDispatcher()
+Opens up a socket where you can read for events posted. *ASL4A*
+
+```python
+startEventDispatcher(port=0)
+```
+
+**Parameters:**
+- `port` (int, optional): Port to listen on (default: 0 = auto-select)
+
+**Returns:** Port number being listened on
+
+### stopEventDispatcher()
+Stops the event server. *ASL4A*
+
+```python
+stopEventDispatcher()
+```
+
+## Deprecated Methods
+
+### rpcPostEvent() *ASL4A*
+Post an event to the event queue. (Deprecated, use eventPost)
+
+```python
+rpcPostEvent(name, data)
+```
+
+**Parameters:**
+- `name` (str): Event name
+- `data`: Event data
+
 ## Usage Examples
 
 ### Basic Event Polling
