@@ -2765,39 +2765,67 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">wifiLockRelease</span><span class="p">()</span>
 </code></pre></div>
 <h2 id="usage-example">Usage Example<a class="headerlink" href="#usage-example" title="Permanent link">&para;</a></h2>
-<p>```python
-import androidhelper
-import time</p>
-<p>droid = androidhelper.Android()</p>
-<h1 id="check-wifi-state">Check WiFi state<a class="headerlink" href="#check-wifi-state" title="Permanent link">&para;</a></h1>
-<p>if droid.checkWifiState().result:
-    print("WiFi is enabled")
-else:
-    print("Enabling WiFi...")
-    droid.toggleWifiState(True)
-    time.sleep(2)</p>
-<h1 id="start-scanning">Start scanning<a class="headerlink" href="#start-scanning" title="Permanent link">&para;</a></h1>
-<p>droid.wifiStartScan()
-time.sleep(3)</p>
-<h1 id="get-scan-results">Get scan results<a class="headerlink" href="#get-scan-results" title="Permanent link">&para;</a></h1>
-<p>networks = droid.wifiGetScanResults().result
-for network in networks:
-    print(f"SSID: {network.get('SSID')}, Signal: {network.get('level')} dBm")</p>
-<h1 id="get-connection-info">Get connection info<a class="headerlink" href="#get-connection-info" title="Permanent link">&para;</a></h1>
-<p>info = droid.wifiGetConnectionInfo().result
-if info:
-    print(f"Connected to: {info.get('ssid')}")
-    print(f"BSSID: {info.get('bssid')}")
-    print(f"IP: {info.get('ip_address')}")</p>
-<h1 id="get-dhcp-info">Get DHCP info<a class="headerlink" href="#get-dhcp-info" title="Permanent link">&para;</a></h1>
-<p>dhcp = droid.getDhcpInfo().result
-if dhcp:
-    print(f"Gateway: {dhcp.get('gateway')}")
-    print(f"DNS: {dhcp.get('dns1')}")</p>
-<h1 id="acquire-wifi-lock-for-background-operation">Acquire WiFi lock for background operation<a class="headerlink" href="#acquire-wifi-lock-for-background-operation" title="Permanent link">&para;</a></h1>
-<p>droid.wifiLockAcquireFull()</p>
-<h1 id="do-work">... do work ...<a class="headerlink" href="#do-work" title="Permanent link">&para;</a></h1>
-<p>droid.wifiLockRelease()</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">androidhelper</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="n">droid</span> <span class="o">=</span> <span class="n">androidhelper</span><span class="o">.</span><span class="n">Android</span><span class="p">()</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="c1"># Check WiFi state</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="k">if</span> <span class="n">droid</span><span class="o">.</span><span class="n">checkWifiState</span><span class="p">()</span><span class="o">.</span><span class="n">result</span><span class="p">:</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;WiFi is enabled&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enabling WiFi...&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>    <span class="n">droid</span><span class="o">.</span><span class="n">toggleWifiState</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="c1"># Start scanning</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="n">droid</span><span class="o">.</span><span class="n">wifiStartScan</span><span class="p">()</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="c1"># Get scan results</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="n">networks</span> <span class="o">=</span> <span class="n">droid</span><span class="o">.</span><span class="n">wifiGetScanResults</span><span class="p">()</span><span class="o">.</span><span class="n">result</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a><span class="k">for</span> <span class="n">network</span> <span class="ow">in</span> <span class="n">networks</span><span class="p">:</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;SSID: </span><span class="si">{</span><span class="n">network</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;SSID&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">, Signal: </span><span class="si">{</span><span class="n">network</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;level&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2"> dBm&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a><span class="c1"># Get connection info</span>
+<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a><span class="n">info</span> <span class="o">=</span> <span class="n">droid</span><span class="o">.</span><span class="n">wifiGetConnectionInfo</span><span class="p">()</span><span class="o">.</span><span class="n">result</span>
+<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a><span class="k">if</span> <span class="n">info</span><span class="p">:</span>
+<a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Connected to: </span><span class="si">{</span><span class="n">info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ssid&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;BSSID: </span><span class="si">{</span><span class="n">info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;bssid&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;IP: </span><span class="si">{</span><span class="n">info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ip_address&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a>
+<a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a><span class="c1"># Get DHCP info</span>
+<a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a><span class="n">dhcp</span> <span class="o">=</span> <span class="n">droid</span><span class="o">.</span><span class="n">getDhcpInfo</span><span class="p">()</span><span class="o">.</span><span class="n">result</span>
+<a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a><span class="k">if</span> <span class="n">dhcp</span><span class="p">:</span>
+<a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Gateway: </span><span class="si">{</span><span class="n">dhcp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;gateway&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;DNS: </span><span class="si">{</span><span class="n">dhcp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;dns1&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a>
+<a id="__codelineno-14-36" name="__codelineno-14-36" href="#__codelineno-14-36"></a><span class="c1"># Get simplified connected info</span>
+<a id="__codelineno-14-37" name="__codelineno-14-37" href="#__codelineno-14-37"></a><span class="n">connected</span> <span class="o">=</span> <span class="n">droid</span><span class="o">.</span><span class="n">getConnectedInfo</span><span class="p">()</span><span class="o">.</span><span class="n">result</span>
+<a id="__codelineno-14-38" name="__codelineno-14-38" href="#__codelineno-14-38"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;SSID: </span><span class="si">{</span><span class="n">connected</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ssid&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">, Signal: </span><span class="si">{</span><span class="n">connected</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;level&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2"> dBm&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-39" name="__codelineno-14-39" href="#__codelineno-14-39"></a>
+<a id="__codelineno-14-40" name="__codelineno-14-40" href="#__codelineno-14-40"></a><span class="c1"># Disconnect and reconnect</span>
+<a id="__codelineno-14-41" name="__codelineno-14-41" href="#__codelineno-14-41"></a><span class="n">droid</span><span class="o">.</span><span class="n">wifiDisconnect</span><span class="p">()</span>
+<a id="__codelineno-14-42" name="__codelineno-14-42" href="#__codelineno-14-42"></a><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-14-43" name="__codelineno-14-43" href="#__codelineno-14-43"></a><span class="n">droid</span><span class="o">.</span><span class="n">wifiReconnect</span><span class="p">()</span>
+<a id="__codelineno-14-44" name="__codelineno-14-44" href="#__codelineno-14-44"></a>
+<a id="__codelineno-14-45" name="__codelineno-14-45" href="#__codelineno-14-45"></a><span class="c1"># Reassociate with access point</span>
+<a id="__codelineno-14-46" name="__codelineno-14-46" href="#__codelineno-14-46"></a><span class="n">droid</span><span class="o">.</span><span class="n">wifiReassociate</span><span class="p">()</span>
+<a id="__codelineno-14-47" name="__codelineno-14-47" href="#__codelineno-14-47"></a>
+<a id="__codelineno-14-48" name="__codelineno-14-48" href="#__codelineno-14-48"></a><span class="c1"># Check hotspot state</span>
+<a id="__codelineno-14-49" name="__codelineno-14-49" href="#__codelineno-14-49"></a><span class="n">ap_state</span> <span class="o">=</span> <span class="n">droid</span><span class="o">.</span><span class="n">wifiGetApState</span><span class="p">()</span><span class="o">.</span><span class="n">result</span>
+<a id="__codelineno-14-50" name="__codelineno-14-50" href="#__codelineno-14-50"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hotspot state: </span><span class="si">{</span><span class="n">ap_state</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-51" name="__codelineno-14-51" href="#__codelineno-14-51"></a>
+<a id="__codelineno-14-52" name="__codelineno-14-52" href="#__codelineno-14-52"></a><span class="c1"># Acquire WiFi lock for background operation</span>
+<a id="__codelineno-14-53" name="__codelineno-14-53" href="#__codelineno-14-53"></a><span class="n">droid</span><span class="o">.</span><span class="n">wifiLockAcquireFull</span><span class="p">()</span>
+<a id="__codelineno-14-54" name="__codelineno-14-54" href="#__codelineno-14-54"></a><span class="c1"># ... do work ...</span>
+<a id="__codelineno-14-55" name="__codelineno-14-55" href="#__codelineno-14-55"></a><span class="n">droid</span><span class="o">.</span><span class="n">wifiLockRelease</span><span class="p">()</span>
+<a id="__codelineno-14-56" name="__codelineno-14-56" href="#__codelineno-14-56"></a>
+<a id="__codelineno-14-57" name="__codelineno-14-57" href="#__codelineno-14-57"></a><span class="c1"># Or use scan-only lock for lighter background operation</span>
+<a id="__codelineno-14-58" name="__codelineno-14-58" href="#__codelineno-14-58"></a><span class="n">droid</span><span class="o">.</span><span class="n">wifiLockAcquireScanOnly</span><span class="p">()</span>
+<a id="__codelineno-14-59" name="__codelineno-14-59" href="#__codelineno-14-59"></a><span class="c1"># ... do scanning work ...</span>
+<a id="__codelineno-14-60" name="__codelineno-14-60" href="#__codelineno-14-60"></a><span class="n">droid</span><span class="o">.</span><span class="n">wifiLockRelease</span><span class="p">()</span>
+</code></pre></div>
 
 
 
