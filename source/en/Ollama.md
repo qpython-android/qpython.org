@@ -2,8 +2,6 @@
 
 Ollama is a local large language model runtime framework that supports a variety of models including Deepseek, Qwen, and Gemma. QPython has built-in Ollama integration, enabling developers to explore GenAI development directly on their mobile devices.
 
-![Ollama](static/ollama_demo.jpg)
-
 ## Overview
 
 Ollama allows you to run powerful large language models locally on your Android device. With QPython's integration, you can:
