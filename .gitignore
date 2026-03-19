@@ -43,3 +43,4 @@ qpython-docs/static/*
 venv
 site
 .DS_Store
+qpython
