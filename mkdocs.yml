@@ -43,8 +43,10 @@ nav:
     - Branches: qpython-x.md
     - Updates: whats-new.md
   - Guides:
-    - QPYPI: qpypi-guide.md
+    - Terminal: Terminal.md
+    - Notebook: Notebook.md
     - Editor: editor-guide.md
+    - QPYPI: qpypi-guide.md
     - Graphical Interface: GraphicalInterface.md
     - AIPyApp: AIPyApp.md
     - OpenAPI: external-api.md
