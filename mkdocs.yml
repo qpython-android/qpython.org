@@ -49,6 +49,7 @@ nav:
     - QPYPI: qpypi-guide.md
     - Graphical Interface: GraphicalInterface.md
     - AIPyApp: AIPyApp.md
+    - Ollama: Ollama.md
     - OpenAPI: external-api.md
   - QSL4A:
     - Overview: qsl4a/index.md
