@@ -46,7 +46,7 @@ textToSpeech(Text, AutoPlay=True, WavFile=None, VoiceName=None)
 
 ## Configuration
 
-The API uses configuration from `/sdcard/Android/data/org.qpython.qpy/files/apigpt.conf`:
+The API uses configuration from `/storage/emulated/0/Android/data/org.qpython.qpy/files/apigpt.conf`:
 
 ```ini
 [speech]
