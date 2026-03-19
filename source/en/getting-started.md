@@ -200,7 +200,7 @@ Run scripts without UI in the background.
 
 Add header:
 ```python
-#qpy:qpyapp
+#qpy:quiet
 
 import time
 
