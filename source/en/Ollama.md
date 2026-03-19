@@ -59,7 +59,7 @@ Install the `openai` library from QPYPI:
 
 ```bash
 # Using PIP Client (long press Terminal icon -> PIP Client)
-pip install openai
+pip install openai-aipy
 ```
 
 ### Python Code Example
