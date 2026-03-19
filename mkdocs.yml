@@ -46,6 +46,7 @@ nav:
     - QPYPI: qpypi-guide.md
     - Editor: editor-guide.md
     - Graphical Interface: GraphicalInterface.md
+    - AIPyApp: AIPyApp.md
     - OpenAPI: external-api.md
   - QSL4A:
     - Overview: qsl4a/index.md
