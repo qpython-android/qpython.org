@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://www.qpython.org/en/qpypi-guide/">
+        <link rel="canonical" href="https://www.qpython.org/en/Terminal/">
       
       
-        <link rel="prev" href="../editor-guide/">
+        <link rel="prev" href="../whats-new/">
       
       
-        <link rel="next" href="../GraphicalInterface/">
+        <link rel="next" href="../Notebook/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>QPYPI - QPython</title>
+        <title>Terminal - QPython</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#qpypi" class="md-skip">
+        <a href="#terminal-python-command-line-tools" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              QPYPI
+              Terminal
             
           </span>
         </div>
@@ -248,7 +248,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../Terminal/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -538,10 +538,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Terminal/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminal
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -557,6 +584,226 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing Terminal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessing Terminal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Access
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-options-long-press" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Options (Long Press)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qpython-shell-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QPython Shell Terminal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="QPython Shell Terminal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ipython-interactive-interpreter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IPython Interactive Interpreter
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IPython Interactive Interpreter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-usage_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pip-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PIP Client
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PIP Client">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage Tips
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-right-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing the Right Tool
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learn-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learn More
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -622,37 +869,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    QPYPI
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../qpypi-guide/" class="md-nav__link">
         
   
   
@@ -668,87 +888,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#package-installation-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Package Installation Support
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Package Installation Support">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pure-python-packages" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pure Python Packages
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pre-compiled-packages" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pre-compiled Packages
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#installing-pre-compiled-packages" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Installing Pre-compiled Packages
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#requesting-new-packages" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Requesting New Packages
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2218,22 +2357,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#package-installation-support" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Package Installation Support
+        Overview
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Package Installation Support">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing Terminal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessing Terminal">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pure-python-packages" class="md-nav__link">
+  <a href="#quick-access" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pure Python Packages
+        Quick Access
       
     </span>
   </a>
@@ -2241,32 +2391,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pre-compiled-packages" class="md-nav__link">
+  <a href="#advanced-options-long-press" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pre-compiled Packages
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#installing-pre-compiled-packages" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Installing Pre-compiled Packages
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#requesting-new-packages" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Requesting New Packages
+        Advanced Options (Long Press)
       
     </span>
   </a>
@@ -2275,6 +2403,156 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qpython-shell-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QPython Shell Terminal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="QPython Shell Terminal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ipython-interactive-interpreter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IPython Interactive Interpreter
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IPython Interactive Interpreter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-usage_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pip-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PIP Client
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PIP Client">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage Tips
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-right-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing the Right Tool
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learn-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learn More
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2295,35 +2573,132 @@
 
 
 
-<h1 id="qpypi">QPYPI<a class="headerlink" href="#qpypi" title="Permanent link">&para;</a></h1>
-<p>You can extend your QPython capabilities by installing packages.</p>
-<h2 id="package-installation-support">Package Installation Support<a class="headerlink" href="#package-installation-support" title="Permanent link">&para;</a></h2>
-<h3 id="pure-python-packages">Pure Python Packages<a class="headerlink" href="#pure-python-packages" title="Permanent link">&para;</a></h3>
-<p>QPython supports Python packages developed with pure Python. You can install these packages directly using <code>pip install</code> through QPython's PIP Client or QPYPI on dashboard.</p>
-<h3 id="pre-compiled-packages">Pre-compiled Packages<a class="headerlink" href="#pre-compiled-packages" title="Permanent link">&para;</a></h3>
-<p>If some packages (or their dependencies) are developed with Rust/C/C++, QPython cannot support them directly because there is no compiler toolchain support on QPython. However, the QPython team has pre-compiled some commonly used packages and published them in QPython's QPYPI/Extensions for users to install easily.</p>
-<h3 id="installing-pre-compiled-packages">Installing Pre-compiled Packages<a class="headerlink" href="#installing-pre-compiled-packages" title="Permanent link">&para;</a></h3>
-<p>You can install pre-compiled packages in the following ways:</p>
-<ol>
-<li><strong>Through QPython App</strong>: Install directly from QPYPI or Extensions within the QPython app</li>
-<li><strong>Through PyPI</strong>: Visit <a href="https://pypi.org/user/qpythonx/">https://pypi.org/user/qpythonx/</a> to view available packages</li>
-<li><strong>Via pip command</strong>:</li>
-<li><code>pip install xxx-qpython</code> - Packages with the <code>-qpython</code> suffix</li>
-<li><code>pip install xxx-aipy</code> - Packages with the <code>-aipy</code> suffix (typically AI/ML related packages)</li>
-</ol>
-<blockquote>
-<p><strong>Note</strong>: We usually add one of these suffixes based on the package's intended use case.</p>
-</blockquote>
-<h3 id="requesting-new-packages">Requesting New Packages<a class="headerlink" href="#requesting-new-packages" title="Permanent link">&para;</a></h3>
-<p>If you need a package that is not currently supported:</p>
+<h1 id="terminal-python-command-line-tools">Terminal - Python Command Line Tools<a class="headerlink" href="#terminal-python-command-line-tools" title="Permanent link">&para;</a></h1>
+<p>Terminal is one of the most frequently used features in QPython. It's a powerful tool for exploring Python features and libraries, experimenting with new syntax, and managing packages.</p>
+<p><img alt="Terminal" src="static/terminal_demo.jpg" /></p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>QPython provides multiple terminal options to suit different needs:</p>
 <ul>
-<li><strong>Raise an issue</strong> in the <a href="https://github.com/qpython-android/qpython.org/issues">qpython.org project</a></li>
-<li>The QPython team will consider pre-compiling and adding it to the repository</li>
+<li><strong>QPython Shell Terminal</strong> – The standard Python shell for quick exploration</li>
+<li><strong>IPython Interactive Interpreter</strong> – A more powerful and feature-rich interactive interpreter</li>
+<li><strong>PIP Client</strong> – Command-line tool for managing Python packages</li>
 </ul>
-<p>For more ways to get help and engage with the community, see the <a href="../#community--feedback">Community &amp; Feedback</a> section.</p>
-<blockquote>
-<p><strong>Note</strong>: Because of different computer architectures, we cannot guarantee that QPYPI includes all packages from PyPI.</p>
-</blockquote>
+<h2 id="accessing-terminal">Accessing Terminal<a class="headerlink" href="#accessing-terminal" title="Permanent link">&para;</a></h2>
+<h3 id="quick-access">Quick Access<a class="headerlink" href="#quick-access" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Open QPython and go to the <strong>Dashboard</strong></li>
+<li><strong>Click</strong> the Terminal icon to enter the default QPython Shell Terminal</li>
+</ol>
+<h3 id="advanced-options-long-press">Advanced Options (Long Press)<a class="headerlink" href="#advanced-options-long-press" title="Permanent link">&para;</a></h3>
+<p>On the Dashboard, <strong>long press</strong> the Terminal icon to access additional options:</p>
+<ul>
+<li><strong>QPython Shell Terminal</strong> – Launch the standard Python shell</li>
+<li><strong>IPython Interactive Interpreter</strong> – Launch IPython with advanced features like tab completion, syntax highlighting, and command history</li>
+<li><strong>PIP Client</strong> – Launch the package management interface</li>
+</ul>
+<h2 id="qpython-shell-terminal">QPython Shell Terminal<a class="headerlink" href="#qpython-shell-terminal" title="Permanent link">&para;</a></h2>
+<p>The QPython Shell Terminal provides a quick way to execute Python commands and explore Python features.</p>
+<h3 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Immediate command execution</li>
+<li>Basic Python interpreter functionality</li>
+<li>Access to Python built-in functions and standard library</li>
+<li>Perfect for quick tests and experiments</li>
+</ul>
+<h3 id="example-usage">Example Usage<a class="headerlink" href="#example-usage" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello from QPython!&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">Hello</span> <span class="kn">from</span><span class="w"> </span><span class="nn">QPython</span><span class="err">!</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="mf">4.0</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">81</span><span class="p">]</span>
+</code></pre></div>
+<h2 id="ipython-interactive-interpreter">IPython Interactive Interpreter<a class="headerlink" href="#ipython-interactive-interpreter" title="Permanent link">&para;</a></h2>
+<p>IPython offers a much more powerful interactive Python experience with enhanced features.</p>
+<h3 id="features_1">Features<a class="headerlink" href="#features_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Tab Completion</strong> – Automatically complete variable names, module attributes, and file paths</li>
+<li><strong>Command History</strong> – Navigate through previous commands with up/down arrows</li>
+<li><strong>Syntax Highlighting</strong> – Color-coded output for better readability</li>
+<li><strong>Magic Commands</strong> – Special commands prefixed with <code>%</code> for common tasks</li>
+<li><strong>Object Introspection</strong> – Easily explore objects and their attributes</li>
+</ul>
+<h3 id="example-usage_1">Example Usage<a class="headerlink" href="#example-usage_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">arr</span><span class="err">?</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">Type</span><span class="p">:</span>            <span class="n">ndarray</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">String</span> <span class="n">form</span><span class="p">:</span>     <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span><span class="p">]</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">Length</span><span class="p">:</span>          <span class="mi">5</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="o">...</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="o">%</span><span class="n">timeit</span> <span class="n">arr</span> <span class="o">**</span> <span class="mi">2</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">The</span> <span class="n">slowest</span> <span class="n">run</span> <span class="n">took</span> <span class="mf">12.34</span> <span class="n">microseconds</span><span class="o">...</span>
+</code></pre></div>
+<h2 id="pip-client">PIP Client<a class="headerlink" href="#pip-client" title="Permanent link">&para;</a></h2>
+<p>The PIP Client provides command-line access to Python package management.</p>
+<h3 id="features_2">Features<a class="headerlink" href="#features_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Install packages from PyPI</li>
+<li>View installed packages</li>
+<li>Upgrade packages</li>
+<li>Uninstall packages</li>
+<li>Search for packages</li>
+</ul>
+<h3 id="common-commands">Common Commands<a class="headerlink" href="#common-commands" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Install a package</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>pip<span class="w"> </span>install<span class="w"> </span>requests
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># List installed packages</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>pip<span class="w"> </span>list
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># Upgrade a package</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>requests
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1"># Uninstall a package</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>pip<span class="w"> </span>uninstall<span class="w"> </span>requests
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c1"># Search for packages</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>pip<span class="w"> </span>search<span class="w"> </span>json
+</code></pre></div>
+<h3 id="usage-tips">Usage Tips<a class="headerlink" href="#usage-tips" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Long press to access PIP Client from the Dashboard</li>
+<li>Use <code>pip help</code> to see all available commands</li>
+<li>Some commands may require administrator privileges</li>
+</ul>
+<h2 id="choosing-the-right-tool">Choosing the Right Tool<a class="headerlink" href="#choosing-the-right-tool" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shell Terminal</td>
+<td>Quick calculations, simple scripts, testing snippets</td>
+</tr>
+<tr>
+<td>IPython</td>
+<td>Complex exploration, data analysis, interactive debugging</td>
+</tr>
+<tr>
+<td>PIP Client</td>
+<td>Installing/updating packages, checking dependencies</td>
+</tr>
+</tbody>
+</table>
+<h2 id="learn-more">Learn More<a class="headerlink" href="#learn-more" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://docs.python.org/3.12/">Python Documentation</a> – Official Python language and library reference</li>
+<li><a href="https://ipython.readthedocs.io/">IPython Documentation</a> – Advanced interactive Python features</li>
+<li><a href="../qpypi-guide/">PyPI Guide</a> – Managing Python packages in QPython</li>
+</ul>
 
 
 
