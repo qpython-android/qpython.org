@@ -10,29 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://www.qpython.org/en/">
+        <link rel="canonical" href="https://www.qpython.org/en/Ollama/">
       
       
+        <link rel="prev" href="../AIPyApp/">
       
-        <link rel="next" href="qpython-x/">
+      
+        <link rel="next" href="../external-api/">
       
       
         
       
       
-      <link rel="icon" href="static/img_logo.png">
+      <link rel="icon" href="../static/img_logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
-        <title>Overview - QPython</title>
+        <title>Ollama - QPython</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="static/extra.css">
+      <link rel="stylesheet" href="../static/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -88,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#qpython-project" class="md-skip">
+        <a href="#ollama-local-large-language-model-integration" class="md-skip">
           Skip to content
         </a>
       
@@ -102,9 +104,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="QPython" class="md-header__button md-logo" aria-label="QPython" data-md-component="logo">
+    <a href=".." title="QPython" class="md-header__button md-logo" aria-label="QPython" data-md-component="logo">
       
-  <img src="static/img_logo.png" alt="logo">
+  <img src="../static/img_logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -121,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Ollama
             
           </span>
         </div>
@@ -220,13 +222,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="." class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
           
   
   
@@ -242,11 +242,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="Terminal/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Terminal/" class="md-tabs__link">
           
   
   
@@ -266,7 +268,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="qsl4a/" class="md-tabs__link">
+        <a href="../qsl4a/" class="md-tabs__link">
           
   
   
@@ -286,7 +288,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="getting-started/" class="md-tabs__link">
+        <a href="../getting-started/" class="md-tabs__link">
           
   
   
@@ -320,9 +322,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="QPython" class="md-nav__button md-logo" aria-label="QPython" data-md-component="logo">
+    <a href=".." title="QPython" class="md-nav__button md-logo" aria-label="QPython" data-md-component="logo">
       
-  <img src="static/img_logo.png" alt="logo">
+  <img src="../static/img_logo.png" alt="logo">
 
     </a>
     QPython
@@ -334,31 +336,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
             
   
   
@@ -376,7 +375,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -391,37 +390,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Overview
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -437,92 +409,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ai-enabled-python-ide-for-android" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        AI-Enabled Python IDE for Android
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Getting Started
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#programming-guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Programming Guide
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#download-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Download Resources
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#community-feedback" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Community &amp; Feedback
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#follow-us" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Follow Us
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -535,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qpython-x/" class="md-nav__link">
+      <a href="../qpython-x/" class="md-nav__link">
         
   
   
@@ -563,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="whats-new/" class="md-nav__link">
+      <a href="../whats-new/" class="md-nav__link">
         
   
   
@@ -595,28 +481,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -634,7 +523,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -652,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Terminal/" class="md-nav__link">
+      <a href="../Terminal/" class="md-nav__link">
         
   
   
@@ -680,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Notebook/" class="md-nav__link">
+      <a href="../Notebook/" class="md-nav__link">
         
   
   
@@ -708,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="editor-guide/" class="md-nav__link">
+      <a href="../editor-guide/" class="md-nav__link">
         
   
   
@@ -736,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qpypi-guide/" class="md-nav__link">
+      <a href="../qpypi-guide/" class="md-nav__link">
         
   
   
@@ -764,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="GraphicalInterface/" class="md-nav__link">
+      <a href="../GraphicalInterface/" class="md-nav__link">
         
   
   
@@ -792,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="AIPyApp/" class="md-nav__link">
+      <a href="../AIPyApp/" class="md-nav__link">
         
   
   
@@ -817,10 +706,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="Ollama/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ollama
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -836,6 +752,170 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported Models
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Started
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-access-qpython-shell-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Access QPython Shell Terminal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-download-a-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Download a Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-run-the-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Run the Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-ollama-with-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using Ollama with Python
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Ollama with Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-openai-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install OpenAI Library
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-code-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python Code Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-models-for-mobile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Models for Mobile
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-ollama-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Useful Ollama Commands
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learn-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learn More
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -848,7 +928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="external-api/" class="md-nav__link">
+      <a href="../external-api/" class="md-nav__link">
         
   
   
@@ -937,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/" class="md-nav__link">
+      <a href="../qsl4a/" class="md-nav__link">
         
   
   
@@ -1019,7 +1099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/core/android-base/" class="md-nav__link">
+      <a href="../qsl4a/core/android-base/" class="md-nav__link">
         
   
   
@@ -1047,7 +1127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/core/intent/" class="md-nav__link">
+      <a href="../qsl4a/core/intent/" class="md-nav__link">
         
   
   
@@ -1075,7 +1155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/core/events/" class="md-nav__link">
+      <a href="../qsl4a/core/events/" class="md-nav__link">
         
   
   
@@ -1165,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/ui/dialogs/" class="md-nav__link">
+      <a href="../qsl4a/ui/dialogs/" class="md-nav__link">
         
   
   
@@ -1193,7 +1273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/ui/fullscreen/" class="md-nav__link">
+      <a href="../qsl4a/ui/fullscreen/" class="md-nav__link">
         
   
   
@@ -1221,7 +1301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/ui/floatview/" class="md-nav__link">
+      <a href="../qsl4a/ui/floatview/" class="md-nav__link">
         
   
   
@@ -1249,7 +1329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/ui/accessibility/" class="md-nav__link">
+      <a href="../qsl4a/ui/accessibility/" class="md-nav__link">
         
   
   
@@ -1339,7 +1419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/system/battery/" class="md-nav__link">
+      <a href="../qsl4a/system/battery/" class="md-nav__link">
         
   
   
@@ -1367,7 +1447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/system/sensors/" class="md-nav__link">
+      <a href="../qsl4a/system/sensors/" class="md-nav__link">
         
   
   
@@ -1395,7 +1475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/system/application/" class="md-nav__link">
+      <a href="../qsl4a/system/application/" class="md-nav__link">
         
   
   
@@ -1423,7 +1503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/system/sysinfo/" class="md-nav__link">
+      <a href="../qsl4a/system/sysinfo/" class="md-nav__link">
         
   
   
@@ -1513,7 +1593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/hardware/bluetooth/" class="md-nav__link">
+      <a href="../qsl4a/hardware/bluetooth/" class="md-nav__link">
         
   
   
@@ -1541,7 +1621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/hardware/camera/" class="md-nav__link">
+      <a href="../qsl4a/hardware/camera/" class="md-nav__link">
         
   
   
@@ -1569,7 +1649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/hardware/recorder/" class="md-nav__link">
+      <a href="../qsl4a/hardware/recorder/" class="md-nav__link">
         
   
   
@@ -1659,7 +1739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/connectivity/wifi/" class="md-nav__link">
+      <a href="../qsl4a/connectivity/wifi/" class="md-nav__link">
         
   
   
@@ -1687,7 +1767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/connectivity/location/" class="md-nav__link">
+      <a href="../qsl4a/connectivity/location/" class="md-nav__link">
         
   
   
@@ -1715,7 +1795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/connectivity/sms/" class="md-nav__link">
+      <a href="../qsl4a/connectivity/sms/" class="md-nav__link">
         
   
   
@@ -1805,7 +1885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/storage/documentfile/" class="md-nav__link">
+      <a href="../qsl4a/storage/documentfile/" class="md-nav__link">
         
   
   
@@ -1833,7 +1913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/storage/clipboard/" class="md-nav__link">
+      <a href="../qsl4a/storage/clipboard/" class="md-nav__link">
         
   
   
@@ -1923,7 +2003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/media/mediaplayer/" class="md-nav__link">
+      <a href="../qsl4a/media/mediaplayer/" class="md-nav__link">
         
   
   
@@ -1951,7 +2031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/media/image/" class="md-nav__link">
+      <a href="../qsl4a/media/image/" class="md-nav__link">
         
   
   
@@ -2041,7 +2121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/special/cipher/" class="md-nav__link">
+      <a href="../qsl4a/special/cipher/" class="md-nav__link">
         
   
   
@@ -2069,7 +2149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="qsl4a/special/pgptai/" class="md-nav__link">
+      <a href="../qsl4a/special/pgptai/" class="md-nav__link">
         
   
   
@@ -2166,7 +2246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/" class="md-nav__link">
+      <a href="../getting-started/" class="md-nav__link">
         
   
   
@@ -2194,7 +2274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial-hello-world/" class="md-nav__link">
+      <a href="../tutorial-hello-world/" class="md-nav__link">
         
   
   
@@ -2249,10 +2329,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ai-enabled-python-ide-for-android" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        AI-Enabled Python IDE for Android
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported Models
       
     </span>
   </a>
@@ -2268,13 +2359,91 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-access-qpython-shell-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Access QPython Shell Terminal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-download-a-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Download a Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-run-the-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Run the Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#programming-guide" class="md-nav__link">
+  <a href="#using-ollama-with-python" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Programming Guide
+        Using Ollama with Python
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Ollama with Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-openai-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install OpenAI Library
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-code-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python Code Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-models-for-mobile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Models for Mobile
       
     </span>
   </a>
@@ -2282,10 +2451,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#download-resources" class="md-nav__link">
+  <a href="#useful-ollama-commands" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Download Resources
+        Useful Ollama Commands
       
     </span>
   </a>
@@ -2293,21 +2462,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#community-feedback" class="md-nav__link">
+  <a href="#learn-more" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Community &amp; Feedback
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#follow-us" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Follow Us
+        Learn More
       
     </span>
   </a>
@@ -2331,55 +2489,119 @@
 
 
 
-<h1 id="qpython-project">QPython Project<a class="headerlink" href="#qpython-project" title="Permanent link">&para;</a></h1>
-<p><strong>QPython project is not only a powerful Python IDE for Android, but also an active technology community.</strong></p>
-<p><img alt="QPython Banner" src="static/img_banner2x.jpg" /></p>
-<h2 id="ai-enabled-python-ide-for-android">AI-Enabled Python IDE for Android<a class="headerlink" href="#ai-enabled-python-ide-for-android" title="Permanent link">&para;</a></h2>
-<p><strong>QPython</strong> is your gateway to Python programming on Android. With an integrated Python interpreter, AI model engine, and mobile development toolchain, it empowers you to build web applications, perform scientific computing, and create intelligent apps — all from your mobile device.</p>
-<p>Whether you're learning to code, building data science projects, or developing AI-powered applications, QPython provides a complete mobile programming solution with comprehensive developer resources and an active community to support your journey.</p>
+<h1 id="ollama-local-large-language-model-integration">Ollama - Local Large Language Model Integration<a class="headerlink" href="#ollama-local-large-language-model-integration" title="Permanent link">&para;</a></h1>
+<p>Ollama is a local large language model runtime framework that supports a variety of models including Deepseek, Qwen, and Gemma. QPython has built-in Ollama integration, enabling developers to explore GenAI development directly on their mobile devices.</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Ollama allows you to run powerful large language models locally on your Android device. With QPython's integration, you can:</p>
 <ul>
-<li><strong><a href="qpython-x/">Branches</a></strong> – Learn about the different QPython versions (IDE, Community, Plus) and choose the right one for your needs</li>
-<li><strong><a href="whats-new/">Updates</a></strong> – Stay informed about the latest features, improvements, and release notes</li>
+<li>Run open-source LLMs directly on your phone</li>
+<li>Use AI capabilities without internet connectivity</li>
+<li>Experiment with different models for various use cases</li>
+<li>Build AI-powered applications using familiar Python libraries</li>
 </ul>
-<hr />
+<h2 id="supported-models">Supported Models<a class="headerlink" href="#supported-models" title="Permanent link">&para;</a></h2>
+<p>Ollama supports many popular open-source models:</p>
+<ul>
+<li><strong>Deepseek</strong> – Efficient reasoning models (recommended: deepseek-r1:1.5b for mobile)</li>
+<li><strong>Qwen</strong> – Alibaba's large language models</li>
+<li><strong>Gemma</strong> – Google's lightweight open models</li>
+<li>And many more available on <a href="https://ollama.com/library">Ollama Library</a></li>
+</ul>
 <h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
-<p>How to start quickly? Just follow these steps:</p>
+<h3 id="step-1-access-qpython-shell-terminal">Step 1: Access QPython Shell Terminal<a class="headerlink" href="#step-1-access-qpython-shell-terminal" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Open QPython and go to the <strong>Dashboard</strong></li>
+<li><strong>Long press</strong> the Terminal icon</li>
+<li>Select <strong>QPython Shell Terminal</strong></li>
+</ol>
+<h3 id="step-2-download-a-model">Step 2: Download a Model<a class="headerlink" href="#step-2-download-a-model" title="Permanent link">&para;</a></h3>
+<p>In the Shell Terminal, use Ollama commands to download models. For mobile devices, we recommend smaller models for faster response times.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Pull a model (example: deepseek-r1 with 1.5 billion parameters)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>ollama<span class="w"> </span>pull<span class="w"> </span>deepseek-r1:1.5b
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Pull other models</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>ollama<span class="w"> </span>pull<span class="w"> </span>qwen:2.5
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>ollama<span class="w"> </span>pull<span class="w"> </span>gemma:2b
+</code></pre></div>
+<h3 id="step-3-run-the-model">Step 3: Run the Model<a class="headerlink" href="#step-3-run-the-model" title="Permanent link">&para;</a></h3>
+<p>Start the Ollama service to make the model available via API:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ollama<span class="w"> </span>serve
+</code></pre></div>
+<p>When running, Ollama will output the local port address (default: 11434).</p>
+<h2 id="using-ollama-with-python">Using Ollama with Python<a class="headerlink" href="#using-ollama-with-python" title="Permanent link">&para;</a></h2>
+<h3 id="install-openai-library">Install OpenAI Library<a class="headerlink" href="#install-openai-library" title="Permanent link">&para;</a></h3>
+<p>Install the <code>openai</code> library from QPYPI:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Using PIP Client (long press Terminal icon -&gt; PIP Client)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>pip<span class="w"> </span>install<span class="w"> </span>openai
+</code></pre></div>
+<h3 id="python-code-example">Python Code Example<a class="headerlink" href="#python-code-example" title="Permanent link">&para;</a></h3>
+<p>After starting <code>ollama serve</code>, you can use the OpenAI-compatible API to interact with your local model:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">openai</span><span class="w"> </span><span class="kn">import</span> <span class="n">OpenAI</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1"># Configure the client</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">client</span> <span class="o">=</span> <span class="n">OpenAI</span><span class="p">(</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;deepseek&quot;</span><span class="p">,</span>  <span class="c1"># Can be any string</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">base_url</span><span class="o">=</span><span class="s2">&quot;https://localhost:11434/v1&quot;</span>  <span class="c1"># Ollama&#39;s local address</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">)</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="c1"># Chat with the model</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;deepseek-r1:1.5b&quot;</span><span class="p">,</span>  <span class="c1"># Match the model you downloaded</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="n">messages</span><span class="o">=</span><span class="p">[</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>        <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;What is Python?&quot;</span><span class="p">}</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    <span class="p">]</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="p">)</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="recommended-models-for-mobile">Recommended Models for Mobile<a class="headerlink" href="#recommended-models-for-mobile" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Parameters</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>deepseek-r1</td>
+<td>1.5b</td>
+<td>Fast responses, general tasks</td>
+</tr>
+<tr>
+<td>qwen:2.5</td>
+<td>2.5b</td>
+<td>Balanced performance</td>
+</tr>
+<tr>
+<td>gemma:2b</td>
+<td>2b</td>
+<td>Lightweight tasks</td>
+</tr>
+</tbody>
+</table>
+<p>Larger models will work but may respond slower on mobile devices.</p>
+<h2 id="useful-ollama-commands">Useful Ollama Commands<a class="headerlink" href="#useful-ollama-commands" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># List installed models</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>ollama<span class="w"> </span>list
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># Remove a model</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>ollama<span class="w"> </span>rm<span class="w"> </span>deepseek-r1:1.5b
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Show model information</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>ollama<span class="w"> </span>show<span class="w"> </span>deepseek-r1:1.5b
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="c1"># Create a custom model (Modelfile)</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>ollama<span class="w"> </span>create<span class="w"> </span>mymodel<span class="w"> </span>-f<span class="w"> </span>Modelfile
+</code></pre></div>
+<h2 id="learn-more">Learn More<a class="headerlink" href="#learn-more" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="getting-started/">Getting Started</a></li>
-<li><a href="tutorial-hello-world/">Hello World Tutorial</a></li>
+<li><a href="https://docs.ollama.com">Ollama Documentation</a> – Official Ollama guides and command reference</li>
+<li><a href="https://ollama.com/library">Ollama Library</a> – Browse available models</li>
+<li><a href="../AIPyApp/">AIPyApp</a> – AI-powered program generator in QPython</li>
+<li><a href="../qpypi-guide/">QPYPI Guide</a> – Managing Python packages</li>
 </ul>
-<h2 id="programming-guide">Programming Guide<a class="headerlink" href="#programming-guide" title="Permanent link">&para;</a></h2>
-<p>QPython not only provides basic Python interface support, but more importantly, it also enables you to call Android APIs using Python through the <strong>QSL4A</strong> interface.</p>
-<ul>
-<li><strong><a href="https://docs.python.org/3.12/">Python Standard Library</a></strong> – For general Python syntax and built-in libraries</li>
-<li><strong><a href="qsl4a/">QSL4A API</a></strong> – For accessing Android device features (camera, sensors, SMS, etc.) from Python</li>
-<li><strong><a href="qpypi-guide/">QPYPI Guide</a></strong> – For installing additional Python packages</li>
-<li><strong><a href="editor-guide/">Editor Guide</a></strong> – For using the built-in code editor</li>
-<li><strong><a href="external-api/">External API</a></strong> – For integrating with external applications</li>
-</ul>
-<hr />
-<h2 id="download-resources">Download Resources<a class="headerlink" href="#download-resources" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://drive.google.com/drive/folders/1lFqvlmArrV35ikcdW61MdVAx2UUWMcLh?usp=drive_link">Google Drive</a></li>
-<li><a href="https://drive.weixin.qq.com/s?k=AM0A8wffAAc5HYFbqJ">微信网盘</a></li>
-</ul>
-<h2 id="community-feedback">Community &amp; Feedback<a class="headerlink" href="#community-feedback" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://discord.gg/hV2chuD">Discord</a></li>
-<li><a href="https://www.facebook.com/groups/qpython">Facebook Group</a></li>
-<li><a href="https://www.qpython.com.cn/qpy-forum/">中文交流社区</a></li>
-<li><a href="https://groups.google.com/g/qpython">Newsletter (Google Groups)</a></li>
-<li><a href="https://github.com/qpython-android/qpython/issues">Report Issues</a></li>
-<li><a href="https://github.com/qpython-android/qpython.org/issues">Request Extensions</a></li>
-</ul>
-<h2 id="follow-us">Follow Us<a class="headerlink" href="#follow-us" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="http://www.facebook.com/qpython">Facebook</a></li>
-<li><a href="http://www.twitter.com/qpython">Twitter/X</a></li>
-<li><a href="https://www.youtube.com/@qpythonplus">YouTube</a></li>
-</ul>
-<hr />
-<p>© QPython (2012-2026)</p>
 
 
 
@@ -2484,10 +2706,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
