@@ -2141,10 +2141,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#webcamstart-asl4a" class="md-nav__link">
+  <a href="#webcamstart" class="md-nav__link">
     <span class="md-ellipsis">
       
-        webcamStart() ASL4A
+        webcamStart()
       
     </span>
   </a>
@@ -2152,10 +2152,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#webcamadjustquality-asl4a" class="md-nav__link">
+  <a href="#webcamadjustquality" class="md-nav__link">
     <span class="md-ellipsis">
       
-        webcamAdjustQuality() ASL4A
+        webcamAdjustQuality()
       
     </span>
   </a>
@@ -2163,10 +2163,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#webcamstop-asl4a" class="md-nav__link">
+  <a href="#webcamstop" class="md-nav__link">
     <span class="md-ellipsis">
       
-        webcamStop() ASL4A
+        webcamStop()
       
     </span>
   </a>
@@ -2191,10 +2191,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#camerastartpreview-asl4a" class="md-nav__link">
+  <a href="#camerastartpreview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        cameraStartPreview() ASL4A
+        cameraStartPreview()
       
     </span>
   </a>
@@ -2202,10 +2202,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#camerastoppreview-asl4a" class="md-nav__link">
+  <a href="#camerastoppreview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        cameraStopPreview() ASL4A
+        cameraStopPreview()
       
     </span>
   </a>
@@ -2248,7 +2248,7 @@
 <h1 id="webcam-api">Webcam API<a class="headerlink" href="#webcam-api" title="Permanent link">&para;</a></h1>
 <p>Stream video from the device camera using MJPEG.</p>
 <h2 id="mjpeg-stream-methods">MJPEG Stream Methods<a class="headerlink" href="#mjpeg-stream-methods" title="Permanent link">&para;</a></h2>
-<h3 id="webcamstart-asl4a">webcamStart() <em>ASL4A</em><a class="headerlink" href="#webcamstart-asl4a" title="Permanent link">&para;</a></h3>
+<h3 id="webcamstart">webcamStart()<a class="headerlink" href="#webcamstart" title="Permanent link">&para;</a></h3>
 <p>Start an MJPEG stream from the webcam.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">webcamStart</span><span class="p">(</span><span class="n">resolutionLevel</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">jpegQuality</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </code></pre></div>
@@ -2257,19 +2257,19 @@
 - <code>jpegQuality</code> (int): JPEG quality 1-100 (default: 20)
 - <code>port</code> (int): Port number (default: 0 = auto)</p>
 <p><strong>Returns:</strong> Tuple of (address, port) for the stream</p>
-<h3 id="webcamadjustquality-asl4a">webcamAdjustQuality() <em>ASL4A</em><a class="headerlink" href="#webcamadjustquality-asl4a" title="Permanent link">&para;</a></h3>
+<h3 id="webcamadjustquality">webcamAdjustQuality()<a class="headerlink" href="#webcamadjustquality" title="Permanent link">&para;</a></h3>
 <p>Adjust the quality of an active webcam stream.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">webcamAdjustQuality</span><span class="p">(</span><span class="n">resolutionLevel</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">jpegQuality</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 </code></pre></div>
 <p><strong>Parameters:</strong>
 - <code>resolutionLevel</code> (int): Resolution level
 - <code>jpegQuality</code> (int): JPEG quality 1-100</p>
-<h3 id="webcamstop-asl4a">webcamStop() <em>ASL4A</em><a class="headerlink" href="#webcamstop-asl4a" title="Permanent link">&para;</a></h3>
+<h3 id="webcamstop">webcamStop()<a class="headerlink" href="#webcamstop" title="Permanent link">&para;</a></h3>
 <p>Stop the webcam stream.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">webcamStop</span><span class="p">()</span>
 </code></pre></div>
 <h2 id="camera-preview-methods">Camera Preview Methods<a class="headerlink" href="#camera-preview-methods" title="Permanent link">&para;</a></h2>
-<h3 id="camerastartpreview-asl4a">cameraStartPreview() <em>ASL4A</em><a class="headerlink" href="#camerastartpreview-asl4a" title="Permanent link">&para;</a></h3>
+<h3 id="camerastartpreview">cameraStartPreview()<a class="headerlink" href="#camerastartpreview" title="Permanent link">&para;</a></h3>
 <p>Start camera preview mode with event generation.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">cameraStartPreview</span><span class="p">(</span><span class="n">resolutionLevel</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">jpegQuality</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">filepath</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
@@ -2279,7 +2279,7 @@
 - <code>filepath</code> (str, optional): File path to save preview frames</p>
 <p><strong>Returns:</strong> True if successful</p>
 <p><strong>Note:</strong> Generates 'preview' events with frame data.</p>
-<h3 id="camerastoppreview-asl4a">cameraStopPreview() <em>ASL4A</em><a class="headerlink" href="#camerastoppreview-asl4a" title="Permanent link">&para;</a></h3>
+<h3 id="camerastoppreview">cameraStopPreview()<a class="headerlink" href="#camerastoppreview" title="Permanent link">&para;</a></h3>
 <p>Stop the camera preview.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">cameraStopPreview</span><span class="p">()</span>
 </code></pre></div>

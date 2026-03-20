@@ -2120,10 +2120,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#prefgetvalue-asl4a" class="md-nav__link">
+  <a href="#prefgetvalue" class="md-nav__link">
     <span class="md-ellipsis">
       
-        prefGetValue() ASL4A
+        prefGetValue()
       
     </span>
   </a>
@@ -2131,10 +2131,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#prefputvalue-asl4a" class="md-nav__link">
+  <a href="#prefputvalue" class="md-nav__link">
     <span class="md-ellipsis">
       
-        prefPutValue() ASL4A
+        prefPutValue()
       
     </span>
   </a>
@@ -2142,10 +2142,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#prefgetall-asl4a" class="md-nav__link">
+  <a href="#prefgetall" class="md-nav__link">
     <span class="md-ellipsis">
       
-        prefGetAll() ASL4A
+        prefGetAll()
       
     </span>
   </a>
@@ -2153,10 +2153,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#prefremovevalue-asl4a" class="md-nav__link">
+  <a href="#prefremovevalue" class="md-nav__link">
     <span class="md-ellipsis">
       
-        prefRemoveValue() ASL4A
+        prefRemoveValue()
       
     </span>
   </a>
@@ -2601,10 +2601,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#prefgetvalue-asl4a" class="md-nav__link">
+  <a href="#prefgetvalue" class="md-nav__link">
     <span class="md-ellipsis">
       
-        prefGetValue() ASL4A
+        prefGetValue()
       
     </span>
   </a>
@@ -2612,10 +2612,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#prefputvalue-asl4a" class="md-nav__link">
+  <a href="#prefputvalue" class="md-nav__link">
     <span class="md-ellipsis">
       
-        prefPutValue() ASL4A
+        prefPutValue()
       
     </span>
   </a>
@@ -2623,10 +2623,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#prefgetall-asl4a" class="md-nav__link">
+  <a href="#prefgetall" class="md-nav__link">
     <span class="md-ellipsis">
       
-        prefGetAll() ASL4A
+        prefGetAll()
       
     </span>
   </a>
@@ -2634,10 +2634,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#prefremovevalue-asl4a" class="md-nav__link">
+  <a href="#prefremovevalue" class="md-nav__link">
     <span class="md-ellipsis">
       
-        prefRemoveValue() ASL4A
+        prefRemoveValue()
       
     </span>
   </a>
@@ -2680,7 +2680,7 @@
 <h1 id="api">偏好设置 API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h1>
 <p>使用 Android SharedPreferences 存储和检索数据。</p>
 <h2 id="_1">偏好设置方法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h3 id="prefgetvalue-asl4a">prefGetValue() <em>ASL4A</em><a class="headerlink" href="#prefgetvalue-asl4a" title="Permanent link">&para;</a></h3>
+<h3 id="prefgetvalue">prefGetValue()<a class="headerlink" href="#prefgetvalue" title="Permanent link">&para;</a></h3>
 <p>从共享偏好设置读取值。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">prefGetValue</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
@@ -2688,7 +2688,7 @@
 - <code>key</code> (str): 偏好设置键
 - <code>filename</code> (str, optional): 偏好设置文件名</p>
 <p><strong>返回：</strong> 存储的值（任意类型）</p>
-<h3 id="prefputvalue-asl4a">prefPutValue() <em>ASL4A</em><a class="headerlink" href="#prefputvalue-asl4a" title="Permanent link">&para;</a></h3>
+<h3 id="prefputvalue">prefPutValue()<a class="headerlink" href="#prefputvalue" title="Permanent link">&para;</a></h3>
 <p>写入值到共享偏好设置。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">prefPutValue</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
@@ -2696,14 +2696,14 @@
 - <code>key</code> (str): 偏好设置键
 - <code>value</code> (object): 要存储的值
 - <code>filename</code> (str, optional): 偏好设置文件名</p>
-<h3 id="prefgetall-asl4a">prefGetAll() <em>ASL4A</em><a class="headerlink" href="#prefgetall-asl4a" title="Permanent link">&para;</a></h3>
+<h3 id="prefgetall">prefGetAll()<a class="headerlink" href="#prefgetall" title="Permanent link">&para;</a></h3>
 <p>获取所有偏好设置值。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">prefGetAll</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 <p><strong>参数：</strong>
 - <code>filename</code> (str, optional): 偏好设置文件名</p>
 <p><strong>返回：</strong> 所有偏好的映射</p>
-<h3 id="prefremovevalue-asl4a">prefRemoveValue() <em>ASL4A</em><a class="headerlink" href="#prefremovevalue-asl4a" title="Permanent link">&para;</a></h3>
+<h3 id="prefremovevalue">prefRemoveValue()<a class="headerlink" href="#prefremovevalue" title="Permanent link">&para;</a></h3>
 <p>从共享偏好设置中移除值。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">prefRemoveValue</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>

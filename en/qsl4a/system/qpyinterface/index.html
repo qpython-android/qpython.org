@@ -2141,10 +2141,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#executeqpy-asl4a" class="md-nav__link">
+  <a href="#executeqpy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        executeQPy() ASL4A
+        executeQPy()
       
     </span>
   </a>
@@ -2152,10 +2152,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#executeqpyassrv-asl4a" class="md-nav__link">
+  <a href="#executeqpyassrv" class="md-nav__link">
     <span class="md-ellipsis">
       
-        executeQPyAsSrv() ASL4A
+        executeQPyAsSrv()
       
     </span>
   </a>
@@ -2163,10 +2163,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#executeqpycode-asl4a" class="md-nav__link">
+  <a href="#executeqpycode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        executeQPyCode() ASL4A
+        executeQPyCode()
       
     </span>
   </a>
@@ -2174,10 +2174,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#executeqpycodeassrv-asl4a" class="md-nav__link">
+  <a href="#executeqpycodeassrv" class="md-nav__link">
     <span class="md-ellipsis">
       
-        executeQPyCodeAsSrv() ASL4A
+        executeQPyCodeAsSrv()
       
     </span>
   </a>
@@ -2202,10 +2202,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sharedvariableset-asl4a" class="md-nav__link">
+  <a href="#sharedvariableset" class="md-nav__link">
     <span class="md-ellipsis">
       
-        sharedVariableSet() ASL4A
+        sharedVariableSet()
       
     </span>
   </a>
@@ -2213,10 +2213,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sharedvariableget-asl4a" class="md-nav__link">
+  <a href="#sharedvariableget" class="md-nav__link">
     <span class="md-ellipsis">
       
-        sharedVariableGet() ASL4A
+        sharedVariableGet()
       
     </span>
   </a>
@@ -2224,10 +2224,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sharedvariableremove-asl4a" class="md-nav__link">
+  <a href="#sharedvariableremove" class="md-nav__link">
     <span class="md-ellipsis">
       
-        sharedVariableRemove() ASL4A
+        sharedVariableRemove()
       
     </span>
   </a>
@@ -2235,10 +2235,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#getlastlog-asl4a" class="md-nav__link">
+  <a href="#getlastlog" class="md-nav__link">
     <span class="md-ellipsis">
       
-        getLastLog() ASL4A
+        getLastLog()
       
     </span>
   </a>
@@ -2281,7 +2281,7 @@
 <h1 id="qpython-interface-api">QPython Interface API<a class="headerlink" href="#qpython-interface-api" title="Permanent link">&para;</a></h1>
 <p>Execute QPython scripts and manage shared variables from other apps.</p>
 <h2 id="script-execution-methods">Script Execution Methods<a class="headerlink" href="#script-execution-methods" title="Permanent link">&para;</a></h2>
-<h3 id="executeqpy-asl4a">executeQPy() <em>ASL4A</em><a class="headerlink" href="#executeqpy-asl4a" title="Permanent link">&para;</a></h3>
+<h3 id="executeqpy">executeQPy()<a class="headerlink" href="#executeqpy" title="Permanent link">&para;</a></h3>
 <p>Execute a QPython script.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">executeQPy</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">arg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
@@ -2289,21 +2289,21 @@
 - <code>path</code> (str): Path to the script file
 - <code>arg</code> (str, optional): Command line arguments</p>
 <p><strong>Returns:</strong> True if started successfully</p>
-<h3 id="executeqpyassrv-asl4a">executeQPyAsSrv() <em>ASL4A</em><a class="headerlink" href="#executeqpyassrv-asl4a" title="Permanent link">&para;</a></h3>
+<h3 id="executeqpyassrv">executeQPyAsSrv()<a class="headerlink" href="#executeqpyassrv" title="Permanent link">&para;</a></h3>
 <p>Execute a QPython script as a service.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">executeQPyAsSrv</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 <p><strong>Parameters:</strong>
 - <code>path</code> (str, optional): Path to the script file</p>
 <p><strong>Returns:</strong> True if started successfully</p>
-<h3 id="executeqpycode-asl4a">executeQPyCode() <em>ASL4A</em><a class="headerlink" href="#executeqpycode-asl4a" title="Permanent link">&para;</a></h3>
+<h3 id="executeqpycode">executeQPyCode()<a class="headerlink" href="#executeqpycode" title="Permanent link">&para;</a></h3>
 <p>Execute Python code directly.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">executeQPyCode</span><span class="p">(</span><span class="n">code</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 <p><strong>Parameters:</strong>
 - <code>code</code> (str, optional): Python code to execute</p>
 <p><strong>Returns:</strong> True if started successfully</p>
-<h3 id="executeqpycodeassrv-asl4a">executeQPyCodeAsSrv() <em>ASL4A</em><a class="headerlink" href="#executeqpycodeassrv-asl4a" title="Permanent link">&para;</a></h3>
+<h3 id="executeqpycodeassrv">executeQPyCodeAsSrv()<a class="headerlink" href="#executeqpycodeassrv" title="Permanent link">&para;</a></h3>
 <p>Execute Python code as a service.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">executeQPyCodeAsSrv</span><span class="p">(</span><span class="n">code</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
@@ -2312,7 +2312,7 @@
 <p><strong>Returns:</strong> True if started successfully</p>
 <h2 id="shared-variables">Shared Variables<a class="headerlink" href="#shared-variables" title="Permanent link">&para;</a></h2>
 <p>Shared variables allow communication between QPython and other apps.</p>
-<h3 id="sharedvariableset-asl4a">sharedVariableSet() <em>ASL4A</em><a class="headerlink" href="#sharedvariableset-asl4a" title="Permanent link">&para;</a></h3>
+<h3 id="sharedvariableset">sharedVariableSet()<a class="headerlink" href="#sharedvariableset" title="Permanent link">&para;</a></h3>
 <p>Set a Java shared variable.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">sharedVariableSet</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
 </code></pre></div>
@@ -2320,21 +2320,21 @@
 - <code>key</code> (str): Variable name
 - <code>value</code> (str): Variable value</p>
 <p><strong>Returns:</strong> The stored value</p>
-<h3 id="sharedvariableget-asl4a">sharedVariableGet() <em>ASL4A</em><a class="headerlink" href="#sharedvariableget-asl4a" title="Permanent link">&para;</a></h3>
+<h3 id="sharedvariableget">sharedVariableGet()<a class="headerlink" href="#sharedvariableget" title="Permanent link">&para;</a></h3>
 <p>Get a Java shared variable.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">sharedVariableGet</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 </code></pre></div>
 <p><strong>Parameters:</strong>
 - <code>key</code> (str): Variable name</p>
 <p><strong>Returns:</strong> The stored value</p>
-<h3 id="sharedvariableremove-asl4a">sharedVariableRemove() <em>ASL4A</em><a class="headerlink" href="#sharedvariableremove-asl4a" title="Permanent link">&para;</a></h3>
+<h3 id="sharedvariableremove">sharedVariableRemove()<a class="headerlink" href="#sharedvariableremove" title="Permanent link">&para;</a></h3>
 <p>Remove a Java shared variable.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">sharedVariableRemove</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 </code></pre></div>
 <p><strong>Parameters:</strong>
 - <code>key</code> (str): Variable name to remove</p>
 <p><strong>Returns:</strong> The removed value</p>
-<h3 id="getlastlog-asl4a">getLastLog() <em>ASL4A</em><a class="headerlink" href="#getlastlog-asl4a" title="Permanent link">&para;</a></h3>
+<h3 id="getlastlog">getLastLog()<a class="headerlink" href="#getlastlog" title="Permanent link">&para;</a></h3>
 <p>Get the last log output from QPython.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">getLastLog</span><span class="p">()</span>
 </code></pre></div>
