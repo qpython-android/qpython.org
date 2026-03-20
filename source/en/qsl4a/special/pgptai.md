@@ -5,7 +5,7 @@ Speech-to-text and AI services integration.
 ## Prerequisites
 
 ```bash
-pip install apigptcloud
+pip install pgptAI
 ```
 
 ## Speech Recognition

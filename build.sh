@@ -33,7 +33,7 @@ cat > site/index.html << 'EOF'
 <head>
     <meta charset="utf-8">
     <title>QPython Documentation</title>
-    <meta http-equiv="refresh" content="1; url=en/">
+    <meta http-equiv="refresh" content="5; url=en/">
     <style>
         body {
             font-family: Roboto, Arial, sans-serif;
