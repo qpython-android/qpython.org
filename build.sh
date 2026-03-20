@@ -105,6 +105,10 @@ if [ -f source/CNAME ]; then
     cp source/CNAME site/
 fi
 
+# Remove "Made with Material for MkDocs" footer from all HTML files
+echo "Removing MkDocs Material footer..."
+find site -name "*.html" -exec sed -i '' '/Made with/,/<\/a>/d' {} \;
+
 echo ""
 echo "Build complete!"
 echo ""
