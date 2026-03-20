@@ -4,7 +4,7 @@ Access and manage device contacts.
 
 ## Contact Picking
 
-### pickContact() *ASL4A*
+### pickContact()
 Display a list of contacts to pick from.
 
 ```python
@@ -13,7 +13,7 @@ pickContact()
 
 **Returns:** Intent with contact URI
 
-### pickPhone() *ASL4A*
+### pickPhone()
 Display a list of phone numbers to pick from.
 
 ```python
@@ -24,7 +24,7 @@ pickPhone()
 
 ## Contact Queries
 
-### contactsGet() *ASL4A*
+### contactsGet()
 Get all contacts.
 
 ```python
@@ -36,7 +36,7 @@ contactsGet(attributes=None)
 
 **Returns:** List of contact JSONObject
 
-### contactsGetById() *ASL4A*
+### contactsGetById()
 Get a contact by ID.
 
 ```python
@@ -49,7 +49,7 @@ contactsGetById(id, attributes=None)
 
 **Returns:** JSONObject contact data
 
-### contactsGetCount() *ASL4A*
+### contactsGetCount()
 Get the total number of contacts.
 
 ```python
@@ -58,7 +58,7 @@ contactsGetCount()
 
 **Returns:** Integer count
 
-### contactsGetIds() *ASL4A*
+### contactsGetIds()
 Get all contact IDs.
 
 ```python
@@ -67,7 +67,7 @@ contactsGetIds()
 
 **Returns:** List of contact ID integers
 
-### contactsGetAttributes() *ASL4A*
+### contactsGetAttributes()
 Get all possible contact attributes.
 
 ```python
@@ -78,7 +78,7 @@ contactsGetAttributes()
 
 ## Content Queries
 
-### queryContent() *ASL4A*
+### queryContent()
 Query content resolver with custom parameters.
 
 ```python
@@ -94,7 +94,7 @@ queryContent(uri, attributes=None, selection=None, selectionArgs=None, order=Non
 
 **Returns:** List of JSONObject results
 
-### queryAttributes() *ASL4A*
+### queryAttributes()
 Get attributes for a content URI.
 
 ```python

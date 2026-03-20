@@ -4,7 +4,7 @@ Set activity results for scripts launched via `startActivityForResult`.
 
 ## Result Methods
 
-### setResultBoolean() *ASL4A*
+### setResultBoolean()
 Set a boolean result.
 
 ```python
@@ -15,7 +15,7 @@ setResultBoolean(resultCode, resultValue)
 - `resultCode` (int): Result code
 - `resultValue` (bool): Boolean result value
 
-### setResultByte() *ASL4A*
+### setResultByte()
 Set a byte result.
 
 ```python
@@ -26,7 +26,7 @@ setResultByte(resultCode, resultValue)
 - `resultCode` (int): Result code
 - `resultValue` (int): Byte result value
 
-### setResultShort() *ASL4A*
+### setResultShort()
 Set a short result.
 
 ```python
@@ -37,7 +37,7 @@ setResultShort(resultCode, resultValue)
 - `resultCode` (int): Result code
 - `resultValue` (int): Short result value
 
-### setResultChar() *ASL4A*
+### setResultChar()
 Set a character result.
 
 ```python
@@ -48,7 +48,7 @@ setResultChar(resultCode, resultValue)
 - `resultCode` (int): Result code
 - `resultValue` (str): Character result value
 
-### setResultInteger() *ASL4A*
+### setResultInteger()
 Set an integer result.
 
 ```python
@@ -59,7 +59,7 @@ setResultInteger(resultCode, resultValue)
 - `resultCode` (int): Result code
 - `resultValue` (int): Integer result value
 
-### setResultLong() *ASL4A*
+### setResultLong()
 Set a long result.
 
 ```python
@@ -70,7 +70,7 @@ setResultLong(resultCode, resultValue)
 - `resultCode` (int): Result code
 - `resultValue` (int): Long result value
 
-### setResultFloat() *ASL4A*
+### setResultFloat()
 Set a float result.
 
 ```python
@@ -81,7 +81,7 @@ setResultFloat(resultCode, resultValue)
 - `resultCode` (int): Result code
 - `resultValue` (float): Float result value
 
-### setResultDouble() *ASL4A*
+### setResultDouble()
 Set a double result.
 
 ```python
@@ -92,7 +92,7 @@ setResultDouble(resultCode, resultValue)
 - `resultCode` (int): Result code
 - `resultValue` (float): Double result value
 
-### setResultString() *ASL4A*
+### setResultString()
 Set a string result.
 
 ```python
@@ -103,7 +103,7 @@ setResultString(resultCode, resultValue)
 - `resultCode` (int): Result code
 - `resultValue` (str): String result value
 
-### setResultBooleanArray() *ASL4A*
+### setResultBooleanArray()
 Set a boolean array result.
 
 ```python
@@ -114,7 +114,7 @@ setResultBooleanArray(resultCode, resultValue)
 - `resultCode` (int): Result code
 - `resultValue` (list): Boolean array
 
-### setResultByteArray() *ASL4A*
+### setResultByteArray()
 Set a byte array result.
 
 ```python
@@ -125,7 +125,7 @@ setResultByteArray(resultCode, resultValue)
 - `resultCode` (int): Result code
 - `resultValue` (list): Byte array
 
-### setResultShortArray() *ASL4A*
+### setResultShortArray()
 Set a short array result.
 
 ```python
@@ -136,7 +136,7 @@ setResultShortArray(resultCode, resultValue)
 - `resultCode` (int): Result code
 - `resultValue` (list): Short array
 
-### setResultCharArray() *ASL4A*
+### setResultCharArray()
 Set a character array result.
 
 ```python
@@ -147,7 +147,7 @@ setResultCharArray(resultCode, resultValue)
 - `resultCode` (int): Result code
 - `resultValue` (list): Char array
 
-### setResultIntegerArray() *ASL4A*
+### setResultIntegerArray()
 Set an integer array result.
 
 ```python
@@ -158,7 +158,7 @@ setResultIntegerArray(resultCode, resultValue)
 - `resultCode` (int): Result code
 - `resultValue` (list): Integer array
 
-### setResultLongArray() *ASL4A*
+### setResultLongArray()
 Set a long array result.
 
 ```python
@@ -169,7 +169,7 @@ setResultLongArray(resultCode, resultValue)
 - `resultCode` (int): Result code
 - `resultValue` (list): Long array
 
-### setResultFloatArray() *ASL4A*
+### setResultFloatArray()
 Set a float array result.
 
 ```python
@@ -180,7 +180,7 @@ setResultFloatArray(resultCode, resultValue)
 - `resultCode` (int): Result code
 - `resultValue` (list): Float array
 
-### setResultDoubleArray() *ASL4A*
+### setResultDoubleArray()
 Set a double array result.
 
 ```python
@@ -191,7 +191,7 @@ setResultDoubleArray(resultCode, resultValue)
 - `resultCode` (int): Result code
 - `resultValue` (list): Double array
 
-### setResultStringArray() *ASL4A*
+### setResultStringArray()
 Set a string array result.
 
 ```python
@@ -202,7 +202,7 @@ setResultStringArray(resultCode, resultValue)
 - `resultCode` (int): Result code
 - `resultValue` (list): String array
 
-### setResultSerializable() *ASL4A*
+### setResultSerializable()
 Set a serializable result.
 
 ```python

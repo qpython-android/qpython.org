@@ -104,9 +104,9 @@ Pick content from URI.
 pick(uri)
 ```
 
-## Common Intent Methods *ASL4A*
+## Common Intent Methods)
 
-### scanBarcode() *ASL4A*
+### scanBarcode()
 Launch the barcode scanner.
 
 ```python
@@ -115,7 +115,7 @@ scanBarcode()
 
 **Returns:** Scanned barcode string
 
-### send() *ASL4A*
+### send()
 Send content via share intent.
 
 ```python
@@ -126,7 +126,7 @@ send(type, content)
 - `type` (str): MIME type
 - `content` (str): Content to share
 
-### sendText() *ASL4A*
+### sendText()
 Send text content.
 
 ```python
@@ -136,7 +136,7 @@ sendText(text)
 **Parameters:**
 - `text` (str): Text to send
 
-### sendEmail() *ASL4A*
+### sendEmail()
 Send an email.
 
 ```python
@@ -149,7 +149,7 @@ sendEmail(to, subject, body, attachment=None)
 - `body` (str): Email body
 - `attachment` (str, optional): Attachment file path
 
-### pathToUri() *ASL4A*
+### pathToUri()
 Convert file path to content URI.
 
 ```python
@@ -161,7 +161,7 @@ pathToUri(path)
 
 **Returns:** Content URI string
 
-### openFile() *ASL4A*
+### openFile()
 Open a file with appropriate app.
 
 ```python
@@ -171,7 +171,7 @@ openFile(path)
 **Parameters:**
 - `path` (str): File path to open
 
-### sendFile() *ASL4A*
+### sendFile()
 Send a file via share intent.
 
 ```python
@@ -181,7 +181,7 @@ sendFile(path)
 **Parameters:**
 - `path` (str): File path to send
 
-### getPathType() *ASL4A*
+### getPathType()
 Get the MIME type for a file path.
 
 ```python
@@ -193,7 +193,7 @@ getPathType(path)
 
 **Returns:** MIME type string
 
-### viewMap() *ASL4A*
+### viewMap()
 Open map at a location.
 
 ```python
@@ -204,14 +204,14 @@ viewMap(latitude, longitude)
 - `latitude` (float): Latitude
 - `longitude` (float): Longitude
 
-### viewContacts() *ASL4A*
+### viewContacts()
 Open the contacts app.
 
 ```python
 viewContacts()
 ```
 
-### search() *ASL4A*
+### search()
 Perform a web search.
 
 ```python
@@ -221,7 +221,7 @@ search(query)
 **Parameters:**
 - `query` (str): Search query
 
-### viewHtml() *ASL4A*
+### viewHtml()
 View HTML content.
 
 ```python
@@ -232,7 +232,7 @@ viewHtml(content, encoding=None)
 - `content` (str): HTML content
 - `encoding` (str, optional): Character encoding
 
-### webViewShow() *ASL4A*
+### webViewShow()
 Display web content in WebView. Deprecated, use viewHtml.
 
 ```python
@@ -242,7 +242,7 @@ webViewShow(url)
 **Parameters:**
 - `url` (str): Web page URL
 
-### editorOpen() *ASL4A*
+### editorOpen()
 Open a text editor.
 
 ```python

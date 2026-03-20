@@ -2,9 +2,9 @@
 
 与 USB 串行设备通信（需要 USB OTG 支持和 Android 3.1+）。
 
-## USB 串行方法 *ASL4A*
+## USB 串行方法)
 
-### usbHostSerialOpen() *ASL4A*
+### usbHostSerialOpen()
 打开与 USB 串行设备的连接。
 
 ```python
@@ -17,14 +17,14 @@ usbHostSerialOpen(device, baudRate=9600)
 
 **返回：** 如果打开成功则为 True
 
-### usbHostSerialClose() *ASL4A*
+### usbHostSerialClose()
 关闭 USB 串行连接。
 
 ```python
 usbHostSerialClose()
 ```
 
-### usbHostSerialRead() *ASL4A*
+### usbHostSerialRead()
 从 USB 串行读取数据。
 
 ```python
@@ -36,7 +36,7 @@ usbHostSerialRead(bufferSize=1024)
 
 **返回：** 读取的数据字符串
 
-### usbHostSerialWrite() *ASL4A*
+### usbHostSerialWrite()
 向 USB 串行写入数据。
 
 ```python
@@ -46,7 +46,7 @@ usbHostSerialWrite(data)
 **参数：**
 - `data` (str): 要写入的字符串数据
 
-### usbHostSerialAvailable() *ASL4A*
+### usbHostSerialAvailable()
 检查是否有可读取的数据。
 
 ```python
@@ -55,9 +55,9 @@ usbHostSerialAvailable()
 
 **返回：** 可用字节数
 
-## 配置方法 *ASL4A*
+## 配置方法)
 
-### usbHostSerialSetBaudRate() *ASL4A*
+### usbHostSerialSetBaudRate()
 设置波特率。
 
 ```python
@@ -67,7 +67,7 @@ usbHostSerialSetBaudRate(baudRate)
 **参数：**
 - `baudRate` (int): 波特率
 
-### usbHostSerialSetDataBits() *ASL4A*
+### usbHostSerialSetDataBits()
 设置数据位（5、6、7 或 8）。
 
 ```python
@@ -77,7 +77,7 @@ usbHostSerialSetDataBits(dataBits)
 **参数：**
 - `dataBits` (int): 数据位（5-8）
 
-### usbHostSerialSetStopBits() *ASL4A*
+### usbHostSerialSetStopBits()
 设置停止位（1、1.5 或 2）。
 
 ```python
@@ -87,7 +87,7 @@ usbHostSerialSetStopBits(stopBits)
 **参数：**
 - `stopBits` (float): 停止位（1、1.5 或 2）
 
-### usbHostSerialSetParity() *ASL4A*
+### usbHostSerialSetParity()
 设置校验位（无、奇、偶、标记、空格）。
 
 ```python
@@ -97,7 +97,7 @@ usbHostSerialSetParity(parity)
 **参数：**
 - `parity` (str): 校验模式（'none'、'odd'、'even'、'mark'、'space'）
 
-### usbHostSerialSetFlowControl() *ASL4A*
+### usbHostSerialSetFlowControl()
 设置流控制（无、硬件、软件）。
 
 ```python
@@ -107,7 +107,7 @@ usbHostSerialSetFlowControl(flowControl)
 **参数：**
 - `flowControl` (str): 流控制模式（'none'、'hardware'、'software'）
 
-### usbHostSerialReadHex() *ASL4A*
+### usbHostSerialReadHex()
 以十六进制字符串读取数据。
 
 ```python
@@ -119,7 +119,7 @@ usbHostSerialReadHex(bufferSize=1024)
 
 **返回：** 十六进制字符串
 
-### usbHostSerialWriteHex() *ASL4A*
+### usbHostSerialWriteHex()
 从十六进制字符串写入数据。
 
 ```python

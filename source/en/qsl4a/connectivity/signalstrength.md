@@ -4,21 +4,21 @@ Monitor cellular and wireless signal strength.
 
 ## Signal Strength Methods
 
-### startTrackingSignalStrengths() *ASL4A*
+### startTrackingSignalStrengths()
 Start tracking signal strength changes. Generates 'signal_strengths' events.
 
 ```python
 startTrackingSignalStrengths()
 ```
 
-### stopTrackingSignalStrengths() *ASL4A*
+### stopTrackingSignalStrengths()
 Stop tracking signal strengths.
 
 ```python
 stopTrackingSignalStrengths()
 ```
 
-### readSignalStrengths() *ASL4A*
+### readSignalStrengths()
 Read the current signal strengths.
 
 ```python
@@ -27,7 +27,7 @@ readSignalStrengths()
 
 **Returns:** Bundle with signal strength data
 
-### getTelephoneSignalStrengthLevel() *ASL4A*
+### getTelephoneSignalStrengthLevel()
 Get the telephone signal strength as a level (0-4).
 
 ```python
@@ -36,7 +36,7 @@ getTelephoneSignalStrengthLevel()
 
 **Returns:** Integer level (0=none, 1=poor, 2=fair, 3=good, 4=excellent)
 
-### getTelephoneSignalStrengthDetail() *ASL4A*
+### getTelephoneSignalStrengthDetail()
 Get detailed telephone signal strength information.
 
 ```python

@@ -4,7 +4,7 @@
 
 ## 结果方法
 
-### setResultBoolean() *ASL4A*
+### setResultBoolean()
 设置布尔结果。
 
 ```python
@@ -15,7 +15,7 @@ setResultBoolean(resultCode, resultValue)
 - `resultCode` (int): 结果代码
 - `resultValue` (bool): 布尔结果值
 
-### setResultByte() *ASL4A*
+### setResultByte()
 设置字节结果。
 
 ```python
@@ -26,7 +26,7 @@ setResultByte(resultCode, resultValue)
 - `resultCode` (int): 结果代码
 - `resultValue` (int): 字节结果值
 
-### setResultShort() *ASL4A*
+### setResultShort()
 设置短整数结果。
 
 ```python
@@ -37,7 +37,7 @@ setResultShort(resultCode, resultValue)
 - `resultCode` (int): 结果代码
 - `resultValue` (int): 短整数结果值
 
-### setResultChar() *ASL4A*
+### setResultChar()
 设置字符结果。
 
 ```python
@@ -48,7 +48,7 @@ setResultChar(resultCode, resultValue)
 - `resultCode` (int): 结果代码
 - `resultValue` (str): 字符结果值
 
-### setResultInteger() *ASL4A*
+### setResultInteger()
 设置整数结果。
 
 ```python
@@ -59,7 +59,7 @@ setResultInteger(resultCode, resultValue)
 - `resultCode` (int): 结果代码
 - `resultValue` (int): 整数结果值
 
-### setResultLong() *ASL4A*
+### setResultLong()
 设置长整数结果。
 
 ```python
@@ -70,7 +70,7 @@ setResultLong(resultCode, resultValue)
 - `resultCode` (int): 结果代码
 - `resultValue` (int): 长整数结果值
 
-### setResultFloat() *ASL4A*
+### setResultFloat()
 设置浮点数结果。
 
 ```python
@@ -81,7 +81,7 @@ setResultFloat(resultCode, resultValue)
 - `resultCode` (int): 结果代码
 - `resultValue` (float): 浮点数结果值
 
-### setResultDouble() *ASL4A*
+### setResultDouble()
 设置双精度浮点数结果。
 
 ```python
@@ -92,7 +92,7 @@ setResultDouble(resultCode, resultValue)
 - `resultCode` (int): 结果代码
 - `resultValue` (float): 双精度浮点数结果值
 
-### setResultString() *ASL4A*
+### setResultString()
 设置字符串结果。
 
 ```python
@@ -103,7 +103,7 @@ setResultString(resultCode, resultValue)
 - `resultCode` (int): 结果代码
 - `resultValue` (str): 字符串结果值
 
-### setResultBooleanArray() *ASL4A*
+### setResultBooleanArray()
 设置布尔数组结果。
 
 ```python
@@ -114,7 +114,7 @@ setResultBooleanArray(resultCode, resultValue)
 - `resultCode` (int): 结果代码
 - `resultValue` (list): 布尔数组
 
-### setResultByteArray() *ASL4A*
+### setResultByteArray()
 设置字节数组结果。
 
 ```python
@@ -125,7 +125,7 @@ setResultByteArray(resultCode, resultValue)
 - `resultCode` (int): 结果代码
 - `resultValue` (list): 字节数组
 
-### setResultShortArray() *ASL4A*
+### setResultShortArray()
 设置短整数数组结果。
 
 ```python
@@ -136,7 +136,7 @@ setResultShortArray(resultCode, resultValue)
 - `resultCode` (int): 结果代码
 - `resultValue` (list): 短整数数组
 
-### setResultCharArray() *ASL4A*
+### setResultCharArray()
 设置字符数组结果。
 
 ```python
@@ -147,7 +147,7 @@ setResultCharArray(resultCode, resultValue)
 - `resultCode` (int): 结果代码
 - `resultValue` (list): 字符数组
 
-### setResultIntegerArray() *ASL4A*
+### setResultIntegerArray()
 设置整数数组结果。
 
 ```python
@@ -158,7 +158,7 @@ setResultIntegerArray(resultCode, resultValue)
 - `resultCode` (int): 结果代码
 - `resultValue` (list): 整数数组
 
-### setResultLongArray() *ASL4A*
+### setResultLongArray()
 设置长整数数组结果。
 
 ```python
@@ -169,7 +169,7 @@ setResultLongArray(resultCode, resultValue)
 - `resultCode` (int): 结果代码
 - `resultValue` (list): 长整数数组
 
-### setResultFloatArray() *ASL4A*
+### setResultFloatArray()
 设置浮点数数组结果。
 
 ```python
@@ -180,7 +180,7 @@ setResultFloatArray(resultCode, resultValue)
 - `resultCode` (int): 结果代码
 - `resultValue` (list): 浮点数数组
 
-### setResultDoubleArray() *ASL4A*
+### setResultDoubleArray()
 设置双精度浮点数数组结果。
 
 ```python
@@ -191,7 +191,7 @@ setResultDoubleArray(resultCode, resultValue)
 - `resultCode` (int): 结果代码
 - `resultValue` (list): 双精度浮点数数组
 
-### setResultStringArray() *ASL4A*
+### setResultStringArray()
 设置字符串数组结果。
 
 ```python
@@ -202,7 +202,7 @@ setResultStringArray(resultCode, resultValue)
 - `resultCode` (int): 结果代码
 - `resultValue` (list): 字符串数组
 
-### setResultSerializable() *ASL4A*
+### setResultSerializable()
 设置可序列化结果。
 
 ```python

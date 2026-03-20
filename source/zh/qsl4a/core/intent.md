@@ -104,9 +104,9 @@ view(uri, type=None, extras=None)
 pick(uri)
 ```
 
-## 常见 Intent 方法 *ASL4A*
+## 常见 Intent 方法)
 
-### scanBarcode() *ASL4A*
+### scanBarcode()
 启动条码扫描器。
 
 ```python
@@ -115,7 +115,7 @@ scanBarcode()
 
 **返回：** 扫描的条码字符串
 
-### send() *ASL4A*
+### send()
 通过分享 Intent 发送内容。
 
 ```python
@@ -126,7 +126,7 @@ send(type, content)
 - `type` (str): MIME 类型
 - `content` (str): 要分享的内容
 
-### sendText() *ASL4A*
+### sendText()
 发送文本内容。
 
 ```python
@@ -136,7 +136,7 @@ sendText(text)
 **参数：**
 - `text` (str): 要发送的文本
 
-### sendEmail() *ASL4A*
+### sendEmail()
 发送电子邮件。
 
 ```python
@@ -149,7 +149,7 @@ sendEmail(to, subject, body, attachment=None)
 - `body` (str): 电子邮件正文
 - `attachment` (str, optional): 附件文件路径
 
-### pathToUri() *ASL4A*
+### pathToUri()
 将文件路径转换为内容 URI。
 
 ```python
@@ -161,7 +161,7 @@ pathToUri(path)
 
 **返回：** 内容 URI 字符串
 
-### openFile() *ASL4A*
+### openFile()
 用适当的应用程序打开文件。
 
 ```python
@@ -171,7 +171,7 @@ openFile(path)
 **参数：**
 - `path` (str): 要打开的文件路径
 
-### sendFile() *ASL4A*
+### sendFile()
 通过分享 Intent 发送文件。
 
 ```python
@@ -181,7 +181,7 @@ sendFile(path)
 **参数：**
 - `path` (str): 要发送的文件路径
 
-### getPathType() *ASL4A*
+### getPathType()
 获取文件路径的 MIME 类型。
 
 ```python
@@ -193,7 +193,7 @@ getPathType(path)
 
 **返回：** MIME 类型字符串
 
-### viewMap() *ASL4A*
+### viewMap()
 在指定位置打开地图。
 
 ```python
@@ -204,14 +204,14 @@ viewMap(latitude, longitude)
 - `latitude` (float): 纬度
 - `longitude` (float): 经度
 
-### viewContacts() *ASL4A*
+### viewContacts()
 打开联系人应用。
 
 ```python
 viewContacts()
 ```
 
-### search() *ASL4A*
+### search()
 执行网络搜索。
 
 ```python
@@ -221,7 +221,7 @@ search(query)
 **参数：**
 - `query` (str): 搜索查询
 
-### viewHtml() *ASL4A*
+### viewHtml()
 查看 HTML 内容。
 
 ```python
@@ -232,7 +232,7 @@ viewHtml(content, encoding=None)
 - `content` (str): HTML 内容
 - `encoding` (str, optional): 字符编码
 
-### webViewShow() *ASL4A*
+### webViewShow()
 在 WebView 中显示网页内容。已废弃，请使用 viewHtml。
 
 ```python
@@ -242,7 +242,7 @@ webViewShow(url)
 **参数：**
 - `url` (str): 网页 URL
 
-### editorOpen() *ASL4A*
+### editorOpen()
 打开文本编辑器。
 
 ```python

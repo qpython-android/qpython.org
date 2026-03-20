@@ -4,7 +4,7 @@
 
 ## 屏幕设置
 
-### setScreenTimeout() *ASL4A*
+### setScreenTimeout()
 设置屏幕超时值。
 
 ```python
@@ -16,7 +16,7 @@ setScreenTimeout(value)
 
 **返回：** 之前的超时值
 
-### getScreenTimeout() *ASL4A*
+### getScreenTimeout()
 获取当前屏幕超时。
 
 ```python
@@ -25,7 +25,7 @@ getScreenTimeout()
 
 **返回：** 当前屏幕超时时间（秒）
 
-### getScreenBrightness() *ASL4A*
+### getScreenBrightness()
 获取屏幕亮度值。
 
 ```python
@@ -34,7 +34,7 @@ getScreenBrightness()
 
 **返回：** 亮度值（0-255）
 
-### setScreenBrightness() *ASL4A*
+### setScreenBrightness()
 设置屏幕亮度。
 
 ```python
@@ -46,7 +46,7 @@ setScreenBrightness(value=None)
 
 **返回：** 之前的亮度值
 
-### checkScreenOn() *ASL4A*
+### checkScreenOn()
 检查屏幕是否亮着。
 
 ```python
@@ -57,7 +57,7 @@ checkScreenOn()
 
 ## 飞行模式
 
-### checkAirplaneMode() *ASL4A*
+### checkAirplaneMode()
 检查飞行模式是否启用。
 
 ```python
@@ -68,7 +68,7 @@ checkAirplaneMode()
 
 ## 铃声设置
 
-### checkRingerSilentMode() *ASL4A*
+### checkRingerSilentMode()
 检查铃声是否处于静音模式。
 
 ```python
@@ -77,7 +77,7 @@ checkRingerSilentMode()
 
 **返回：** 如果静音模式开着则为 True
 
-### toggleRingerSilentMode() *ASL4A*
+### toggleRingerSilentMode()
 切换铃声静音模式。
 
 ```python
@@ -89,7 +89,7 @@ toggleRingerSilentMode(enabled=None)
 
 **返回：** 新状态
 
-### toggleVibrateMode() *ASL4A*
+### toggleVibrateMode()
 切换振动模式。
 
 ```python
@@ -102,7 +102,7 @@ toggleVibrateMode(enabled=None, ringer=None)
 
 **返回：** 新状态
 
-### getVibrateMode() *ASL4A*
+### getVibrateMode()
 获取振动模式设置。
 
 ```python
@@ -116,7 +116,7 @@ getVibrateMode(ringer=None)
 
 ## 音量设置
 
-### getRingerVolume() *ASL4A*
+### getRingerVolume()
 获取当前铃声音量。
 
 ```python
@@ -125,7 +125,7 @@ getRingerVolume()
 
 **返回：** 铃声音量级别（通常为 0-7）
 
-### getMaxRingerVolume() *ASL4A*
+### getMaxRingerVolume()
 获取最大铃声音量。
 
 ```python
@@ -134,7 +134,7 @@ getMaxRingerVolume()
 
 **返回：** 最大铃声音量
 
-### setRingerVolume() *ASL4A*
+### setRingerVolume()
 设置铃声音量。
 
 ```python
@@ -144,7 +144,7 @@ setRingerVolume(volume)
 **参数：**
 - `volume` (int): 音量级别
 
-### getMediaVolume() *ASL4A*
+### getMediaVolume()
 获取当前媒体音量。
 
 ```python
@@ -153,7 +153,7 @@ getMediaVolume()
 
 **返回：** 媒体音量级别（通常为 0-15）
 
-### getMaxMediaVolume() *ASL4A*
+### getMaxMediaVolume()
 获取最大媒体音量。
 
 ```python
@@ -162,7 +162,7 @@ getMaxMediaVolume()
 
 **返回：** 最大媒体音量
 
-### setMediaVolume() *ASL4A*
+### setMediaVolume()
 设置媒体音量。
 
 ```python
@@ -174,7 +174,7 @@ setMediaVolume(volume)
 
 ## 系统信息
 
-### elapsedRealtimeNanos() *ASL4A*
+### elapsedRealtimeNanos()
 获取自系统启动以来的纳秒数。
 
 ```python
@@ -183,7 +183,7 @@ elapsedRealtimeNanos()
 
 **返回：** 纳秒数（可用于计时）
 
-### getTrafficStats() *ASL4A*
+### getTrafficStats()
 获取网络流量统计。
 
 ```python
@@ -195,7 +195,7 @@ getTrafficStats(flags=7)
 
 **返回：** 包含发送/接收字节的字典
 
-### getAppTxBytes() *ASL4A*
+### getAppTxBytes()
 获取 QPython 应用的发送字节。
 
 ```python

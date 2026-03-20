@@ -4,7 +4,7 @@ Store and retrieve data using Android SharedPreferences.
 
 ## Preference Methods
 
-### prefGetValue() *ASL4A*
+### prefGetValue()
 Read a value from shared preferences.
 
 ```python
@@ -17,7 +17,7 @@ prefGetValue(key, filename=None)
 
 **Returns:** The stored value (any type)
 
-### prefPutValue() *ASL4A*
+### prefPutValue()
 Write a value to shared preferences.
 
 ```python
@@ -29,7 +29,7 @@ prefPutValue(key, value, filename=None)
 - `value` (object): Value to store
 - `filename` (str, optional): Preference file name
 
-### prefGetAll() *ASL4A*
+### prefGetAll()
 Get all preference values.
 
 ```python
@@ -41,7 +41,7 @@ prefGetAll(filename=None)
 
 **Returns:** Map of all preferences
 
-### prefRemoveValue() *ASL4A*
+### prefRemoveValue()
 Remove a value from shared preferences.
 
 ```python

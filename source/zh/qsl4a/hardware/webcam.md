@@ -4,7 +4,7 @@
 
 ## MJPEG 流方法
 
-### webcamStart() *ASL4A*
+### webcamStart()
 从网络摄像头启动 MJPEG 流。
 
 ```python
@@ -18,7 +18,7 @@ webcamStart(resolutionLevel=0, jpegQuality=20, port=0)
 
 **返回：** 流的 (地址, 端口) 元组
 
-### webcamAdjustQuality() *ASL4A*
+### webcamAdjustQuality()
 调整活动网络摄像头流的质量。
 
 ```python
@@ -29,7 +29,7 @@ webcamAdjustQuality(resolutionLevel=0, jpegQuality=20)
 - `resolutionLevel` (int): 分辨率级别
 - `jpegQuality` (int): JPEG 质量 1-100
 
-### webcamStop() *ASL4A*
+### webcamStop()
 停止网络摄像头流。
 
 ```python
@@ -38,7 +38,7 @@ webcamStop()
 
 ## 相机预览方法
 
-### cameraStartPreview() *ASL4A*
+### cameraStartPreview()
 开始带事件生成的相机预览模式。
 
 ```python
@@ -54,7 +54,7 @@ cameraStartPreview(resolutionLevel=0, jpegQuality=20, filepath=None)
 
 **注意：** 生成带有帧数据的 'preview' 事件。
 
-### cameraStopPreview() *ASL4A*
+### cameraStopPreview()
 停止相机预览。
 
 ```python

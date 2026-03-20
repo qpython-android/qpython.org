@@ -97,7 +97,7 @@ sensorsGetStepCounter()
 
 **Returns:** Number of steps
 
-### sensorsGetAccuracy() *ASL4A*
+### sensorsGetAccuracy()
 Get the current sensor accuracy.
 
 ```python

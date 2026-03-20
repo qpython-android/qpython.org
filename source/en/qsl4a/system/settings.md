@@ -4,7 +4,7 @@ Control system settings including screen, sound, and network settings.
 
 ## Screen Settings
 
-### setScreenTimeout() *ASL4A*
+### setScreenTimeout()
 Set the screen timeout value.
 
 ```python
@@ -16,7 +16,7 @@ setScreenTimeout(value)
 
 **Returns:** Previous timeout value
 
-### getScreenTimeout() *ASL4A*
+### getScreenTimeout()
 Get the current screen timeout.
 
 ```python
@@ -25,7 +25,7 @@ getScreenTimeout()
 
 **Returns:** Current screen timeout in seconds
 
-### getScreenBrightness() *ASL4A*
+### getScreenBrightness()
 Get the screen brightness value.
 
 ```python
@@ -34,7 +34,7 @@ getScreenBrightness()
 
 **Returns:** Brightness value (0-255)
 
-### setScreenBrightness() *ASL4A*
+### setScreenBrightness()
 Set the screen brightness.
 
 ```python
@@ -46,7 +46,7 @@ setScreenBrightness(value=None)
 
 **Returns:** Previous brightness value
 
-### checkScreenOn() *ASL4A*
+### checkScreenOn()
 Check if the screen is on.
 
 ```python
@@ -57,7 +57,7 @@ checkScreenOn()
 
 ## Airplane Mode
 
-### checkAirplaneMode() *ASL4A*
+### checkAirplaneMode()
 Check if airplane mode is enabled.
 
 ```python
@@ -68,7 +68,7 @@ checkAirplaneMode()
 
 ## Ringer Settings
 
-### checkRingerSilentMode() *ASL4A*
+### checkRingerSilentMode()
 Check if ringer is in silent mode.
 
 ```python
@@ -77,7 +77,7 @@ checkRingerSilentMode()
 
 **Returns:** True if silent mode is on
 
-### toggleRingerSilentMode() *ASL4A*
+### toggleRingerSilentMode()
 Toggle ringer silent mode.
 
 ```python
@@ -89,7 +89,7 @@ toggleRingerSilentMode(enabled=None)
 
 **Returns:** New state
 
-### toggleVibrateMode() *ASL4A*
+### toggleVibrateMode()
 Toggle vibrate mode.
 
 ```python
@@ -102,7 +102,7 @@ toggleVibrateMode(enabled=None, ringer=None)
 
 **Returns:** New state
 
-### getVibrateMode() *ASL4A*
+### getVibrateMode()
 Get the vibrate mode setting.
 
 ```python
@@ -116,7 +116,7 @@ getVibrateMode(ringer=None)
 
 ## Volume Settings
 
-### getRingerVolume() *ASL4A*
+### getRingerVolume()
 Get the current ringer volume.
 
 ```python
@@ -125,7 +125,7 @@ getRingerVolume()
 
 **Returns:** Ringer volume level (0-7 typically)
 
-### getMaxRingerVolume() *ASL4A*
+### getMaxRingerVolume()
 Get the maximum ringer volume.
 
 ```python
@@ -134,7 +134,7 @@ getMaxRingerVolume()
 
 **Returns:** Maximum ringer volume
 
-### setRingerVolume() *ASL4A*
+### setRingerVolume()
 Set the ringer volume.
 
 ```python
@@ -144,7 +144,7 @@ setRingerVolume(volume)
 **Parameters:**
 - `volume` (int): Volume level
 
-### getMediaVolume() *ASL4A*
+### getMediaVolume()
 Get the current media volume.
 
 ```python
@@ -153,7 +153,7 @@ getMediaVolume()
 
 **Returns:** Media volume level (0-15 typically)
 
-### getMaxMediaVolume() *ASL4A*
+### getMaxMediaVolume()
 Get the maximum media volume.
 
 ```python
@@ -162,7 +162,7 @@ getMaxMediaVolume()
 
 **Returns:** Maximum media volume
 
-### setMediaVolume() *ASL4A*
+### setMediaVolume()
 Set the media volume.
 
 ```python
@@ -174,7 +174,7 @@ setMediaVolume(volume)
 
 ## System Info
 
-### elapsedRealtimeNanos() *ASL4A*
+### elapsedRealtimeNanos()
 Get nanoseconds since system startup.
 
 ```python
@@ -183,7 +183,7 @@ elapsedRealtimeNanos()
 
 **Returns:** Nanoseconds (can be used for timing)
 
-### getTrafficStats() *ASL4A*
+### getTrafficStats()
 Get network traffic statistics.
 
 ```python
@@ -195,7 +195,7 @@ getTrafficStats(flags=7)
 
 **Returns:** Dict with transmit/receive bytes
 
-### getAppTxBytes() *ASL4A*
+### getAppTxBytes()
 Get transmit bytes for QPython app.
 
 ```python

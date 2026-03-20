@@ -4,7 +4,7 @@
 
 ## 脚本执行方法
 
-### executeQPy() *ASL4A*
+### executeQPy()
 执行 QPython 脚本。
 
 ```python
@@ -17,7 +17,7 @@ executeQPy(path="", arg=None)
 
 **返回：** 如果启动成功则为 True
 
-### executeQPyAsSrv() *ASL4A*
+### executeQPyAsSrv()
 作为服务执行 QPython 脚本。
 
 ```python
@@ -29,7 +29,7 @@ executeQPyAsSrv(path=None)
 
 **返回：** 如果启动成功则为 True
 
-### executeQPyCode() *ASL4A*
+### executeQPyCode()
 直接执行 Python 代码。
 
 ```python
@@ -41,7 +41,7 @@ executeQPyCode(code=None)
 
 **返回：** 如果启动成功则为 True
 
-### executeQPyCodeAsSrv() *ASL4A*
+### executeQPyCodeAsSrv()
 作为服务执行 Python 代码。
 
 ```python
@@ -57,7 +57,7 @@ executeQPyCodeAsSrv(code=None)
 
 共享变量允许 QPython 与其他应用之间进行通信。
 
-### sharedVariableSet() *ASL4A*
+### sharedVariableSet()
 设置 Java 共享变量。
 
 ```python
@@ -70,7 +70,7 @@ sharedVariableSet(key, value)
 
 **返回：** 存储的值
 
-### sharedVariableGet() *ASL4A*
+### sharedVariableGet()
 获取 Java 共享变量。
 
 ```python
@@ -82,7 +82,7 @@ sharedVariableGet(key)
 
 **返回：** 存储的值
 
-### sharedVariableRemove() *ASL4A*
+### sharedVariableRemove()
 移除 Java 共享变量。
 
 ```python
@@ -94,7 +94,7 @@ sharedVariableRemove(key)
 
 **返回：** 被移除的值
 
-### getLastLog() *ASL4A*
+### getLastLog()
 获取 QPython 的最后日志输出。
 
 ```python

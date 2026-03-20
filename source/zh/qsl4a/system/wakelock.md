@@ -15,35 +15,35 @@ QSL4A 提供不同类型的唤醒锁：
 
 ## Wake Lock 方法
 
-### wakeLockAcquireFull() *ASL4A*
+### wakeLockAcquireFull()
 获取完整唤醒锁（CPU 开启，屏幕亮，键盘亮）。
 
 ```python
 wakeLockAcquireFull()
 ```
 
-### wakeLockAcquirePartial() *ASL4A*
+### wakeLockAcquirePartial()
 获取部分唤醒锁（仅 CPU 开启）。
 
 ```python
 wakeLockAcquirePartial()
 ```
 
-### wakeLockAcquireBright() *ASL4A*
+### wakeLockAcquireBright()
 获取明亮唤醒锁（CPU 开启，屏幕亮）。
 
 ```python
 wakeLockAcquireBright()
 ```
 
-### wakeLockAcquireDim() *ASL4A*
+### wakeLockAcquireDim()
 获取暗淡唤醒锁（CPU 开启，屏幕暗）。
 
 ```python
 wakeLockAcquireDim()
 ```
 
-### wakeLockRelease() *ASL4A*
+### wakeLockRelease()
 释放唤醒锁。
 
 ```python

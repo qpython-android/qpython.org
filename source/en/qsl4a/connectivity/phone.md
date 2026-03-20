@@ -4,14 +4,14 @@ Control phone calls and retrieve phone information.
 
 ## Phone State Tracking
 
-### startTrackingPhoneState() *ASL4A*
+### startTrackingPhoneState()
 Start tracking phone state changes. Generates 'phone' events.
 
 ```python
 startTrackingPhoneState()
 ```
 
-### readPhoneState() *ASL4A*
+### readPhoneState()
 Read the current phone state.
 
 ```python
@@ -20,7 +20,7 @@ readPhoneState()
 
 **Returns:** Bundle with phone state and incoming number
 
-### stopTrackingPhoneState() *ASL4A*
+### stopTrackingPhoneState()
 Stop tracking phone state.
 
 ```python
@@ -29,7 +29,7 @@ stopTrackingPhoneState()
 
 ## Making Calls
 
-### phoneCall() *ASL4A*
+### phoneCall()
 Call a contact/phone number by URI.
 
 ```python
@@ -39,7 +39,7 @@ phoneCall(uri)
 **Parameters:**
 - `uri` (str): Contact URI or phone number URI
 
-### phoneCallNumber() *ASL4A*
+### phoneCallNumber()
 Call a phone number directly.
 
 ```python
@@ -49,7 +49,7 @@ phoneCallNumber(phone_number)
 **Parameters:**
 - `phone_number` (str): Phone number to call
 
-### phoneDial() *ASL4A*
+### phoneDial()
 Dial a number (opens dialer without calling).
 
 ```python
@@ -59,7 +59,7 @@ phoneDial(uri)
 **Parameters:**
 - `uri` (str): Contact URI or phone number URI
 
-### phoneDialNumber() *ASL4A*
+### phoneDialNumber()
 Dial a phone number (opens dialer without calling).
 
 ```python
@@ -71,7 +71,7 @@ phoneDialNumber(phone_number)
 
 ## Cell Location
 
-### getCellLocation() *ASL4A*
+### getCellLocation()
 Get the current cell location.
 
 ```python
@@ -80,7 +80,7 @@ getCellLocation()
 
 **Returns:** JSONObject with cell location data
 
-### getAllCellsLocation() *ASL4A*
+### getAllCellsLocation()
 Get all cell locations (for dual SIM devices).
 
 ```python
@@ -91,7 +91,7 @@ getAllCellsLocation()
 
 ## Network Information
 
-### getNetworkOperator() *ASL4A*
+### getNetworkOperator()
 Get the MCC+MNC of the current operator.
 
 ```python
@@ -100,7 +100,7 @@ getNetworkOperator()
 
 **Returns:** String (e.g., '310260')
 
-### getNetworkOperatorName() *ASL4A*
+### getNetworkOperatorName()
 Get the name of the current operator.
 
 ```python
@@ -109,7 +109,7 @@ getNetworkOperatorName()
 
 **Returns:** String (e.g., 'T-Mobile')
 
-### getNetworkType() *ASL4A*
+### getNetworkType()
 Get the current network type.
 
 ```python
@@ -118,7 +118,7 @@ getNetworkType()
 
 **Returns:** String describing radio technology (e.g., 'LTE', 'UMTS', 'GSM')
 
-### getPhoneType() *ASL4A*
+### getPhoneType()
 Get the phone type.
 
 ```python
@@ -129,7 +129,7 @@ getPhoneType()
 
 ## SIM Information
 
-### getSimCountryIso() *ASL4A*
+### getSimCountryIso()
 Get the ISO country code for the SIM.
 
 ```python
@@ -138,7 +138,7 @@ getSimCountryIso()
 
 **Returns:** String (e.g., 'us')
 
-### getSimOperator() *ASL4A*
+### getSimOperator()
 Get the MCC+MNC of the SIM operator.
 
 ```python
@@ -147,7 +147,7 @@ getSimOperator()
 
 **Returns:** String (e.g., '310260')
 
-### getSimOperatorName() *ASL4A*
+### getSimOperatorName()
 Get the SIM operator name.
 
 ```python
@@ -156,7 +156,7 @@ getSimOperatorName()
 
 **Returns:** String (e.g., 'T-Mobile')
 
-### getSimSerialNumber() *ASL4A*
+### getSimSerialNumber()
 Get the SIM serial number.
 
 ```python
@@ -165,7 +165,7 @@ getSimSerialNumber()
 
 **Returns:** String SIM serial number
 
-### getSimState() *ASL4A*
+### getSimState()
 Get the SIM card state.
 
 ```python
@@ -174,7 +174,7 @@ getSimState()
 
 **Returns:** String describing SIM state
 
-### getSubscriberId() *ASL4A*
+### getSubscriberId()
 Get the subscriber ID.
 
 ```python
@@ -185,7 +185,7 @@ getSubscriberId()
 
 ## Voice Mail
 
-### getVoiceMailAlphaTag() *ASL4A*
+### getVoiceMailAlphaTag()
 Get the voice mail alpha tag.
 
 ```python
@@ -194,7 +194,7 @@ getVoiceMailAlphaTag()
 
 **Returns:** String voice mail tag
 
-### getVoiceMailNumber() *ASL4A*
+### getVoiceMailNumber()
 Get the voice mail number.
 
 ```python
@@ -205,7 +205,7 @@ getVoiceMailNumber()
 
 ## Device Information
 
-### getDeviceId() *ASL4A*
+### getDeviceId()
 Get the device ID (IMEI for GSM). Deprecated.
 
 ```python
@@ -214,7 +214,7 @@ getDeviceId()
 
 **Returns:** String device ID
 
-### getDeviceSoftwareVersion() *ASL4A*
+### getDeviceSoftwareVersion()
 Get the device software version.
 
 ```python
@@ -223,7 +223,7 @@ getDeviceSoftwareVersion()
 
 **Returns:** String software version
 
-### getLine1Number() *ASL4A*
+### getLine1Number()
 Get the line 1 phone number.
 
 ```python
@@ -232,7 +232,7 @@ getLine1Number()
 
 **Returns:** String phone number
 
-### checkNetworkRoaming() *ASL4A*
+### checkNetworkRoaming()
 Check if connected to roaming network.
 
 ```python
@@ -243,7 +243,7 @@ checkNetworkRoaming()
 
 ## Cell Info
 
-### getAllCellInfo() *ASL4A*
+### getAllCellInfo()
 Get information about all cells.
 
 ```python
@@ -252,7 +252,7 @@ getAllCellInfo()
 
 **Returns:** List of cell information
 
-### setDataEnabled() *ASL4A*
+### setDataEnabled()
 Enable or disable mobile data.
 
 ```python

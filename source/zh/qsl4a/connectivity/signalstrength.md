@@ -4,21 +4,21 @@
 
 ## 信号强度方法
 
-### startTrackingSignalStrengths() *ASL4A*
+### startTrackingSignalStrengths()
 开始跟踪信号强度变化。生成 'signal_strengths' 事件。
 
 ```python
 startTrackingSignalStrengths()
 ```
 
-### stopTrackingSignalStrengths() *ASL4A*
+### stopTrackingSignalStrengths()
 停止跟踪信号强度。
 
 ```python
 stopTrackingSignalStrengths()
 ```
 
-### readSignalStrengths() *ASL4A*
+### readSignalStrengths()
 读取当前信号强度。
 
 ```python
@@ -27,7 +27,7 @@ readSignalStrengths()
 
 **返回：** 包含信号强度数据的 Bundle
 
-### getTelephoneSignalStrengthLevel() *ASL4A*
+### getTelephoneSignalStrengthLevel()
 获取电话信号强度等级（0-4）。
 
 ```python
@@ -36,7 +36,7 @@ getTelephoneSignalStrengthLevel()
 
 **返回：** 整数等级（0=无，1=差，2=一般，3=好，4=优秀）
 
-### getTelephoneSignalStrengthDetail() *ASL4A*
+### getTelephoneSignalStrengthDetail()
 获取详细的电话信号强度信息。
 
 ```python

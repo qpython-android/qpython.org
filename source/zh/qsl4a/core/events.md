@@ -109,10 +109,10 @@ eventGetBrodcastCategories()
 
 **返回：** 已注册类别列表
 
-## 事件分发器 *ASL4A*
+## 事件分发器)
 
 ### startEventDispatcher()
-打开一个可以读取已发布事件的套接字。 *ASL4A*
+打开一个可以读取已发布事件的套接字。)
 
 ```python
 startEventDispatcher(port=0)
@@ -124,7 +124,7 @@ startEventDispatcher(port=0)
 **返回：** 正在监听的端口号
 
 ### stopEventDispatcher()
-停止事件服务器。 *ASL4A*
+停止事件服务器。)
 
 ```python
 stopEventDispatcher()
@@ -132,7 +132,7 @@ stopEventDispatcher()
 
 ## 已废弃方法
 
-### rpcPostEvent() *ASL4A*
+### rpcPostEvent()
 将事件发布到事件队列。（已废弃，请使用 eventPost）
 
 ```python

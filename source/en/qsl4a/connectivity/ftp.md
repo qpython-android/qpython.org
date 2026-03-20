@@ -4,7 +4,7 @@ Start and manage a built-in FTP server on the device.
 
 ## FTP Server Methods
 
-### ftpStart() *ASL4A*
+### ftpStart()
 Start the FTP server.
 
 ```python
@@ -13,14 +13,14 @@ ftpStart()
 
 **Returns:** Array containing IP address and port [ip, port]
 
-### ftpStop() *ASL4A*
+### ftpStop()
 Stop the FTP server.
 
 ```python
 ftpStop()
 ```
 
-### ftpIsRunning() *ASL4A*
+### ftpIsRunning()
 Check if FTP server is running.
 
 ```python
@@ -29,7 +29,7 @@ ftpIsRunning()
 
 **Returns:** True if running
 
-### ftpGet() *ASL4A*
+### ftpGet()
 Get FTP server IP address.
 
 ```python
@@ -38,7 +38,7 @@ ftpGet()
 
 **Returns:** Array with IP address and port
 
-### ftpSet() *ASL4A*
+### ftpSet()
 Configure FTP server settings.
 
 ```python
@@ -53,7 +53,7 @@ ftpSet(port=None, rootDir=None, username=None, password=None)
 
 **Returns:** JSONObject with current settings
 
-### ftpStatus() *ASL4A*
+### ftpStatus()
 Get FTP server status.
 
 ```python

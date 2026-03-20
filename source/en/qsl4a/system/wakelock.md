@@ -15,35 +15,35 @@ QSL4A provides different wake lock types:
 
 ## Wake Lock Methods
 
-### wakeLockAcquireFull() *ASL4A*
+### wakeLockAcquireFull()
 Acquire a full wake lock (CPU on, screen bright, keyboard bright).
 
 ```python
 wakeLockAcquireFull()
 ```
 
-### wakeLockAcquirePartial() *ASL4A*
+### wakeLockAcquirePartial()
 Acquire a partial wake lock (CPU on only).
 
 ```python
 wakeLockAcquirePartial()
 ```
 
-### wakeLockAcquireBright() *ASL4A*
+### wakeLockAcquireBright()
 Acquire a bright wake lock (CPU on, screen bright).
 
 ```python
 wakeLockAcquireBright()
 ```
 
-### wakeLockAcquireDim() *ASL4A*
+### wakeLockAcquireDim()
 Acquire a dim wake lock (CPU on, screen dim).
 
 ```python
 wakeLockAcquireDim()
 ```
 
-### wakeLockRelease() *ASL4A*
+### wakeLockRelease()
 Release the wake lock.
 
 ```python

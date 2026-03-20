@@ -4,7 +4,7 @@
 
 ## 选择联系人
 
-### pickContact() *ASL4A*
+### pickContact()
 显示联系人列表以供选择。
 
 ```python
@@ -13,7 +13,7 @@ pickContact()
 
 **返回：** 包含联系人 URI 的 Intent
 
-### pickPhone() *ASL4A*
+### pickPhone()
 显示电话号码列表以供选择。
 
 ```python
@@ -24,7 +24,7 @@ pickPhone()
 
 ## 联系人查询
 
-### contactsGet() *ASL4A*
+### contactsGet()
 获取所有联系人。
 
 ```python
@@ -36,7 +36,7 @@ contactsGet(attributes=None)
 
 **返回：** 联系人 JSONObject 列表
 
-### contactsGetById() *ASL4A*
+### contactsGetById()
 通过 ID 获取联系人。
 
 ```python
@@ -49,7 +49,7 @@ contactsGetById(id, attributes=None)
 
 **返回：** JSONObject 联系人数据
 
-### contactsGetCount() *ASL4A*
+### contactsGetCount()
 获取联系人总数。
 
 ```python
@@ -58,7 +58,7 @@ contactsGetCount()
 
 **返回：** 整数计数
 
-### contactsGetIds() *ASL4A*
+### contactsGetIds()
 获取所有联系人 ID。
 
 ```python
@@ -67,7 +67,7 @@ contactsGetIds()
 
 **返回：** 联系人 ID 整数列表
 
-### contactsGetAttributes() *ASL4A*
+### contactsGetAttributes()
 获取所有可能的联系人属性。
 
 ```python
@@ -78,7 +78,7 @@ contactsGetAttributes()
 
 ## 内容查询
 
-### queryContent() *ASL4A*
+### queryContent()
 使用自定义参数查询内容解析器。
 
 ```python
@@ -94,7 +94,7 @@ queryContent(uri, attributes=None, selection=None, selectionArgs=None, order=Non
 
 **返回：** JSONObject 结果列表
 
-### queryAttributes() *ASL4A*
+### queryAttributes()
 获取内容 URI 的属性。
 
 ```python

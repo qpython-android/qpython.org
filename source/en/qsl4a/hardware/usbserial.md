@@ -2,9 +2,9 @@
 
 Communicate with USB serial devices (requires USB OTG support and Android 3.1+).
 
-## USB Serial Methods *ASL4A*
+## USB Serial Methods)
 
-### usbHostSerialOpen() *ASL4A*
+### usbHostSerialOpen()
 Open a connection to a USB serial device.
 
 ```python
@@ -17,14 +17,14 @@ usbHostSerialOpen(device, baudRate=9600)
 
 **Returns:** True if opened successfully
 
-### usbHostSerialClose() *ASL4A*
+### usbHostSerialClose()
 Close the USB serial connection.
 
 ```python
 usbHostSerialClose()
 ```
 
-### usbHostSerialRead() *ASL4A*
+### usbHostSerialRead()
 Read data from USB serial.
 
 ```python
@@ -36,7 +36,7 @@ usbHostSerialRead(bufferSize=1024)
 
 **Returns:** String read data
 
-### usbHostSerialWrite() *ASL4A*
+### usbHostSerialWrite()
 Write data to USB serial.
 
 ```python
@@ -46,7 +46,7 @@ usbHostSerialWrite(data)
 **Parameters:**
 - `data` (str): String data to write
 
-### usbHostSerialAvailable() *ASL4A*
+### usbHostSerialAvailable()
 Check if data is available to read.
 
 ```python
@@ -55,9 +55,9 @@ usbHostSerialAvailable()
 
 **Returns:** Number of bytes available
 
-## Configuration Methods *ASL4A*
+## Configuration Methods)
 
-### usbHostSerialSetBaudRate() *ASL4A*
+### usbHostSerialSetBaudRate()
 Set the baud rate.
 
 ```python
@@ -67,7 +67,7 @@ usbHostSerialSetBaudRate(baudRate)
 **Parameters:**
 - `baudRate` (int): Baud rate
 
-### usbHostSerialSetDataBits() *ASL4A*
+### usbHostSerialSetDataBits()
 Set data bits (5, 6, 7, or 8).
 
 ```python
@@ -77,7 +77,7 @@ usbHostSerialSetDataBits(dataBits)
 **Parameters:**
 - `dataBits` (int): Data bits (5-8)
 
-### usbHostSerialSetStopBits() *ASL4A*
+### usbHostSerialSetStopBits()
 Set stop bits (1, 1.5, or 2).
 
 ```python
@@ -87,7 +87,7 @@ usbHostSerialSetStopBits(stopBits)
 **Parameters:**
 - `stopBits` (float): Stop bits (1, 1.5, or 2)
 
-### usbHostSerialSetParity() *ASL4A*
+### usbHostSerialSetParity()
 Set parity (none, odd, even, mark, space).
 
 ```python
@@ -97,7 +97,7 @@ usbHostSerialSetParity(parity)
 **Parameters:**
 - `parity` (str): Parity mode ('none', 'odd', 'even', 'mark', 'space')
 
-### usbHostSerialSetFlowControl() *ASL4A*
+### usbHostSerialSetFlowControl()
 Set flow control (none, hardware, software).
 
 ```python
@@ -107,7 +107,7 @@ usbHostSerialSetFlowControl(flowControl)
 **Parameters:**
 - `flowControl` (str): Flow control mode ('none', 'hardware', 'software')
 
-### usbHostSerialReadHex() *ASL4A*
+### usbHostSerialReadHex()
 Read data as hex string.
 
 ```python
@@ -119,7 +119,7 @@ usbHostSerialReadHex(bufferSize=1024)
 
 **Returns:** Hex string
 
-### usbHostSerialWriteHex() *ASL4A*
+### usbHostSerialWriteHex()
 Write data from hex string.
 
 ```python

@@ -4,7 +4,7 @@ Execute QPython scripts and manage shared variables from other apps.
 
 ## Script Execution Methods
 
-### executeQPy() *ASL4A*
+### executeQPy()
 Execute a QPython script.
 
 ```python
@@ -17,7 +17,7 @@ executeQPy(path="", arg=None)
 
 **Returns:** True if started successfully
 
-### executeQPyAsSrv() *ASL4A*
+### executeQPyAsSrv()
 Execute a QPython script as a service.
 
 ```python
@@ -29,7 +29,7 @@ executeQPyAsSrv(path=None)
 
 **Returns:** True if started successfully
 
-### executeQPyCode() *ASL4A*
+### executeQPyCode()
 Execute Python code directly.
 
 ```python
@@ -41,7 +41,7 @@ executeQPyCode(code=None)
 
 **Returns:** True if started successfully
 
-### executeQPyCodeAsSrv() *ASL4A*
+### executeQPyCodeAsSrv()
 Execute Python code as a service.
 
 ```python
@@ -57,7 +57,7 @@ executeQPyCodeAsSrv(code=None)
 
 Shared variables allow communication between QPython and other apps.
 
-### sharedVariableSet() *ASL4A*
+### sharedVariableSet()
 Set a Java shared variable.
 
 ```python
@@ -70,7 +70,7 @@ sharedVariableSet(key, value)
 
 **Returns:** The stored value
 
-### sharedVariableGet() *ASL4A*
+### sharedVariableGet()
 Get a Java shared variable.
 
 ```python
@@ -82,7 +82,7 @@ sharedVariableGet(key)
 
 **Returns:** The stored value
 
-### sharedVariableRemove() *ASL4A*
+### sharedVariableRemove()
 Remove a Java shared variable.
 
 ```python
@@ -94,7 +94,7 @@ sharedVariableRemove(key)
 
 **Returns:** The removed value
 
-### getLastLog() *ASL4A*
+### getLastLog()
 Get the last log output from QPython.
 
 ```python

@@ -48,7 +48,7 @@ getLastKnownLocation()
 geocode(address, maxResults=1)
 ```
 
-## 位置提供商方法 *ASL4A*
+## 位置提供商方法)
 
 ### locationProviders()
 获取手机上可用的位置提供商。
@@ -71,7 +71,7 @@ locationProviderEnabled(provider)
 
 **返回：** 如果已启用则为 True，否则为 False
 
-### readGnssStatus() *ASL4A*
+### readGnssStatus()
 读取全球导航卫星系统状态（需要 Android 8+）。
 
 ```python

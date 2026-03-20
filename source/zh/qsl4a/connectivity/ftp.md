@@ -4,7 +4,7 @@
 
 ## FTP 服务器方法
 
-### ftpStart() *ASL4A*
+### ftpStart()
 启动 FTP 服务器。
 
 ```python
@@ -13,14 +13,14 @@ ftpStart()
 
 **返回：** 包含 IP 地址和端口的数组 [ip, port]
 
-### ftpStop() *ASL4A*
+### ftpStop()
 停止 FTP 服务器。
 
 ```python
 ftpStop()
 ```
 
-### ftpIsRunning() *ASL4A*
+### ftpIsRunning()
 检查 FTP 服务器是否正在运行。
 
 ```python
@@ -29,7 +29,7 @@ ftpIsRunning()
 
 **返回：** 如果正在运行则为 True
 
-### ftpGet() *ASL4A*
+### ftpGet()
 获取 FTP 服务器 IP 地址。
 
 ```python
@@ -38,7 +38,7 @@ ftpGet()
 
 **返回：** 包含 IP 地址和端口的数组
 
-### ftpSet() *ASL4A*
+### ftpSet()
 配置 FTP 服务器设置。
 
 ```python
@@ -53,7 +53,7 @@ ftpSet(port=None, rootDir=None, username=None, password=None)
 
 **返回：** 包含当前设置的 JSONObject
 
-### ftpStatus() *ASL4A*
+### ftpStatus()
 获取 FTP 服务器状态。
 
 ```python

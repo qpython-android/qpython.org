@@ -4,7 +4,7 @@
 
 ## 偏好设置方法
 
-### prefGetValue() *ASL4A*
+### prefGetValue()
 从共享偏好设置读取值。
 
 ```python
@@ -17,7 +17,7 @@ prefGetValue(key, filename=None)
 
 **返回：** 存储的值（任意类型）
 
-### prefPutValue() *ASL4A*
+### prefPutValue()
 写入值到共享偏好设置。
 
 ```python
@@ -29,7 +29,7 @@ prefPutValue(key, value, filename=None)
 - `value` (object): 要存储的值
 - `filename` (str, optional): 偏好设置文件名
 
-### prefGetAll() *ASL4A*
+### prefGetAll()
 获取所有偏好设置值。
 
 ```python
@@ -41,7 +41,7 @@ prefGetAll(filename=None)
 
 **返回：** 所有偏好的映射
 
-### prefRemoveValue() *ASL4A*
+### prefRemoveValue()
 从共享偏好设置中移除值。
 
 ```python

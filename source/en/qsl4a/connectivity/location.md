@@ -48,7 +48,7 @@ Convert address to coordinates.
 geocode(address, maxResults=1)
 ```
 
-## Location Provider Methods *ASL4A*
+## Location Provider Methods)
 
 ### locationProviders()
 Get available location providers on the phone.
@@ -71,7 +71,7 @@ locationProviderEnabled(provider)
 
 **Returns:** True if enabled, False otherwise
 
-### readGnssStatus() *ASL4A*
+### readGnssStatus()
 Read Global Navigation Satellite System status (requires Android 8+).
 
 ```python

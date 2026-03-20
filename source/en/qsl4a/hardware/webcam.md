@@ -4,7 +4,7 @@ Stream video from the device camera using MJPEG.
 
 ## MJPEG Stream Methods
 
-### webcamStart() *ASL4A*
+### webcamStart()
 Start an MJPEG stream from the webcam.
 
 ```python
@@ -18,7 +18,7 @@ webcamStart(resolutionLevel=0, jpegQuality=20, port=0)
 
 **Returns:** Tuple of (address, port) for the stream
 
-### webcamAdjustQuality() *ASL4A*
+### webcamAdjustQuality()
 Adjust the quality of an active webcam stream.
 
 ```python
@@ -29,7 +29,7 @@ webcamAdjustQuality(resolutionLevel=0, jpegQuality=20)
 - `resolutionLevel` (int): Resolution level
 - `jpegQuality` (int): JPEG quality 1-100
 
-### webcamStop() *ASL4A*
+### webcamStop()
 Stop the webcam stream.
 
 ```python
@@ -38,7 +38,7 @@ webcamStop()
 
 ## Camera Preview Methods
 
-### cameraStartPreview() *ASL4A*
+### cameraStartPreview()
 Start camera preview mode with event generation.
 
 ```python
@@ -54,7 +54,7 @@ cameraStartPreview(resolutionLevel=0, jpegQuality=20, filepath=None)
 
 **Note:** Generates 'preview' events with frame data.
 
-### cameraStopPreview() *ASL4A*
+### cameraStopPreview()
 Stop the camera preview.
 
 ```python
