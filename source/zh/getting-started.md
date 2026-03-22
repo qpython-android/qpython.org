@@ -233,3 +233,11 @@ while True:
 - 了解 [QPython 版本](qpython-x.md)
 
 ---
+
+## 视频介绍
+
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114097886600297&bvid=BV1Gi9iYYE6b&cid=28669247848&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+## 下一步
+
+如果您已经初步了解了 QPython 的功能，欢迎开始体验编程的乐趣！试试 [Hello World 教程](/tutorial-hello-world/) 迈出您的第一步。

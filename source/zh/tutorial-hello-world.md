@@ -18,7 +18,7 @@ droid.makeToast('Hello, QPYTHON!')
 
 毫无疑问，它与其他任何 hello-world 程序并无不同。执行时，它只是在屏幕上显示弹出消息（见顶部截图）。无论如何，这是一个很好的 QPython 程序示例。
 
-## QSL4A 库
+## 代码理解
 
 它以 *import androidhelper* 开头——这是 QPython 中最有用的模块，它封装了 Python 中可用的几乎所有与 Android 的接口。任何在 QPython 中开发的脚本都以这个语句开头（至少如果它声称要与用户通信的话）。在此处阅读更多关于 [Python 库](https://docs.python.org/3.12/library/index.html) 和 [import 语句](https://docs.python.org/3.12/reference/simple_stmts.html#import) 的内容。
 
@@ -112,4 +112,4 @@ droid.makeToast(message)
 
 运行效果：
 
-<video src="static/mov_hellolorld.mp4" controls width="300"></video>
+<video src="../static/mov_hellolorld.mp4" controls width="480"></video>

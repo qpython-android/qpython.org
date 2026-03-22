@@ -232,4 +232,14 @@ Visit [QPython.org](http://qpython.org) for documentation, user communities, and
 
 ---
 
+## Video Introduction
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GxdWpm3T97c?si=zQzPE7yc4ErmhLOK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Next Steps
+
+If you've got a basic understanding of QPython's features, welcome to start experiencing the fun of programming! Try the [Hello World Tutorial](/tutorial-hello-world/) to take your first step.
+
+---
+
 *Thanks to dmych for the original draft on [his blog](http://onetimeblog.logdown.com/posts/2014/01/22/qpython-how-to-start)*
