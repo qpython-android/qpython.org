@@ -238,8 +238,5 @@ Visit [QPython.org](http://qpython.org) for documentation, user communities, and
 
 ## Next Steps
 
-If you've got a basic understanding of QPython's features, welcome to start experiencing the fun of programming! Try the [Hello World Tutorial](/tutorial-hello-world/) to take your first step.
+If you've got a basic understanding of QPython's features, welcome to start experiencing the fun of programming! Try the [Hello World Tutorial](/en/tutorial-hello-world/) to take your first step.
 
----
-
-*Thanks to dmych for the original draft on [his blog](http://onetimeblog.logdown.com/posts/2014/01/22/qpython-how-to-start)*

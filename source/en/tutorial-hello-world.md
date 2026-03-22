@@ -112,5 +112,3 @@ else:
     message = "Hey! And you're not very polite, %Username%!"
 droid.makeToast(message)
 ```
-
-[Thanks dmych offer the first draft in his blog](http://onetimeblog.logdown.com/posts/2014/01/23/first-program-in-qpython)
