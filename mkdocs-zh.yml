@@ -42,6 +42,9 @@ nav:
     - 概览: index.md
     - 版本: qpython-x.md
     - 更新日志: whats-new.md
+  - 教程:
+    - 快速入门: getting-started.md
+    - Hello World 教程: tutorial-hello-world.md
   - 指南:
     - 终端: Terminal.md
     - Notebook: Notebook.md
@@ -95,9 +98,6 @@ nav:
     - 特殊功能:
       - 加密: qsl4a/special/cipher.md
       - PGPT AI: qsl4a/special/pgptai.md
-  - 教程:
-    - 快速入门: getting-started.md
-    - Hello World 教程: tutorial-hello-world.md
 
 markdown_extensions:
   - pymdownx.highlight:

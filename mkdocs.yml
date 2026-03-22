@@ -42,6 +42,9 @@ nav:
     - Overview: index.md
     - Branches: qpython-x.md
     - Updates: whats-new.md
+  - Tutorial:
+    - Getting Started: getting-started.md
+    - Hello World Tutorial: tutorial-hello-world.md
   - Guides:
     - Terminal: Terminal.md
     - Notebook: Notebook.md
@@ -84,9 +87,7 @@ nav:
     - Special:
       - Cipher: qsl4a/special/cipher.md
       - PGPT AI: qsl4a/special/pgptai.md
-  - Tutorial:
-    - Getting Started: getting-started.md
-    - Hello World Tutorial: tutorial-hello-world.md
+
 
 markdown_extensions:
   - pymdownx.highlight:
