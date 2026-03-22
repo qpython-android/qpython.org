@@ -2,37 +2,29 @@
 
 ## Hello world
 
-![hello world](static/guide_helloworld_pic1.png)
+![hello world](static/qpy_helloworld.jpg)
 
 Well, after you became a bit more familiar with QPython, let's create our first program in QPython. Obviously, it will be `helloworld.py`. ;)
 
 Start QPython, open editor and enter the following code:
 
 ```python
+#qpy:quiet
 import androidhelper
 
 droid = androidhelper.Android()
-droid.makeToast('Hello, Username!')
+droid.makeToast('Hello, QPYTHON!')
 ```
 
 No wonder, it's just similar to any other hello-world program. When executed, it just shows pop-up message on the screen (see screenshot on the top). Anyway, it's a good example of QPython program.
 
-## SL4A library
+## Code Understanding
 
-It begins with *import androidhelper* — the most useful module in QPython, which encapsulates almost all interface with Android, available in Python. Any script developed in QPython starts with this statement (at least if it claims to communicate with user). Read more about Python library [here](https://docs.python.org/3.12/library/index.html) and import statement [here](https://docs.python.org/3.12/reference/simple_stmts.html#import).
+It begins with *import androidhelper* — the most useful module in QPython, which encapsulates almost all interface with Android available in Python. Any script developed in QPython starts with this statement (at least if it claims to communicate with user). Read more about Python library [here](https://docs.python.org/3.12/library/index.html) and import statement [here](https://docs.python.org/3.12/reference/simple_stmts.html#import).
 
-By the way, if you're going to make your script compatible with SL4A, you should replace the first line with the following code (and use `android` instead `androidhelper` further in the program):
+Next, we create an object `droid` (actually a class), which is necessary to call RPC functions to communicate with Android.
 
-```python
-try:
-    import androidhelper as android
-except ImportError:
-    import android
-```
-
-Ok, next we're creating an object `droid` (actually a class), it is necessary to call RPC functions in order to communicate with Android.
-
-And the last line of our code calls such function, `droid.makeToast()`, which shows a small pop-up message (a "toast") on the screen.
+The last line of our code calls `droid.makeToast()`, which shows a small pop-up message (a "toast") on the screen.
 
 Well, let's add some more functionality. Let it ask the user name and greet them.
 
@@ -41,15 +33,17 @@ Well, let's add some more functionality. Let it ask the user name and greet them
 We can display a simple dialog box with the title, prompt, edit field and buttons **Ok** and **Cancel** using `dialogGetInput` call. Replace the last line of your code and save it as `hello1.py`:
 
 ```python
+#qpy:quiet
 import androidhelper
 
 droid = androidhelper.Android()
 respond = droid.dialogGetInput("Hello", "What is your name?")
 ```
 
-Well, I think it should return any respond, any user reaction. That's why I wrote `respond = ...`. But what the call actually returns? Let's check. Just add print statement after the last line:
+Well, I think it should return any respond, any user reaction. That's why I wrote `respond = ...`. But what does the call actually return? Let's check. Just add print statement after the last line:
 
 ```python
+#qpy:quiet
 import androidhelper
 
 droid = androidhelper.Android()
@@ -66,6 +60,7 @@ As you can see, `droid.dialogGetInput()` returns a JSON object with three fields
 Let's add script's reaction:
 
 ```python
+#qpy:quiet
 import androidhelper
 
 droid = androidhelper.Android()
@@ -100,6 +95,7 @@ First of all, we put user input to the variable `name`. Then we check does `name
 Ok, here is the whole program:
 
 ```python
+#qpy:quiet
 import androidhelper
 
 droid = androidhelper.Android()
@@ -113,7 +109,10 @@ else:
 droid.makeToast(message)
 ```
 
-
-## Execution result 
+## Execution Result
 
 <video src="../static/mov_hellolorld.mp4" controls width="480"></video>
+
+## Next Steps
+
+For Python beginners, we recommend learning from the [Python Basic Syntax](https://www.qpython.com.cn/courses/python-basic-syntax/) course to further your Python skills, or browse [QPython Featured Courses](https://www.qpython.com.cn/courses/) to find more content you want to learn.
