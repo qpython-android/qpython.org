@@ -2,35 +2,28 @@
 
 ## Hello world
 
-![hello world](static/guide_helloworld_pic1.png)
+![hello world](static/qpy_helloworld.jpg)
 
 好的，在您对 QPython 有了一定的了解之后，让我们在 QPython 中创建我们的第一个程序。显然，它将是 `helloworld.py`。;)
 
 启动 QPython，打开编辑器并输入以下代码：
 
 ```python
+#qpy:quiet
 import androidhelper
 
 droid = androidhelper.Android()
-droid.makeToast('Hello, Username!')
+droid.makeToast('Hello, QPYTHON!')
 ```
 
 毫无疑问，它与其他任何 hello-world 程序并无不同。执行时，它只是在屏幕上显示弹出消息（见顶部截图）。无论如何，这是一个很好的 QPython 程序示例。
 
-## SL4A 库
+## QSL4A 库
 
 它以 *import androidhelper* 开头——这是 QPython 中最有用的模块，它封装了 Python 中可用的几乎所有与 Android 的接口。任何在 QPython 中开发的脚本都以这个语句开头（至少如果它声称要与用户通信的话）。在此处阅读更多关于 [Python 库](https://docs.python.org/3.12/library/index.html) 和 [import 语句](https://docs.python.org/3.12/reference/simple_stmts.html#import) 的内容。
 
-顺便说一句，如果您打算使您的脚本与 SL4A 兼容，您应该用以下代码替换第一行（并在程序中用 `android` 而不是 `androidhelper`）：
 
-```python
-try:
-    import androidhelper as android
-except ImportError:
-    import android
-```
-
-好的，接下来我们创建一个 `droid` 对象（实际上是一个类），它对于调用 RPC 函数以与 Android 通信是必要的。
+接下来我们创建一个 `droid` 对象（实际上是一个类），它对于调用 RPC 函数以与 Android 通信是必要的。
 
 我们代码的最后一行调用了这样的函数，`droid.makeToast()`，它在屏幕上显示一个小的弹出消息（"toast"）。
 
@@ -41,6 +34,7 @@ except ImportError:
 我们可以使用 `dialogGetInput` 调用显示一个带有标题、提示、编辑字段和 **确定** 和 **取消** 按钮的简单对话框。用以下代码替换您的最后一行代码并将其保存为 `hello1.py`：
 
 ```python
+#qpy:quiet
 import androidhelper
 
 droid = androidhelper.Android()
@@ -50,6 +44,7 @@ respond = droid.dialogGetInput("Hello", "What is your name?")
 好的，我认为它应该返回任何响应，任何用户反应。这就是为什么我写 `respond = ...`。但这个调用实际上返回什么？让我们检查一下。只需在最后一行后添加 print 语句：
 
 ```python
+#qpy:quiet
 import androidhelper
 
 droid = androidhelper.Android()
@@ -66,6 +61,7 @@ print(respond)
 让我们添加脚本的反应：
 
 ```python
+#qpy:quiet
 import androidhelper
 
 droid = androidhelper.Android()
@@ -100,6 +96,7 @@ else:
 好的，这是整个程序：
 
 ```python
+#qpy:quiet
 import androidhelper
 
 droid = androidhelper.Android()
@@ -113,4 +110,6 @@ else:
 droid.makeToast(message)
 ```
 
-[感谢 dmych 在他的博客上提供第一个草稿](http://onetimeblog.logdown.com/posts/2014/01/23/first-program-in-qpython)
+运行效果：
+
+<video src="static/mov_hellolorld.mp4" controls width="300"></video>

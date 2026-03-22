@@ -6,7 +6,7 @@ This guide will introduce QPython's features and help you get started quickly.
 
 **Why choose QPython?**
 
-The smartphone is becoming people's essential information & technical assistant, so a flexible script engine could help people complete most jobs efficiently without complex development.
+Smartphones have become essential information and technical assistants. A flexible interpreter engine helps you efficiently complete most tasks without complex development processes.
 
 QPython offers **an amazing developing experience** - with its help, you could implement programs easily without complex IDE installation, compiling, or packaging processes.
 
@@ -14,24 +14,24 @@ QPython offers **an amazing developing experience** - with its help, you could i
 
 For different usage scenarios, QPython has several branches:
 
-- **[QPython - IDE for Python & AI](qpython-x.md)** - The main version with AI features, available on Google Play and app stores
-- **[QPython+ - Python for Android](qpython-x.md)** - Community open-source version for contributors
-- **[QPython Plus](qpython-x.md)** - Extended permissions version (not on app stores)
+- **[QPython](qpython-x.md)** – The main version maintained by the QPython team with AI features, available on Google Play and other app stores
+- **[QPython+](qpython-x.md)** – Community version launched by open-source contributors, offering various new features
+- **[QPython Plus](qpython-x.md)** – Extended permissions version (not available on app stores)
 
 ### Key Features
 
-- **Offline Python 3.12 interpreter** - No Internet required to run Python programs
-- **Multiple runtime modes** - Console, SL4A, Kivy GUI, WebApp, and background (QScript) modes
+- **Offline Python 3.12 interpreter** - Run Python programs without Internet
 - **SL4A Integration** - Control Android hardware and APIs with Python
-- **Package Installation** - QPYPI and pip support for extending capabilities
+- **GenAI Integration** - Support for local LLM, various LLM libraries including OpenAI, and AIPyApp for Vibe Coding development on QPython
+- **Package Installation** - Install extensions via QPYPI and pip
 - **Built-in Editor** - Syntax highlighting and code editing
-- **QR Code Support** - Easy code sharing and distribution
+- **Multiple Runtime Modes** - Besides console programs, supports Android native UI (via SL4A interface), Pygame / Turtle / Tkinter and other runtime modes
 
 ---
 
 ## 1. Dashboard
 
-![QPython start](static/guide_howtostart_pic1.png)
+![QPython Dashboard](static/qpy_dashboard.jpg)
 
 After you install QPython, start it by tapping its icon. You will see the main dashboard with the QPython logo and the following features:
 
@@ -56,39 +56,40 @@ Tap any icon to access the corresponding feature.
 
 ### Terminal
 
-![QPython console](static/guide_howtostart_pic3.png)
+![QPython Console](static/terminal_demo.jpg)
 
-The Terminal provides a Python console where you can:
+The Terminal provides a Python console with:
 - Explore object properties
 - Test syntax and ideas
 - Execute commands directly
 
-Open additional Terminal tabs with the plus button (1), switch between them from the dropdown (2), and close with the close button (3).
-
-![QPython notification](static/guide_howtostart_pic4.png)
-
-A notification will remain in the notification bar while the Terminal is running. Tap it to return to the Terminal.
+Use the plus button (1) to open new Terminal tabs, switch between them via the dropdown (2), and close with the close button (3).
 
 ### Editor
 
-![QPython editor](static/guide_howtostart_pic5.png)
+![QPython Editor](static/qpy_editor.jpg)
 
-The editor features:
-- Python syntax highlighting
-- Line numbers
-- Indentation control (buttons 1 on toolbar)
-- **Save** and **Save As** (buttons 2)
-- **Run** (button 3)
-- **Undo**, **Search**, **Recent Files**, **Settings**
-- **Open** and **New** (top buttons 5)
+The editor's bottom toolbar contains the following tools (left to right):
 
-**Important:** When saving, add `.py` extension manually as the editor doesn't do it automatically.
+- Quick Input (includes keywords like def / if / else / elif / class)
+- Lock (prevent accidental touches)
+- Jump
+- Save
+- Run
+- Search
+- Undo
+- Redo
+- Save As
+- Recent Files
+- Code Snippets
+
+**Important:** When saving, manually add the `.py` extension as the editor doesn't add it automatically.
 
 ---
 
 ## 3. Explorer (File Management)
 
-Access your scripts and projects through the **Explorer**. Here you can browse, organize, and manage all your Python files.
+Access scripts and projects through the **Explorer**, supporting browsing, organizing, and managing all Python files.
 
 ### Scripts
 
@@ -109,10 +110,10 @@ Projects are directories containing `main.py` as the entry point. You can includ
 Jupyter-style notebooks are also managed through the Explorer, stored in `/storage/emulated/0/Android/data/org.qpython.qpy/files/notebooks/`.
 
 Available actions:
-- **Run** — Execute the project
-- **Open** — Explore project resources
-- **Rename** — Change the project name
-- **Delete** — Remove the project
+- **Run** — Execute the notebook
+- **Open** — Explore notebook content
+- **Rename** — Change the notebook name
+- **Delete** — Remove the notebook
 
 ---
 
@@ -130,7 +131,7 @@ See [QPYPI Guide](qpypi-guide.md) for details.
 
 **PIP Client**
 
-Install pure Python libraries through QPython's PIP Client or QPYPI dashboard:
+Install pure Python libraries through QPython's PIP client or QPYPI interface:
 
 ```bash
 pip install requests
@@ -163,7 +164,7 @@ Default mode for regular Python scripts.
 
 ### SL4A Mode
 
-Scripts using Android APIs through the SL4A library.
+Scripts that call Android APIs through the SL4A library.
 
 ```python
 import androidhelper
@@ -176,9 +177,14 @@ See [QSL4A Documentation](qsl4a/index.md) for full API reference.
 
 ### WebApp Mode
 
-Create web-based applications with a backend server.
+Create web-based applications with a backend server. Add the following two headers at the beginning of your script:
 
-Add headers to your script:
+```python
+#qpy:webapp:<project name>
+#qpy://localhost:<port the web service listens on>/<default main path>
+```
+
+Example:
 ```python
 #qpy:webapp:Hello QPython
 #qpy://localhost:8080/hello
@@ -194,11 +200,9 @@ def hello():
 run(app, host='localhost', port=8080)
 ```
 
-### Q Mode (Background)
+### Q Mode (Quiet Mode)
 
-Run scripts without UI in the background.
-
-Add header:
+Run scripts silently without displaying the console. Add header at the beginning of your script:
 ```python
 #qpy:quiet
 
@@ -208,15 +212,13 @@ while True:
     # Your background task
     time.sleep(60)
 ```
+If you need to run a GUI-based SL4A program and don't want to show console information, this mode is recommended.
 
 ---
 
 ## 6. Community and Support
 
-Visit [QPython.org](http://qpython.org) for:
-- Documentation
-- User communities
-- Help and Q&A
+Visit [QPython.org](http://qpython.org) for documentation, user communities, and help.
 
 **Community Links:**
 - [Facebook Group](https://www.facebook.com/groups/qpython)
