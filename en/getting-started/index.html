@@ -2344,10 +2344,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#q-mode-background" class="md-nav__link">
+  <a href="#q-mode-quiet-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Q Mode (Background)
+        Q Mode (Quiet Mode)
       
     </span>
   </a>
@@ -2364,6 +2364,28 @@
     <span class="md-ellipsis">
       
         6. Community and Support
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
       
     </span>
   </a>
@@ -2670,10 +2692,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#q-mode-background" class="md-nav__link">
+  <a href="#q-mode-quiet-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Q Mode (Background)
+        Q Mode (Quiet Mode)
       
     </span>
   </a>
@@ -2690,6 +2712,28 @@
     <span class="md-ellipsis">
       
         6. Community and Support
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
       
     </span>
   </a>
@@ -2717,27 +2761,27 @@
 <p>This guide will introduce QPython's features and help you get started quickly.</p>
 <h2 id="qpython-overview">QPython Overview<a class="headerlink" href="#qpython-overview" title="Permanent link">&para;</a></h2>
 <p><strong>Why choose QPython?</strong></p>
-<p>The smartphone is becoming people's essential information &amp; technical assistant, so a flexible script engine could help people complete most jobs efficiently without complex development.</p>
+<p>Smartphones have become essential information and technical assistants. A flexible interpreter engine helps you efficiently complete most tasks without complex development processes.</p>
 <p>QPython offers <strong>an amazing developing experience</strong> - with its help, you could implement programs easily without complex IDE installation, compiling, or packaging processes.</p>
 <h3 id="qpython-branches">QPython Branches<a class="headerlink" href="#qpython-branches" title="Permanent link">&para;</a></h3>
 <p>For different usage scenarios, QPython has several branches:</p>
 <ul>
-<li><strong><a href="../qpython-x/">QPython - IDE for Python &amp; AI</a></strong> - The main version with AI features, available on Google Play and app stores</li>
-<li><strong><a href="../qpython-x/">QPython+ - Python for Android</a></strong> - Community open-source version for contributors</li>
-<li><strong><a href="../qpython-x/">QPython Plus</a></strong> - Extended permissions version (not on app stores)</li>
+<li><strong><a href="../qpython-x/">QPython</a></strong> – The main version maintained by the QPython team with AI features, available on Google Play and other app stores</li>
+<li><strong><a href="../qpython-x/">QPython+</a></strong> – Community version launched by open-source contributors, offering various new features</li>
+<li><strong><a href="../qpython-x/">QPython Plus</a></strong> – Extended permissions version (not available on app stores)</li>
 </ul>
 <h3 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Offline Python 3.12 interpreter</strong> - No Internet required to run Python programs</li>
-<li><strong>Multiple runtime modes</strong> - Console, SL4A, Kivy GUI, WebApp, and background (QScript) modes</li>
+<li><strong>Offline Python 3.12 interpreter</strong> - Run Python programs without Internet</li>
 <li><strong>SL4A Integration</strong> - Control Android hardware and APIs with Python</li>
-<li><strong>Package Installation</strong> - QPYPI and pip support for extending capabilities</li>
+<li><strong>GenAI Integration</strong> - Support for local LLM, various LLM libraries including OpenAI, and AIPyApp for Vibe Coding development on QPython</li>
+<li><strong>Package Installation</strong> - Install extensions via QPYPI and pip</li>
 <li><strong>Built-in Editor</strong> - Syntax highlighting and code editing</li>
-<li><strong>QR Code Support</strong> - Easy code sharing and distribution</li>
+<li><strong>Multiple Runtime Modes</strong> - Besides console programs, supports Android native UI (via SL4A interface), Pygame / Turtle / Tkinter and other runtime modes</li>
 </ul>
 <hr />
 <h2 id="1-dashboard">1. Dashboard<a class="headerlink" href="#1-dashboard" title="Permanent link">&para;</a></h2>
-<p><img alt="QPython start" src="../static/guide_howtostart_pic1.png" /></p>
+<p><img alt="QPython Dashboard" src="../static/qpy_dashboard.jpg" /></p>
 <p>After you install QPython, start it by tapping its icon. You will see the main dashboard with the QPython logo and the following features:</p>
 <h3 id="dashboard-features">Dashboard Features<a class="headerlink" href="#dashboard-features" title="Permanent link">&para;</a></h3>
 <p>The QPython dashboard provides quick access to all major features:</p>
@@ -2755,28 +2799,32 @@
 <hr />
 <h2 id="2-terminal-and-editor">2. Terminal and Editor<a class="headerlink" href="#2-terminal-and-editor" title="Permanent link">&para;</a></h2>
 <h3 id="terminal">Terminal<a class="headerlink" href="#terminal" title="Permanent link">&para;</a></h3>
-<p><img alt="QPython console" src="../static/guide_howtostart_pic3.png" /></p>
-<p>The Terminal provides a Python console where you can:
+<p><img alt="QPython Console" src="../static/terminal_demo.jpg" /></p>
+<p>The Terminal provides a Python console with:
 - Explore object properties
 - Test syntax and ideas
 - Execute commands directly</p>
-<p>Open additional Terminal tabs with the plus button (1), switch between them from the dropdown (2), and close with the close button (3).</p>
-<p><img alt="QPython notification" src="../static/guide_howtostart_pic4.png" /></p>
-<p>A notification will remain in the notification bar while the Terminal is running. Tap it to return to the Terminal.</p>
+<p>Use the plus button (1) to open new Terminal tabs, switch between them via the dropdown (2), and close with the close button (3).</p>
 <h3 id="editor">Editor<a class="headerlink" href="#editor" title="Permanent link">&para;</a></h3>
-<p><img alt="QPython editor" src="../static/guide_howtostart_pic5.png" /></p>
-<p>The editor features:
-- Python syntax highlighting
-- Line numbers
-- Indentation control (buttons 1 on toolbar)
-- <strong>Save</strong> and <strong>Save As</strong> (buttons 2)
-- <strong>Run</strong> (button 3)
-- <strong>Undo</strong>, <strong>Search</strong>, <strong>Recent Files</strong>, <strong>Settings</strong>
-- <strong>Open</strong> and <strong>New</strong> (top buttons 5)</p>
-<p><strong>Important:</strong> When saving, add <code>.py</code> extension manually as the editor doesn't do it automatically.</p>
+<p><img alt="QPython Editor" src="../static/qpy_editor.jpg" /></p>
+<p>The editor's bottom toolbar contains the following tools (left to right):</p>
+<ul>
+<li>Quick Input (includes keywords like def / if / else / elif / class)</li>
+<li>Lock (prevent accidental touches)</li>
+<li>Jump</li>
+<li>Save</li>
+<li>Run</li>
+<li>Search</li>
+<li>Undo</li>
+<li>Redo</li>
+<li>Save As</li>
+<li>Recent Files</li>
+<li>Code Snippets</li>
+</ul>
+<p><strong>Important:</strong> When saving, manually add the <code>.py</code> extension as the editor doesn't add it automatically.</p>
 <hr />
 <h2 id="3-explorer-file-management">3. Explorer (File Management)<a class="headerlink" href="#3-explorer-file-management" title="Permanent link">&para;</a></h2>
-<p>Access your scripts and projects through the <strong>Explorer</strong>. Here you can browse, organize, and manage all your Python files.</p>
+<p>Access scripts and projects through the <strong>Explorer</strong>, supporting browsing, organizing, and managing all Python files.</p>
 <h3 id="scripts">Scripts<a class="headerlink" href="#scripts" title="Permanent link">&para;</a></h3>
 <p>Scripts are single Python files stored in <code>/storage/emulated/0/Android/data/org.qpython.qpy/files/scripts3/</code> (for Python 3).</p>
 <p>Available actions:
@@ -2789,10 +2837,10 @@
 <h3 id="notebooks">Notebooks<a class="headerlink" href="#notebooks" title="Permanent link">&para;</a></h3>
 <p>Jupyter-style notebooks are also managed through the Explorer, stored in <code>/storage/emulated/0/Android/data/org.qpython.qpy/files/notebooks/</code>.</p>
 <p>Available actions:
-- <strong>Run</strong> — Execute the project
-- <strong>Open</strong> — Explore project resources
-- <strong>Rename</strong> — Change the project name
-- <strong>Delete</strong> — Remove the project</p>
+- <strong>Run</strong> — Execute the notebook
+- <strong>Open</strong> — Explore notebook content
+- <strong>Rename</strong> — Change the notebook name
+- <strong>Delete</strong> — Remove the notebook</p>
 <hr />
 <h2 id="4-libraries">4. Libraries<a class="headerlink" href="#4-libraries" title="Permanent link">&para;</a></h2>
 <p>Extend QPython's capabilities by installing third-party libraries.</p>
@@ -2801,7 +2849,7 @@
 <p>Install pre-built libraries from QPYPI, including scientific packages like numpy, scipy, etc.</p>
 <p>See <a href="../qpypi-guide/">QPYPI Guide</a> for details.</p>
 <p><strong>PIP Client</strong></p>
-<p>Install pure Python libraries through QPython's PIP Client or QPYPI dashboard:</p>
+<p>Install pure Python libraries through QPython's PIP client or QPYPI interface:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>requests
 </code></pre></div>
 <p><strong>Pre-compiled Packages</strong></p>
@@ -2818,7 +2866,7 @@
 <h3 id="console-mode">Console Mode<a class="headerlink" href="#console-mode" title="Permanent link">&para;</a></h3>
 <p>Default mode for regular Python scripts.</p>
 <h3 id="sl4a-mode">SL4A Mode<a class="headerlink" href="#sl4a-mode" title="Permanent link">&para;</a></h3>
-<p>Scripts using Android APIs through the SL4A library.</p>
+<p>Scripts that call Android APIs through the SL4A library.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">androidhelper</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">droid</span> <span class="o">=</span> <span class="n">androidhelper</span><span class="o">.</span><span class="n">Android</span><span class="p">()</span>
@@ -2826,38 +2874,38 @@
 </code></pre></div>
 <p>See <a href="../qsl4a/">QSL4A Documentation</a> for full API reference.</p>
 <h3 id="webapp-mode">WebApp Mode<a class="headerlink" href="#webapp-mode" title="Permanent link">&para;</a></h3>
-<p>Create web-based applications with a backend server.</p>
-<p>Add headers to your script:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">#qpy:webapp:Hello QPython</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1">#qpy://localhost:8080/hello</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">bottle</span><span class="w"> </span><span class="kn">import</span> <span class="n">route</span><span class="p">,</span> <span class="n">run</span><span class="p">,</span> <span class="n">Bottle</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">app</span> <span class="o">=</span> <span class="n">Bottle</span><span class="p">()</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/hello&#39;</span><span class="p">)</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="k">def</span><span class="w"> </span><span class="nf">hello</span><span class="p">():</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="k">return</span> <span class="s1">&#39;&lt;h1&gt;Hello from QPython!&lt;/h1&gt;&#39;</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="n">run</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8080</span><span class="p">)</span>
+<p>Create web-based applications with a backend server. Add the following two headers at the beginning of your script:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">#qpy:webapp:&lt;project name&gt;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1">#qpy://localhost:&lt;port the web service listens on&gt;/&lt;default main path&gt;</span>
+</code></pre></div>
+<p>Example:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">#qpy:webapp:Hello QPython</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1">#qpy://localhost:8080/hello</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">bottle</span><span class="w"> </span><span class="kn">import</span> <span class="n">route</span><span class="p">,</span> <span class="n">run</span><span class="p">,</span> <span class="n">Bottle</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">app</span> <span class="o">=</span> <span class="n">Bottle</span><span class="p">()</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/hello&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="k">def</span><span class="w"> </span><span class="nf">hello</span><span class="p">():</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="k">return</span> <span class="s1">&#39;&lt;h1&gt;Hello from QPython!&lt;/h1&gt;&#39;</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="n">run</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8080</span><span class="p">)</span>
 </code></pre></div></p>
-<h3 id="q-mode-background">Q Mode (Background)<a class="headerlink" href="#q-mode-background" title="Permanent link">&para;</a></h3>
-<p>Run scripts without UI in the background.</p>
-<p>Add header:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">#qpy:quiet</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="c1"># Your background task</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
-</code></pre></div></p>
+<h3 id="q-mode-quiet-mode">Q Mode (Quiet Mode)<a class="headerlink" href="#q-mode-quiet-mode" title="Permanent link">&para;</a></h3>
+<p>Run scripts silently without displaying the console. Add header at the beginning of your script:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">#qpy:quiet</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="c1"># Your background task</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+</code></pre></div>
+If you need to run a GUI-based SL4A program and don't want to show console information, this mode is recommended.</p>
 <hr />
 <h2 id="6-community-and-support">6. Community and Support<a class="headerlink" href="#6-community-and-support" title="Permanent link">&para;</a></h2>
-<p>Visit <a href="http://qpython.org">QPython.org</a> for:
-- Documentation
-- User communities
-- Help and Q&amp;A</p>
+<p>Visit <a href="http://qpython.org">QPython.org</a> for documentation, user communities, and help.</p>
 <p><strong>Community Links:</strong>
 - <a href="https://www.facebook.com/groups/qpython">Facebook Group</a>
 - <a href="https://github.com/qpython-android/qpython">GitHub</a>
@@ -2866,6 +2914,12 @@
 - Try the <a href="../tutorial-hello-world/">Hello World Tutorial</a>
 - Explore <a href="../qsl4a/">QSL4A API</a> for Android integration
 - Learn about <a href="../qpython-x/">QPython Branches</a></p>
+<hr />
+<h2 id="video-introduction">Video Introduction<a class="headerlink" href="#video-introduction" title="Permanent link">&para;</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GxdWpm3T97c?si=zQzPE7yc4ErmhLOK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<p>If you've got a basic understanding of QPython's features, welcome to start experiencing the fun of programming! Try the <a href="/tutorial-hello-world/">Hello World Tutorial</a> to take your first step.</p>
 <hr />
 <p><em>Thanks to dmych for the original draft on <a href="http://onetimeblog.logdown.com/posts/2014/01/22/qpython-how-to-start">his blog</a></em></p>
 

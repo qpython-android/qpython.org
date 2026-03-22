@@ -2460,10 +2460,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sl4a" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SL4A 库
+        代码理解
       
     </span>
   </a>
@@ -2471,7 +2471,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         更多示例
@@ -2535,10 +2535,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sl4a" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SL4A 库
+        代码理解
       
     </span>
   </a>
@@ -2546,7 +2546,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         更多示例
@@ -2575,79 +2575,79 @@
 
 <h1 id="hello-world">编写"Hello World"<a class="headerlink" href="#hello-world" title="Permanent link">&para;</a></h1>
 <h2 id="hello-world_1">Hello world<a class="headerlink" href="#hello-world_1" title="Permanent link">&para;</a></h2>
-<p><img alt="hello world" src="../static/guide_helloworld_pic1.png" /></p>
+<p><img alt="hello world" src="../static/qpy_helloworld.jpg" /></p>
 <p>好的，在您对 QPython 有了一定的了解之后，让我们在 QPython 中创建我们的第一个程序。显然，它将是 <code>helloworld.py</code>。;)</p>
 <p>启动 QPython，打开编辑器并输入以下代码：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">androidhelper</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">droid</span> <span class="o">=</span> <span class="n">androidhelper</span><span class="o">.</span><span class="n">Android</span><span class="p">()</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">droid</span><span class="o">.</span><span class="n">makeToast</span><span class="p">(</span><span class="s1">&#39;Hello, Username!&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">#qpy:quiet</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">androidhelper</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">droid</span> <span class="o">=</span> <span class="n">androidhelper</span><span class="o">.</span><span class="n">Android</span><span class="p">()</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">droid</span><span class="o">.</span><span class="n">makeToast</span><span class="p">(</span><span class="s1">&#39;Hello, QPYTHON!&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p>毫无疑问，它与其他任何 hello-world 程序并无不同。执行时，它只是在屏幕上显示弹出消息（见顶部截图）。无论如何，这是一个很好的 QPython 程序示例。</p>
-<h2 id="sl4a">SL4A 库<a class="headerlink" href="#sl4a" title="Permanent link">&para;</a></h2>
+<h2 id="_1">代码理解<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>它以 <em>import androidhelper</em> 开头——这是 QPython 中最有用的模块，它封装了 Python 中可用的几乎所有与 Android 的接口。任何在 QPython 中开发的脚本都以这个语句开头（至少如果它声称要与用户通信的话）。在此处阅读更多关于 <a href="https://docs.python.org/3.12/library/index.html">Python 库</a> 和 <a href="https://docs.python.org/3.12/reference/simple_stmts.html#import">import 语句</a> 的内容。</p>
-<p>顺便说一句，如果您打算使您的脚本与 SL4A 兼容，您应该用以下代码替换第一行（并在程序中用 <code>android</code> 而不是 <code>androidhelper</code>）：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">try</span><span class="p">:</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="kn">import</span><span class="w"> </span><span class="nn">androidhelper</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">android</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="kn">import</span><span class="w"> </span><span class="nn">android</span>
-</code></pre></div>
-<p>好的，接下来我们创建一个 <code>droid</code> 对象（实际上是一个类），它对于调用 RPC 函数以与 Android 通信是必要的。</p>
+<p>接下来我们创建一个 <code>droid</code> 对象（实际上是一个类），它对于调用 RPC 函数以与 Android 通信是必要的。</p>
 <p>我们代码的最后一行调用了这样的函数，<code>droid.makeToast()</code>，它在屏幕上显示一个小的弹出消息（"toast"）。</p>
 <p>好的，让我们添加一些更多的功能。让它询问用户名并向用户打招呼。</p>
-<h2 id="_1">更多示例<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_2">更多示例<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>我们可以使用 <code>dialogGetInput</code> 调用显示一个带有标题、提示、编辑字段和 <strong>确定</strong> 和 <strong>取消</strong> 按钮的简单对话框。用以下代码替换您的最后一行代码并将其保存为 <code>hello1.py</code>：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">androidhelper</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">droid</span> <span class="o">=</span> <span class="n">androidhelper</span><span class="o">.</span><span class="n">Android</span><span class="p">()</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">respond</span> <span class="o">=</span> <span class="n">droid</span><span class="o">.</span><span class="n">dialogGetInput</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="s2">&quot;What is your name?&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">#qpy:quiet</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">androidhelper</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">droid</span> <span class="o">=</span> <span class="n">androidhelper</span><span class="o">.</span><span class="n">Android</span><span class="p">()</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">respond</span> <span class="o">=</span> <span class="n">droid</span><span class="o">.</span><span class="n">dialogGetInput</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="s2">&quot;What is your name?&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>好的，我认为它应该返回任何响应，任何用户反应。这就是为什么我写 <code>respond = ...</code>。但这个调用实际上返回什么？让我们检查一下。只需在最后一行后添加 print 语句：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">androidhelper</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">droid</span> <span class="o">=</span> <span class="n">androidhelper</span><span class="o">.</span><span class="n">Android</span><span class="p">()</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">respond</span> <span class="o">=</span> <span class="n">droid</span><span class="o">.</span><span class="n">dialogGetInput</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="s2">&quot;What is your name?&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">respond</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">#qpy:quiet</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">androidhelper</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">droid</span> <span class="o">=</span> <span class="n">androidhelper</span><span class="o">.</span><span class="n">Android</span><span class="p">()</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">respond</span> <span class="o">=</span> <span class="n">droid</span><span class="o">.</span><span class="n">dialogGetInput</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="s2">&quot;What is your name?&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">respond</span><span class="p">)</span>
 </code></pre></div>
 <p>然后保存并运行它...</p>
 <p>哎呀！没有打印？别担心。只需拉下通知栏，您就会看到"QPython Program Output: hello1.py"——点击它！</p>
 <p>如您所见，<code>droid.dialogGetInput()</code> 返回一个包含三个字段的 JSON 对象。我们只需要一个——<code>result</code>，其中包含用户实际输入的内容。</p>
 <p>让我们添加脚本的反应：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">androidhelper</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">droid</span> <span class="o">=</span> <span class="n">androidhelper</span><span class="o">.</span><span class="n">Android</span><span class="p">()</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">respond</span> <span class="o">=</span> <span class="n">droid</span><span class="o">.</span><span class="n">dialogGetInput</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="s2">&quot;What is your name?&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">respond</span><span class="p">)</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">message</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Hello, </span><span class="si">{</span><span class="n">respond</span><span class="o">.</span><span class="n">result</span><span class="si">}</span><span class="s1">!&#39;</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">droid</span><span class="o">.</span><span class="n">makeToast</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">#qpy:quiet</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">androidhelper</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">droid</span> <span class="o">=</span> <span class="n">androidhelper</span><span class="o">.</span><span class="n">Android</span><span class="p">()</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">respond</span> <span class="o">=</span> <span class="n">droid</span><span class="o">.</span><span class="n">dialogGetInput</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="s2">&quot;What is your name?&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">respond</span><span class="p">)</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">message</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Hello, </span><span class="si">{</span><span class="n">respond</span><span class="o">.</span><span class="n">result</span><span class="si">}</span><span class="s1">!&#39;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">droid</span><span class="o">.</span><span class="n">makeToast</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
 </code></pre></div>
 <p>最后两行（1）格式化消息，（2）以 toast 形式向用户显示消息。如果您仍然不知道 f-string 是什么意思，请参阅 <a href="https://docs.python.org/3.12/tutorial/inputoutput.html#fancier-output-formatting">Python 文档</a>。</p>
 <p>哇！它工作了！;)</p>
 <p>现在我要在那里添加一些逻辑。想一想：如果用户点击 <strong>取消</strong> 按钮，或者点击 <strong>确定</strong> 但将输入字段留空，会发生什么？</p>
 <p>您可以玩这个程序，检查 <code>respond</code> 变量在每种情况下包含什么。</p>
 <p>首先，我想将用户输入的文本放入一个单独的变量中：<code>name = respond.result</code>。然后我检查它，如果它包含任何真实文本，它将被视为名称并用于问候。否则，将显示另一条消息。将第五行 <code>message = f'Hello, {respond.result}!'</code> 替换为以下代码：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">name</span> <span class="o">=</span> <span class="n">respond</span><span class="o">.</span><span class="n">result</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">if</span> <span class="n">name</span><span class="p">:</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">message</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">!&#39;</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Hey! And you&#39;re not very polite, %Username%!&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">name</span> <span class="o">=</span> <span class="n">respond</span><span class="o">.</span><span class="n">result</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">if</span> <span class="n">name</span><span class="p">:</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">message</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">!&#39;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Hey! And you&#39;re not very polite, %Username%!&quot;</span>
 </code></pre></div>
 <p>使用工具栏上的 <strong>&lt;</strong> 和 <strong>&gt;</strong> 按钮来缩进/取消缩进 if 语句中的行（或者只需使用空格/退格键）。您可以在 <a href="https://docs.python.org/3.12/tutorial/introduction.html#first-steps-towards-programming">此处</a> 阅读更多关于 Python 缩进的内容；if 语句在 <a href="https://docs.python.org/3.12/tutorial/controlflow.html#if-statements">此处</a> 描述。</p>
 <p>首先，我们将用户输入放入 <code>name</code> 变量。然后我们检查 <code>name</code> 是否包含任何内容？如果用户留空行并点击 <strong>确定</strong>，返回值是空字符串 <code>''</code>。如果按下了 <strong>取消</strong> 按钮，返回值是 <code>None</code>。在 if 语句中，两者都被视为假。因此，只有当 <code>name</code> 包含任何有意义的内容时，then 语句才会执行，并显示问候语"Hello, ...!"。如果输入为空，用户将看到"Hey! And you're not very polite, %Username%!"消息。</p>
 <p>好的，这是整个程序：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">androidhelper</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">droid</span> <span class="o">=</span> <span class="n">androidhelper</span><span class="o">.</span><span class="n">Android</span><span class="p">()</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">respond</span> <span class="o">=</span> <span class="n">droid</span><span class="o">.</span><span class="n">dialogGetInput</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="s2">&quot;What is your name?&quot;</span><span class="p">)</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">respond</span><span class="p">)</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="n">name</span> <span class="o">=</span> <span class="n">respond</span><span class="o">.</span><span class="n">result</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="k">if</span> <span class="n">name</span><span class="p">:</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    <span class="n">message</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">!&#39;</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Hey! And you&#39;re not very polite, %Username%!&quot;</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="n">droid</span><span class="o">.</span><span class="n">makeToast</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">#qpy:quiet</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">androidhelper</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">droid</span> <span class="o">=</span> <span class="n">androidhelper</span><span class="o">.</span><span class="n">Android</span><span class="p">()</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">respond</span> <span class="o">=</span> <span class="n">droid</span><span class="o">.</span><span class="n">dialogGetInput</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="s2">&quot;What is your name?&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">respond</span><span class="p">)</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">name</span> <span class="o">=</span> <span class="n">respond</span><span class="o">.</span><span class="n">result</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="k">if</span> <span class="n">name</span><span class="p">:</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    <span class="n">message</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">!&#39;</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Hey! And you&#39;re not very polite, %Username%!&quot;</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="n">droid</span><span class="o">.</span><span class="n">makeToast</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
 </code></pre></div>
-<p><a href="http://onetimeblog.logdown.com/posts/2014/01/23/first-program-in-qpython">感谢 dmych 在他的博客上提供第一个草稿</a></p>
+<p>运行效果：</p>
+<video src="../static/mov_hellolorld.mp4" controls width="480"></video>
 
 
 
