@@ -236,7 +236,7 @@ while True:
 
 ## 视频介绍
 
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114097886600297&bvid=BV1Gi9iYYE6b&cid=28669247848&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"  width="560"></iframe>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114097886600297&bvid=BV1Gi9iYYE6b&cid=28669247848&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="315" height="560"></iframe>
 
 ## 下一步
 

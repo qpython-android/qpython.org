@@ -110,6 +110,10 @@ else:
 droid.makeToast(message)
 ```
 
-运行效果：
+## 运行效果
 
 <video src="../static/mov_hellolorld.mp4" controls width="480"></video>
+
+## 下一步
+
+对于 Python 新用户，推荐学习 [Python 语法实践](https://www.qpython.com.cn/courses/python-basic-syntax/) 课程来进一步学习 Python，或者在 [QPython 精选课程](https://www.qpython.com.cn/courses/) 中寻找想要学习的内容。

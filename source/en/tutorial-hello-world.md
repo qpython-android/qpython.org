@@ -112,3 +112,8 @@ else:
     message = "Hey! And you're not very polite, %Username%!"
 droid.makeToast(message)
 ```
+
+
+## Execution result 
+
+<video src="../static/mov_hellolorld.mp4" controls width="480"></video>
