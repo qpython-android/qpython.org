@@ -15,8 +15,12 @@ droid.makeToast('Hello QPython!')
 # Vibrate the device
 droid.vibrate(500)
 
-# Get battery level
+# Get battery level (start monitoring first)
+import time
+droid.batteryStartMonitoring()
+time.sleep(0.5)  # Wait for data
 battery = droid.readBatteryData().result
+print(f"Battery: {battery['level']}%")
 ```
 
 ## Documentation Structure
@@ -37,20 +41,31 @@ battery = droid.readBatteryData().result
 - [Sensors](system/sensors.md) - Device sensors
 - [Application](system/application.md) - App management
 - [System Info](system/sysinfo.md) - Device information
+- [Settings](system/settings.md) - System settings
+- [WakeLock](system/wakelock.md) - Wake lock control
+- [QPython Interface](system/qpyinterface.md) - Script execution
+- [Activity Result](system/activityresult.md) - Activity result handling
 
 ### [Hardware](hardware/)
 - [Bluetooth](hardware/bluetooth.md) - Bluetooth operations
 - [Camera](hardware/camera.md) - Photo and video capture
 - [Audio/Recorder](hardware/recorder.md) - Audio recording
+- [Webcam](hardware/webcam.md) - MJPEG streaming
+- [USB Serial](hardware/usbserial.md) - USB host serial
 
 ### [Connectivity](connectivity/)
 - [WiFi](connectivity/wifi.md) - WiFi operations
 - [Location](connectivity/location.md) - GPS and location
 - [SMS](connectivity/sms.md) - SMS operations
+- [Phone](connectivity/phone.md) - Phone calls and info
+- [Contacts](connectivity/contacts.md) - Contact management
+- [Signal Strength](connectivity/signalstrength.md) - Signal monitoring
+- [FTP Server](connectivity/ftp.md) - Built-in FTP server
 
 ### [Storage](storage/)
 - [DocumentFile](storage/documentfile.md) - File operations
 - [Clipboard](storage/clipboard.md) - Clipboard operations
+- [Preferences](storage/preferences.md) - Shared preferences
 
 ### [Media](media/)
 - [Media Player](media/mediaplayer.md) - Audio/Video playback

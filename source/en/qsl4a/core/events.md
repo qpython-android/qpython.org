@@ -109,6 +109,40 @@ eventGetBrodcastCategories()
 
 **Returns:** List of registered categories
 
+## Event Dispatcher)
+
+### startEventDispatcher()
+Opens up a socket where you can read for events posted.)
+
+```python
+startEventDispatcher(port=0)
+```
+
+**Parameters:**
+- `port` (int, optional): Port to listen on (default: 0 = auto-select)
+
+**Returns:** Port number being listened on
+
+### stopEventDispatcher()
+Stops the event server.)
+
+```python
+stopEventDispatcher()
+```
+
+## Deprecated Methods
+
+### rpcPostEvent()
+Post an event to the event queue. (Deprecated, use eventPost)
+
+```python
+rpcPostEvent(name, data)
+```
+
+**Parameters:**
+- `name` (str): Event name
+- `data`: Event data
+
 ## Usage Examples
 
 ### Basic Event Polling

@@ -48,6 +48,38 @@ Convert address to coordinates.
 geocode(address, maxResults=1)
 ```
 
+## Location Provider Methods)
+
+### locationProviders()
+Get available location providers on the phone.
+
+```python
+locationProviders()
+```
+
+**Returns:** List of available provider names (e.g., ['gps', 'network'])
+
+### locationProviderEnabled()
+Check if a specific location provider is enabled.
+
+```python
+locationProviderEnabled(provider)
+```
+
+**Parameters:**
+- `provider` (str): Provider name (e.g., 'gps', 'network')
+
+**Returns:** True if enabled, False otherwise
+
+### readGnssStatus()
+Read Global Navigation Satellite System status (requires Android 8+).
+
+```python
+readGnssStatus()
+```
+
+**Returns:** JSONArray containing GNSS satellite information
+
 ## Usage Example
 
 ```python

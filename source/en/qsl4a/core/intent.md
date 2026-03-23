@@ -104,6 +104,155 @@ Pick content from URI.
 pick(uri)
 ```
 
+## Common Intent Methods)
+
+### scanBarcode()
+Launch the barcode scanner.
+
+```python
+scanBarcode()
+```
+
+**Returns:** Scanned barcode string
+
+### send()
+Send content via share intent.
+
+```python
+send(type, content)
+```
+
+**Parameters:**
+- `type` (str): MIME type
+- `content` (str): Content to share
+
+### sendText()
+Send text content.
+
+```python
+sendText(text)
+```
+
+**Parameters:**
+- `text` (str): Text to send
+
+### sendEmail()
+Send an email.
+
+```python
+sendEmail(to, subject, body, attachment=None)
+```
+
+**Parameters:**
+- `to` (str or list): Recipient email address(es)
+- `subject` (str): Email subject
+- `body` (str): Email body
+- `attachment` (str, optional): Attachment file path
+
+### pathToUri()
+Convert file path to content URI.
+
+```python
+pathToUri(path)
+```
+
+**Parameters:**
+- `path` (str): File path
+
+**Returns:** Content URI string
+
+### openFile()
+Open a file with appropriate app.
+
+```python
+openFile(path)
+```
+
+**Parameters:**
+- `path` (str): File path to open
+
+### sendFile()
+Send a file via share intent.
+
+```python
+sendFile(path)
+```
+
+**Parameters:**
+- `path` (str): File path to send
+
+### getPathType()
+Get the MIME type for a file path.
+
+```python
+getPathType(path)
+```
+
+**Parameters:**
+- `path` (str): File path
+
+**Returns:** MIME type string
+
+### viewMap()
+Open map at a location.
+
+```python
+viewMap(latitude, longitude)
+```
+
+**Parameters:**
+- `latitude` (float): Latitude
+- `longitude` (float): Longitude
+
+### viewContacts()
+Open the contacts app.
+
+```python
+viewContacts()
+```
+
+### search()
+Perform a web search.
+
+```python
+search(query)
+```
+
+**Parameters:**
+- `query` (str): Search query
+
+### viewHtml()
+View HTML content.
+
+```python
+viewHtml(content, encoding=None)
+```
+
+**Parameters:**
+- `content` (str): HTML content
+- `encoding` (str, optional): Character encoding
+
+### webViewShow()
+Display web content in WebView. Deprecated, use viewHtml.
+
+```python
+webViewShow(url)
+```
+
+**Parameters:**
+- `url` (str): Web page URL
+
+### editorOpen()
+Open a text editor.
+
+```python
+editorOpen(path=None, create=False)
+```
+
+**Parameters:**
+- `path` (str, optional): File path to edit
+- `create` (bool, optional): Create if doesn't exist
+
 ## Helper Class: Uri
 
 Create URI objects for Intents:

@@ -57,5 +57,3 @@ QPython not only provides basic Python interface support, but more importantly, 
 - [YouTube](https://www.youtube.com/@qpythonplus)
 
 ---
-
-© QPython (2012-2026)

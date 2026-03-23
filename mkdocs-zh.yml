@@ -1,6 +1,6 @@
 site_name: QPython
 site_url: https://www.qpython.org/zh/
-site_description: QPython - 移动设备上的 Python & AI 开发环境
+site_description: QPython - Android 上的 Python & AI 开发环境
 theme:
   name: material
   logo: static/img_logo.png
@@ -29,20 +29,81 @@ theme:
     text: Roboto
     code: Roboto Mono
 
+copyright: © QPython 2012-2026
+
 extra_css:
   - static/extra.css
 
 docs_dir: source/zh
 site_dir: site/zh
-clean: false  # Don't clean to preserve English build
 
 nav:
-  - 首页: index.md
+  - 首页:
+    - 概览: index.md
+    - 版本: qpython-x.md
+    - 更新日志: whats-new.md
+  - 教程:
+    - 快速入门: getting-started.md
+    - Hello World 教程: tutorial-hello-world.md
+  - 指南:
+    - 终端: Terminal.md
+    - Notebook: Notebook.md
+    - 编辑器: editor-guide.md
+    - QPYPI: qpypi-guide.md
+    - 图形界面: GraphicalInterface.md
+    - AIPyApp: AIPyApp.md
+    - Ollama: Ollama.md
+    - 开放API: external-api.md
+  - QSL4A:
+    - 概览: qsl4a/index.md
+    - 核心:
+      - Android 基础: qsl4a/core/android-base.md
+      - Intent 系统: qsl4a/core/intent.md
+      - 事件系统: qsl4a/core/events.md
+    - UI:
+      - 对话框: qsl4a/ui/dialogs.md
+      - 全屏 UI: qsl4a/ui/fullscreen.md
+      - 悬浮窗: qsl4a/ui/floatview.md
+      - 辅助功能: qsl4a/ui/accessibility.md
+    - 系统:
+      - 电池: qsl4a/system/battery.md
+      - 传感器: qsl4a/system/sensors.md
+      - 应用: qsl4a/system/application.md
+      - 系统信息: qsl4a/system/sysinfo.md
+      - 设置: qsl4a/system/settings.md
+      - 唤醒锁: qsl4a/system/wakelock.md
+      - QPython 接口: qsl4a/system/qpyinterface.md
+      - Activity 结果: qsl4a/system/activityresult.md
+    - 硬件:
+      - 蓝牙: qsl4a/hardware/bluetooth.md
+      - 相机: qsl4a/hardware/camera.md
+      - 音频/录音: qsl4a/hardware/recorder.md
+      - 网络摄像头: qsl4a/hardware/webcam.md
+      - USB 串口: qsl4a/hardware/usbserial.md
+    - 连接:
+      - WiFi: qsl4a/connectivity/wifi.md
+      - 位置: qsl4a/connectivity/location.md
+      - 短信: qsl4a/connectivity/sms.md
+      - 电话: qsl4a/connectivity/phone.md
+      - 联系人: qsl4a/connectivity/contacts.md
+      - 信号强度: qsl4a/connectivity/signalstrength.md
+      - FTP 服务器: qsl4a/connectivity/ftp.md
+    - 存储:
+      - DocumentFile: qsl4a/storage/documentfile.md
+      - 剪贴板: qsl4a/storage/clipboard.md
+      - 偏好设置: qsl4a/storage/preferences.md
+    - 媒体:
+      - 媒体播放器: qsl4a/media/mediaplayer.md
+      - 图像处理: qsl4a/media/image.md
+    - 特殊功能:
+      - 加密: qsl4a/special/cipher.md
+      - PGPT AI: qsl4a/special/pgptai.md
 
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
+  - pymdownx.mark
   - pymdownx.snippets
   - pymdownx.superfences
   - tables

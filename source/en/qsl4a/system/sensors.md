@@ -97,6 +97,15 @@ sensorsGetStepCounter()
 
 **Returns:** Number of steps
 
+### sensorsGetAccuracy()
+Get the current sensor accuracy.
+
+```python
+sensorsGetAccuracy()
+```
+
+**Returns:** Accuracy value (0-3: UNRELIABLE, ACCURACY_LOW, ACCURACY_MEDIUM, ACCURACY_HIGH)
+
 ## Usage Example
 
 ```python

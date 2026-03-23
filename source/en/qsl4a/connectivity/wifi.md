@@ -166,7 +166,29 @@ if dhcp:
     print(f"Gateway: {dhcp.get('gateway')}")
     print(f"DNS: {dhcp.get('dns1')}")
 
+# Get simplified connected info
+connected = droid.getConnectedInfo().result
+print(f"SSID: {connected.get('ssid')}, Signal: {connected.get('level')} dBm")
+
+# Disconnect and reconnect
+droid.wifiDisconnect()
+time.sleep(1)
+droid.wifiReconnect()
+
+# Reassociate with access point
+droid.wifiReassociate()
+
+# Check hotspot state
+ap_state = droid.wifiGetApState().result
+print(f"Hotspot state: {ap_state}")
+
 # Acquire WiFi lock for background operation
 droid.wifiLockAcquireFull()
 # ... do work ...
 droid.wifiLockRelease()
+
+# Or use scan-only lock for lighter background operation
+droid.wifiLockAcquireScanOnly()
+# ... do scanning work ...
+droid.wifiLockRelease()
+```

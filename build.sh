@@ -33,7 +33,7 @@ cat > site/index.html << 'EOF'
 <head>
     <meta charset="utf-8">
     <title>QPython Documentation</title>
-    <meta http-equiv="refresh" content="0; url=en/">
+    <meta http-equiv="refresh" content="5; url=en/">
     <style>
         body {
             font-family: Roboto, Arial, sans-serif;
@@ -81,7 +81,7 @@ cat > site/index.html << 'EOF'
 <body>
     <div class="container">
         <div class="logo">
-            <img src="en/_static/img_logo.png" alt="QPython">
+            <img src="en/static/img_logo.png" alt="QPython">
         </div>
         <h1>Choose your language / 选择语言</h1>
         <div class="languages">
@@ -104,6 +104,10 @@ if [ -f source/CNAME ]; then
     echo "Copying CNAME file..."
     cp source/CNAME site/
 fi
+
+# Remove "Made with Material for MkDocs" footer from all HTML files
+echo "Removing MkDocs Material footer..."
+find site -name "*.html" -exec sed -i '/Made with/,/<\/a>/d' {} \;
 
 echo ""
 echo "Build complete!"
