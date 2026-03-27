@@ -1,51 +1,47 @@
 # 社区
 
-**QPython 拥有一个活跃的技术社区，为开发者提供交流、分享和互助的平台。**
+**QPython 拥有一个活跃的技术社区，为开发者提供编程学习相关的交流、分享和互助的平台。**
 
 ## 加入社区
 
-### 中文交流社区
+### QPython公众号 - 编程学习资料分享 
+专注于QPython移动端开发与Python全栈技术。内容涵盖：
+- ① 基础语法与进阶技巧；
+- ② 趣味实战项目（爬虫、数据分析、自动化）；
+- ③ 编程思维与学习方法。
+定期更新，系统化学习，帮你构建完整的Python知识图谱。
 
-- [QPython 中文论坛](https://www.qpython.com.cn/qpy-forum/) – 与中文用户交流讨论
-- [百度贴吧](https://tieba.baidu.com/f?ie=utf-8&kw=qpython) – 中文用户聚集地
+![QPython微信公众号](static/wechat_qpy_office_account.jpg)
 
-### 国际社区
+### QPython B站
+专注手机编程实战教学。用QPython在手机上轻松学Python，零基础也能跟上！
+- ① 手把手实操演示
+- ② 趣味实战项目（爬虫/自动化/小工具）
+- ③ 避坑指南与技巧分享
+有问必答，欢迎评论区交流，一起在手机上玩转Python！
 
-- [Discord 服务器](https://discord.gg/hV2chuD) – 与全球开发者实时交流
-- [Facebook 主页](http://www.facebook.com/qpython) – 关注最新动态
-- [Twitter/X](http://www.twitter.com/qpython) – 官方账号
+- [B站](https://space.bilibili.com/1357778956) – 访问QPython B站
 
-### 视频平台
+### QPython QQ论坛
+专注于QPython移动端开发与Python全栈技术，为开发者提供一个作品展示、行业交流、技术沉淀的高质量交流空间。 包括以下栏目：行业资讯、技术交流、项目案例、BUG反馈。
 
-- [B站](https://space.bilibili.com/1357778956) – 教程视频和直播
-- [YouTube](https://www.youtube.com/@qpython) – 官方视频频道
+- [QPython QQ频道](https://pd.qq.com/g/pd41382684) – 与QQ/微信用户在腾讯频道交流
 
-## 获取帮助
+### QPython微信群 & QQ群
+QPython微信用户群群定位：QPython使用交流 | Python学习互助 | 实战问题解答，添加助手后会邀您加入
 
-### 问题反馈
+| 微信群（助手: learnwithqpy） | QQ群（群号: 862351102） |
+|------|----------|
+| ![QPython微信社区助手](static/qpy_wechat.jpg) | ![QPython QQ群](static/qpython_qq_group.jpg) |
 
-如果您发现任何问题或有改进建议，欢迎通过以下方式反馈：
 
-- [GitHub Issues](https://github.com/qpython-android/qpython/issues) – 报告 bug 和功能请求
-- [GitHub Discussions](https://github.com/qpython-android/qpython.org/discussions) – 参与讨论
+### QPython 知识星球 VIP社区
+QPython官方付费VIP专属社区，为深度用户提供官方团队直连、及时技术支持、高质量交流的专属服务空间。加入VIP社区可获下列核心价值：
 
-### 贡献代码
-
-QPython 是开源项目，欢迎开发者贡献代码：
-
-- [QPython 主项目](https://github.com/qpython-android/qpython)
-- [QSL4A 库](https://github.com/qpython-android/qsl4a-android)
-
-## 关注我们
-
-| 平台 | 链接 |
-|------|------|
-| GitHub | [github.com/qpython-android](https://github.com/qpython-android) |
-| Discord | [discord.gg/hV2chuD](https://discord.gg/hV2chuD) |
-| Facebook | [facebook.com/qpython](http://www.facebook.com/qpython) |
-| Twitter | [twitter.com/qpython](http://www.twitter.com/qpython) |
-| Weibo | [weibo.com/qpython](http://www.weibo.com/qpython) |
-
+- 🎯 官方团队直连 —— QPython开发团队在线答疑，遇到问题不再卡壳，技术难题快速响应
+- 🚀 优先技术支持 —— VIP用户专属通道，比公开渠道更快获得官方解答
+- 💡 深度交流圈子 —— 与核心用户、资深开发者同行，探讨高阶技巧与项目实战
+![QPython知识星球VIP社区](static/zhishi-nobg.jpg)
 ---
 
 *QPython 团队会定期在社区中更新项目进展，欢迎关注！*
