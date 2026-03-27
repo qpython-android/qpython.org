@@ -98,6 +98,8 @@ nav:
     - 特殊功能:
       - 加密: qsl4a/special/cipher.md
       - PGPT AI: qsl4a/special/pgptai.md
+  - 社区:
+    - 概览: community.md
 
 markdown_extensions:
   - pymdownx.highlight:

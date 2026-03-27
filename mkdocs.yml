@@ -87,6 +87,8 @@ nav:
     - Special:
       - Cipher: qsl4a/special/cipher.md
       - PGPT AI: qsl4a/special/pgptai.md
+  - Community:
+    - Overview: community.md
 
 
 markdown_extensions:
