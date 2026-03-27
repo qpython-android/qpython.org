@@ -45,7 +45,6 @@ QPython not only provides basic Python interface support, but more importantly, 
 
 - [Discord](https://discord.gg/hV2chuD)
 - [Facebook Group](https://www.facebook.com/groups/qpython)
-- [中文交流社区](https://www.qpython.com.cn/qpy-forum/)
 - [Newsletter (Google Groups)](https://groups.google.com/g/qpython)
 - [Report Issues](https://github.com/qpython-android/qpython/issues)
 - [Request Extensions](https://github.com/qpython-android/qpython.org/issues)
