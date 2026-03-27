@@ -13,12 +13,6 @@
 ### Video Platforms
 
 - [YouTube](https://www.youtube.com/@qpython) – Official video channel
-- [Bilibili](https://space.bilibili.com/1357778956) – Tutorials and live streams
-
-### Chinese Communities
-
-- [QPython Chinese Forum](https://www.qpython.com.cn/qpy-forum/) – Discuss with Chinese users
-- [Baidu Tieba](https://tieba.baidu.com/f?ie=utf-8&kw=qpython) – Chinese user community
 
 ## Get Help
 
@@ -28,13 +22,6 @@ If you find any issues or have suggestions for improvement, please feedback thro
 
 - [GitHub Issues](https://github.com/qpython-android/qpython/issues) – Report bugs and feature requests
 - [GitHub Discussions](https://github.com/qpython-android/qpython.org/discussions) – Participate in discussions
-
-### Contributing Code
-
-QPython is an open source project and welcomes developers to contribute code:
-
-- [QPython Main Project](https://github.com/qpython-android/qpython)
-- [QSL4A Library](https://github.com/qpython-android/qsl4a-android)
 
 ## Follow Us
 
