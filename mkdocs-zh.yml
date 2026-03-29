@@ -100,6 +100,7 @@ nav:
       - PGPT AI: qsl4a/special/pgptai.md
   - 社区:
     - 概览: community.md
+  - 课程: https://edu.qpython.org/?lang=zh
 
 markdown_extensions:
   - pymdownx.highlight:

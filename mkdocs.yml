@@ -89,6 +89,7 @@ nav:
       - PGPT AI: qsl4a/special/pgptai.md
   - Community:
     - Overview: community.md
+  - Courses: https://edu.qpython.org/?lang=en
 
 
 markdown_extensions:
