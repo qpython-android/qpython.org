@@ -35,11 +35,10 @@ QPython微信用户群群定位：QPython使用交流 | Python学习互助 | 实
 | ![QPython微信社区助手](static/qpy_wechat.jpg) | ![QPython QQ群](static/qpython_qq_group.jpg) |
 
 ### QPython 社区推荐服务
-在 QPython 的使用过程中，部分用户希望将自己开发的脚本或服务打包成独立的安卓应用。为此，我们特别筛选了以下优质服务，供您按需选择：
+在 QPython 的使用过程中，部分用户希望将自己开发的脚本或服务打包成独立的安卓应用。为此，我们特别筛选了以下优质服务，供您按需选择(如果您想推荐你的 QPython 社区服务，也欢迎微信联系)：
 
 - [安卓应用打包 - 将您的 QPython 项目打包为安卓应用](https://pd.qq.com/s/cemomtgzg?b=2)
 
-如果您想推荐你的 QPython 社区服务，也欢迎微信联系。
 
 ### QPython 知识星球 VIP社区
 QPython官方付费VIP专属社区，为深度用户提供官方团队直连、及时技术支持、高质量交流的专属服务空间。加入VIP社区可获下列核心价值：
