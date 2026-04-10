@@ -21,6 +21,7 @@
 
 - [快速入门](getting-started.md)
 - [Hello World 教程](tutorial-hello-world.md)
+- [精选课程](featured-courses.md)
 
 ## 编程指南
 
