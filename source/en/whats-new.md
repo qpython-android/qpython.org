@@ -1,5 +1,11 @@
 # What's New
 
+## v4.0.0
+
+- External storage access: Users can now save Python scripts directly to external storage, greatly improving file management flexibility.
+- QSL4A enhancements: Improved QSL4A features. (https://www.qpython.org/en/qsl4a/)
+- Community & Courses: Refined community and course modules with clearer info and better navigation for easier access to learning resources and support.
+
 ## v3.9.2 / v3.9.3
 
 - SDK upgrade with support for 16 KB page size, providing a smoother runtime environment

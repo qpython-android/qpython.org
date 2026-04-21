@@ -38,6 +38,12 @@ QPython not only provides basic Python interface support, but more importantly, 
 
 ## Download Resources
 
+**Latest Version v4.0.0:**
+
+- External Storage Access: Users can now save Python scripts directly to external storage devices, greatly improving file management flexibility.
+- QSL4A Enhanced: Improved QSL4A functionality.
+- Community & Courses: Optimized community and courses modules, providing clearer information and more convenient navigation for accessing learning resources and support.
+
 - [Google Drive](https://drive.google.com/drive/folders/1lFqvlmArrV35ikcdW61MdVAx2UUWMcLh?usp=drive_link)
 - [微信网盘](https://drive.weixin.qq.com/s?k=AM0A8wffAAc5HYFbqJ)
 
